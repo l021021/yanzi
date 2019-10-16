@@ -1,0 +1,362 @@
+Connecting to wss://cirrus21.yanzi.se/cirrusAPI using username 653498331@qq.com
+Checking API service status with ServiceRequest.
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:21:53 # 10 Last: 14:07:47 static_for(s) 11645.376
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:21:53 # 468 Last: 17:19:54 static_for(s) 118.564
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:21:54 # 435 Last: 14:08:02 static_for(s) 11631.678
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:21:55  isMotion
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:21:55 # 634 Last: 17:21:55 static_for(s) 0.005
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:21:55 # 101 Last: 13:50:23 static_for(s) 790292.058
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:21:57 # 46 Last: 11:22:41 static_for(s) 1058356.895
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:22:04 # 1157 Last: 17:22:04 static_for(s) 0.011
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:22:06 # 169 Last: 15:11:53 static_for(s) 7813.199
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:22:09 # 547 Last: 13:54:15 static_for(s) 12473.846
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:22:09 # 424 Last: 17:19:41 static_for(s) 147.615
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:22:15  isMotion
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:22:15 # 988 Last: 17:22:15 static_for(s) 0.026
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:22:16 # 988 Last: 17:22:15 static_for(s) 1.073
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:22:22 # 1361 Last: 17:22:22 static_for(s) 0.002
+   Motion! EUI64-D0CF5EFFFE7931DA-3-Motion @ 17:22:29 # 1 Last: 13:50:40 static_for(s) 790308.93
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:22:30  isNoMotion
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:22:36 # 1211 Last: 17:18:11 static_for(s) 264.87
+   Motion! EUI64-0080E10300053BA3-4-Motion @ 17:22:36 # 15 Last: 13:37:36 static_for(s) 13499.296
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:22:36  isMotion
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:22:36 # 1212 Last: 17:22:36 static_for(s) 0.019
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:22:37 # 112 Last: 14:07:30 static_for(s) 11706.604
+   Motion! EUI64-90FD9FFFFEA95289-3-Motion @ 17:22:39 # 46 Last: 15:38:22 static_for(s) 697457.106
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:22:49 # 122 Last: 16:10:43 static_for(s) 4326.327
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:23:00 # 13 Last: 11:22:41 static_for(s) 1058419.044
+   Motion! EUI64-0080E10300056EB7-4-Motion @ 17:23:01 # 516 Last: 14:07:21 static_for(s) 11739.962
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:23:01 # 13 Last: 11:22:41 static_for(s) 1058420.059
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:23:01 # 1361 Last: 17:22:22 static_for(s) 39.001
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:23:02 # 1062 Last: 17:11:35 static_for(s) 687.777
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:23:02 # 500 Last: 17:23:02 static_for(s) 0
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:23:03 # 500 Last: 17:23:02 static_for(s) 1.021
+   Motion! EUI64-D0CF5EFFFE793380-3-Motion @ 17:23:05 # 171 Last: 10:34:32 static_for(s) 715712.909
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:23:10 # 35 Last: 11:22:42 static_for(s) 1058427.391
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:23:13 # 29 Last: 11:22:41 static_for(s) 1058432.187
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:23:13 # 634 Last: 17:21:55 static_for(s) 78.265
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:23:14 # 29 Last: 11:22:41 static_for(s) 1058433.196
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:23:22 # 174 Last: 13:50:23 static_for(s) 790378.783
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:23:23 # 1 Last: 13:50:40 static_for(s) 790363.114
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:23:25 # 1157 Last: 17:22:04 static_for(s) 80.423
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:23:25  isNoMotion
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:23:30 # 1666 Last: 17:18:37 static_for(s) 293.295
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:23:32 # 178 Last: 17:21:00 static_for(s) 151.35
+   Motion! EUI64-D0CF5EFFFE7932C2-3-Motion @ 17:23:32 # 57 Last: 11:22:43 static_for(s) 1058449.861
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:23:33 # 1362 Last: 17:23:33 static_for(s) 0.005
+   Motion! EUI64-90FD9FFFFEA950FF-3-Motion @ 17:23:34 # 222 Last: 16:45:46 static_for(s) 2268.148
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:23:34  isNoMotion
+   Motion! EUI64-D0CF5EFFFE59F28A-3-Motion @ 17:23:43 # 102 Last: 14:07:25 static_for(s) 11778.098
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:23:45  isNoMotion
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:23:53 # 435 Last: 14:08:02 static_for(s) 11750.708
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:23:54 # 10 Last: 14:07:47 static_for(s) 11766.88
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:23:54 # 468 Last: 17:19:54 static_for(s) 240.093
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:23:57 # 101 Last: 13:50:23 static_for(s) 790414.022
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:23:58 # 46 Last: 11:22:41 static_for(s) 1058477.308
+   Motion! UUID-7E86CD13BA75441AB159990F58C6E441 @ 17:24:04  free
+   Motion! UUID-615551E71791446F906951B255950798 @ 17:24:04  free
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:24:06 # 169 Last: 15:11:53 static_for(s) 7932.926
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:24:06  isNoMotion
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:24:08 # 547 Last: 13:54:15 static_for(s) 12593.125
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:24:09 # 424 Last: 17:19:41 static_for(s) 267.312
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:24:09  isMotion
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:24:09 # 989 Last: 17:24:09 static_for(s) 0.025
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:24:10 # 989 Last: 17:24:09 static_for(s) 1.053
+   Motion! EUI64-D0CF5EFFFE7931DA-3-Motion @ 17:24:28 # 1 Last: 13:50:40 static_for(s) 790427.709
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:24:32  isMotion
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:24:32 # 1158 Last: 17:24:30 static_for(s) 1.517
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:24:32  isNoMotion
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:24:33 # 1212 Last: 17:22:36 static_for(s) 117.585
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:24:34  isMotion
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:24:34 # 469 Last: 17:24:34 static_for(s) 0.006
+   Motion! EUI64-0080E10300053BA3-4-Motion @ 17:24:36 # 15 Last: 13:37:36 static_for(s) 13619.728
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:24:37 # 112 Last: 14:07:30 static_for(s) 11826.72
+   Motion! EUI64-90FD9FFFFEA95289-3-Motion @ 17:24:38 # 46 Last: 15:38:22 static_for(s) 697575.891
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:24:48 # 122 Last: 16:10:43 static_for(s) 4445.015
+   Motion! UUID-7E86CD13BA75441AB159990F58C6E441 @ 17:24:48  occupied
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:24:48  isMotion
+   Motion! UUID-615551E71791446F906951B255950798 @ 17:24:48  occupied
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:24:48 # 1667 Last: 17:24:48 static_for(s) 0.056
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:24:49  isMotion
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:24:49 # 1213 Last: 17:24:49 static_for(s) 0.021
+   Motion! UUID-7EAA0EEAD99A4B98A5BBEB121A23396E @ 17:24:59  free
+   Motion! EUI64-0080E10300056EB7-4-Motion @ 17:25:00 # 516 Last: 14:07:21 static_for(s) 11859.385
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:25:02 # 13 Last: 11:22:41 static_for(s) 1058541.028
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:25:02 # 1363 Last: 17:25:02 static_for(s) 0
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:25:02 # 500 Last: 17:23:02 static_for(s) 120.072
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:25:03 # 1363 Last: 17:25:02 static_for(s) 1.018
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:25:04 # 1062 Last: 17:11:35 static_for(s) 809.599
+   Motion! EUI64-D0CF5EFFFE793380-3-Motion @ 17:25:07 # 171 Last: 10:34:32 static_for(s) 715834.257
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:25:10 # 35 Last: 11:22:42 static_for(s) 1058547.316
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:25:11 # 29 Last: 11:22:41 static_for(s) 1058550.697
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:25:13 # 634 Last: 17:21:55 static_for(s) 197.634
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:25:13 # 990 Last: 17:25:13 static_for(s) 0.026
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:25:23 # 1158 Last: 17:24:30 static_for(s) 53.077
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:25:23 # 174 Last: 13:50:23 static_for(s) 790500.466
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:25:24 # 1 Last: 13:50:40 static_for(s) 790483.849
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:25:32 # 1667 Last: 17:24:48 static_for(s) 43.487
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:25:32 # 174 Last: 13:50:23 static_for(s) 790509.552
+   Motion! EUI64-D0CF5EFFFE7932C2-3-Motion @ 17:25:33 # 57 Last: 11:22:43 static_for(s) 1058570.385
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:25:34 # 178 Last: 17:21:00 static_for(s) 273.42
+   Motion! EUI64-90FD9FFFFEA950FF-3-Motion @ 17:25:34 # 222 Last: 16:45:46 static_for(s) 2388.37
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:25:40 # 1159 Last: 17:25:40 static_for(s) 0.013
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:25:44 # 174 Last: 13:50:23 static_for(s) 790521.359
+   Motion! EUI64-D0CF5EFFFE59F28A-3-Motion @ 17:25:44 # 102 Last: 14:07:25 static_for(s) 11899.624
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:25:52 # 10 Last: 14:07:47 static_for(s) 11885.234
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:25:53 # 435 Last: 14:08:02 static_for(s) 11870.745
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:25:53 # 174 Last: 13:50:23 static_for(s) 790530.225
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:25:53 # 1668 Last: 17:25:53 static_for(s) 0.024
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:25:55 # 101 Last: 13:50:23 static_for(s) 790532.33
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:25:56 # 469 Last: 17:24:34 static_for(s) 81.884
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:25:56 # 101 Last: 13:50:23 static_for(s) 790533.336
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:25:57 # 46 Last: 11:22:41 static_for(s) 1058596.432
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:25:58 # 470 Last: 17:25:58 static_for(s) 0.013
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:26:00  isMotion
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:26:00 # 501 Last: 17:26:00 static_for(s) 0.026
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:26:02 # 174 Last: 13:50:23 static_for(s) 790539.454
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:26:07 # 169 Last: 15:11:53 static_for(s) 8054.315
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:26:08 # 547 Last: 13:54:15 static_for(s) 12713.102
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:26:10 # 990 Last: 17:25:13 static_for(s) 57.412
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:26:11 # 424 Last: 17:19:41 static_for(s) 389.445
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:26:11 # 174 Last: 13:50:23 static_for(s) 790547.936
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:26:16 # 1364 Last: 17:26:16 static_for(s) 0.003
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:26:19  isNoMotion
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:26:23 # 174 Last: 13:50:23 static_for(s) 790560.075
+   Motion! UUID-E86236F580B14B81AD7C6879289BDF91 @ 17:26:25  free
+   Motion! UUID-78E2909EDEE948B6AF89C9FA1749E66A @ 17:26:25  free
+   Motion! EUI64-D0CF5EFFFE7931DA-3-Motion @ 17:26:27 # 1 Last: 13:50:40 static_for(s) 790546.646
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:26:31 # 174 Last: 13:50:23 static_for(s) 790568.564
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:26:32 # 1213 Last: 17:24:49 static_for(s) 102.513
+   Motion! EUI64-90FD9FFFFEA95289-3-Motion @ 17:26:37 # 46 Last: 15:38:22 static_for(s) 697694.646
+   Motion! EUI64-0080E10300053BA3-4-Motion @ 17:26:37 # 15 Last: 13:37:36 static_for(s) 13740.656
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:26:38 # 112 Last: 14:07:30 static_for(s) 11947.91
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:26:39 # 112 Last: 14:07:30 static_for(s) 11948.929
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:26:42 # 1160 Last: 17:26:42 static_for(s) 0.013
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:26:43  isNoMotion
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:26:44 # 174 Last: 13:50:23 static_for(s) 790580.598
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:26:44  isMotion
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:26:44 # 991 Last: 17:26:44 static_for(s) 0.038
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:26:47 # 122 Last: 16:10:43 static_for(s) 4563.728
+{"messageType":"SubscribeData","timeSent":1570526929966,"list":[{"resourceType":"SampleList","dataSourceAddress":{"resourceType":"DataSourceAddress","did":"EUI64-0090DAFFFF00586C","locationId":"229349","serverDid":"EUI64-0090DAFFFF0040AA","variableName":{"resourceType":"VariableName","name":"uplog"},"instanceNumber":0},"list":[{"resourceType":"SampleUpState","sampleTime":1570526929965,"deviceUpState":{"resourceType":"DeviceUpState","name":"goingDown"}}]}]}
+{"messageType":"SubscribeData","timeSent":1570526935702,"list":[{"resourceType":"SampleList","dataSourceAddress":{"resourceType":"DataSourceAddress","did":"EUI64-0090DAFFFF00586C","locationId":"229349","serverDid":"EUI64-0090DAFFFF0040AA","variableName":{"resourceType":"VariableName","name":"uplog"},"instanceNumber":0},"list":[{"resourceType":"SampleUpState","sampleTime":1570526935702,"deviceUpState":{"resourceType":"DeviceUpState","name":"goingUp"}}]}]}
+   Motion! EUI64-0080E10300056EB7-4-Motion @ 17:28:59 # 516 Last: 14:07:21 static_for(s) 12098.656
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:29:01 # 502 Last: 17:28:36 static_for(s) 25.001
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:29:01 # 174 Last: 13:50:23 static_for(s) 790717.704
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:29:01 # 1062 Last: 17:11:35 static_for(s) 1046.238
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:29:02 # 13 Last: 11:22:41 static_for(s) 1058781.296
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:29:04 # 1364 Last: 17:26:16 static_for(s) 167.09
+   Motion! EUI64-D0CF5EFFFE793380-3-Motion @ 17:29:05 # 171 Last: 10:34:32 static_for(s) 716072.551
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:29:08 # 993 Last: 17:29:08 static_for(s) 0.025
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:29:09 # 29 Last: 11:22:41 static_for(s) 1058788.623
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:29:11 # 35 Last: 11:22:42 static_for(s) 1058788.582
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:29:13 # 174 Last: 13:50:23 static_for(s) 790729.922
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:29:13 # 634 Last: 17:21:55 static_for(s) 437.909
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:29:17 # 426 Last: 17:29:17 static_for(s) 0.008
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:29:19  isNoMotion
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:29:26 # 1160 Last: 17:26:42 static_for(s) 163.768
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:29:27 # 1 Last: 13:50:40 static_for(s) 790727.606
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:29:28 # 1 Last: 13:50:40 static_for(s) 790728.638
+   Motion! EUI64-D0CF5EFFFE7932C2-3-Motion @ 17:29:29 # 57 Last: 11:22:43 static_for(s) 1058806.567
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:29:33 # 1668 Last: 17:25:53 static_for(s) 219.326
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:29:34 # 178 Last: 17:21:00 static_for(s) 513.854
+   Motion! EUI64-90FD9FFFFEA950FF-3-Motion @ 17:29:35 # 222 Last: 16:45:46 static_for(s) 2629.109
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:29:35 # 178 Last: 17:21:00 static_for(s) 514.785
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:29:44 # 503 Last: 17:29:44 static_for(s) 0.042
+   Motion! EUI64-D0CF5EFFFE59F28A-3-Motion @ 17:29:46 # 102 Last: 14:07:25 static_for(s) 12140.947
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:29:48  isNoMotion
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:29:50 # 471 Last: 17:27:49 static_for(s) 121.283
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:29:52 # 10 Last: 14:07:47 static_for(s) 12124.653
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:29:55 # 435 Last: 14:08:02 static_for(s) 12112.539
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:29:58 # 101 Last: 13:50:23 static_for(s) 790775.062
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:29:59 # 46 Last: 11:22:41 static_for(s) 1058838.634
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:30:05 # 426 Last: 17:29:17 static_for(s) 47.51
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:30:09 # 169 Last: 15:11:53 static_for(s) 8295.742
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:30:09 # 993 Last: 17:29:08 static_for(s) 61.028
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:30:10 # 169 Last: 15:11:53 static_for(s) 8296.751
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:30:10 # 547 Last: 13:54:15 static_for(s) 12955.609
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:30:17 # 1214 Last: 17:28:18 static_for(s) 118.642
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:30:26  isMotion
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:30:26 # 1215 Last: 17:30:26 static_for(s) 0.035
+   Motion! EUI64-D0CF5EFFFE7931DA-3-Motion @ 17:30:27 # 1 Last: 13:50:40 static_for(s) 790786.377
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:30:27  isMotion
+   Motion! UUID-17B30675BC5849C2AD81F2448E772705 @ 17:30:27  occupied
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:30:27 # 635 Last: 17:30:27 static_for(s) 0.019
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:30:33  isMotion
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:30:33 # 1161 Last: 17:30:33 static_for(s) 0.029
+   Motion! EUI64-90FD9FFFFEA95289-3-Motion @ 17:30:37 # 46 Last: 15:38:22 static_for(s) 697934.2
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:30:38  isNoMotion
+   Motion! EUI64-0080E10300053BA3-4-Motion @ 17:30:39 # 15 Last: 13:37:36 static_for(s) 13982.075
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:30:39 # 112 Last: 14:07:30 static_for(s) 12189.157
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:30:46 # 122 Last: 16:10:43 static_for(s) 4802.719
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:30:47 # 122 Last: 16:10:43 static_for(s) 4803.752
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:30:47  isNoMotion
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:30:49 # 504 Last: 17:30:49 static_for(s) 0.009
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:30:50 # 504 Last: 17:30:49 static_for(s) 1.028
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:30:59 # 1062 Last: 17:11:35 static_for(s) 1164.727
+   Motion! EUI64-0080E10300056EB7-4-Motion @ 17:31:01 # 516 Last: 14:07:21 static_for(s) 12220.758
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:31:02 # 1364 Last: 17:26:16 static_for(s) 285.295
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:31:03 # 1364 Last: 17:26:16 static_for(s) 286.322
+   Motion! EUI64-D0CF5EFFFE793380-3-Motion @ 17:31:04 # 171 Last: 10:34:32 static_for(s) 716191.413
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:31:04 # 13 Last: 11:22:41 static_for(s) 1058903.048
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:31:06  isMotion
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:31:06 # 1669 Last: 17:31:06 static_for(s) 0.055
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:31:08 # 29 Last: 11:22:41 static_for(s) 1058907.46
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:31:11 # 635 Last: 17:30:27 static_for(s) 43.408
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:31:13 # 35 Last: 11:22:42 static_for(s) 1058910.786
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:31:14 # 35 Last: 11:22:42 static_for(s) 1058911.794
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:31:14 # 174 Last: 13:50:23 static_for(s) 790851.535
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:31:24 # 1161 Last: 17:30:33 static_for(s) 50.447
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:31:25  isMotion
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:31:25 # 994 Last: 17:31:24 static_for(s) 0.024
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:31:25 # 174 Last: 13:50:23 static_for(s) 790862.358
+   Motion! UUID-A9899341F08A49279C04EAC3E6C05094 @ 17:31:26  free
+   Motion! UUID-B0DD1D3C4A5E405293476E061A3243C5 @ 17:31:26  free
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:31:27 # 1 Last: 13:50:40 static_for(s) 790847.084
+   Motion! EUI64-D0CF5EFFFE7932C2-3-Motion @ 17:31:27 # 57 Last: 11:22:43 static_for(s) 1058924.812
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:31:32 # 1669 Last: 17:31:06 static_for(s) 26.448
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:31:34 # 174 Last: 13:50:23 static_for(s) 790871.393
+   Motion! EUI64-90FD9FFFFEA950FF-3-Motion @ 17:31:35 # 222 Last: 16:45:46 static_for(s) 2749.357
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:31:35 # 178 Last: 17:21:00 static_for(s) 635.182
+   Motion! EUI64-D0CF5EFFFE59F28A-3-Motion @ 17:31:43 # 102 Last: 14:07:25 static_for(s) 12258.755
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:31:44 # 174 Last: 13:50:23 static_for(s) 790881.572
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:31:48  isMotion
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:31:48 # 472 Last: 17:31:48 static_for(s) 0.016
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:31:49 # 472 Last: 17:31:48 static_for(s) 1.02
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:31:50 # 10 Last: 14:07:47 static_for(s) 12242.723
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:31:54 # 505 Last: 17:31:54 static_for(s) 0.004
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:31:56 # 174 Last: 13:50:23 static_for(s) 790892.944
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:31:56  isNoMotion
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:31:56 # 101 Last: 13:50:23 static_for(s) 790892.935
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:31:56 # 435 Last: 14:08:02 static_for(s) 12233.85
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:31:57  isNoMotion
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:31:59 # 46 Last: 11:22:41 static_for(s) 1058958.189
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:32:03  isNoMotion
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:32:08 # 174 Last: 13:50:23 static_for(s) 790904.886
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:32:09 # 547 Last: 13:54:15 static_for(s) 13074.278
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:32:10 # 994 Last: 17:31:24 static_for(s) 45.153
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:32:10 # 169 Last: 15:11:53 static_for(s) 8417.49
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:32:12 # 426 Last: 17:29:17 static_for(s) 175.153
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:32:14 # 426 Last: 17:29:17 static_for(s) 176.195
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:32:17 # 174 Last: 13:50:23 static_for(s) 790914.501
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:32:18 # 1215 Last: 17:30:26 static_for(s) 112.015
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:32:27 # 174 Last: 13:50:23 static_for(s) 790923.967
+   Motion! EUI64-D0CF5EFFFE7931DA-3-Motion @ 17:32:28 # 1 Last: 13:50:40 static_for(s) 790907.776
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:32:29 # 1670 Last: 17:32:28 static_for(s) 0.045
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:32:31 # 995 Last: 17:32:31 static_for(s) 0.025
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:32:35 # 174 Last: 13:50:23 static_for(s) 790932.477
+   Motion! EUI64-90FD9FFFFEA95289-3-Motion @ 17:32:37 # 46 Last: 15:38:22 static_for(s) 698055.063
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:32:38 # 112 Last: 14:07:30 static_for(s) 12307.532
+   Motion! EUI64-0080E10300053BA3-4-Motion @ 17:32:38 # 15 Last: 13:37:36 static_for(s) 14101.967
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:32:44 # 174 Last: 13:50:23 static_for(s) 790941.127
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:32:46 # 122 Last: 16:10:43 static_for(s) 4922.823
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:32:49 # 505 Last: 17:31:54 static_for(s) 54.388
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:32:53 # 174 Last: 13:50:23 static_for(s) 790950.571
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:32:58 # 1062 Last: 17:11:35 static_for(s) 1283.779
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:33:01 # 1364 Last: 17:26:16 static_for(s) 404.977
+   Motion! EUI64-D0CF5EFFFE793380-3-Motion @ 17:33:03 # 171 Last: 10:34:32 static_for(s) 716310.517
+   Motion! EUI64-0080E10300056EB7-4-Motion @ 17:33:03 # 516 Last: 14:07:21 static_for(s) 12342.777
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:33:04  isMotion
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:33:04 # 1216 Last: 17:33:04 static_for(s) 0.022
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:33:04 # 13 Last: 11:22:41 static_for(s) 1059023.745
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:33:06 # 174 Last: 13:50:23 static_for(s) 790962.597
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:33:07 # 506 Last: 17:33:07 static_for(s) 0.012
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:33:08 # 29 Last: 11:22:41 static_for(s) 1059027.35
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:33:09 # 635 Last: 17:30:27 static_for(s) 161.968
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:33:14 # 35 Last: 11:22:42 static_for(s) 1059031.931
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:33:14 # 174 Last: 13:50:23 static_for(s) 790971.338
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:33:18  isNoMotion
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:33:23 # 1161 Last: 17:30:33 static_for(s) 169.983
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:33:26 # 174 Last: 13:50:23 static_for(s) 790983.485
+   Motion! EUI64-D0CF5EFFFE7932C2-3-Motion @ 17:33:27 # 57 Last: 11:22:43 static_for(s) 1059044.522
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:33:29 # 1 Last: 13:50:40 static_for(s) 790968.755
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:33:32 # 1670 Last: 17:32:28 static_for(s) 64.009
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:33:33 # 1670 Last: 17:32:28 static_for(s) 65.016
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:33:36 # 174 Last: 13:50:23 static_for(s) 790992.711
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:33:37 # 178 Last: 17:21:00 static_for(s) 756.655
+   Motion! EUI64-90FD9FFFFEA950FF-3-Motion @ 17:33:37 # 222 Last: 16:45:46 static_for(s) 2871.548
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:33:41 # 996 Last: 17:33:41 static_for(s) 0.03
+   Motion! EUI64-D0CF5EFFFE59F28A-3-Motion @ 17:33:42 # 102 Last: 14:07:25 static_for(s) 12377.093
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:33:44  isMotion
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:33:44 # 427 Last: 17:33:44 static_for(s) 0.032
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:33:45 # 174 Last: 13:50:23 static_for(s) 791002.371
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:33:49 # 472 Last: 17:31:48 static_for(s) 120.592
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:33:49 # 10 Last: 14:07:47 static_for(s) 12362.003
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:33:50 # 1671 Last: 17:33:50 static_for(s) 0.03
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:33:51  isMotion
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:33:51 # 1162 Last: 17:33:51 static_for(s) 0.017
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:33:54 # 101 Last: 13:50:23 static_for(s) 791011.138
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:33:55 # 174 Last: 13:50:23 static_for(s) 791011.717
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:33:55 # 435 Last: 14:08:02 static_for(s) 12353.008
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:33:59 # 46 Last: 11:22:41 static_for(s) 1059078.221
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:34:01 # 427 Last: 17:33:44 static_for(s) 17.483
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:34:03 # 174 Last: 13:50:23 static_for(s) 791020.332
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:34:10 # 169 Last: 15:11:53 static_for(s) 8537.249
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:34:11 # 547 Last: 13:54:15 static_for(s) 13196.238
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:34:12 # 996 Last: 17:33:41 static_for(s) 30.587
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:34:13 # 1217 Last: 17:34:13 static_for(s) 0.029
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:34:14 # 1217 Last: 17:34:13 static_for(s) 1.034
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:34:16 # 174 Last: 13:50:23 static_for(s) 791032.731
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:34:20  isMotion
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:34:20 # 473 Last: 17:34:20 static_for(s) 0.012
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:34:25 # 174 Last: 13:50:23 static_for(s) 791041.836
+   Motion! EUI64-D0CF5EFFFE7931DA-3-Motion @ 17:34:27 # 1 Last: 13:50:40 static_for(s) 791026.225
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:34:31  isMotion
+   Motion! UUID-6B664BB93FC6425D8D91FF689E3B023C @ 17:34:31  occupied
+   Motion! UUID-B1287F969A0B48D3ADC6C43FF186F561 @ 17:34:31  occupied
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:34:31 # 1063 Last: 17:34:31 static_for(s) 0
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:34:33 # 174 Last: 13:50:23 static_for(s) 791050.301
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:34:37  isNoMotion
+   Motion! EUI64-0080E10300053BA3-4-Motion @ 17:34:38 # 15 Last: 13:37:36 static_for(s) 14221.93
+   Motion! EUI64-90FD9FFFFEA95289-3-Motion @ 17:34:40 # 46 Last: 15:38:22 static_for(s) 698177.357
+   Motion! EUI64-D0CF5EFFFE793068-3-Motion @ 17:34:40 # 112 Last: 14:07:30 static_for(s) 12429.782
+   Motion! EUI64-D0CF5EFFFE79333A-3-Motion @ 17:34:45 # 122 Last: 16:10:43 static_for(s) 5041.448
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:34:45 # 174 Last: 13:50:23 static_for(s) 791061.739
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:34:50 # 506 Last: 17:33:07 static_for(s) 102.879
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:34:54 # 174 Last: 13:50:23 static_for(s) 791070.865
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:34:57 # 1063 Last: 17:34:31 static_for(s) 26.122
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:34:58 # 1672 Last: 17:34:58 static_for(s) 0.047
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:34:59 # 1364 Last: 17:26:16 static_for(s) 522.878
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:35:03  isMotion
+   Motion! EUI64-D0CF5EFFFE793144-3-Motion @ 17:35:03 # 507 Last: 17:35:03 static_for(s) 0.017
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:35:03 # 174 Last: 13:50:23 static_for(s) 791079.789
+   Motion! EUI64-D0CF5EFFFE793380-3-Motion @ 17:35:04 # 171 Last: 10:34:32 static_for(s) 716431.321
+   Motion! EUI64-0080E10300056EB7-4-Motion @ 17:35:04 # 516 Last: 14:07:21 static_for(s) 12463.276
+   Motion! EUI64-D0CF5EFFFE7931D9-3-Motion @ 17:35:07 # 13 Last: 11:22:41 static_for(s) 1059145.989
+   Motion! EUI64-90FD9FFFFEA9528F-3-Motion @ 17:35:07 # 29 Last: 11:22:41 static_for(s) 1059146.476
+   Motion! EUI64-D0CF5EFFFE792D84-3-Motion @ 17:35:09 # 635 Last: 17:30:27 static_for(s) 282.073
+   Motion! EUI64-D0CF5EFFFE792D76-3-Motion @ 17:35:11  isNoMotion
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:35:12  isMotion
+   Motion! UUID-A9899341F08A49279C04EAC3E6C05094 @ 17:35:12  occupied
+   Motion! UUID-B0DD1D3C4A5E405293476E061A3243C5 @ 17:35:12  occupied
+   Motion! EUI64-D0CF5EFFFE792D88-3-Motion @ 17:35:12 # 1365 Last: 17:35:12 static_for(s) 0.026
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:35:14 # 174 Last: 13:50:23 static_for(s) 791090.852
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:35:14  isNoMotion
+   Motion! EUI64-D0CF5EFFFE79310D-3-Motion @ 17:35:15 # 35 Last: 11:22:42 static_for(s) 1059152.414
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:35:21  isNoMotion
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:35:22 # 174 Last: 13:50:23 static_for(s) 791099.487
+   Motion! EUI64-D0CF5EFFFE7931D6-3-Motion @ 17:35:25 # 1162 Last: 17:33:51 static_for(s) 93.991
+   Motion! EUI64-D0CF5EFFFE59F26C-3-Motion @ 17:35:27 # 1 Last: 13:50:40 static_for(s) 791086.769
+   Motion! EUI64-D0CF5EFFFE7932C2-3-Motion @ 17:35:29 # 57 Last: 11:22:43 static_for(s) 1059166.121
+   Motion! UUID-17B30675BC5849C2AD81F2448E772705 @ 17:35:29  free
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:35:32 # 174 Last: 13:50:23 static_for(s) 791108.735
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:35:33 # 1672 Last: 17:34:58 static_for(s) 34.823
+   Motion! EUI64-90FD9FFFFEA950FF-3-Motion @ 17:35:36 # 222 Last: 16:45:46 static_for(s) 2990.431
+   Motion! EUI64-0080E10300054D5A-4-Motion @ 17:35:36 # 178 Last: 17:21:00 static_for(s) 876.169
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:35:38 # 474 Last: 17:35:38 static_for(s) 0.01
+   Motion! EUI64-D0CF5EFFFE793047-3-Motion @ 17:35:39 # 474 Last: 17:35:38 static_for(s) 1.028
+   Motion! EUI64-D0CF5EFFFE59F28A-3-Motion @ 17:35:40 # 102 Last: 14:07:25 static_for(s) 12495.102
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:35:41 # 174 Last: 13:50:23 static_for(s) 791118.002
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:35:43  isNoMotion
+   Motion! EUI64-D0CF5EFFFE792F82-3-Motion @ 17:35:48 # 10 Last: 14:07:47 static_for(s) 12480.382
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:35:51 # 174 Last: 13:50:23 static_for(s) 791127.778
+   Motion! EUI64-90FD9FFFFEA9510F-3-Motion @ 17:35:55 # 101 Last: 13:50:23 static_for(s) 791132.318
+   Motion! EUI64-D0CF5EFFFE7931B3-3-Motion @ 17:35:56 # 435 Last: 14:08:02 static_for(s) 12473.487
+   Motion! EUI64-0080E1030005CA0F-4-Motion @ 17:35:59 # 1673 Last: 17:35:59 static_for(s) 0.06
+   Motion! EUI64-90FD9FFFFEA9527C-3-Motion @ 17:36:00 # 46 Last: 11:22:41 static_for(s) 1059199.767
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:36:01 # 174 Last: 13:50:23 static_for(s) 791138.356
+   Motion! EUI64-0080E1030005DFA9-4-Motion @ 17:36:01  isNoMotion
+   Motion! EUI64-D0CF5EFFFE7931BA-3-Motion @ 17:36:02 # 427 Last: 17:33:44 static_for(s) 138.591
+   Motion! EUI64-90FD9FFFFEA95255-3-Motion @ 17:36:09 # 547 Last: 13:54:15 static_for(s) 13314.661
+   Motion! EUI64-0080E1030005D584-4-Motion @ 17:36:10 # 169 Last: 15:11:53 static_for(s) 8657.377
+   Motion! EUI64-D0CF5EFFFE79305F-3-Motion @ 17:36:10 # 174 Last: 13:50:23 static_for(s) 791147.31
+   Motion! EUI64-90FD9FFFFEA94E89-3-Motion @ 17:36:13 # 1217 Last: 17:34:13 static_for(s) 119.786

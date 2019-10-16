@@ -1,0 +1,982 @@
+3# periodic response-keepalive
+143# periodic response-keepalive
+203# periodic response-keepalive
+204# 22:05:57 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+205# 22:05:57 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+206# 22:05:58 Motion EUI64-0080E1030005473B-4-Motion @ 22:05:57 # 936 Last: 21:40:55 static_for(s) 1501.672
+207# 22:05:57 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+208# periodic response-keepalive
+209# 22:06:00 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:05:59 # 61 Last: 18:36:52 static_for(s) 12547.259
+210# 22:05:59 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.413
+211# periodic response-keepalive
+212# periodic response-keepalive
+213# 22:06:14 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:06:13 # 100 Last: 18:41:02 static_for(s) 12311.153
+214# 22:06:13 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.414
+215# periodic response-keepalive
+216# periodic response-keepalive
+217# 22:06:23 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:06:22 # 22 Last: 18:37:01 static_for(s) 12561.151
+218# 22:06:22 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.923
+219# periodic response-keepalive
+220# periodic response-keepalive
+221# periodic response-keepalive
+222# 22:06:38 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:06:37 # 47 Last: 18:37:01 static_for(s) 12576.594
+223# 22:06:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.898
+224# periodic response-keepalive
+225# periodic response-keepalive
+226# periodic response-keepalive
+227# periodic response-keepalive
+228# periodic response-keepalive
+229# periodic response-keepalive
+230# periodic response-keepalive
+231# periodic response-keepalive
+232# periodic response-keepalive
+233# 22:07:29 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+234# 22:07:29 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+235# 22:07:29 Motion EUI64-0080E10300053665-4-Motion @ 22:07:29 # 2345 Last: 19:36:57 static_for(s) 9031.052
+236# 22:07:29 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+237# periodic response-keepalive
+238# periodic response-keepalive
+239# periodic response-keepalive
+240# periodic response-keepalive
+241# 22:07:46 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.96
+242# 22:07:46 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+243# 22:07:47 Motion EUI64-0080E1030005473B-4-Motion @ 22:07:46 # 936 Last: 21:40:55 static_for(s) 1611.306
+244# 22:07:46 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+245# periodic response-keepalive
+246# periodic response-keepalive
+247# periodic response-keepalive
+248# 22:08:02 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:08:02 # 61 Last: 18:36:52 static_for(s) 12669.627
+249# 22:08:02 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.387
+250# periodic response-keepalive
+251# periodic response-keepalive
+252# 22:08:15 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:08:14 # 100 Last: 18:41:02 static_for(s) 12432.512
+253# 22:08:14 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.389
+254# periodic response-keepalive
+255# 22:08:21 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:08:20 # 22 Last: 18:37:01 static_for(s) 12679.392
+256# 22:08:20 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.923
+257# periodic response-keepalive
+258# periodic response-keepalive
+259# periodic response-keepalive
+260# periodic response-keepalive
+261# 22:08:40 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:08:39 # 47 Last: 18:37:01 static_for(s) 12698.597
+262# 22:08:39 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.898
+263# periodic response-keepalive
+264# periodic response-keepalive
+265# periodic response-keepalive
+266# periodic response-keepalive
+267# periodic response-keepalive
+268# periodic response-keepalive
+269# periodic response-keepalive
+270# periodic response-keepalive
+271# periodic response-keepalive
+272# 22:09:27 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+273# 22:09:27 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+274# 22:09:27 Motion EUI64-0080E10300053665-4-Motion @ 22:09:27 # 2345 Last: 19:36:57 static_for(s) 9149.051
+275# 22:09:27 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+276# periodic response-keepalive
+277# periodic response-keepalive
+278# periodic response-keepalive
+279# periodic response-keepalive
+280# 22:09:47 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+281# 22:09:47 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+282# 22:09:48 Motion EUI64-0080E1030005473B-4-Motion @ 22:09:47 # 936 Last: 21:40:55 static_for(s) 1731.553
+283# 22:09:47 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+284# 22:09:47 Envrmt EUI64-0080E1030005473B-10-SoundPressureLevel SampleSoundPressureLevel 3800
+285# periodic response-keepalive
+286# periodic response-keepalive
+287# periodic response-keepalive
+288# 22:10:03 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:10:02 # 61 Last: 18:36:52 static_for(s) 12790.464
+289# 22:10:02 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.361
+290# periodic response-keepalive
+291# periodic response-keepalive
+292# 22:10:16 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:10:16 # 100 Last: 18:41:02 static_for(s) 12553.937
+293# 22:10:16 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.389
+294# periodic response-keepalive
+295# 22:10:19 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:10:19 # 22 Last: 18:37:01 static_for(s) 12797.542
+296# 22:10:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.923
+297# periodic response-keepalive
+298# periodic response-keepalive
+299# periodic response-keepalive
+300# periodic response-keepalive
+301# 22:10:39 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:10:38 # 47 Last: 18:37:01 static_for(s) 12817.798
+302# 22:10:38 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.872
+303# periodic response-keepalive
+304# periodic response-keepalive
+305# periodic response-keepalive
+306# periodic response-keepalive
+307# periodic response-keepalive
+308# periodic response-keepalive
+309# periodic response-keepalive
+310# periodic response-keepalive
+311# periodic response-keepalive
+312# 22:11:26 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+313# 22:11:26 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+314# 22:11:26 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+315# 22:11:26 Motion EUI64-0080E10300053665-4-Motion @ 22:11:26 # 2345 Last: 19:36:57 static_for(s) 9268.155
+316# 22:11:26 Envrmt EUI64-0080E10300053665-10-SoundPressureLevel SampleSoundPressureLevel 3800
+317# periodic response-keepalive
+318# periodic response-keepalive
+319# periodic response-keepalive
+320# periodic response-keepalive
+321# 22:11:48 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+322# 22:11:48 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+323# 22:11:49 Motion EUI64-0080E1030005473B-4-Motion @ 22:11:48 # 936 Last: 21:40:55 static_for(s) 1852.804
+324# 22:11:48 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+325# periodic response-keepalive
+326# periodic response-keepalive
+327# periodic response-keepalive
+328# 22:12:02 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:12:01 # 61 Last: 18:36:52 static_for(s) 12908.915
+329# 22:12:01 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.361
+330# periodic response-keepalive
+331# periodic response-keepalive
+332# 22:12:16 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:12:15 # 100 Last: 18:41:02 static_for(s) 12673.391
+333# 22:12:15 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.414
+334# periodic response-keepalive
+335# 22:12:21 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:12:20 # 22 Last: 18:37:01 static_for(s) 12919.411
+336# periodic response-keepalive
+337# 22:12:20 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.923
+338# periodic response-keepalive
+339# periodic response-keepalive
+340# 22:12:38 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:12:37 # 47 Last: 18:37:01 static_for(s) 12936.341
+341# periodic response-keepalive
+342# 22:12:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.872
+343# 22:12:39 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:12:38 # 47 Last: 18:37:01 static_for(s) 12937.465
+344# periodic response-keepalive
+345# periodic response-keepalive
+346# periodic response-keepalive
+347# periodic response-keepalive
+348# periodic response-keepalive
+349# periodic response-keepalive
+350# periodic response-keepalive
+351# periodic response-keepalive
+352# periodic response-keepalive
+353# 22:13:26 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+354# 22:13:26 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+355# 22:13:27 Motion EUI64-0080E10300053665-4-Motion @ 22:13:26 # 2345 Last: 19:36:57 static_for(s) 9388.214
+356# 22:13:26 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+357# periodic response-keepalive
+358# periodic response-keepalive
+359# periodic response-keepalive
+360# periodic response-keepalive
+361# 22:13:48 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+362# 22:13:48 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+363# 22:13:49 Motion EUI64-0080E1030005473B-4-Motion @ 22:13:48 # 936 Last: 21:40:55 static_for(s) 1973.073
+364# 22:13:48 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+365# periodic response-keepalive
+366# periodic response-keepalive
+367# periodic response-keepalive
+368# 22:14:04 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:14:03 # 61 Last: 18:36:52 static_for(s) 13031.062
+369# 22:14:03 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.335
+370# periodic response-keepalive
+371# periodic response-keepalive
+372# 22:14:17 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:14:16 # 100 Last: 18:41:02 static_for(s) 12794.186
+373# 22:14:16 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.389
+374# periodic response-keepalive
+375# periodic response-keepalive
+376# 22:14:23 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:14:22 # 22 Last: 18:37:01 static_for(s) 13040.868
+377# 22:14:22 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.898
+378# periodic response-keepalive
+379# periodic response-keepalive
+380# 22:14:38 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:14:37 # 47 Last: 18:37:01 static_for(s) 13056.198
+381# 22:14:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.847
+382# periodic response-keepalive
+383# periodic response-keepalive
+384# periodic response-keepalive
+385# periodic response-keepalive
+386# periodic response-keepalive
+387# periodic response-keepalive
+388# periodic response-keepalive
+389# periodic response-keepalive
+390# periodic response-keepalive
+391# periodic response-keepalive
+392# 22:15:24 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+393# 22:15:24 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+394# 22:15:25 Motion EUI64-0080E10300053665-4-Motion @ 22:15:25 # 2345 Last: 19:36:57 static_for(s) 9507.036
+395# 22:15:25 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+396# periodic response-keepalive
+397# periodic response-keepalive
+398# periodic response-keepalive
+399# periodic response-keepalive
+400# 22:15:47 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+401# 22:15:47 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+402# 22:15:48 Motion EUI64-0080E1030005473B-4-Motion @ 22:15:47 # 936 Last: 21:40:55 static_for(s) 2092.062
+403# 22:15:47 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+404# periodic response-keepalive
+405# periodic response-keepalive
+406# periodic response-keepalive
+407# 22:16:01 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:16:01 # 61 Last: 18:36:52 static_for(s) 13148.686
+408# 22:16:01 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.335
+409# periodic response-keepalive
+410# periodic response-keepalive
+411# periodic response-keepalive
+412# 22:16:18 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:16:17 # 100 Last: 18:41:02 static_for(s) 12915.466
+413# 22:16:17 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.364
+414# 22:16:22 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:16:21 # 22 Last: 18:37:01 static_for(s) 13159.85
+415# 22:16:21 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.898
+416# periodic response-keepalive
+417# periodic response-keepalive
+418# periodic response-keepalive
+419# periodic response-keepalive
+420# 22:16:38 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:16:37 # 47 Last: 18:37:01 static_for(s) 13176.177
+421# 22:16:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.847
+422# periodic response-keepalive
+423# periodic response-keepalive
+424# periodic response-keepalive
+425# periodic response-keepalive
+426# periodic response-keepalive
+427# periodic response-keepalive
+428# periodic response-keepalive
+429# periodic response-keepalive
+430# 22:17:23 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+431# 22:17:23 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+432# 22:17:23 Motion EUI64-0080E10300053665-4-Motion @ 22:17:23 # 2345 Last: 19:36:57 static_for(s) 9625.14
+433# 22:17:23 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+434# periodic response-keepalive
+435# periodic response-keepalive
+436# periodic response-keepalive
+437# periodic response-keepalive
+438# periodic response-keepalive
+439# 22:17:48 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+440# 22:17:48 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+441# 22:17:49 Motion EUI64-0080E1030005473B-4-Motion @ 22:17:48 # 936 Last: 21:40:55 static_for(s) 2213.127
+442# 22:17:48 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+443# periodic response-keepalive
+444# periodic response-keepalive
+445# 22:18:00 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:17:59 # 61 Last: 18:36:52 static_for(s) 13267.2
+446# periodic response-keepalive
+447# 22:17:59 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.309
+448# periodic response-keepalive
+449# periodic response-keepalive
+450# periodic response-keepalive
+451# 22:18:20 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:18:19 # 22 Last: 18:37:01 static_for(s) 13278.314
+452# 22:18:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.872
+453# 22:18:20 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:18:19 # 100 Last: 18:41:02 static_for(s) 13037.784
+454# 22:18:19 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.364
+455# periodic response-keepalive
+456# periodic response-keepalive
+457# periodic response-keepalive
+458# 22:18:37 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:18:37 # 47 Last: 18:37:01 static_for(s) 13296.055
+459# 22:18:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.847
+460# periodic response-keepalive
+461# periodic response-keepalive
+462# periodic response-keepalive
+463# periodic response-keepalive
+464# periodic response-keepalive
+465# periodic response-keepalive
+466# periodic response-keepalive
+467# periodic response-keepalive
+468# periodic response-keepalive
+469# 22:19:21 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+470# 22:19:21 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+471# 22:19:22 Motion EUI64-0080E10300053665-4-Motion @ 22:19:21 # 2345 Last: 19:36:57 static_for(s) 9743.859
+472# 22:19:21 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+473# periodic response-keepalive
+474# periodic response-keepalive
+475# periodic response-keepalive
+476# periodic response-keepalive
+477# periodic response-keepalive
+478# 22:19:48 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+479# 22:19:48 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+480# 22:19:49 Motion EUI64-0080E1030005473B-4-Motion @ 22:19:48 # 936 Last: 21:40:55 static_for(s) 2333.059
+481# 22:19:48 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+482# 22:19:48 Envrmt EUI64-0080E1030005473B-10-SoundPressureLevel SampleSoundPressureLevel 3964
+483# periodic response-keepalive
+484# periodic response-keepalive
+485# 22:19:57 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+486# 22:19:57 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+487# 22:19:58 Motion EUI64-0080E1030005473B-4-Motion @ 22:19:57 # 936 Last: 21:40:55 static_for(s) 2341.973
+488# 22:19:57 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+489# 22:20:02 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:20:01 # 61 Last: 18:36:52 static_for(s) 13389.446
+490# 22:20:01 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.309
+491# periodic response-keepalive
+492# periodic response-keepalive
+493# periodic response-keepalive
+494# periodic response-keepalive
+495# 22:20:20 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:20:19 # 22 Last: 18:37:01 static_for(s) 13398.106
+496# 22:20:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.872
+497# 22:20:22 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:20:22 # 100 Last: 18:41:02 static_for(s) 13159.991
+498# 22:20:22 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.364
+499# periodic response-keepalive
+500# periodic response-keepalive
+501# periodic response-keepalive
+502# periodic response-keepalive
+503# 22:20:37 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:20:36 # 47 Last: 18:37:01 static_for(s) 13415.43
+504# 22:20:36 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.821
+505# periodic response-keepalive
+506# periodic response-keepalive
+507# periodic response-keepalive
+508# periodic response-keepalive
+509# periodic response-keepalive
+510# periodic response-keepalive
+511# periodic response-keepalive
+512# periodic response-keepalive
+513# 22:21:20 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+514# 22:21:20 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+515# 22:21:21 Motion EUI64-0080E10300053665-4-Motion @ 22:21:20 # 2345 Last: 19:36:57 static_for(s) 9862.762
+516# 22:21:20 Envrmt EUI64-0080E10300053665-10-SoundPressureLevel SampleSoundPressureLevel 3800
+517# 22:21:20 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+518# periodic response-keepalive
+519# periodic response-keepalive
+520# periodic response-keepalive
+521# periodic response-keepalive
+522# 22:21:46 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+523# 22:21:46 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+524# 22:21:47 Motion EUI64-0080E1030005473B-4-Motion @ 22:21:46 # 936 Last: 21:40:55 static_for(s) 2451.092
+525# 22:21:46 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+526# periodic response-keepalive
+527# periodic response-keepalive
+528# periodic response-keepalive
+529# periodic response-keepalive
+530# 22:22:06 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:22:03 # 61 Last: 18:36:52 static_for(s) 13511.366
+531# 22:22:03 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.284
+532# periodic response-keepalive
+533# periodic response-keepalive
+534# 22:22:20 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:22:19 # 22 Last: 18:37:01 static_for(s) 13517.77
+535# 22:22:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.872
+536# 22:22:20 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:22:19 # 100 Last: 18:41:02 static_for(s) 13277.809
+537# 22:22:19 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.364
+538# periodic response-keepalive
+539# periodic response-keepalive
+540# periodic response-keepalive
+541# 22:22:35 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:22:34 # 47 Last: 18:37:01 static_for(s) 13533.39
+542# 22:22:34 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.821
+543# periodic response-keepalive
+544# periodic response-keepalive
+545# periodic response-keepalive
+546# periodic response-keepalive
+547# periodic response-keepalive
+548# periodic response-keepalive
+549# periodic response-keepalive
+550# periodic response-keepalive
+551# periodic response-keepalive
+552# 22:23:19 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+553# 22:23:19 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+554# 22:23:20 Motion EUI64-0080E10300053665-4-Motion @ 22:23:19 # 2345 Last: 19:36:57 static_for(s) 9981.563
+555# 22:23:19 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+556# periodic response-keepalive
+557# periodic response-keepalive
+558# periodic response-keepalive
+559# periodic response-keepalive
+560# 22:23:44 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+561# 22:23:44 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+562# periodic response-keepalive
+563# 22:23:44 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+564# 22:23:45 Motion EUI64-0080E1030005473B-4-Motion @ 22:23:44 # 936 Last: 21:40:55 static_for(s) 2569.028
+565# periodic response-keepalive
+566# periodic response-keepalive
+567# periodic response-keepalive
+568# 22:24:05 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:24:04 # 61 Last: 18:36:52 static_for(s) 13632.011
+569# 22:24:04 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.284
+570# periodic response-keepalive
+571# periodic response-keepalive
+572# periodic response-keepalive
+573# 22:24:20 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:24:19 # 22 Last: 18:37:01 static_for(s) 13637.859
+574# 22:24:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.847
+575# 22:24:21 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:24:20 # 22 Last: 18:37:01 static_for(s) 13638.977
+576# periodic response-keepalive
+577# 22:24:21 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:24:20 # 100 Last: 18:41:02 static_for(s) 13398.829
+578# 22:24:20 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.339
+579# periodic response-keepalive
+580# periodic response-keepalive
+581# 22:24:34 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:24:34 # 47 Last: 18:37:01 static_for(s) 13653.076
+582# 22:24:34 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.796
+583# periodic response-keepalive
+584# periodic response-keepalive
+585# periodic response-keepalive
+586# periodic response-keepalive
+587# periodic response-keepalive
+588# periodic response-keepalive
+589# periodic response-keepalive
+590# periodic response-keepalive
+591# periodic response-keepalive
+592# 22:25:21 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+593# 22:25:21 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+594# 22:25:22 Motion EUI64-0080E10300053665-4-Motion @ 22:25:21 # 2345 Last: 19:36:57 static_for(s) 10103.66
+595# 22:25:21 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+596# periodic response-keepalive
+597# periodic response-keepalive
+598# periodic response-keepalive
+599# periodic response-keepalive
+600# 22:25:43 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+601# 22:25:43 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+602# 22:25:44 Motion EUI64-0080E1030005473B-4-Motion @ 22:25:43 # 936 Last: 21:40:55 static_for(s) 2687.938
+603# 22:25:43 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+604# periodic response-keepalive
+605# periodic response-keepalive
+606# periodic response-keepalive
+607# periodic response-keepalive
+608# 22:26:05 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:26:04 # 61 Last: 18:36:52 static_for(s) 13751.968
+609# 22:26:04 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.284
+610# periodic response-keepalive
+611# periodic response-keepalive
+612# periodic response-keepalive
+613# 22:26:22 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:26:21 # 22 Last: 18:37:01 static_for(s) 13760.025
+614# 22:26:21 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.821
+615# periodic response-keepalive
+616# 22:26:23 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:26:23 # 100 Last: 18:41:02 static_for(s) 13521.047
+617# 22:26:23 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.313
+618# periodic response-keepalive
+619# periodic response-keepalive
+620# 22:26:36 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:26:35 # 47 Last: 18:37:01 static_for(s) 13774.802
+621# 22:26:35 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.796
+622# periodic response-keepalive
+623# periodic response-keepalive
+624# periodic response-keepalive
+625# periodic response-keepalive
+626# periodic response-keepalive
+627# periodic response-keepalive
+628# periodic response-keepalive
+629# periodic response-keepalive
+630# periodic response-keepalive
+631# 22:27:20 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.85
+632# 22:27:20 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+633# 22:27:21 Motion EUI64-0080E10300053665-4-Motion @ 22:27:20 # 2345 Last: 19:36:57 static_for(s) 10222.745
+634# 22:27:20 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+635# periodic response-keepalive
+636# periodic response-keepalive
+637# periodic response-keepalive
+638# periodic response-keepalive
+639# 22:27:42 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+640# 22:27:42 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+641# 22:27:43 Motion EUI64-0080E1030005473B-4-Motion @ 22:27:42 # 936 Last: 21:40:55 static_for(s) 2807.009
+642# 22:27:42 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+643# periodic response-keepalive
+644# periodic response-keepalive
+645# periodic response-keepalive
+646# periodic response-keepalive
+647# 22:28:03 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:28:02 # 61 Last: 18:36:52 static_for(s) 13869.746
+648# 22:28:02 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.284
+649# periodic response-keepalive
+650# periodic response-keepalive
+651# periodic response-keepalive
+652# 22:28:20 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:28:19 # 22 Last: 18:37:01 static_for(s) 13877.73
+653# 22:28:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.821
+654# periodic response-keepalive
+655# 22:28:23 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:28:22 # 100 Last: 18:41:02 static_for(s) 13640.508
+656# 22:28:22 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.313
+657# periodic response-keepalive
+658# periodic response-keepalive
+659# 22:28:36 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:28:35 # 47 Last: 18:37:01 static_for(s) 13894.802
+660# 22:28:35 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.77
+661# periodic response-keepalive
+662# periodic response-keepalive
+663# periodic response-keepalive
+664# periodic response-keepalive
+665# periodic response-keepalive
+666# periodic response-keepalive
+667# periodic response-keepalive
+668# periodic response-keepalive
+669# 22:29:19 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+670# 22:29:19 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+671# 22:29:20 Motion EUI64-0080E10300053665-4-Motion @ 22:29:19 # 2345 Last: 19:36:57 static_for(s) 10341.537
+672# 22:29:19 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+673# periodic response-keepalive
+674# periodic response-keepalive
+675# periodic response-keepalive
+676# periodic response-keepalive
+677# 22:29:43 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+678# 22:29:43 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+679# 22:29:44 Motion EUI64-0080E1030005473B-4-Motion @ 22:29:43 # 936 Last: 21:40:55 static_for(s) 2927.599
+680# 22:29:43 Envrmt EUI64-0080E1030005473B-10-SoundPressureLevel SampleSoundPressureLevel 3800
+681# 22:29:43 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+682# periodic response-keepalive
+683# periodic response-keepalive
+684# periodic response-keepalive
+685# periodic response-keepalive
+686# 22:30:04 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:30:03 # 61 Last: 18:36:52 static_for(s) 13990.697
+687# 22:30:03 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.284
+688# periodic response-keepalive
+689# periodic response-keepalive
+690# periodic response-keepalive
+691# periodic response-keepalive
+692# 22:30:20 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:30:19 # 22 Last: 18:37:01 static_for(s) 13998.126
+693# 22:30:19 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.821
+694# 22:30:21 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:30:21 # 100 Last: 18:41:02 static_for(s) 13758.923
+695# 22:30:21 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.313
+696# periodic response-keepalive
+697# periodic response-keepalive
+698# periodic response-keepalive
+699# periodic response-keepalive
+700# 22:30:38 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:30:37 # 47 Last: 18:37:01 static_for(s) 14016.508
+701# 22:30:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.744
+702# periodic response-keepalive
+703# periodic response-keepalive
+704# periodic response-keepalive
+705# periodic response-keepalive
+706# periodic response-keepalive
+707# periodic response-keepalive
+708# periodic response-keepalive
+709# periodic response-keepalive
+710# 22:31:18 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+711# 22:31:18 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+712# 22:31:19 Motion EUI64-0080E10300053665-4-Motion @ 22:31:18 # 2345 Last: 19:36:57 static_for(s) 10460.628
+713# 22:31:18 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+714# 22:31:18 Envrmt EUI64-0080E10300053665-10-SoundPressureLevel SampleSoundPressureLevel 3800
+715# 22:31:20 Motion EUI64-0080E10300053665-4-Motion @ 22:31:19 # 2345 Last: 19:36:57 static_for(s) 10461.661
+716# periodic response-keepalive
+717# periodic response-keepalive
+718# periodic response-keepalive
+719# periodic response-keepalive
+720# 22:31:44 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+721# 22:31:44 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+722# 22:31:45 Motion EUI64-0080E1030005473B-4-Motion @ 22:31:44 # 936 Last: 21:40:55 static_for(s) 3049.372
+723# 22:31:44 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+724# periodic response-keepalive
+725# periodic response-keepalive
+726# periodic response-keepalive
+727# periodic response-keepalive
+728# 22:32:04 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:32:03 # 61 Last: 18:36:52 static_for(s) 14110.93
+729# 22:32:03 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.284
+730# 22:32:05 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:32:04 # 61 Last: 18:36:52 static_for(s) 14112.043
+731# periodic response-keepalive
+732# periodic response-keepalive
+733# periodic response-keepalive
+734# periodic response-keepalive
+735# 22:32:22 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:32:21 # 100 Last: 18:41:02 static_for(s) 13879.683
+736# 22:32:21 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.288
+737# 22:32:22 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:32:21 # 22 Last: 18:37:01 static_for(s) 14120.473
+738# 22:32:21 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.796
+739# periodic response-keepalive
+740# periodic response-keepalive
+741# 22:32:40 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:32:39 # 47 Last: 18:37:01 static_for(s) 14138.2
+742# 22:32:39 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.744
+743# periodic response-keepalive
+744# periodic response-keepalive
+745# periodic response-keepalive
+746# periodic response-keepalive
+747# periodic response-keepalive
+748# periodic response-keepalive
+749# periodic response-keepalive
+750# periodic response-keepalive
+751# 22:33:17 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+752# 22:33:17 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+753# 22:33:18 Motion EUI64-0080E10300053665-4-Motion @ 22:33:17 # 2345 Last: 19:36:57 static_for(s) 10579.446
+754# 22:33:17 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+755# periodic response-keepalive
+756# periodic response-keepalive
+757# periodic response-keepalive
+758# periodic response-keepalive
+759# periodic response-keepalive
+760# 22:33:42 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+761# 22:33:42 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+762# 22:33:43 Motion EUI64-0080E1030005473B-4-Motion @ 22:33:42 # 936 Last: 21:40:55 static_for(s) 3167.249
+763# 22:33:42 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+764# periodic response-keepalive
+765# periodic response-keepalive
+766# periodic response-keepalive
+767# 22:34:02 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:34:01 # 61 Last: 18:36:52 static_for(s) 14228.992
+768# 22:34:01 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.258
+769# periodic response-keepalive
+770# periodic response-keepalive
+771# periodic response-keepalive
+772# periodic response-keepalive
+773# 22:34:23 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:34:22 # 100 Last: 18:41:02 static_for(s) 14000.741
+774# 22:34:22 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.288
+775# 22:34:23 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:34:23 # 22 Last: 18:37:01 static_for(s) 14241.676
+776# periodic response-keepalive
+777# 22:34:23 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.796
+778# periodic response-keepalive
+779# periodic response-keepalive
+780# periodic response-keepalive
+781# 22:34:41 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:34:40 # 47 Last: 18:37:01 static_for(s) 14259.543
+782# 22:34:40 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.744
+783# periodic response-keepalive
+784# periodic response-keepalive
+785# periodic response-keepalive
+786# periodic response-keepalive
+787# periodic response-keepalive
+788# periodic response-keepalive
+789# 22:35:16 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+790# 22:35:16 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+791# 22:35:17 Motion EUI64-0080E10300053665-4-Motion @ 22:35:16 # 2345 Last: 19:36:57 static_for(s) 10698.495
+792# 22:35:16 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+793# periodic response-keepalive
+794# periodic response-keepalive
+795# periodic response-keepalive
+796# periodic response-keepalive
+797# periodic response-keepalive
+798# periodic response-keepalive
+799# 22:35:44 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+800# 22:35:44 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+801# 22:35:45 Motion EUI64-0080E1030005473B-4-Motion @ 22:35:44 # 936 Last: 21:40:55 static_for(s) 3288.594
+802# 22:35:44 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+803# periodic response-keepalive
+804# periodic response-keepalive
+805# 22:35:54 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.87
+806# 22:35:54 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+807# 22:35:55 Motion EUI64-0080E1030005473B-4-Motion @ 22:35:54 # 936 Last: 21:40:55 static_for(s) 3298.634
+808# 22:35:54 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+809# periodic response-keepalive
+810# 22:36:00 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:35:59 # 61 Last: 18:36:52 static_for(s) 14346.904
+811# periodic response-keepalive
+812# 22:35:59 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.232
+813# periodic response-keepalive
+814# periodic response-keepalive
+815# periodic response-keepalive
+816# periodic response-keepalive
+817# 22:36:21 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:36:21 # 100 Last: 18:41:02 static_for(s) 14119.072
+818# 22:36:21 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.238
+819# 22:36:25 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:36:25 # 22 Last: 18:37:01 static_for(s) 14363.634
+820# 22:36:25 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.796
+821# periodic response-keepalive
+822# periodic response-keepalive
+823# periodic response-keepalive
+824# 22:36:41 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:36:40 # 47 Last: 18:37:01 static_for(s) 14379.907
+825# periodic response-keepalive
+826# 22:36:40 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.744
+827# periodic response-keepalive
+828# periodic response-keepalive
+829# periodic response-keepalive
+830# periodic response-keepalive
+831# periodic response-keepalive
+832# periodic response-keepalive
+833# 22:37:15 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+834# 22:37:15 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+835# 22:37:16 Motion EUI64-0080E10300053665-4-Motion @ 22:37:15 # 2345 Last: 19:36:57 static_for(s) 10817.42
+836# 22:37:15 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+837# periodic response-keepalive
+838# periodic response-keepalive
+839# periodic response-keepalive
+840# periodic response-keepalive
+841# periodic response-keepalive
+842# 22:37:43 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.79
+843# 22:37:43 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 59
+844# 22:37:44 Motion EUI64-0080E1030005473B-4-Motion @ 22:37:43 # 936 Last: 21:40:55 static_for(s) 3407.674
+845# periodic response-keepalive
+846# 22:37:43 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+847# 22:37:45 Motion EUI64-0080E1030005473B-4-Motion @ 22:37:44 # 936 Last: 21:40:55 static_for(s) 3408.658
+848# periodic response-keepalive
+849# periodic response-keepalive
+850# 22:37:59 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:37:58 # 61 Last: 18:36:52 static_for(s) 14465.821
+851# 22:37:58 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.232
+852# periodic response-keepalive
+853# periodic response-keepalive
+854# periodic response-keepalive
+855# periodic response-keepalive
+856# 22:38:21 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:38:20 # 100 Last: 18:41:02 static_for(s) 14238.178
+857# 22:38:20 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.238
+858# 22:38:23 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:38:23 # 22 Last: 18:37:01 static_for(s) 14481.54
+859# 22:38:23 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.796
+860# periodic response-keepalive
+861# periodic response-keepalive
+862# periodic response-keepalive
+863# periodic response-keepalive
+864# 22:38:41 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:38:40 # 47 Last: 18:37:01 static_for(s) 14499.893
+865# 22:38:40 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.719
+866# periodic response-keepalive
+867# periodic response-keepalive
+868# periodic response-keepalive
+869# periodic response-keepalive
+870# periodic response-keepalive
+871# periodic response-keepalive
+872# 22:39:14 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+873# 22:39:14 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+874# 22:39:15 Motion EUI64-0080E10300053665-4-Motion @ 22:39:14 # 2345 Last: 19:36:57 static_for(s) 10936.468
+875# 22:39:14 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+876# periodic response-keepalive
+877# periodic response-keepalive
+878# periodic response-keepalive
+879# periodic response-keepalive
+880# periodic response-keepalive
+881# periodic response-keepalive
+882# periodic response-keepalive
+883# periodic response-keepalive
+884# 22:39:52 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.79
+885# 22:39:52 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+886# 22:39:52 Motion EUI64-0080E1030005473B-4-Motion @ 22:39:52 # 936 Last: 21:40:55 static_for(s) 3536.406
+887# 22:39:52 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+888# 22:39:53 Envrmt EUI64-0080E1030005473B-10-SoundPressureLevel SampleSoundPressureLevel 3800
+889# 22:39:59 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:39:58 # 61 Last: 18:36:52 static_for(s) 14586.271
+890# 22:39:58 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.232
+891# periodic response-keepalive
+892# periodic response-keepalive
+893# periodic response-keepalive
+894# periodic response-keepalive
+895# 22:40:21 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:40:21 # 100 Last: 18:41:02 static_for(s) 14358.937
+896# 22:40:21 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.238
+897# periodic response-keepalive
+898# periodic response-keepalive
+899# 22:40:25 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:40:24 # 22 Last: 18:37:01 static_for(s) 14603.031
+900# 22:40:24 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.77
+901# periodic response-keepalive
+902# periodic response-keepalive
+903# 22:40:40 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:40:39 # 47 Last: 18:37:01 static_for(s) 14618.473
+904# 22:40:39 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.719
+905# periodic response-keepalive
+906# periodic response-keepalive
+907# periodic response-keepalive
+908# periodic response-keepalive
+909# periodic response-keepalive
+910# periodic response-keepalive
+911# periodic response-keepalive
+912# periodic response-keepalive
+913# 22:41:16 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+914# 22:41:16 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+915# 22:41:16 Motion EUI64-0080E10300053665-4-Motion @ 22:41:16 # 2345 Last: 19:36:57 static_for(s) 11058.139
+916# 22:41:16 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+917# 22:41:16 Envrmt EUI64-0080E10300053665-10-SoundPressureLevel SampleSoundPressureLevel 3800
+918# periodic response-keepalive
+919# periodic response-keepalive
+920# periodic response-keepalive
+921# periodic response-keepalive
+922# 22:41:42 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.79
+923# 22:41:42 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+924# 22:41:42 Motion EUI64-0080E1030005473B-4-Motion @ 22:41:42 # 936 Last: 21:40:55 static_for(s) 3646.488
+925# 22:41:42 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+926# periodic response-keepalive
+927# periodic response-keepalive
+928# periodic response-keepalive
+929# periodic response-keepalive
+930# 22:41:59 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:41:58 # 61 Last: 18:36:52 static_for(s) 14705.87
+931# 22:41:58 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.232
+932# periodic response-keepalive
+933# periodic response-keepalive
+934# periodic response-keepalive
+935# periodic response-keepalive
+936# 22:42:21 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:42:20 # 100 Last: 18:41:02 static_for(s) 14478.544
+937# 22:42:20 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.263
+938# 22:42:22 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:42:21 # 100 Last: 18:41:02 static_for(s) 14479.629
+939# 22:42:26 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:42:25 # 22 Last: 18:37:01 static_for(s) 14723.951
+940# 22:42:25 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.744
+941# periodic response-keepalive
+942# periodic response-keepalive
+943# 22:42:40 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:42:39 # 47 Last: 18:37:01 static_for(s) 14738.566
+944# 22:42:39 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.719
+945# periodic response-keepalive
+946# periodic response-keepalive
+947# periodic response-keepalive
+948# periodic response-keepalive
+949# periodic response-keepalive
+950# periodic response-keepalive
+951# periodic response-keepalive
+952# periodic response-keepalive
+953# periodic response-keepalive
+954# periodic response-keepalive
+955# 22:43:26 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+956# 22:43:26 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+957# 22:43:27 Motion EUI64-0080E10300053665-4-Motion @ 22:43:26 # 2345 Last: 19:36:57 static_for(s) 11188.596
+958# 22:43:26 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+959# periodic response-keepalive
+960# periodic response-keepalive
+961# 22:43:41 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.79
+962# 22:43:41 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+963# 22:43:42 Motion EUI64-0080E1030005473B-4-Motion @ 22:43:41 # 936 Last: 21:40:55 static_for(s) 3765.569
+964# 22:43:41 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+965# periodic response-keepalive
+966# periodic response-keepalive
+967# periodic response-keepalive
+968# periodic response-keepalive
+969# 22:43:57 Motion EUI64-90FD9FFFFEA95065-3-Motion @ 22:43:56 # 61 Last: 18:36:52 static_for(s) 14824.454
+970# 22:43:56 Envrmt EUI64-90FD9FFFFEA95065-4-Temp SampleTemp 297.206
+971# periodic response-keepalive
+972# periodic response-keepalive
+973# periodic response-keepalive
+974# periodic response-keepalive
+975# 22:44:20 Motion EUI64-D0CF5EFFFE7931A9-3-Motion @ 22:44:19 # 100 Last: 18:41:02 static_for(s) 14597.854
+976# 22:44:19 Envrmt EUI64-D0CF5EFFFE7931A9-4-Temp SampleTemp 296.238
+977# periodic response-keepalive
+978# 22:44:27 Motion EUI64-D0CF5EFFFE79374E-3-Motion @ 22:44:26 # 22 Last: 18:37:01 static_for(s) 14845.213
+979# 22:44:26 Envrmt EUI64-D0CF5EFFFE79374E-4-Temp SampleTemp 296.744
+980# periodic response-keepalive
+981# periodic response-keepalive
+982# 22:44:38 Motion EUI64-90FD9FFFFEA95240-3-Motion @ 22:44:37 # 47 Last: 18:37:01 static_for(s) 14856.528
+983# 22:44:37 Envrmt EUI64-90FD9FFFFEA95240-4-Temp SampleTemp 296.719
+984# periodic response-keepalive
+985# periodic response-keepalive
+986# periodic response-keepalive
+987# periodic response-keepalive
+988# periodic response-keepalive
+989# periodic response-keepalive
+990# periodic response-keepalive
+991# 22:45:17 Envrmt EUI64-0080E10300053665-3-Temp SampleTemp 296.75
+992# 22:45:17 Envrmt EUI64-0080E10300053665-3-Humd SampleHumidity 59
+993# 22:45:18 Motion EUI64-0080E10300053665-4-Motion @ 22:45:17 # 2345 Last: 19:36:57 static_for(s) 11299.823
+994# 22:45:17 Envrmt EUI64-0080E10300053665-5-Illuminance SampleIlluminance 0
+995# periodic response-keepalive
+996# periodic response-keepalive
+997# periodic response-keepalive
+998# periodic response-keepalive
+999# 22:45:40 Envrmt EUI64-0080E1030005473B-3-Temp SampleTemp 296.79
+1000# 22:45:40 Envrmt EUI64-0080E1030005473B-3-Humd SampleHumidity 60
+1001# 22:45:41 Motion EUI64-0080E1030005473B-4-Motion @ 22:45:40 # 936 Last: 21:40:55 static_for(s) 3884.631
+1002# 22:45:40 Envrmt EUI64-0080E1030005473B-5-Illuminance SampleIlluminance 0
+1003# periodic response-keepalive
+1004# periodic response-keepalive
+Connection Error: Error: read ECONNRESET
+Connection closed!
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
+sendMessage: Couldn't send message, the connection is not open
