@@ -13,15 +13,15 @@ var password = "000888";
 
 
 //Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var LocationId = '229349' //fangtang 
-    // var LocationId = '797296' //novah 
+//var LocationId = '229349' //fangtang 
+var LocationId = '797296' //novah 
 var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
 
 // ################################################
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 1000; //will exit when this number of messages has been logged
+var _logLimit = 500; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -171,11 +171,11 @@ client.on('connect', function(connection) {
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
                                         console.log("motion!");
                                         motionFlag = ' + ';
-                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
+                                        motionTimeStamps = motionTimeStamps  + json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
                                         console.log("no motion!");
                                         motionFlag = ' - ';
-                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t1.toLocaleTimeString() + '"},';
+                                        motionTimeStamps = motionTimeStamps  + json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
                                     } else {
                                         console.log("first seen! cannot tell");
@@ -206,20 +206,20 @@ client.on('connect', function(connection) {
 
                                         case 'isMotion':
                                             console.log("motion");
-                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","mo":"' + _t3.toLocaleTimeString() + '"},';
+                                            assetTimeStamps1 = assetTimeStamps1  + json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'isNoMotion':
 
                                             console.log("nomotion");
-                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","nm":"' + _t3.toLocaleTimeString() + '"},';
+                                            assetTimeStamps1 = assetTimeStamps1  + json.list[0].dataSourceAddress.did + ',nm' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'free':
                                             console.log("nomotion");
-                                            assetTimeStamps2 = assetTimeStamps2 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","fr":"' + _t3.toLocaleTimeString() + '"},';
+                                            assetTimeStamps2 = assetTimeStamps2 + json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'occupied':
                                             console.log("occupy");
-                                            assetTimeStamps2 = assetTimeStamps2 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","oc":"' + _t3.toLocaleTimeString() + '"},';
+                                            assetTimeStamps2 = assetTimeStamps2 +  json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         default:
                                             break;
