@@ -21,7 +21,7 @@ var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 1000; //will exit when this number of messages has been logged
+var _logLimit = 3000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
