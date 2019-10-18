@@ -21,7 +21,7 @@ var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 100; //will exit when this number of messages has been logged
+var _logLimit = 500; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -29,6 +29,9 @@ var _t3 = new Date();
 var _Locations = [];
 var sensorArray = new Array();
 var motionTimeStamps = '';
+var assetTimeStamps1 = '';
+var assetTimeStamps2 = '';
+
 
 
 // Create a web socket client initialized with the options as above
@@ -68,11 +71,11 @@ client.on('connect', function(connection) {
                 // console.log(sensorArray.toString());
                 console.log(output);
                 console.log(motionTimeStamps.toString());
-
+                console.log(assetTimeStamps1.toString());
                 process.exit();
             } //for log use only
 
-            // Print all messages with type
+            // Print all messages with DTO type
             //console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
             switch (json.messageType) {
                 case 'ServiceResponse':
@@ -174,13 +177,13 @@ client.on('connect', function(connection) {
                                         motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t1.toLocaleTimeString() + '"}';
 
                                     } else {
-                                        console.log("first motion!");
+                                        console.log("first seen! cannot tell");
                                     };
 
 
                                     console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
                                         _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
-                                        ' Last: ' + _t2.toLocaleTimeString() + ' static_for(s) ' +
+                                        ' Last: ' + _t2.toLocaleTimeString() + ' static：(s) ' +
                                         (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
                                     break;
                                 case 'assetUtilization': //SampleUtilization
@@ -190,8 +193,28 @@ client.on('connect', function(connection) {
                                         ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied);
                                     break;
                                 case 'unitState': //sampleAsset free occupied ismotion isnomotion
+
+                                    //algorithm based on SampleAsset；
+
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
+                                    //    var temp1 = sensorArray[json.list[0].dataSourceAddress.did];
+                                    var motionFlag = ' ? '; //update new value 
+                                    //     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
+                                    switch (json.list[0].list[0].assetState.name) {
+                                        case 'occupied':
+                                        case 'isMotion':
+                                            console.log("motion or occupied");
+                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t3.toLocaleTimeString() + '"}';
+                                            break;
+                                        case 'isNoMotion':
+                                        case 'free':
+                                            console.log("still or free");
+                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t3.toLocaleTimeString() + '"}';
+                                            break;
+                                        default:
+                                            break;
+                                    };
                                     console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
                                         json.list[0].list[0].assetState.name);
                                     break;
