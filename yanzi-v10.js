@@ -21,7 +21,7 @@ var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 500; //will exit when this number of messages has been logged
+var _logLimit = 3000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -72,6 +72,7 @@ client.on('connect', function(connection) {
                 console.log(output);
                 console.log(motionTimeStamps.toString());
                 console.log(assetTimeStamps1.toString());
+                console.log(assetTimeStamps2.toString());
                 process.exit();
             } //for log use only
 
@@ -170,11 +171,11 @@ client.on('connect', function(connection) {
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
                                         console.log("motion!");
                                         motionFlag = ' + ';
-                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"}';
+                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
                                     } else if (temp1 == json.list[0].list[0].value) {
                                         console.log("no motion!");
                                         motionFlag = ' - ';
-                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t1.toLocaleTimeString() + '"}';
+                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t1.toLocaleTimeString() + '"},';
 
                                     } else {
                                         console.log("first seen! cannot tell");
@@ -202,15 +203,23 @@ client.on('connect', function(connection) {
                                     var motionFlag = ' ? '; //update new value 
                                     //     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
                                     switch (json.list[0].list[0].assetState.name) {
-                                        case 'occupied':
+
                                         case 'isMotion':
-                                            console.log("motion or occupied");
-                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t3.toLocaleTimeString() + '"}';
+                                            console.log("motion");
+                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","mo":"' + _t3.toLocaleTimeString() + '"},';
                                             break;
                                         case 'isNoMotion':
+
+                                            console.log("nomotion");
+                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","nm":"' + _t3.toLocaleTimeString() + '"},';
+                                            break;
                                         case 'free':
-                                            console.log("still or free");
-                                            assetTimeStamps1 = assetTimeStamps1 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t3.toLocaleTimeString() + '"}';
+                                            console.log("nomotion");
+                                            assetTimeStamps2 = assetTimeStamps2 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","fr":"' + _t3.toLocaleTimeString() + '"},';
+                                            break;
+                                        case 'occupied':
+                                            console.log("occupy");
+                                            assetTimeStamps2 = assetTimeStamps2 + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","oc":"' + _t3.toLocaleTimeString() + '"},';
                                             break;
                                         default:
                                             break;
