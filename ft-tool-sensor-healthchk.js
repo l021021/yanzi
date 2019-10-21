@@ -1,35 +1,49 @@
-var WebSocketClient = require('websocket').client;
+/*这个是传感器测试工具，测试网关下所有传感器的motion状态是否正常，测试过程如下：
+
+        保持传感器没人状态至少10分钟；
+        启动程序；保持无人状态；
+        30分钟后触发所有传感器；
+        保持无人状态；
+        10分钟后，再次触发传感器；
+        保持无人状态；
+        保持约20分钟的无人；
+        根据传感器数量估计——logLimit取值；
+        大约是传感器数量X70；
+        */
+
+var LocationId = '88252' //1002
+var _logLimit = 300; //will exit when this number of messages has been logged
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
+var WebSocketClient = require('websocket').client;
 
 // ##########CHANGE BELOW TO YOUR OWN DATA##########
 
 //Set up credentials. Please DONT have your credentials in your code when running on production
 
 //var username = "653498331@qq.com";
-var username = "bruce.li@sugarinc.cn";
-var password = "000888";
+var username = "frank.shen@pinyuaninfo.com";
+var password = "Internetofthing";
 
 
 //Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var LocationId = '229349' //fangtang 
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
+
+//var LocationId = '938433' //1001
 
 
 // ################################################
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 300; //will exit when this number of messages has been logged
-var _t1 = new Date();
-var _t2 = new Date();
-var _t3 = new Date();
+var _Counter1 = 0; //sensor counter
 
-var _Locations = [];
+
+
+//var _Locations = [];
 var sensorArray = new Array();
-var motionTimeStamps = '';
-var assetTimeStamps1 = '';
-var assetTimeStamps2 = '';
 
 
 
@@ -58,19 +72,18 @@ client.on('connect', function(connection) {
                 connection.close();
                 var output = "";    
                 for (var key in sensorArray) {
+                    _Counter1 = _Counter1 + 1;
                     if (output == "") {
-                        output = sensorArray[key];      
+                        output = key.substring(0, 22) + ' - ' + sensorArray[key];      
                     }      
                     else {
-                        output += "|" + sensorArray[key];      
+                        // output = key +  + sensorArray[key];      
+                        output += "\n" + key.substring(0, 22) + ' - ' + sensorArray[key];      
                     }
                 } // do some report before exit
-
+                console.log('Total sensors: ' + _Counter1);
                 // console.log(sensorArray.toString());
                 console.log(output);
-                console.log(motionTimeStamps.toString());
-                console.log(assetTimeStamps1.toString());
-                console.log(assetTimeStamps2.toString());
                 process.exit();
             } //for log use only
 
@@ -112,18 +125,16 @@ client.on('connect', function(connection) {
                             //Sensor DATA
                             switch (json.list[0].dataSourceAddress.variableName.name) {
                                 case 'motion': //sampleMotion
-                                    _t1.setTime(json.list[0].list[0].sampleTime);
-                                    _t2.setTime(json.list[0].list[0].timeLastMotion); //sensor motion-detected time
-                                    _t3.setTime(json.timeSent); //packet sent 
-
                                     //algorithm based on SampleMotion；
                                     var temp1 = sensorArray[json.list[0].dataSourceAddress.did];
                                     // var motionFlag = ' ? '; //update new value 
                                     if (temp1 == null) {
                                         sensorArray[json.list[0].dataSourceAddress.did] = 1;
-                                        console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+                                        console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' new sensor! ' + json.list[0].dataSourceAddress.did.substring(0, 22));
                                     } else {
                                         sensorArray[json.list[0].dataSourceAddress.did] = sensorArray[json.list[0].dataSourceAddress.did] + 1;
+                                        console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' old sensor! ' + json.list[0].dataSourceAddress.did.substring(0, 22));
+
                                     };
                                     break;
                                 case 'assetUtilization': //SampleUtilization
@@ -153,7 +164,7 @@ client.on('connect', function(connection) {
                     break;
 
                 default:
-                    console.log("!!!! cannot understand");
+                    console.log("!!!! cannot understand" + json);
                     //connection.close();
                     break;
             }
