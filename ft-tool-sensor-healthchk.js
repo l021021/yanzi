@@ -14,13 +14,13 @@ var password = "000888";
 
 //Location ID and Device ID, please change this to your own, can be found in Yanzi Live
 var LocationId = '229349' //fangtang 
-    // var LocationId = '797296' //novah 
+
 
 // ################################################
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 30; //will exit when this number of messages has been logged
+var _logLimit = 300; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -118,24 +118,13 @@ client.on('connect', function(connection) {
 
                                     //algorithm based on SampleMotion；
                                     var temp1 = sensorArray[json.list[0].dataSourceAddress.did];
-                                    var motionFlag = ' ? '; //update new value 
-                                    sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
-                                    if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        console.log("motion!");
-                                        motionFlag = ' + ';
-                                        motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',i,' + _t1.toLocaleTimeString() + '\n';
-                                    } else if (temp1 == json.list[0].list[0].value) {
-                                        console.log("no motion!");
-                                        motionFlag = ' - ';
-                                        motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',o,' + _t1.toLocaleTimeString() + '\n';
-
+                                    // var motionFlag = ' ? '; //update new value 
+                                    if (temp1 == null) {
+                                        sensorArray[json.list[0].dataSourceAddress.did] = 1;
+                                        console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
                                     } else {
-                                        console.log("first seen!");
+                                        sensorArray[json.list[0].dataSourceAddress.did] = sensorArray[json.list[0].dataSourceAddress.did] + 1;
                                     };
-                                    console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
-                                        _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
-                                        ' Last: ' + _t2.toLocaleTimeString() + ' static：(s) ' +
-                                        (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
                                     break;
                                 case 'assetUtilization': //SampleUtilization
                                     break;
