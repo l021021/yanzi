@@ -11,8 +11,10 @@
         大约是传感器数量X70；
         */
 
-var LocationId = '88252' //1002
-var _logLimit = 50; //will exit when this number of messages has been logged
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+var LocationId = '938433' //1004
+var _logLimit = 4000; //will exit when this number of messages has been logged
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
@@ -31,7 +33,7 @@ var password = "Internetofthing";
 //var LocationId = '229349' //fangtang 
 //var LocationId = '188559' //1001
 
-//var LocationId = '938433' //1001
+//var LocationId = '938433' //1004
 
 
 // ################################################
@@ -43,11 +45,10 @@ var _Counter1 = 0; //sensor counter
 
 
 //var _Locations = [];
-var sensorArray = new Array();
+var sensorCounterMap = new Map();
+var sensorMotionMap = new Map();
+var sensorNoMotionMap = new Map();
 
-for (var i = 0; i < 5; i++) {
-    sensorArray[i] = new Array();
-}
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
@@ -67,40 +68,35 @@ client.on('connect', function(connection) {
             var t = new Date().getTime();
             var timestamp = new Date();
             timestamp.setTime(t);
+            //        console.log(timestamp.toLocaleTimeString());
+
             _Counter = _Counter + 1; //counter of all received packets
 
             if (_Counter > _logLimit) {
-                console.log("Enough Data, I will quit now!")
+                console.log("Enough Data, I will quit now!");
+                console.log(timestamp.toLocaleTimeString());
                 connection.close();
                 var output = "";    
 
-                sensorArray.forEach(element => {
-                    sensorArray[element].forEach(element1 => {
-                        console.log(sensorArray[element][element1]);
+                // do some report before exit
+                console.log('Total sensors detected ' + sensorCounterMap.size);
 
-                    });
+
+                sensorCounterMap.forEach(function(value, key, map) {
+                    console.log("key:%s,value:%s", key, value)
 
                 });
 
-                /*    for (var i = 0; i < sensorArray.length; i++) {
-                    //  const element = array[index];
-                    for (var j = 0; j < sensorArray[i].length; j++) {
-                        _Counter1 = _Counter1 + 1;
-                        if (output == "") {
-                            output = key.substring(0, 22) + ' - ' + sensorArray[i][j];      
-                        }      
-                        else {
-                            // output = key +  + sensorArray[key];      
-                            output += "\n" + key.substring(0, 22) + ' - ' + sensorArray[i][j];      
-                        }
-                    }
+                console.log('\n\nSensors and Motion data counter: ');
+                sensorMotionMap.forEach(function(value, key, map) {
+                    console.log("key:%s,value:%s", key, value)
 
+                });
+                console.log('\n\nSensors and noMotion data counter:');
+                sensorNoMotionMap.forEach(function(value, key, map) {
+                    console.log("key:%s,value:%s", key, value)
 
-                }*/
-                // do some report before exit
-                console.log('Total sensors: ' + _Counter1);
-                // console.log(sensorArray.toString());
-                console.log(output);
+                });
                 process.exit();
             } //for log use only
 
@@ -137,28 +133,19 @@ client.on('connect', function(connection) {
                             //Sensor DATA
                             switch (json.list[0].dataSourceAddress.variableName.name) {
                                 case 'motion': //sampleMotion
-
-                                    var temp1 = sensorArray[3][json.list[0].dataSourceAddress.did];
-                                    var motionFlag = ' ? '; //update new value 
-                                    sensorArray[3][json.list[0].dataSourceAddress.did] = json.list[0].list[0].value; //latest value
+                                    var _Id = json.list[0].dataSourceAddress.did;
+                                    var temp1 = sensorCounterMap.get(json.list[0].dataSourceAddress.did);
+                                    sensorCounterMap.set(json.list[0].dataSourceAddress.did, json.list[0].list[0].value);
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
                                         console.log("motion!");
-                                        motionFlag = ' + ';
-                                        sensorArray[1][json.list[0].dataSourceAddress.did] = sensorArray[1][json.list[0].dataSourceAddress.did] + 1;
-
-                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
+                                        sensorMotionMap.set(json.list[0].dataSourceAddress.did, sensorMotionMap.get(json.list[0].dataSourceAddress.did) + 1);
+                                        //     motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
                                     } else if (temp1 == json.list[0].list[0].value) {
                                         console.log("no motion!");
-                                        motionFlag = ' - ';
-                                        sensorArray[2][json.list[0].dataSourceAddress.did] = sensorArray[2][json.list[0].dataSourceAddress.did] + 1;
-
-                                        motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","ot":"' + _t1.toLocaleTimeString() + '"},';
-
+                                        sensorNoMotionMap.set(json.list[0].dataSourceAddress.did, sensorNoMotionMap.get(json.list[0].dataSourceAddress.did) + 1);
                                     } else {
-                                        sensorArray[0][json.list[0].dataSourceAddress.did] = 1;
-                                        sensorArray[1][json.list[0].dataSourceAddress.did] = 0;
-                                        sensorArray[2][json.list[0].dataSourceAddress.did] = 0;
-
+                                        sensorMotionMap.set(json.list[0].dataSourceAddress.did, 0);
+                                        sensorNoMotionMap.set(json.list[0].dataSourceAddress.did, 0);
                                         console.log("first seen! cannot tell");
 
                                     };
@@ -167,7 +154,7 @@ client.on('connect', function(connection) {
                                 case 'assetUtilization': //SampleUtilization
                                     break;
                                 default:
-                                    console.log(_Counter + '# ' + "Other " + json.list[0].dataSourceAddress.variableName.name);
+                                    console.log(timestamp.toLocaleTimeString() + ' ' + _Counter + '# ' + "Other " + json.list[0].dataSourceAddress.variableName.name);
                             }
                             break;
                         default:
@@ -189,6 +176,8 @@ client.on('connect', function(connection) {
 
     connection.on('close', function(error) {
         console.log('Connection closed!');
+        beginPOLL();
+        process.exit();
     });
 
     function sendMessage(message) {
