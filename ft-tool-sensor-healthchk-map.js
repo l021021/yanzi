@@ -14,7 +14,8 @@
 //var LocationId = '88252' //1002
 //var LocationId = '60358' //1003
 var LocationId = '938433' //1004
-var _logLimit = 4000; //will exit when this number of messages has been logged
+    //var LocationId = '83561' //1005
+var _logLimit = 5000; //will exit when this number of messages has been logged
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
@@ -172,6 +173,8 @@ client.on('connect', function(connection) {
 
     connection.on('error', function(error) {
         console.log("Connection Error: " + error.toString());
+        beginPOLL();
+        process.exit();
     });
 
     connection.on('close', function(error) {
