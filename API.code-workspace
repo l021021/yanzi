@@ -1,13 +1,8 @@
 {
-    "folders": [
+	"folders": [
 		{
-			"path": "C:\\Users\\bruce\\Desktop\\js-code"
-		},
-		{
-			"path": "C:\\Users\\bruce\\Desktop\\FTDemoWebSite\\FTDemoWebSite\\apache-tomcat-9.0.10\\webapps\\fangtang"
+			"path": "."
 		}
 	],
-	"settings": {
-		"editor.renderLineHighlight": "all"
-	}
+	"settings": {}
 }

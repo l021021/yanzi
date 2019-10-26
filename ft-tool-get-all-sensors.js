@@ -3,6 +3,8 @@ var WebSocketClient = require('websocket').client;
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
 
+
+
 // ##########CHANGE BELOW TO YOUR OWN DATA##########
 
 //Set up credentials. Please DONT have your credentials in your code when running on production
@@ -11,10 +13,9 @@ var cirrusAPIendpoint = "cirrus21.yanzi.se";
 var username = "bruce.li@sugarinc.cn";
 var password = "000888";
 
-
 //Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var LocationId = '229349' //fangtang 
-    // var LocationId = '797296' //novah 
+//var LocationId = '229349' //fangtang 
+var LocationId = '797296' //novah 
 var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
 
 // ################################################
@@ -47,6 +48,7 @@ client.on('connect', function(connection) {
     sendServiceRequest();
 
     // Handle messages
+    //
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
