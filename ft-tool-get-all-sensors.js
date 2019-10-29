@@ -1,3 +1,4 @@
+//Get sensor info from getunit interface
 var WebSocketClient = require('websocket').client;
 
 //Set up endpoint, you'll probably need to change this
@@ -88,9 +89,10 @@ client.on('connect', function(connection) {
                     if (json.responseCode.name == 'success') {
                         sendPeriodicRequest(); //as keepalive
                         //sendGetLocationsRequest();// not mandatory 
-                        sendSubscribeRequest(LocationId); //test
+                        //sendSubscribeRequest(LocationId); //test
                         //sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId);
-                        sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                        //sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                        sendGetUnitsRequest(LocationId);
 
                     } else {
                         console.log(json.responseCode.name);
@@ -134,10 +136,9 @@ client.on('connect', function(connection) {
 
                     break;
                 case 'GetUnitsResponse':
+                    //Get units info
                     if (json.responseCode.name == 'success') {
-                        console.log("Yaaaay, temperaturedata in abundance!");
-                        console.log(json.sampleListDto.list);
-                        connection.close();
+                        console.log(json);
                     } else {
                         console.log("Couldn't get samples.");
 
@@ -350,7 +351,7 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-    function sendGetUnitsRequest() {
+    function sendGetUnitsRequest(_locationID) {
         var now = new Date().getTime();
         var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
@@ -359,7 +360,7 @@ client.on('connect', function(connection) {
             "timeSent": now,
             "locationAddress": {
                 "resourceType": "LocationAddress",
-                "locationId": locationID,
+                "locationId": _locationID,
             }
         }
 
