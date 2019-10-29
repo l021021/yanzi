@@ -9,15 +9,10 @@ var cirrusAPIendpoint = "cirrus21.yanzi.se";
 var username = "653498331@qq.com";
 var password = "000000";
 
-//A flag to indicate which stage the session was in
-var sessionstage = "getlocations";
 //Set up Location ID and Device ID, please change this to your own, can be found in Yanzi Live
 var locationId = "229349" //Usually a 6 digit number
 var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
-
-// ################################################
-
-// Create a web socket client initialized with the options as above
+    // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 
 client.on('connectFailed', function(error) {
@@ -43,26 +38,17 @@ client.on('connect', function(connection) {
             } else if (json.messageType == 'LoginResponse') {
                 if (json.responseCode.name == 'success') {
                     console.log("LoginRequest succeeded, let's get some data...");
-                    sendGetLocationsRequest();
-                } else {
-                    console.log(json.responseCode.name);
-                    console.log("Couldn't login, check your username and passoword");
-                    connection.close();
-                }
-            } else if (json.messageType == 'GetLocationsResponse') {
-                if (json.responseCode.name == 'success') {
-                    console.log("rcvd :  location  " + JSON.stringify(json));
                     sendGetSamplesRequest();
                 } else {
                     console.log(json.responseCode.name);
-                    console.log("Couldn't get location");
+                    console.log("Couldn't login, check your username and passoword");
                     connection.close();
                 }
             } else if (json.messageType == 'GetSamplesResponse') {
                 if (json.responseCode.name == 'success') {
                     console.log("Yaaaay, temperaturedata in abundance!");
                     console.log(json.sampleListDto.list);
-                    connection.close();
+                    //   connection.close();
                 } else {
                     console.log("Couldn't get samples.");
 
@@ -106,16 +92,6 @@ client.on('connect', function(connection) {
             "messageType": "LoginRequest",
             "username": username,
             "password": password
-        }
-        sendMessage(request);
-    }
-
-    function sendGetLocationsRequest() {
-        var now = new Date().getTime();
-        //var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "GetLocationsRequest",
-            "timeSent": now
         }
         sendMessage(request);
     }

@@ -99,7 +99,6 @@ client.on('connect', function(connection) {
                 }*/
                 // do some report before exit
                 console.log('Total sensors: ' + _Counter1);
-                // console.log(sensorArray.toString());
                 console.log(output);
                 process.exit();
             } //for log use only

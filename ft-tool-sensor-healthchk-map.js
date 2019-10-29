@@ -12,8 +12,8 @@
         */
 
 //var LocationId = '88252' //1002
-//var LocationId = '60358' //1003
-var LocationId = '938433' //1004
+var LocationId = '60358' //1003
+    //var LocationId = '938433' //1004
     //var LocationId = '83561' //1005
 var _logLimit = 5000; //will exit when this number of messages has been logged
 
