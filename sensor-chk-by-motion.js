@@ -12,10 +12,10 @@
         */
 
 //var LocationId = '88252' //1002
-var LocationId = '60358' //1003
-    //var LocationId = '938433' //1004
-    //var LocationId = '83561' //1005
-var _logLimit = 5000; //will exit when this number of messages has been logged
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+var LocationId = '83561' //1005
+var _logLimit = 8000; //will exit when this number of messages has been logged
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
@@ -57,6 +57,7 @@ var client = new WebSocketClient();
 client.on('connectFailed', function(error) {
     console.log('Connect Error: ' + error.toString());
     connection.close();
+    beginPOLL();
 });
 
 client.on('connect', function(connection) {
@@ -174,7 +175,7 @@ client.on('connect', function(connection) {
     connection.on('error', function(error) {
         console.log("Connection Error: " + error.toString());
         beginPOLL();
-        process.exit();
+        // process.exit();
     });
 
     connection.on('close', function(error) {
