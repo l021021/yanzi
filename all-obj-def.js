@@ -19,19 +19,13 @@ var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 20; //will exit when this number of messages has been logged
+var _logLimit = 5000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
 
 var _Locations = [];
 
-
-// Create a web socket client initialized with the options as above
-var client = new WebSocketClient();
-
-
-// All Objs definition 
 var accountObj = {
     "resourceType": "",
     "userId": "",
@@ -71,24 +65,24 @@ var sampleObj = {
     "locationId": "123456",
     // "variableName":{
     // "resourceType":"VariableName",
-    "name": "relativeHumidity",
-    //  },
-    //  "instanceNumber":0
-    // },"timeCreated":1569232419466,
-    //  "range":{
-    //  "resourceType":"Range",
-    // "timeCreated":1569232419466,
-    // "timeStart":1569232119466,
-    // "timeEnd":1569232419466,
-    // "numberOfSamples":50
-    // },
-    // "list":[
-    // {
+    "name": "relativeHumidity"
+        //  },
+        //  "instanceNumber":0
+        // },"timeCreated":1569232419466,
+        //  "range":{
+        //  "resourceType":"Range",
+        // "timeCreated":1569232419466,
+        // "timeStart":1569232119466,
+        // "timeEnd":1569232419466,
+        // "numberOfSamples":50
+        // },
+        // "list":[
+        // {
     "resourceType": "SampleHumidity",
     "timeCreated": 1569232419466,
     "sampleTime": 1569232419466,
-    "value": 30.5
-        //  "temperature":296.45
+    "value": 30.5,
+    //  "temperature":296.45
 
 }
 
@@ -100,8 +94,8 @@ var unitObj = {
     // "timeCreated":1569232419475,
     "did": "EUI64-0080E10300099999",
     "locationId": "123456",
-    "serverDid": "EUI64-0080E10300012345",
-    // },
+    "serverDid": "EUI64-0080E10300012345"
+        // },
     "productType": "09876543210987",
     "lifeCycleState": {
         "resourceType": "LifeCycleState",
@@ -134,13 +128,13 @@ var susbscribeObj = {
     "locationId": "123456",
     //  "variableName":{
     //  "resourceType":"VariableName",
-    "name": "relativeHumidity",
-    //   },
-    //   "instanceNumber":0
-    //   },
-    //  "timeCreated":1569232419547,
-    //  "list":[
-    //  {
+    "name": "relativeHumidity"
+        //   },
+        //   "instanceNumber":0
+        //   },
+        //  "timeCreated":1569232419547,
+        //  "list":[
+        //  {
     "resourceType": "SampleHumidity",
     //"timeCreated":1569232419547,
     "sampleTime": 1569232419547,
@@ -185,8 +179,9 @@ var eventObj = {
     "name": "physicalDeviceIsNowUP"
 }
 
+// Create a web socket client initialized with the options as above
+var client = new WebSocketClient();
 
-//Program body 
 client.on('connectFailed', function(error) {
     console.log('Connect Error: reconnect' + error.toString());
     beginPOLL();
@@ -207,14 +202,13 @@ client.on('connect', function(connection) {
 
             if (_Counter > _logLimit) {
                 console.log("Enough Data, I will quit now!")
-                console.log(JSON.stringify(_Locations));
                 connection.close();
                 process.exit();
             } //for log use only
 
             // Print all messages with type
-            // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
-            // console.log(JSON.stringify(json));
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            console.log(JSON.stringify(json));
             switch (json.messageType) {
                 case 'ServiceResponse':
                     sendLoginRequest();
@@ -223,8 +217,8 @@ client.on('connect', function(connection) {
                     if (json.responseCode.name == 'success') {
                         sendPeriodicRequest(); //as keepalive
                         sendGetLocationsRequest(); // not mandatory 
-                        //sendSubscribeRequest(LocationId); //test one location
-                        // sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                        sendSubscribeRequest(LocationId); //test one location
+                        sendSubscribeRequest_lifecircle(LocationId); //eventDTO
 
                     } else {
                         console.log(json.responseCode.name);
@@ -235,44 +229,14 @@ client.on('connect', function(connection) {
                     break;
                 case 'GetLocationsResponse':
                     if (json.responseCode.name == 'success') {
-                        // console.log(_Counter + '# rcvd :  location  ' + JSON.stringify(json));
+                        console.log(_Counter + '# rcvd :  location  ' + JSON.stringify(json));
                         //UPDATE location IDs
-                        if (json.list.length != 0) { //收到一组新的location
+                        if (json.list.length != 0) {
                             for (var i = 0; i < json.list.length; i++) {
-                                let _locationExist = false;
-
-                                for (const key in _Locations) {
-                                    console.log(i + '---' + key.toString());
-
-                                    if (_Locations[key].locationID || (_Locations[key].locationID == json.list[i].locationAddress.locationId)) {
-                                        _locationExist = true;
-                                    }
-                                    console.log(' for ' + _Locations[key].locationId + '  to add ' + json.list[i].locationAddress.locationId + ' ？ ' + _locationExist);
-
+                                if (!_Locations.includes(json.list[i].locationAddress.locationId)) {
+                                    _Locations.push(json.list[i].locationAddress.locationId);
+                                    //sendSubscribeRequest(json.list[i].locationAddress.locationId);
                                 }
-                                /* _Locations.forEach(function(x) {
-                                    if (x.locationID == json.list[i].locationAddress.locationId) {
-                                        var _locationExist = true;
-                                        console.log('----00000000000' + x.locationID);
-                                    }
-                                });
-*/
-                                // console.log(_locationExist);
-                                var _templocationObj;
-                                if (!_locationExist) {
-                                    locationObj.locationId = json.list[i].locationAddress.locationId
-                                    locationObj.serverDid = json.list[i].locationAddress.serverDid
-                                    locationObj.accountId = json.list[i].accountId
-                                    locationObj.name = json.list[i].name
-                                    locationObj.gwdid = json.list[i].gwdid
-                                    locationObj.activityLevel = 'medium'
-                                        // _Locations.push(locationObj);
-                                    console.log(JSON.stringify(locationObj));
-                                    _templocationObj = JSON.parse(JSON.stringify(locationObj));
-
-                                    console.log(locationObj.locationId + 'pushed upto ' + _Locations.push(_templocationObj));
-                                }
-                                // let _templocationObj = locationObj;
                             }
                         }
                     } else {
@@ -280,9 +244,10 @@ client.on('connect', function(connection) {
                         console.log("Couldn't get location");
                         connection.close();
                         process.exit();
-                    };
-                    //  sendSubscribeRequest(LocationId); //test
-                    //  sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                    }
+                    sendSubscribeRequest(LocationId); //test
+                    sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+
                     break;
                 case 'GetSamplesResponse':
                     //GetSamplesResponse
