@@ -206,8 +206,8 @@ client.on('connect', function(connection) {
             _Counter = _Counter + 1; //counter of all received packets
 
             if (_Counter > _logLimit) {
-                console.log("Enough Data, I will quit now!")
-                console.log(JSON.stringify(_Locations));
+                console.log("Enough Data!")
+                console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
                 connection.close();
                 process.exit();
             } //for log use only
@@ -242,12 +242,12 @@ client.on('connect', function(connection) {
                                 let _locationExist = false;
 
                                 for (const key in _Locations) {
-                                    console.log(i + '---' + key.toString());
+                                    //     console.log(i + '---' + key.toString());
 
                                     if (_Locations[key].locationID || (_Locations[key].locationID == json.list[i].locationAddress.locationId)) {
                                         _locationExist = true;
                                     }
-                                    console.log(' for ' + _Locations[key].locationId + '  to add ' + json.list[i].locationAddress.locationId + ' ？ ' + _locationExist);
+                                    // console.log(' for ' + _Locations[key].locationId + '  to add ' + json.list[i].locationAddress.locationId + ' ？ ' + _locationExist);
 
                                 }
                                 /* _Locations.forEach(function(x) {
@@ -267,10 +267,10 @@ client.on('connect', function(connection) {
                                     locationObj.gwdid = json.list[i].gwdid
                                     locationObj.activityLevel = 'medium'
                                         // _Locations.push(locationObj);
-                                    console.log(JSON.stringify(locationObj));
+                                        //   console.log(JSON.stringify(locationObj));
                                     _templocationObj = JSON.parse(JSON.stringify(locationObj));
 
-                                    console.log(locationObj.locationId + 'pushed upto ' + _Locations.push(_templocationObj));
+                                    _Locations.push(_templocationObj);
                                 }
                                 // let _templocationObj = locationObj;
                             }
@@ -309,7 +309,7 @@ client.on('connect', function(connection) {
                     break;
                 case 'PeriodicResponse':
                     setTimeout(sendPeriodicRequest, 60000);
-                    console.log(_Counter + '# ' + "periodic response-keepalive");
+                    //console.log(_Counter + '# ' + "periodic response-keepalive");
                     break;
                 case 'SubscribeResponse':
                     var now = new Date().getTime();
