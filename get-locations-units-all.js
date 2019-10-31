@@ -8,8 +8,11 @@ var WebSocketClient = require('websocket').client;
 //var username = "653498331@qq.com";
 //var password = "000000";
 
-var username = "bruce.li@sugarinc.cn";
-var password = "000888";
+//var username = "bruce.li@sugarinc.cn"
+//var password = "000888";
+
+var username = "frank.shen@pinyuaninfo.com";
+var password = "Internetofthing";
 
 //Location ID and Device ID, please change this to your own, can be found in Yanzi Live
 var LocationId = '229349' //Usually a 6 digit number 
@@ -19,13 +22,15 @@ var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 20; //will exit when this number of messages has been logged
+var _logLimit = 200; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
-
+var _UnitsCounter = 0;
+var _OnlineUnitsCounter = 0;
 var _Locations = [];
-
+var _Units = [];
+var TimeoutId = setTimeout(doReport, 10000);
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
@@ -42,22 +47,17 @@ var accountObj = {
 }
 
 var locationObj = {
-    //"timeCreated": 1569232419461,
-    //"locationAddress": {
-    //  "resourceType": "LocationAddress",
-    // "timeCreated": 1569232419461,
+
     "locationId": "123456",
     "serverDid": "EUI64-0090DAFFFF0040A9",
-    // },
-    // "timeModified": 1569232419761,
     "accountId": "262468578",
     "name": "Beach House",
     "gwdid": "EUI64-12411261342",
     "multiLocationParent": "991579",
     "isMultiLocation": false,
-    //"propertyList": [{
-    // "resourceType": "PropertyDTO",
-    //   "name": 
+    "units": 0,
+    "Onlineunits": 0,
+    "gwOnline": false,
     "activityLevel": "medium"
 
 }
@@ -93,35 +93,19 @@ var sampleObj = {
 }
 
 var unitObj = {
-    // "resourceType":"UnitDTO",
-    //  "timeCreated":1569232419475,
-    // "unitAddress":{
-    // "resourceType":"UnitAddress",
-    // "timeCreated":1569232419475,
     "did": "EUI64-0080E10300099999",
     "locationId": "123456",
     "serverDid": "EUI64-0080E10300012345",
-    // },
     "productType": "09876543210987",
-    "lifeCycleState": {
-        "resourceType": "LifeCycleState",
-        "name": "shadow"
-    },
+    "lifeCycleState": "shadow",
     "isChassis": true,
     "chassisDid": "0999999999999",
-    "unitTypeFixed": {
-        "resourceType": "UnitType",
-        "name": "inputMotion"
-    },
+    "unitTypeFixed": "inputMotion",
     "isNameSetByUser": true,
     "nameSetByUser": "Door's Motion",
     "defaultNameSetBySystem": "Motion-12AB",
     "userId": "giorgos@yanzi.se",
-    "unitAcl": {
-        "resourceType": "UnitAcl",
-        "name": "operator"
-    },
-    "subunitIdentifier": 0
+    "unitAcl": "operator"
 
 }
 
@@ -198,6 +182,9 @@ client.on('connect', function(connection) {
 
     // Handle messages
     connection.on('message', function(message) {
+        clearTimeout(TimeoutId);
+        TimeoutId = setTimeout(doReport, 10000);
+
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
             var t = new Date().getTime();
@@ -209,6 +196,7 @@ client.on('connect', function(connection) {
                 console.log("Enough Data!")
                 console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
                 connection.close();
+                doReport();
                 process.exit();
             } //for log use only
 
@@ -235,14 +223,12 @@ client.on('connect', function(connection) {
                     break;
                 case 'GetLocationsResponse':
                     if (json.responseCode.name == 'success') {
-                        // console.log(_Counter + '# rcvd :  location  ' + JSON.stringify(json));
                         //UPDATE location IDs
                         if (json.list.length != 0) { //收到一组新的location
                             for (var i = 0; i < json.list.length; i++) {
                                 let _locationExist = false;
 
                                 for (const key in _Locations) {
-                                    //     console.log(i + '---' + key.toString());
 
                                     if (_Locations[key].locationID || (_Locations[key].locationID == json.list[i].locationAddress.locationId)) {
                                         _locationExist = true;
@@ -250,14 +236,7 @@ client.on('connect', function(connection) {
                                     // console.log(' for ' + _Locations[key].locationId + '  to add ' + json.list[i].locationAddress.locationId + ' ？ ' + _locationExist);
 
                                 }
-                                /* _Locations.forEach(function(x) {
-                                    if (x.locationID == json.list[i].locationAddress.locationId) {
-                                        var _locationExist = true;
-                                        console.log('----00000000000' + x.locationID);
-                                    }
-                                });
-*/
-                                // console.log(_locationExist);
+
                                 var _templocationObj;
                                 if (!_locationExist) {
                                     locationObj.locationId = json.list[i].locationAddress.locationId
@@ -271,8 +250,8 @@ client.on('connect', function(connection) {
                                     _templocationObj = JSON.parse(JSON.stringify(locationObj));
 
                                     _Locations.push(_templocationObj);
+                                    sendGetUnitsRequest(json.list[i].locationAddress.locationId); //Optinoal ,get units under this location
                                 }
-                                // let _templocationObj = locationObj;
                             }
                         }
                     } else {
@@ -298,12 +277,41 @@ client.on('connect', function(connection) {
                     break;
                 case 'GetUnitsResponse':
                     if (json.responseCode.name == 'success') {
-                        console.log(json.sampleListDto.list);
-                        connection.close();
-                    } else {
-                        console.log("Couldn't get samples.");
 
-                        connection.close();
+                        var _tempunitObj;
+
+                        for (let index = 0; index < json.list.length; index++) { //process each response packet
+
+
+                            if (json.list[index].isChassis) { // record physical sensors 
+                                unitObj.did = json.list[index].chassisDid
+                                unitObj.locationId = json.locationAddress.locationId
+                                unitObj.serverDid = json.locationAddress.serverDid
+                                unitObj.productType = json.list[index].productType
+                                unitObj.lifeCycleState = json.list[index].lifeCycleState.name
+                                unitObj.isChassis = json.list[index].isChassis
+                                    //unitObj.chassisDid = "0999999999999"
+                                    // unitObj.unitTypeFixed = "inputMotion"
+                                    // unitObj.nameSetByUser = "Door's Motion"
+                                    // unitObj.defaultNameSetBySystem = "Motion-12AB"
+                                    //unitObj.userId = "giorgos@yanzi.se"
+                                    /* console.log(json.list[index].chassisDid,
+                                         json.list[index].isChassis,
+                                         json.list[index].lifeCycleState.name,
+
+                                     );*/
+                                _tempunitObj = JSON.parse(JSON.stringify(unitObj));
+                                _Units.push(_tempunitObj);
+                                _UnitsCounter++;
+                                if (json.list[index].lifeCycleState.name == 'present') {
+                                    _OnlineUnitsCounter++;
+                                }
+                            }
+                        }
+                        //console.log(_UnitsCounter + ' Units in Location:  while ' + _OnlineUnitsCounter + ' online');
+
+                    } else {
+                        console.log("Couldn't get Units");
                     }
 
                     break;
@@ -466,7 +474,7 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-    function sendGetUnitsRequest() {
+    function sendGetUnitsRequest(locationID) {
         var now = new Date().getTime();
         var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
@@ -547,6 +555,45 @@ function beginPOLL() {
     }
     client.connect("wss://" + cirrusAPIendpoint + "/cirrusAPI");
     //console.log("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
+}
+
+function doReport() {
+
+    console.log("total " + _Locations.length + " locations: ") // + JSON.stringify(_Locations))
+    var _c1 = 0;
+    var _c2 = 0;
+
+    //do some work to match sensor to locations
+    for (const key in _Units) {
+        var unitsinlocation = 0;
+        var onlineunitsinlocation = 0;
+        //console.log(_Units[key].lifeCycleState + ':' + _Units[key].did + ' ' + _c1++); // for each online sensors
+        if (_Units[key].lifeCycleState == 'present') {
+            for (const key1 in _Locations) { //update to its locations
+                // console.log(_Locations[key1].locationId + '-G   x   S-' + _Units[key].locationId + ' match ?' + _c2++);
+
+                if (_Locations[key1].locationId == _Units[key].locationId) {
+                    _Locations[key1].gwOnline = true;
+                    _Locations[key1].Onlineunits++;
+                    break;
+                }
+            }
+
+
+
+        };
+
+
+    }
+
+    //list each active location
+    for (const key1 in _Locations) {
+        if (_Locations[key1].gwOnline)
+            console.log('Location:' + _Locations[key1].locationId + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors');
+    }
+    console.log("total " + _Units.length + " Sensors under live locations while " + _OnlineUnitsCounter + ' online') //+ JSON.stringify(_Units))
+    clearTimeout(TimeoutId);
+    process.exit();
 }
 
 beginPOLL();
