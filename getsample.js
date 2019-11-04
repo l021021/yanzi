@@ -1,4 +1,5 @@
 var WebSocketClient = require('websocket').client;
+var async = require('async');
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
@@ -10,8 +11,8 @@ var username = "653498331@qq.com";
 var password = "000000";
 
 //Set up Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var locationId = "229349" //Usually a 6 digit number
-var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
+var locationId = "213806" //Usually a 6 digit number
+var deviceID = "EUI64-90FD9FFFFEA939D3-4-Temp" //Found in Yanzi Live, ends with "-Temp"
     // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 
@@ -29,16 +30,17 @@ client.on('connect', function(connection) {
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
-            console.log('recieved message type:');
-            console.log(json.messageType);
+            //console.log('recieved message type:');
+            //console.log(json.messageType);
             if (json.messageType == 'ServiceResponse') {
                 console.log("ServiceRequest succeeded, sending LoginRequest");
-                console.log('rcvd' + JSON.stringify(json));
+                // console.log('rcvd' + JSON.stringify(json));
                 sendLoginRequest();
             } else if (json.messageType == 'LoginResponse') {
                 if (json.responseCode.name == 'success') {
-                    console.log("LoginRequest succeeded, let's get some data...");
-                    sendGetSamplesRequest();
+
+                    now = new Date().getTime();
+                    sendGetSamplesRequest(deviceID, now - 3600000 * 50, now);
                 } else {
                     console.log(json.responseCode.name);
                     console.log("Couldn't login, check your username and passoword");
@@ -46,7 +48,7 @@ client.on('connect', function(connection) {
                 }
             } else if (json.messageType == 'GetSamplesResponse') {
                 if (json.responseCode.name == 'success') {
-                    console.log("Yaaaay, temperaturedata in abundance!");
+
                     console.log(json.sampleListDto.list);
                     //   connection.close();
                 } else {
@@ -73,7 +75,7 @@ client.on('connect', function(connection) {
         if (connection.connected) {
             // Create the text to be sent
             var json = JSON.stringify(message, null, 1);
-            console.log('sending' + JSON.stringify(json));
+            // console.log('sending' + JSON.stringify(json));
             connection.sendUTF(json);
         } else {
             console.log("sendMessage: Couldn't send message, the connection is not open");
@@ -96,27 +98,47 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-    function sendGetSamplesRequest() {
-        var now = new Date().getTime();
-        var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "GetSamplesRequest",
-            "dataSourceAddress": {
-                "resourceType": "DataSourceAddress",
-                "did": deviceID,
-                "locationId": locationId,
-                "variableName": {
-                    "resourceType": "VariableName",
-                    "name": "temperatureC"
+    function sendGetSamplesRequest(deviceID, timeStart, timeEnd) {
+
+        if ((timeEnd - timeStart) >= 36000000) {
+            async.series([
+                    sendGetSamplesRequest(deviceID, timeStart, timeStart + 36000000),
+                    sendGetSamplesRequest(deviceID, timeStart + 36000000, timeEnd)
+                ],
+                function(error, result) {
+                    if (error) {
+                        console.log("error: ", error, "msg: ", result);
+                    } else {
+                        console.log("方法执行完毕" + result);
+                    }
                 }
-            },
-            "timeSerieSelection": {
-                "resourceType": "TimeSerieSelection",
-                "timeStart": nowMinusOneHour,
-                "timeEnd": now
-            }
-        };
-        sendMessage(request);
+            );
+        } else {
+
+            var request = {
+                "messageType": "GetSamplesRequest",
+                "dataSourceAddress": {
+                    "resourceType": "DataSourceAddress",
+                    "did": deviceID,
+                    "locationId": findLocationId(deviceID),
+                    "variableName": {
+                        "resourceType": "VariableName",
+                        "name": "temperatureC"
+                    }
+                },
+                "timeSerieSelection": {
+                    "resourceType": "TimeSerieSelection",
+                    "timeStart": timeStart,
+                    "timeEnd": timeEnd
+                }
+            };
+            //console.log(Date(timeEnd).toTimeString());
+            sendMessage(request);
+        }
+    }
+
+    function findLocationId(deviceID) {
+        return locationId;
     }
 
     function sendGetUnitsRequest() {
@@ -142,51 +164,6 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-    function sendGetUnitsRequest2() {
-        var now = new Date().getTime();
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "GetSamplesRequest",
-            "dataSourceAddress": {
-                "resourceType": "DataSourceAddress",
-                "did": deviceID,
-                "locationId": locationId,
-                "variableName": {
-                    "resourceType": "VariableName",
-                    "name": "temperatureC"
-                }
-            },
-            "timeSerieSelection": {
-                "resourceType": "TimeSerieSelection",
-                "timeStart": nowMinusOneHour,
-                "timeEnd": now
-            }
-        };
-        sendMessage(request);
-    }
-
-    function sendGetUnitsRequest1() {
-        var now = new Date().getTime();
-        var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "GetSamplesRequest",
-            "dataSourceAddress": {
-                "resourceType": "DataSourceAddress",
-                "did": deviceID,
-                "locationId": locationId,
-                "variableName": {
-                    "resourceType": "VariableName",
-                    "name": "temperatureC"
-                }
-            },
-            "timeSerieSelection": {
-                "resourceType": "TimeSerieSelection",
-                "timeStart": nowMinusOneHour,
-                "timeEnd": now
-            }
-        };
-        sendMessage(request);
-    }
 });
 
 function processArgs() {
@@ -201,5 +178,6 @@ function processArgs() {
     client.connect("wss://" + cirrusAPIendpoint + "/cirrusAPI");
     console.log("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
 }
+
 
 processArgs();
