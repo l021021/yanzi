@@ -1,5 +1,5 @@
 var WebSocketClient = require('websocket').client;
-var async = require('async');
+//var async = require('async');
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
@@ -12,9 +12,11 @@ var password = "000000";
 
 //Set up Location ID and Device ID, please change this to your own, can be found in Yanzi Live
 var locationId = "213806" //Usually a 6 digit number
-var deviceID = "EUI64-90FD9FFFFEA939D3-4-Temp" //Found in Yanzi Live, ends with "-Temp"
-    // Create a web socket client initialized with the options as above
+var deviceID = "EUI64-90FD9FFFFEA939D3-4-Temp"
+
+// Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
+var connection;
 
 client.on('connectFailed', function(error) {
     console.log('Connect Error: ' + error.toString());
@@ -40,7 +42,7 @@ client.on('connect', function(connection) {
                 if (json.responseCode.name == 'success') {
 
                     now = new Date().getTime();
-                    sendGetSamplesRequest(deviceID, now - 3600000 * 50, now);
+                    sendGetSamplesRequest(deviceID, now - 36000000, now);
                 } else {
                     console.log(json.responseCode.name);
                     console.log("Couldn't login, check your username and passoword");
@@ -54,7 +56,7 @@ client.on('connect', function(connection) {
                 } else {
                     console.log("Couldn't get samples.");
 
-                    connection.close();
+                    //connection.close();
                 }
             } else {
                 console.log("Couldn't understand");
@@ -75,7 +77,7 @@ client.on('connect', function(connection) {
         if (connection.connected) {
             // Create the text to be sent
             var json = JSON.stringify(message, null, 1);
-            // console.log('sending' + JSON.stringify(json));
+            console.log('sending' + JSON.stringify(json));
             connection.sendUTF(json);
         } else {
             console.log("sendMessage: Couldn't send message, the connection is not open");
@@ -98,29 +100,39 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-    function sendGetSamplesRequest(deviceID, timeStart, timeEnd) {
 
-        if ((timeEnd - timeStart) >= 36000000) {
-            async.series([
-                    sendGetSamplesRequest(deviceID, timeStart, timeStart + 36000000),
-                    sendGetSamplesRequest(deviceID, timeStart + 36000000, timeEnd)
-                ],
-                function(error, result) {
-                    if (error) {
-                        console.log("error: ", error, "msg: ", result);
-                    } else {
-                        console.log("方法执行完毕" + result);
+    function sendGetSamplesRequest(deviceID, timeStart, timeEnd) {
+        if ((timeEnd - timeStart) >= 10000000) {
+            var request = {
+                "messageType": "GetSamplesRequest",
+                "dataSourceAddress": {
+                    "resourceType": "DataSourceAddress",
+                    "did": deviceID,
+                    "locationId": locationId,
+                    "variableName": {
+                        "resourceType": "VariableName",
+                        "name": "temperatureC"
                     }
+                },
+                "timeSerieSelection": {
+                    "resourceType": "TimeSerieSelection",
+                    "timeStart": timeStart,
+                    "timeEnd": timeStart + 10000000
                 }
-            );
+            };
+            //console.log(Date(timeEnd).toTimeString());
+            sendMessage(request);
+            //setTimeout('
+            sendGetSamplesRequest(deviceID, timeStart + 10000000, timeEnd);
         } else {
+            if (timeStart >= timeEnd) { return null };
 
             var request = {
                 "messageType": "GetSamplesRequest",
                 "dataSourceAddress": {
                     "resourceType": "DataSourceAddress",
                     "did": deviceID,
-                    "locationId": findLocationId(deviceID),
+                    "locationId": locationId,
                     "variableName": {
                         "resourceType": "VariableName",
                         "name": "temperatureC"
@@ -135,36 +147,15 @@ client.on('connect', function(connection) {
             //console.log(Date(timeEnd).toTimeString());
             sendMessage(request);
         }
+
     }
 
     function findLocationId(deviceID) {
         return locationId;
     }
 
-    function sendGetUnitsRequest() {
-        var now = new Date().getTime();
-        var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "GetSamplesRequest",
-            "dataSourceAddress": {
-                "resourceType": "DataSourceAddress",
-                "did": deviceID,
-                "locationId": locationId,
-                "variableName": {
-                    "resourceType": "VariableName",
-                    "name": "temperatureC"
-                }
-            },
-            "timeSerieSelection": {
-                "resourceType": "TimeSerieSelection",
-                "timeStart": nowMinusOneHour,
-                "timeEnd": now
-            }
-        };
-        sendMessage(request);
-    }
-
 });
+
 
 function processArgs() {
     if (!username) {
