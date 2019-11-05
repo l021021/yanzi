@@ -58,8 +58,10 @@ client.on('connect', function(connection) {
             if (_Counter > _logLimit) {
                 console.log("Enough Data, I will quit now!")
                 connection.close();
-                var output = "";    
+                var output = "";
+                var sensorcounter = 0;
                 for (var key in sensorArray) {
+                    sensorcounter++;
                     if (output == "") {
                         output = sensorArray[key];      
                     }      
@@ -69,7 +71,7 @@ client.on('connect', function(connection) {
                 } // do some report before exit
 
                 // console.log(sensorArray.toString());
-                console.log('Total Motions Sensors seen：' + sensorArray.length + ' : with counters as :' + output);
+                console.log('Total Motions Sensors seen：' + sensorcounter + ' : with counters as :' + output);
                 console.log('Motion records calculated from counters:');
                 console.log(motionTimeStamps.toString());
                 console.log('Motion records calculated from motion/nomotion packets:');
@@ -134,11 +136,11 @@ client.on('connect', function(connection) {
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
                                         console.log("Motion detected！");
                                         motionFlag = ' + ';
-                                        motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
+                                        motionTimeStamps += json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
                                         console.log("No motion Detected！");
                                         motionFlag = ' - ';
-                                        motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
+                                        motionTimeStamps += json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
                                     } else {
                                         console.log("Sensor first seen! cannot tell");
@@ -168,20 +170,20 @@ client.on('connect', function(connection) {
 
                                         case 'isMotion':
                                             console.log("UnitState:motion");
-                                            assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'isNoMotion':
 
                                             console.log("UnitState:nomotion");
-                                            assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'free':
                                             console.log("UnitState:free");
-                                            assetTimeStamps2 = assetTimeStamps2 + json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'occupied':
                                             console.log("UnitState:occupy");
-                                            assetTimeStamps2 = assetTimeStamps2 + json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         default:
                                             break;
