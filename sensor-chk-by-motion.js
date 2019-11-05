@@ -14,8 +14,9 @@
 //var LocationId = '88252' //1002
 //var LocationId = '60358' //1003
 //var LocationId = '938433' //1004
-var LocationId = '83561' //1005
-var _logLimit = 8000; //will exit when this number of messages has been logged
+//var LocationId = '83561' //1005
+var LocationId = '521209' //wafer-shanghai 
+var _logLimit = 200; //will exit when this number of messages has been logged
 
 //Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";

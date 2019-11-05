@@ -11,8 +11,8 @@ var username = "653498331@qq.com";
 var password = "000000";
 
 //Set up Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var locationId = "213806" //Usually a 6 digit number
-var deviceID = "EUI64-0080E10300024133-4-Motion"
+var locationId = "229349" //Usually a 6 digit number
+var deviceID = "UUID-A9899341F08A49279C04EAC3E6C05094"
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
@@ -46,19 +46,19 @@ client.on('connect', function(connection) {
                 if (json.responseCode.name == 'success') {
 
                     now = new Date().getTime();
-                    sendGetSamplesRequest(deviceID, now - 36000000, now);
+                    sendGetSamplesRequest(deviceID, now - 3600000 * 100, now);
                 } else {
                     console.log(json.responseCode.name);
                     console.log("Couldn't login, check your username and passoword");
                     connection.close();
                 }
             } else if (json.messageType == 'GetSamplesResponse') {
-                if (json.responseCode.name == 'success') {
+                if (json.responseCode.name == 'success' && json.sampleListDto.list) {
 
-                    console.log(json.sampleListDto.list);
-                    //   connection.close();
+                    console.log(json.sampleListDto.list)
+                        //   connection.close();
                 } else {
-                    console.log("Couldn't get samples.");
+                    console.log("no samples.");
 
                     //connection.close();
                 }
@@ -113,10 +113,10 @@ client.on('connect', function(connection) {
                     "resourceType": "DataSourceAddress",
                     "did": deviceID,
                     "locationId": locationId,
-                    "variableName": {
-                        "resourceType": "VariableName",
-                        "name": "assetUtilization"
-                    }
+                    // "variableName": {
+                    ///     "resourceType": "VariableName",
+                    //      "name": "assetUtilization"
+                    //  }
                 },
                 "timeSerieSelection": {
                     "resourceType": "TimeSerieSelection",
@@ -137,10 +137,10 @@ client.on('connect', function(connection) {
                     "resourceType": "DataSourceAddress",
                     "did": deviceID,
                     "locationId": locationId,
-                    "variableName": {
-                        "resourceType": "VariableName",
-                        "name": "assetUtilization"
-                    }
+                    //   "variableName": {
+                    //       "resourceType": "VariableName",
+                    //       "name": "assetUtilization"
+                    //    }
                 },
                 "timeSerieSelection": {
                     "resourceType": "TimeSerieSelection",
