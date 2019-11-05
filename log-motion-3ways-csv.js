@@ -16,7 +16,8 @@ var password = "Internetofthing";
 //var LocationId = '60358' //1003
 //var LocationId = '938433' //1004
 //var LocationId = '83561' //1005
-var LocationId = '521209' //wafer-shanghai 
+//var LocationId = '521209' //wafer-shanghai 
+var LocationId = '503370' //wanshen
 
 //For log use only
 var _Counter = 0; //message counter
@@ -63,15 +64,19 @@ client.on('connect', function(connection) {
                         output = sensorArray[key];      
                     }      
                     else {
-                        output += "|" + sensorArray[key];      
+                        output += "," + sensorArray[key];      
                     }
                 } // do some report before exit
 
                 // console.log(sensorArray.toString());
-                console.log(output);
+                console.log('Total Motions Sensors seen：' + sensorArray.length + ' : with counters as :' + output);
+                console.log('Motion records calculated from counters:');
                 console.log(motionTimeStamps.toString());
+                console.log('Motion records calculated from motion/nomotion packets:');
                 console.log(assetTimeStamps1.toString());
+                console.log('Motion records calculated from free/occupy packets:');
                 console.log(assetTimeStamps2.toString());
+                console.log("That's all");
                 process.exit();
             } //for log use only
 
@@ -97,50 +102,10 @@ client.on('connect', function(connection) {
                     }
                     break;
                 case 'GetLocationsResponse':
-                    if (json.responseCode.name == 'success') {
-                        console.log(_Counter + '# rcvd :  location  ' + JSON.stringify(json));
-                        //UPDATE location IDs
-                        if (json.list.length != 0) {
-                            for (var i = 0; i < json.list.length; i++) {
-                                if (!_Locations.includes(json.list[i].locationAddress.locationId)) {
-                                    _Locations.push(json.list[i].locationAddress.locationId);
-                                    //sendSubscribeRequest(json.list[i].locationAddress.locationId);
-                                    sendSubscribeRequest(LocationId); //test
-                                    //sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId);
-                                    sendSubscribeRequest_lifecircle(LocationId); //eventDTO
-                                }
-                            }
-                        }
-                    } else {
-                        console.log(json.responseCode.name);
-                        console.log("Couldn't get location");
-                        connection.close();
-                        process.exit();
-                    }
                     break;
                 case 'GetSamplesResponse':
-                    //GetSamplesResponse
-                    if (json.responseCode.name == 'success') {
-                        console.log("Environment Data");
-                        console.log(json.sampleListDto.list);
-                        connection.close();
-                    } else {
-                        console.log("Couldn't get samples.");
-                        connection.close();
-                    }
-
                     break;
                 case 'GetUnitsResponse':
-                    if (json.responseCode.name == 'success') {
-                        console.log("Yaaaay, temperaturedata in abundance!");
-                        console.log(json.sampleListDto.list);
-                        connection.close();
-                    } else {
-                        console.log("Couldn't get samples.");
-
-                        connection.close();
-                    }
-
                     break;
                 case 'PeriodicResponse':
                     setTimeout(sendPeriodicRequest, 60000);
@@ -152,7 +117,6 @@ client.on('connect', function(connection) {
                     _t1.setTime(json.expireTime);
                     console.log("Susbscribe renew in (min)： " + (json.expireTime - now) / 60000); //100min
                     break;
-
                 case 'SubscribeData':
                     switch (json.list[0].resourceType) {
                         case 'SampleList':
@@ -168,18 +132,17 @@ client.on('connect', function(connection) {
                                     var motionFlag = ' ? '; //update new value 
                                     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        console.log("Motion!");
+                                        console.log("Motion detected！");
                                         motionFlag = ' + ';
                                         motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
-                                        console.log("No motion!");
+                                        console.log("No motion Detected！");
                                         motionFlag = ' - ';
                                         motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
                                     } else {
-                                        console.log("first seen! cannot tell");
+                                        console.log("Sensor first seen! cannot tell");
                                     };
-
 
                                     console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
                                         _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
@@ -204,20 +167,20 @@ client.on('connect', function(connection) {
                                     switch (json.list[0].list[0].assetState.name) {
 
                                         case 'isMotion':
-                                            console.log("motion");
+                                            console.log("UnitState:motion");
                                             assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'isNoMotion':
 
-                                            console.log("nomotion");
-                                            assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',nm' + _t3.toLocaleTimeString() + '\n';
+                                            console.log("UnitState:nomotion");
+                                            assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'free':
-                                            console.log("nomotion");
+                                            console.log("UnitState:free");
                                             assetTimeStamps2 = assetTimeStamps2 + json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'occupied':
-                                            console.log("occupy");
+                                            console.log("UnitState:occupy");
                                             assetTimeStamps2 = assetTimeStamps2 + json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         default:
@@ -245,7 +208,7 @@ client.on('connect', function(connection) {
                                 case 'illuminance':
                                 case 'carbonDioxide':
                                     _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
+                                    //console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
                                     console.log(_Counter + '# ' + "Sample List Other " + json.list[0].dataSourceAddress.variableName.name);
@@ -263,7 +226,7 @@ client.on('connect', function(connection) {
                                     console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
                                     break;
                                 default:
-                                    console.log('    Event DTO : ' + json.list[0].eventType.name);
+                                    console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
                             }
                             break;
                         default:
