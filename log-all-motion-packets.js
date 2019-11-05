@@ -6,13 +6,17 @@ var cirrusAPIendpoint = "cirrus21.yanzi.se";
 // ##########CHANGE BELOW TO YOUR OWN DATA##########
 
 //Set up credentials. Please DONT have your credentials in your code when running on production
+var username = "frank.shen@pinyuaninfo.com";
+var password = "Internetofthing";
 
-var username = "653498331@qq.com";
-var password = "000000";
-
-//Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var locationId = "229349" //Usually a 6 digit number
-var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+//var LocationId = '83561' //1005
+var LocationId = '521209' //wafer-shanghai 
+var _logLimit = 200; //will exit when this number of messages has been logged
 
 // ################################################
 
@@ -35,7 +39,7 @@ client.on('connectFailed', function(error) {
 
 client.on('connect', function(connection) {
     // console.log('Websocket open!');
-    console.log("Checking API service status with ServiceRequest.");
+    //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
@@ -52,7 +56,7 @@ client.on('connect', function(connection) {
                 process.exit();
             }
             // Print all messages with type
-            // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
 
             if (json.messageType == 'ServiceResponse') {
                 //ServiceRequest
@@ -63,7 +67,9 @@ client.on('connect', function(connection) {
                 if (json.responseCode.name == 'success') {
                     //  console.log("LoginRequest succeeded!");
                     setTimeout(sendPeriodicRequest, 30000); //keepalive
-                    sendGetLocationsRequest();
+                    sendSubscribeRequest(LocationId);
+                    sendSubscribeRequest_lifecircle(LocationId);
+                    //sendGetLocationsRequest();
                 } else {
                     console.log(json.responseCode.name);
                     console.log("Couldn't login, check your username and passoword");
@@ -71,36 +77,10 @@ client.on('connect', function(connection) {
                 }
             } else if (json.messageType == 'GetLocationsResponse') {
                 //GetLocationsRequest
-                if (json.responseCode.name == 'success') {
-                    //   console.log("rcvd :  location  " + JSON.stringify(json));
-                    //UPDATE location IDs
-                    if (json.list.length != 0) {
-                        for (var i = 0; i < json.list.length; i++) {
-                            if (!_Locations.includes(json.list[i].locationAddress.locationId)) {
-                                _Locations.push(json.list[i].locationAddress.locationId);
-                                //sendSubscribeRequest(json.list[i].locationAddress.locationId);
-                                sendSubscribeRequest("229349"); //test only fangtang
-                                //    console.log('requesting: ' + json.list[i].locationAddress.locationId);
-                                //sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId);
-                                sendSubscribeRequest_lifecircle("229349");
-                            }
-                        }
-                    }
-                } else {
-                    console.log(json.responseCode.name);
-                    console.log("Couldn't get location");
-                    connection.close();
-                }
+                if (json.responseCode.name == 'success') {} else {}
             } else if (json.messageType == 'GetSamplesResponse') {
                 //GetSamplesResponse
-                if (json.responseCode.name == 'success') {
-                    console.log("Yaaaay, temperaturedata in abundance!");
-                    console.log(json.sampleListDto.list);
-                    connection.close();
-                } else {
-                    console.log("Couldn't get samples.");
-                    connection.close();
-                }
+                if (json.responseCode.name == 'success') {} else {}
             } else if (json.messageType == 'SubscribeData') {
                 //SubscribeData
                 switch (json.list[0].resourceType) {
@@ -115,48 +95,48 @@ client.on('connect', function(connection) {
                                 _t2.setTime(json.list[0].list[0].timeLastMotion);
                                 _t3.setTime(json.timeSent);
 
-                                console.log(_Counter + ' ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + ' @ ' +
+                                console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + ' @ ' +
                                     _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
                                     ' Last: ' + _t2.toLocaleTimeString() + ' static_for(s) ' +
                                     (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
                                 break;
-                            case 'temperatureK':
-                                break;
+
                             case 'assetUtilization':
                                 _t2.setTime(json.timeSent);
                                 _t3.setTime(json.list[0].list[0].sampleTime);
-                                console.log(_Counter + ' ' + _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
+                                console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
                                     ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied);
                                 break;
                             case 'unitState':
                                 _t2.setTime(json.timeSent);
                                 _t3.setTime(json.list[0].list[0].sampleTime);
-                                console.log(_Counter + ' ' + _t2.toLocaleTimeString() + ' UNITST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
+                                console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' UNITST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
                                     json.list[0].list[0].assetState.name);
+                                break;
+                            case 'percentage':
+                                _t2.setTime(json.timeSent);
+                                _t3.setTime(json.list[0].list[0].sampleTime);
+                                console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
+                                    ' Occu%:' + json.list[0].list[0].value);
                                 break;
                             case 'uplog':
                                 console.log('uplog' + JSON.stringify(json));
                                 break;
                             case 'volatileOrganicCompound':
-                                break;
+
                             case 'relativeHumidity':
-                                break;
+
+                            case 'temperatureK':
+
                             case 'pressure':
-                                break;
+
                             case 'soundPressureLevel':
-                                break;
-                            case 'percentage':
-                                _t2.setTime(json.timeSent);
-                                _t3.setTime(json.list[0].list[0].sampleTime);
-                                console.log(_Counter + ' ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
-                                    ' Occu%:' + json.list[0].list[0].value);
-                                break;
+
                             case 'illuminance':
-                                break;
+
                             case 'carbonDioxide':
-                                break;
                             default:
-                                console.log("   Sample List Other" + json.list[0].dataSourceAddress.variableName.name);
+                                console.log(_Counter + "# Environment Data:" + json.list[0].dataSourceAddress.variableName.name);
                         }
                         break;
                     case 'EventDTO':

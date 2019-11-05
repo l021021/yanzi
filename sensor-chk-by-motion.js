@@ -11,6 +11,12 @@
         大约是传感器数量X70；
         */
 
+//var username = "653498331@qq.com";
+var username = "frank.shen@pinyuaninfo.com";
+var password = "Internetofthing";
+
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
 //var LocationId = '88252' //1002
 //var LocationId = '60358' //1003
 //var LocationId = '938433' //1004
@@ -26,27 +32,12 @@ var WebSocketClient = require('websocket').client;
 
 //Set up credentials. Please DONT have your credentials in your code when running on production
 
-//var username = "653498331@qq.com";
-var username = "frank.shen@pinyuaninfo.com";
-var password = "Internetofthing";
-
-
-//Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-//var LocationId = '229349' //fangtang 
-//var LocationId = '188559' //1001
-
-//var LocationId = '938433' //1004
-
 
 // ################################################
 
 //For log use only
 var _Counter = 0; //message counter
-var _Counter1 = 0; //sensor counter
 
-
-
-//var _Locations = [];
 var sensorCounterMap = new Map();
 var sensorMotionMap = new Map();
 var sensorNoMotionMap = new Map();
@@ -79,7 +70,6 @@ client.on('connect', function(connection) {
                 console.log("Enough Data, I will quit now!");
                 console.log(timestamp.toLocaleTimeString());
                 connection.close();
-                var output = "";    
 
                 // do some report before exit
                 console.log('Total sensors detected ' + sensorCounterMap.size);
@@ -140,16 +130,16 @@ client.on('connect', function(connection) {
                                     var temp1 = sensorCounterMap.get(json.list[0].dataSourceAddress.did);
                                     sensorCounterMap.set(json.list[0].dataSourceAddress.did, json.list[0].list[0].value);
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        console.log("motion!");
+                                        console.log("Motion!");
                                         sensorMotionMap.set(json.list[0].dataSourceAddress.did, sensorMotionMap.get(json.list[0].dataSourceAddress.did) + 1);
                                         //     motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
                                     } else if (temp1 == json.list[0].list[0].value) {
-                                        console.log("no motion!");
+                                        console.log("No motion!");
                                         sensorNoMotionMap.set(json.list[0].dataSourceAddress.did, sensorNoMotionMap.get(json.list[0].dataSourceAddress.did) + 1);
                                     } else {
                                         sensorMotionMap.set(json.list[0].dataSourceAddress.did, 0);
                                         sensorNoMotionMap.set(json.list[0].dataSourceAddress.did, 0);
-                                        console.log("first seen! cannot tell");
+                                        console.log("Sensor first seen, cannot tell");
 
                                     };
 

@@ -6,18 +6,17 @@ var cirrusAPIendpoint = "cirrus21.yanzi.se";
 // ##########CHANGE BELOW TO YOUR OWN DATA##########
 
 //Set up credentials. Please DONT have your credentials in your code when running on production
+//Set up credentials. Please DONT have your credentials in your code when running on production
+var username = "frank.shen@pinyuaninfo.com";
+var password = "Internetofthing";
 
-//var username = "653498331@qq.com";
-var username = "bruce.li@sugarinc.cn";
-var password = "000888";
-
-
-//Location ID and Device ID, please change this to your own, can be found in Yanzi Live
 //var LocationId = '229349' //fangtang 
-var LocationId = '797296' //novah 
-var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
-
-// ################################################
+//var LocationId = '188559' //1001
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+//var LocationId = '83561' //1005
+var LocationId = '521209' //wafer-shanghai 
 
 //For log use only
 var _Counter = 0; //message counter
@@ -171,11 +170,11 @@ client.on('connect', function(connection) {
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
                                         console.log("motion!");
                                         motionFlag = ' + ';
-                                        motionTimeStamps = motionTimeStamps  + json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
+                                        motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
                                         console.log("no motion!");
                                         motionFlag = ' - ';
-                                        motionTimeStamps = motionTimeStamps  + json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
+                                        motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
                                     } else {
                                         console.log("first seen! cannot tell");
@@ -206,12 +205,12 @@ client.on('connect', function(connection) {
 
                                         case 'isMotion':
                                             console.log("motion");
-                                            assetTimeStamps1 = assetTimeStamps1  + json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'isNoMotion':
 
                                             console.log("nomotion");
-                                            assetTimeStamps1 = assetTimeStamps1  + json.list[0].dataSourceAddress.did + ',nm' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps1 = assetTimeStamps1 + json.list[0].dataSourceAddress.did + ',nm' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'free':
                                             console.log("nomotion");
@@ -219,7 +218,7 @@ client.on('connect', function(connection) {
                                             break;
                                         case 'occupied':
                                             console.log("occupy");
-                                            assetTimeStamps2 = assetTimeStamps2 +  json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps2 = assetTimeStamps2 + json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         default:
                                             break;
