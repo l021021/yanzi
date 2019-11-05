@@ -121,7 +121,7 @@ client.on('connect', function(connection) {
                 case 'GetSamplesResponse':
                     //GetSamplesResponse
                     if (json.responseCode.name == 'success') {
-                        console.log("Yaaaay, temperaturedata in abundance!");
+                        console.log("Environment Data");
                         console.log(json.sampleListDto.list);
                         connection.close();
                     } else {
@@ -150,7 +150,7 @@ client.on('connect', function(connection) {
                     var now = new Date().getTime();
                     setTimeout(sendGetLocationsRequest, json.expireTime - now);
                     _t1.setTime(json.expireTime);
-                    console.log("susbscribe renew in (min)： " + (json.expireTime - now) / 60000); //100min
+                    console.log("Susbscribe renew in (min)： " + (json.expireTime - now) / 60000); //100min
                     break;
 
                 case 'SubscribeData':
@@ -168,11 +168,11 @@ client.on('connect', function(connection) {
                                     var motionFlag = ' ? '; //update new value 
                                     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        console.log("motion!");
+                                        console.log("Motion!");
                                         motionFlag = ' + ';
                                         motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
-                                        console.log("no motion!");
+                                        console.log("No motion!");
                                         motionFlag = ' - ';
                                         motionTimeStamps = motionTimeStamps + json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
