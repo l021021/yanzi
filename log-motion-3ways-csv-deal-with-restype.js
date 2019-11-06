@@ -142,7 +142,7 @@ client.on('connect', function (connection) {
                                         //console.log("        Sensor first seen, cannot tell");
                                     };
 
-                                    console.log('      ' + _Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
+                                    console.log('      ' + _Counter + '# ' + _t3.toLocaleTimeString() + ' SampleMotion ' + json.list[0].dataSourceAddress.did + motionFlag +
                                         _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
                                         ' Last: ' + _t2.toLocaleTimeString() + ' static(s)：  ' +
                                         (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
@@ -152,7 +152,7 @@ client.on('connect', function (connection) {
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
                                     var motionFlag = ' ? '; //update new value 
-                                    console.log('      ' + _Counter + '# ' + json.list[0].list[0].assetState.name + ' (SampleAsset) ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
+                                    console.log('      ' + _Counter + '# ' + json.list[0].list[0].assetState.name + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
                                         json.list[0].list[0].assetState.name);
                                     switch (json.list[0].list[0].assetState.name) {
 
@@ -224,9 +224,9 @@ client.on('connect', function (connection) {
                                 case 'physicalDeviceIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowUP':
-                                   // _t2.setTime(json.list[0].timeOfEvent);
-                                   // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
-                                  //  break;
+                                // _t2.setTime(json.list[0].timeOfEvent);
+                                // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
+                                //  break;
                                 default:
                                     //console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
                                     console.log("!!!! cannot understand this Event" + json.list[0].eventType.name);
