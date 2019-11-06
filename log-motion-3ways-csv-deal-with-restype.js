@@ -125,9 +125,9 @@ client.on('connect', function(connection) {
                     switch (json.list[0].resourceType) {
                         case 'SampleList':
                             //Sensor DATA
-                            console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].dataSourceAddress.variableName.name)
-                            switch (json.list[0].dataSourceAddress.variableName.name) {
-                                case 'motion': //sampleMotion
+                            console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
+                            switch (json.list[0].list[0].resourceType) {
+                                case 'SampleMotion': //sampleMotion
                                     _t1.setTime(json.list[0].list[0].sampleTime);
                                     _t2.setTime(json.list[0].list[0].timeLastMotion); //sensor motion-detected time
                                     _t3.setTime(json.timeSent); //packet sent 
@@ -154,7 +154,7 @@ client.on('connect', function(connection) {
                                         ' Last: ' + _t2.toLocaleTimeString() + ' static：(s) ' +
                                         (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
                                     break;
-                                case 'unitState': //sampleAsset- free occupied ismotion isnomotion 
+                                case 'SampleAsset': //sampleAsset- free occupied ismotion isnomotion 
 
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
@@ -185,13 +185,13 @@ client.on('connect', function(connection) {
                                             json.list[0].list[0].assetState.name);
                                     }
                                     break;
-                                case 'percentage': //SamplePercentage
+                                case 'SamplePercentage': //SamplePercentage
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
                                     console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
                                         ' Occu%:' + json.list[0].list[0].value);
                                     break;
-                                case 'assetUtilization': //SampleUtilization
+                                case 'SampleUtilization': //SampleUtilization
 
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
@@ -201,18 +201,23 @@ client.on('connect', function(connection) {
 
                                     break;
 
-                                case 'uplog':
+                                case 'SampleUpState':
                                     _t2.setTime(json.list[0].list[0].sampleTime);
                                     console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType);
 
                                     break;
-                                case 'volatileOrganicCompound':
-                                case 'temperatureK':
-                                case 'relativeHumidity':
-                                case 'pressure':
-                                case 'soundPressureLevel':
-                                case 'illuminance':
-                                case 'carbonDioxide':
+
+                                case 'SlotDTO':
+                                case 'SampleEndOfSlot':
+                                    console.log(JSON.stringify(json));
+                                    break;
+                                case 'SampleVOC':
+                                case 'SampleTemp':
+                                case 'SampleRelativeHumidity':
+                                case 'SamplePressure':
+                                case 'SampleSoundPressureLevel':
+                                case 'SampleIlluminance':
+                                case 'SampleCO2':
                                     _t3.setTime(json.list[0].list[0].sampleTime);
                                     //console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
                                     break;
