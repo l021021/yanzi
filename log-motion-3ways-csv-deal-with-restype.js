@@ -160,30 +160,30 @@ client.on('connect', function(connection) {
                                     var motionFlag = ' ? '; //update new value 
                                     // console.log(JSON.stringify(json));
 
-                                    if (json.list[0].list[0].sample == undefined) {
+                                    //  if (json.list[0].list[0].sample == undefined) {
 
 
-                                        switch (json.list[0].list[0].assetState.name) {
+                                    switch (json.list[0].list[0].assetState.name) {
 
-                                            case 'isMotion':
-                                                assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
-                                                break;
-                                            case 'isNoMotion':
-                                                assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
-                                                break;
-                                            case 'free':
-                                                assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
-                                                break;
-                                            case 'occupied':
-                                                assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
-                                                break;
-                                            default:
-                                                console.log("!!!! cannot understand");
-                                                break;
-                                        };
-                                        console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
-                                            json.list[0].list[0].assetState.name);
-                                    }
+                                        case 'isMotion':
+                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
+                                            break;
+                                        case 'isNoMotion':
+                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
+                                            break;
+                                        case 'free':
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
+                                            break;
+                                        case 'occupied':
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
+                                            break;
+                                        default:
+                                            console.log("!!!! cannot understand assetname" + json.list[0].list[0].assetState.name);
+                                            break;
+                                    };
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
+                                        json.list[0].list[0].assetState.name);
+                                    // }
                                     break;
                                 case 'SamplePercentage': //SamplePercentage
                                     _t2.setTime(json.timeSent);
@@ -222,8 +222,7 @@ client.on('connect', function(connection) {
                                     //console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
-                                    console.log("!!!! cannot understand");
-                                    console.log(_Counter + '# ' + "Sample List Other " + json.list[0].dataSourceAddress.variableName.name);
+                                    console.log("!!!! cannot understand samplelist" + json.list[0].dataSourceAddress.variableName.name);
                             }
                             break;
                         case 'EventDTO':
@@ -239,15 +238,16 @@ client.on('connect', function(connection) {
                                     break;
                                 default:
                                     console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
+                                    console.log("!!!! cannot understand evtdto");
                             }
                             break;
                         default:
-                            console.log("!!!! cannot understand");
+                            console.log("!!!! cannot understand " + json.list[0].resourceType);
                     }
                     break;
 
                 default:
-                    console.log("!!!! cannot understand");
+                    console.log("!!!! cannot understand" + json.messageType);
                     //connection.close();
                     break;
             }
