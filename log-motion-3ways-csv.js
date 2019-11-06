@@ -179,6 +179,7 @@ client.on('connect', function(connection) {
                                                 assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                                 break;
                                             default:
+                                                console.log("!!!! ca             nnot understand");
                                                 break;
                                         };
                                         console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
@@ -218,6 +219,7 @@ client.on('connect', function(connection) {
                                     break;
                                 default:
                                     console.log(_Counter + '# ' + "Sample List Other " + json.list[0].dataSourceAddress.variableName.name);
+                                    console.log("!!!! cannot         understand");
                             }
                             break;
                         case 'EventDTO':
@@ -236,11 +238,12 @@ client.on('connect', function(connection) {
                             }
                             break;
                         default:
+                            console.log("!!   !!                      cannot understand");
                     }
                     break;
 
                 default:
-                    console.log("!!!! cannot understand");
+                    console.log("!!!!                                      cannot understand");
                     //connection.close();
                     break;
             }

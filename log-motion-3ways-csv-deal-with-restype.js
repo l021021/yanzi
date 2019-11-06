@@ -9,7 +9,6 @@ var cirrusAPIendpoint = "cirrus21.yanzi.se";
 //Set up credentials. Please DONT have your credentials in your code when running on production
 var username = "frank.shen@pinyuaninfo.com";
 var password = "Internetofthing";
-
 //var LocationId = '229349' //fangtang 
 //var LocationId = '188559' //1001
 //var LocationId = '88252' //1002
@@ -18,8 +17,8 @@ var password = "Internetofthing";
 //var LocationId = '83561' //1005
 //var LocationId = '521209' //wafer-shanghai 
 
-//var LocationId = '503370' //wanshen
-var LocationId = '797296' //novah
+var LocationId = '503370' //wanshen
+    //var LocationId = '797296' //novah
 
 
 //For log use only
@@ -179,6 +178,7 @@ client.on('connect', function(connection) {
                                                 assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                                 break;
                                             default:
+                                                console.log("!!!! cannot understand");
                                                 break;
                                         };
                                         console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
@@ -213,7 +213,7 @@ client.on('connect', function(connection) {
                                     break;
                                 case 'SampleVOC':
                                 case 'SampleTemp':
-                                case 'SampleRelativeHumidity':
+                                case 'SampleHumidity':
                                 case 'SamplePressure':
                                 case 'SampleSoundPressureLevel':
                                 case 'SampleIlluminance':
@@ -222,6 +222,7 @@ client.on('connect', function(connection) {
                                     //console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
+                                    console.log("!!!! cannot understand");
                                     console.log(_Counter + '# ' + "Sample List Other " + json.list[0].dataSourceAddress.variableName.name);
                             }
                             break;
@@ -241,6 +242,7 @@ client.on('connect', function(connection) {
                             }
                             break;
                         default:
+                            console.log("!!!! cannot understand");
                     }
                     break;
 
