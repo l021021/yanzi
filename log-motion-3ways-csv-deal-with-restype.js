@@ -1,12 +1,7 @@
 var WebSocketClient = require('websocket').client;
-
-//Set up endpoint, you'll probably need to change this
 var cirrusAPIendpoint = "cirrus21.yanzi.se";
 
-// ##########CHANGE BELOW TO YOUR OWN DATA##########
 
-//Set up credentials. Please DONT have your credentials in your code when running on production
-//Set up credentials. Please DONT have your credentials in your code when running on production
 var username = "frank.shen@pinyuaninfo.com";
 var password = "Internetofthing";
 //var LocationId = '229349' //fangtang 
@@ -16,14 +11,13 @@ var password = "Internetofthing";
 //var LocationId = '938433' //1004
 //var LocationId = '83561' //1005
 //var LocationId = '521209' //wafer-shanghai 
-
-var LocationId = '503370' //wanshen
-    //var LocationId = '797296' //novah
+//var LocationId = '503370' //wanshen
+var LocationId = '797296' //novah
 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 2000; //will exit when this number of messages has been logged
+var _logLimit = 1000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -40,17 +34,17 @@ var assetTimeStamps3 = '';
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 
-client.on('connectFailed', function(error) {
+client.on('connectFailed', function (error) {
     console.log('Connect Error: ' + error.toString());
     connection.close();
 });
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
             var t = new Date().getTime();
@@ -66,15 +60,15 @@ client.on('connect', function(connection) {
                 for (var key in sensorArray) {
                     sensorcounter++;
                     if (output == "") {
-                        output = sensorArray[key];      
-                    }      
+                        output = sensorArray[key];
+                    }
                     else {
-                        output += "," + sensorArray[key];      
+                        output += "," + sensorArray[key];
                     }
                 } // do some report before exit
 
                 // console.log(sensorArray.toString());
-                console.log('Total Motions Sensors seen：' + sensorcounter + ' : with counters as :' + output);
+                console.log('Total Motions Sensors seen： ' + sensorcounter + ' : with counters as :' + output);
                 console.log('Motion records calculated from counters:');
                 console.log(motionTimeStamps.toString());
                 console.log('Motion records calculated from motion/nomotion packets:');
@@ -88,7 +82,7 @@ client.on('connect', function(connection) {
             } //for log use only
 
             // Print all messages with DTO type
-            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ':' + json.messageType);
             switch (json.messageType) {
                 case 'ServiceResponse':
                     sendLoginRequest();
@@ -133,24 +127,24 @@ client.on('connect', function(connection) {
 
                                     //algorithm based on SampleMotion；
                                     var temp1 = sensorArray[json.list[0].dataSourceAddress.did];
-                                    var motionFlag = ' ? '; //update new value 
+                                    var motionFlag = ' ?? '; //update new value 
                                     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        console.log("        Motion detected..");
-                                        motionFlag = ' + ';
+                                        //console.log("        Motion detected..");
+                                        motionFlag = ' ++ ';
                                         motionTimeStamps += json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
-                                        console.log("        No motion Detected..");
-                                        motionFlag = ' - ';
+                                        // console.log("        No motion Detected..");
+                                        motionFlag = ' == ';
                                         motionTimeStamps += json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
                                     } else {
-                                        console.log("        Sensor first seen, cannot tell");
+                                        //console.log("        Sensor first seen, cannot tell");
                                     };
 
                                     console.log('      ' + _Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
                                         _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
-                                        ' Last: ' + _t2.toLocaleTimeString() + ' static：(s) ' +
+                                        ' Last: ' + _t2.toLocaleTimeString() + ' static(s)：  ' +
                                         (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
                                     break;
                                 case 'SampleAsset': //sampleAsset- free occupied ismotion isnomotion 
@@ -158,11 +152,8 @@ client.on('connect', function(connection) {
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
                                     var motionFlag = ' ? '; //update new value 
-                                    // console.log(JSON.stringify(json));
-
-                                    //  if (json.list[0].list[0].sample == undefined) {
-
-
+                                    console.log('      ' + _Counter + '# ' + json.list[0].list[0].assetState.name + ' (SampleAsset) ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
+                                        json.list[0].list[0].assetState.name);
                                     switch (json.list[0].list[0].assetState.name) {
 
                                         case 'isMotion':
@@ -181,21 +172,19 @@ client.on('connect', function(connection) {
                                             console.log("!!!! cannot understand assetname" + json.list[0].list[0].assetState.name);
                                             break;
                                     };
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
-                                        json.list[0].list[0].assetState.name);
-                                    // }
+
                                     break;
                                 case 'SamplePercentage': //SamplePercentage
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SamplePercentage ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
                                         ' Occu%:' + json.list[0].list[0].value);
                                     break;
                                 case 'SampleUtilization': //SampleUtilization
 
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SampleUtilization ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
                                         ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied);
                                     assetTimeStamps3 += _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied + '\n';
 
@@ -203,13 +192,15 @@ client.on('connect', function(connection) {
 
                                 case 'SampleUpState':
                                     _t2.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType);
-
+                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].deviceUpState.name);
+                                    //console.log(JSON.stringify(json));
                                     break;
 
                                 case 'SlotDTO':
+                                    console.log('      ' + _Counter + '# ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
+                                    break;
                                 case 'SampleEndOfSlot':
-                                    console.log(JSON.stringify(json));
+                                    console.log('      ' + _Counter + '# ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.resourceType + ' ' + json.list[0].list[0].sample.assetState.name);
                                     break;
                                 case 'SampleVOC':
                                 case 'SampleTemp':
@@ -218,36 +209,36 @@ client.on('connect', function(connection) {
                                 case 'SampleSoundPressureLevel':
                                 case 'SampleIlluminance':
                                 case 'SampleCO2':
-                                    _t3.setTime(json.list[0].list[0].sampleTime);
+                                    // _t3.setTime(json.list[0].list[0].sampleTime);
                                     //console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
-                                    console.log("!!!! cannot understand samplelist" + json.list[0].dataSourceAddress.variableName.name);
+                                    console.log("!!!! cannot understand samplelist resourcetype" + json.list[0].list[0].resourceType);
                             }
                             break;
                         case 'EventDTO':
-                            //console.log('   Event DTO : ' + json.list[0].eventType.name);
+                            console.log('    ' + _Counter + '#    Event DTO : ' + json.list[0].eventType.name);
                             switch (json.list[0].eventType.name) {
                                 case 'newUnAcceptedDeviceSeenByDiscovery':
                                 case 'physicalDeviceIsNowUP':
                                 case 'physicalDeviceIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowUP':
-                                    _t2.setTime(json.list[0].timeOfEvent);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
-                                    break;
+                                   // _t2.setTime(json.list[0].timeOfEvent);
+                                   // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
+                                  //  break;
                                 default:
-                                    console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
-                                    console.log("!!!! cannot understand evtdto");
+                                    //console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
+                                    console.log("!!!! cannot understand this Event" + json.list[0].eventType.name);
                             }
                             break;
                         default:
-                            console.log("!!!! cannot understand " + json.list[0].resourceType);
+                            console.log("!!!! cannot understand this rsourcetype " + json.list[0].resourceType);
                     }
                     break;
 
                 default:
-                    console.log("!!!! cannot understand" + json.messageType);
+                    console.log("!!!! cannot understand this messagetype" + json.messageType);
                     //connection.close();
                     break;
             }
@@ -255,11 +246,11 @@ client.on('connect', function(connection) {
         }
     });
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         console.log("Connection Error: " + error.toString());
     });
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         console.log('Connection closed!');
     });
 
