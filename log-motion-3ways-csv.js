@@ -17,11 +17,14 @@ var password = "Internetofthing";
 //var LocationId = '938433' //1004
 //var LocationId = '83561' //1005
 //var LocationId = '521209' //wafer-shanghai 
-var LocationId = '503370' //wanshen
+
+//var LocationId = '503370' //wanshen
+var LocationId = '797296' //novah
+
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 500; //will exit when this number of messages has been logged
+var _logLimit = 2000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -31,6 +34,7 @@ var sensorArray = new Array();
 var motionTimeStamps = '';
 var assetTimeStamps1 = '';
 var assetTimeStamps2 = '';
+var assetTimeStamps3 = '';
 
 
 
@@ -83,7 +87,7 @@ client.on('connect', function(connection) {
             } //for log use only
 
             // Print all messages with DTO type
-            //console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
             switch (json.messageType) {
                 case 'ServiceResponse':
                     sendLoginRequest();
@@ -94,7 +98,7 @@ client.on('connect', function(connection) {
                         //sendGetLocationsRequest();// not mandatory 
                         sendSubscribeRequest(LocationId); //test
                         //sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId);
-                        sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                        //sendSubscribeRequest_lifecircle(LocationId); //eventDTO
 
                     } else {
                         console.log(json.responseCode.name);
@@ -103,12 +107,7 @@ client.on('connect', function(connection) {
                         process.exit();
                     }
                     break;
-                case 'GetLocationsResponse':
-                    break;
-                case 'GetSamplesResponse':
-                    break;
-                case 'GetUnitsResponse':
-                    break;
+
                 case 'PeriodicResponse':
                     setTimeout(sendPeriodicRequest, 60000);
                     console.log(_Counter + '# ' + "periodic response-keepalive");
@@ -120,9 +119,11 @@ client.on('connect', function(connection) {
                     console.log("Susbscribe renew in (min)： " + (json.expireTime - now) / 60000); //100min
                     break;
                 case 'SubscribeData':
+                    console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
                     switch (json.list[0].resourceType) {
                         case 'SampleList':
                             //Sensor DATA
+                            console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].dataSourceAddress.variableName.name)
                             switch (json.list[0].dataSourceAddress.variableName.name) {
                                 case 'motion': //sampleMotion
                                     _t1.setTime(json.list[0].list[0].sampleTime);
@@ -134,67 +135,61 @@ client.on('connect', function(connection) {
                                     var motionFlag = ' ? '; //update new value 
                                     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        console.log("Motion detected！");
+                                        console.log("        Motion detected..");
                                         motionFlag = ' + ';
                                         motionTimeStamps += json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
                                     } else if (temp1 == json.list[0].list[0].value) {
-                                        console.log("No motion Detected！");
+                                        console.log("        No motion Detected..");
                                         motionFlag = ' - ';
                                         motionTimeStamps += json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
 
                                     } else {
-                                        console.log("Sensor first seen! cannot tell");
+                                        console.log("        Sensor first seen, cannot tell");
                                     };
 
-                                    console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
+                                    console.log('      ' + _Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + motionFlag +
                                         _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
                                         ' Last: ' + _t2.toLocaleTimeString() + ' static：(s) ' +
                                         (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
                                     break;
                                 case 'assetUtilization': //SampleUtilization
+
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
                                         ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied);
                                     break;
-                                case 'unitState': //sampleAsset free occupied ismotion isnomotion
-
-                                    //algorithm based on SampleAsset；
+                                case 'unitState': //sampleAsset- free occupied ismotion isnomotion 
 
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
-                                    //    var temp1 = sensorArray[json.list[0].dataSourceAddress.did];
                                     var motionFlag = ' ? '; //update new value 
-                                    //     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
+                                    console.log('      ' + _Counter + '# ' + 'UnitState ' + json.list[0].list[0].assetState.name)
+
                                     switch (json.list[0].list[0].assetState.name) {
 
                                         case 'isMotion':
-                                            console.log("UnitState:motion");
                                             assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'isNoMotion':
-
-                                            console.log("UnitState:nomotion");
                                             assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'free':
-                                            console.log("UnitState:free");
                                             assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         case 'occupied':
-                                            console.log("UnitState:occupy");
                                             assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
                                             break;
                                         default:
                                             break;
                                     };
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
                                         json.list[0].list[0].assetState.name);
                                     break;
                                 case 'percentage': //SamplePercentage
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
                                         ' Occu%:' + json.list[0].list[0].value);
                                     break;
                                 case 'uplog':

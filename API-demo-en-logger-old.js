@@ -52,7 +52,7 @@ client.on('connect', function(connection) {
                 process.exit();
             }
             // Print all messages with type
-            //console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
 
             if (json.messageType == 'ServiceResponse') {
                 //ServiceRequest
