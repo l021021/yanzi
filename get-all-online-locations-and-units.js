@@ -1,22 +1,26 @@
-//Set up endpoint, you'll probably need to change this
-var cirrusAPIendpoint = "cirrus21.yanzi.se";
 var WebSocketClient = require('websocket').client;
-// ##########CHANGE BELOW TO YOUR OWN DATA##########
+var cirrusAPIendpoint = "cirrus21.yanzi.se";
 
-//Set up credentials. Please DONT have your credentials in your code when running on production
-
-//var username = "653498331@qq.com";
-//var password = "000000";
-
-//var username = "bruce.li@sugarinc.cn"
-//var password = "000888";
 
 var username = "frank.shen@pinyuaninfo.com";
 var password = "Internetofthing";
+//var username = "653498331@qq.com";
+//var password = "000000";
 
-//Location ID and Device ID, please change this to your own, can be found in Yanzi Live
-var LocationId = '229349' //Usually a 6 digit number 
-var deviceID = "EUI64-0080E10300056EB7-3-Temp" //Found in Yanzi Live, ends with "-Temp"
+
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+//var LocationId = '83561' //1005
+//var LocationId = '521209' //wafer-shanghai 
+//var LocationId = '503370' //wanshen
+//var LocationId = '797296' //novah
+//var LocationId = '223516' //huamao
+var LocationId = '783825' //浦发11
+
+
 
 // ################################################
 
@@ -26,12 +30,11 @@ var _logLimit = 200; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
-var _UnitsCounter = 0;
 var _OnlineUnitsCounter = 0;
 var _Locations = [];
 var _Units = [];
 var TimeoutId = setTimeout(doReport, 10000);
-
+var _UnitsCounter = 0;
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 
@@ -53,12 +56,10 @@ var locationObj = {
     "accountId": "262468578",
     "name": "Beach House",
     "gwdid": "EUI64-12411261342",
-    "multiLocationParent": "991579",
-    "isMultiLocation": false,
     "units": 0,
+    "Allunits": 0,
     "Onlineunits": 0,
-    "gwOnline": false,
-    "activityLevel": "medium"
+    //"activityLevel": "medium"
 
 }
 
@@ -93,47 +94,18 @@ var sampleObj = {
 }
 
 var unitObj = {
-    "did": "EUI64-0080E10300099999",
-    "locationId": "123456",
-    "serverDid": "EUI64-0080E10300012345",
-    "productType": "09876543210987",
-    "lifeCycleState": "shadow",
+    "did": "",
+    "locationId": "",
+    "serverDid": "",
+    "productType": "",
+    "lifeCycleState": "",
     "isChassis": true,
-    "chassisDid": "0999999999999",
-    "unitTypeFixed": "inputMotion",
-    "isNameSetByUser": true,
-    "nameSetByUser": "Door's Motion",
-    "defaultNameSetBySystem": "Motion-12AB",
-    "userId": "giorgos@yanzi.se",
-    "unitAcl": "operator"
+    "chassisDid": "",
+    "unitTypeFixed": "in",
+    "nameSetByUser": "",
+    "type": ""
 
 }
-
-var susbscribeObj = {
-    // "resourceType":"SampleList",
-    //"dataSourceAddress":{
-    // "resourceType":"DataSourceAddress",
-    "timeCreated": 1569232419547,
-    "did": "EUI64-0080E10300099999-3-Humd",
-    "locationId": "123456",
-    //  "variableName":{
-    //  "resourceType":"VariableName",
-    "name": "relativeHumidity",
-    //   },
-    //   "instanceNumber":0
-    //   },
-    //  "timeCreated":1569232419547,
-    //  "list":[
-    //  {
-    "resourceType": "SampleHumidity",
-    //"timeCreated":1569232419547,
-    "sampleTime": 1569232419547,
-    "value": 30.5
-        //,"temperature":296.45
-        //}
-        //   ]
-}
-
 
 var eventObj = {
     // "resourceType":"EventDTO",
@@ -183,7 +155,8 @@ client.on('connect', function(connection) {
     // Handle messages
     connection.on('message', function(message) {
         clearTimeout(TimeoutId);
-        TimeoutId = setTimeout(doReport, 10000);
+        TimeoutId = setTimeout(doReport, 10000); //exit after 10 seconds idle
+
 
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
@@ -228,13 +201,11 @@ client.on('connect', function(connection) {
                             for (var i = 0; i < json.list.length; i++) {
                                 let _locationExist = false;
 
-                                for (const key in _Locations) {
+                                for (const key in _Locations) { //already exits in Array?
 
                                     if (_Locations[key].locationID || (_Locations[key].locationID == json.list[i].locationAddress.locationId)) {
                                         _locationExist = true;
                                     }
-                                    // console.log(' for ' + _Locations[key].locationId + '  to add ' + json.list[i].locationAddress.locationId + ' ？ ' + _locationExist);
-
                                 }
 
                                 var _templocationObj;
@@ -244,13 +215,11 @@ client.on('connect', function(connection) {
                                     locationObj.accountId = json.list[i].accountId
                                     locationObj.name = json.list[i].name
                                     locationObj.gwdid = json.list[i].gwdid
-                                    locationObj.activityLevel = 'medium'
-                                        // _Locations.push(locationObj);
-                                        //   console.log(JSON.stringify(locationObj));
+
                                     _templocationObj = JSON.parse(JSON.stringify(locationObj));
 
                                     _Locations.push(_templocationObj);
-                                    sendGetUnitsRequest(json.list[i].locationAddress.locationId); //Optinoal ,get units under this location
+                                    sendGetUnitsRequest(json.list[i].locationAddress.locationId); //get units under this location
                                 }
                             }
                         }
@@ -260,54 +229,42 @@ client.on('connect', function(connection) {
                         connection.close();
                         process.exit();
                     };
-                    //  sendSubscribeRequest(LocationId); //test
-                    //  sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                    //sendGetUnitsRequest(537931);
                     break;
                 case 'GetSamplesResponse':
-                    //GetSamplesResponse
-                    if (json.responseCode.name == 'success') {
-                        console.log("Yaaaay, temperaturedata in abundance!");
-                        console.log(json.sampleListDto.list);
-                        connection.close();
-                    } else {
-                        console.log("Couldn't get samples.");
-                        connection.close();
-                    }
 
                     break;
                 case 'GetUnitsResponse':
                     if (json.responseCode.name == 'success') {
+                        //console.log(JSON.stringify(json) + '\n\n');
 
                         var _tempunitObj;
 
                         for (let index = 0; index < json.list.length; index++) { //process each response packet
 
+                            if (json.list[index].unitTypeFixed.name == 'gateway') { continue };
+                            // record physical sensors 
+                            unitObj.did = json.list[index].unitAddress.did //
+                            unitObj.locationId = json.locationAddress.locationId
+                            unitObj.chassisDid = json.list[index].chassisDid
+                            unitObj.productType = json.list[index].productType
+                            unitObj.lifeCycleState = json.list[index].lifeCycleState.name
+                            unitObj.isChassis = json.list[index].isChassis
+                            unitObj.nameSetByUser = json.list[index].nameSetByUser
+                            unitObj.serverDid = json.list[index].unitAddress.serverDid
 
-                            if (json.list[index].isChassis) { // record physical sensors 
-                                unitObj.did = json.list[index].chassisDid
-                                unitObj.locationId = json.locationAddress.locationId
-                                unitObj.serverDid = json.locationAddress.serverDid
-                                unitObj.productType = json.list[index].productType
-                                unitObj.lifeCycleState = json.list[index].lifeCycleState.name
-                                unitObj.isChassis = json.list[index].isChassis
-                                    //unitObj.chassisDid = "0999999999999"
-                                    // unitObj.unitTypeFixed = "inputMotion"
-                                    // unitObj.nameSetByUser = "Door's Motion"
-                                    // unitObj.defaultNameSetBySystem = "Motion-12AB"
-                                    //unitObj.userId = "giorgos@yanzi.se"
-                                    /* console.log(json.list[index].chassisDid,
-                                         json.list[index].isChassis,
-                                         json.list[index].lifeCycleState.name,
+                            unitObj.type = json.list[index].unitTypeFixed.name
 
-                                     );*/
-                                _tempunitObj = JSON.parse(JSON.stringify(unitObj));
-                                _Units.push(_tempunitObj);
-                                _UnitsCounter++;
-                                if (json.list[index].lifeCycleState.name == 'present') {
-                                    _OnlineUnitsCounter++;
-                                }
+                            // console.log(json.list[index].unitTypeFixed.name + '\n\n');
+
+                            _tempunitObj = JSON.parse(JSON.stringify(unitObj));
+                            _Units.push(_tempunitObj);
+                            //_UnitsCounter++;
+                            if (json.list[index].lifeCycleState.name == 'present') {
+                                _OnlineUnitsCounter++;
                             }
                         }
+
                         //console.log(_UnitsCounter + ' Units in Location:  while ' + _OnlineUnitsCounter + ' online');
 
                     } else {
@@ -320,81 +277,8 @@ client.on('connect', function(connection) {
                     //console.log(_Counter + '# ' + "periodic response-keepalive");
                     break;
                 case 'SubscribeResponse':
-                    var now = new Date().getTime();
-                    setTimeout(sendGetLocationsRequest, json.expireTime - now);
-                    _t1.setTime(json.expireTime);
-                    console.log("susbscribe renew in (min)： " + (json.expireTime - now) / 60000); //100min
-                    break;
 
                 case 'SubscribeData':
-                    switch (json.list[0].resourceType) {
-                        case 'SampleList':
-                            //Sensor DATA
-                            switch (json.list[0].dataSourceAddress.variableName.name) {
-                                case 'motion': //sampleMotion
-                                    _t1.setTime(json.list[0].list[0].sampleTime);
-                                    _t2.setTime(json.list[0].list[0].timeLastMotion); //sensor motion-detected time
-                                    _t3.setTime(json.timeSent); //packet sent 
-                                    console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Motion ' + json.list[0].dataSourceAddress.did + ' @ ' +
-                                        _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
-                                        ' Last: ' + _t2.toLocaleTimeString() + ' static_for(s) ' +
-                                        (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000);
-                                    break;
-                                case 'assetUtilization': //SampleUtilization
-                                    _t2.setTime(json.timeSent);
-                                    _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
-                                        ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied);
-                                    break;
-                                case 'unitState': //sampleAsset free occupied ismotion isnomotion
-                                    _t2.setTime(json.timeSent);
-                                    _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' SMPAST ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
-                                        json.list[0].list[0].assetState.name);
-                                    break;
-                                case 'percentage': //SamplePercentage
-                                    _t2.setTime(json.timeSent);
-                                    _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' PCTAGE ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
-                                        ' Occu%:' + json.list[0].list[0].value);
-                                    break;
-                                case 'uplog':
-                                    _t2.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType);
-
-                                    break;
-                                case 'volatileOrganicCompound':
-                                case 'temperatureK':
-                                case 'relativeHumidity':
-                                case 'pressure':
-                                case 'soundPressureLevel':
-                                case 'illuminance':
-                                case 'carbonDioxide':
-                                    _t3.setTime(json.list[0].list[0].sampleTime);
-                                    console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
-                                    break;
-                                default:
-                                    console.log(_Counter + '# ' + "Sample List Other parameters" + json.list[0].dataSourceAddress.variableName.name);
-                            }
-                            break;
-                        case 'EventDTO':
-                            //console.log('   Event DTO : ' + json.list[0].eventType.name);
-                            switch (json.list[0].eventType.name) {
-                                case 'newUnAcceptedDeviceSeenByDiscovery':
-                                case 'physicalDeviceIsNowUP':
-                                case 'physicalDeviceIsNowDOWN':
-                                case 'remoteLocationGatewayIsNowDOWN':
-                                case 'remoteLocationGatewayIsNowUP':
-                                    _t2.setTime(json.list[0].timeOfEvent);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
-                                    break;
-                                default:
-                                    console.log('    Event DTO : ' + json.list[0].eventType.name);
-                            }
-                            break;
-                        default:
-                    }
-                    break;
 
                 default:
                     console.log("!!!! cannot understand");
@@ -451,32 +335,10 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-    function sendGetSamplesRequest() {
-        var now = new Date().getTime();
-        var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "GetSamplesRequest",
-            "dataSourceAddress": {
-                "resourceType": "DataSourceAddress",
-                "did": deviceID,
-                "locationId": locationId,
-                "variableName": {
-                    "resourceType": "VariableName",
-                    "name": "temperatureC"
-                }
-            },
-            "timeSerieSelection": {
-                "resourceType": "TimeSerieSelection",
-                "timeStart": nowMinusOneHour,
-                "timeEnd": now
-            }
-        };
-        sendMessage(request);
-    }
+
 
     function sendGetUnitsRequest(locationID) {
         var now = new Date().getTime();
-        var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
 
             "messageType": "GetUnitsRequest",
@@ -484,46 +346,6 @@ client.on('connect', function(connection) {
             "locationAddress": {
                 "resourceType": "LocationAddress",
                 "locationId": locationID,
-            }
-        }
-
-        sendMessage(request);
-    }
-
-
-
-    function sendSubscribeRequest(location_ID) {
-        var now = new Date().getTime();
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "SubscribeRequest",
-            "timeSent": now,
-            "unitAddress": {
-                "resourceType": "UnitAddress",
-                "locationId": location_ID,
-            },
-            "subscriptionType": {
-                "resourceType": "SubscriptionType",
-                "name": "data" //data   |  lifecircle  |  config
-            }
-        }
-
-        sendMessage(request);
-    }
-
-    function sendSubscribeRequest_lifecircle(location_ID) {
-        var now = new Date().getTime();
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            "messageType": "SubscribeRequest",
-            "timeSent": now,
-            "unitAddress": {
-                "resourceType": "UnitAddress",
-                "locationId": location_ID,
-            },
-            "subscriptionType": {
-                "resourceType": "SubscriptionType",
-                "name": "lifecircle" //data   |  lifecircle  |  config
             }
         }
 
@@ -539,59 +361,47 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-
-
-
 });
 
 function beginPOLL() {
-    if (!username) {
-        console.error("The username has to be set");
-        return;
-    }
-    if (!password) {
-        console.error("The password has to be set");
-        return;
-    }
+
     client.connect("wss://" + cirrusAPIendpoint + "/cirrusAPI");
     //console.log("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
 }
 
 function doReport() {
 
-    console.log("total " + _Locations.length + " locations: ") // + JSON.stringify(_Locations))
     var _c1 = 0;
     var _c2 = 0;
+    var output = '';
 
-    //do some work to match sensor to locations
+    for (const key in _Locations) {
+        output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n';
+
+    }
+    console.log("total " + _Locations.length + " locations: \n" + output)
+        //do some work to match sensor to locations
     for (const key in _Units) {
-        var unitsinlocation = 0;
-        var onlineunitsinlocation = 0;
-        //console.log(_Units[key].lifeCycleState + ':' + _Units[key].did + ' ' + _c1++); // for each online sensors
-        if (_Units[key].lifeCycleState == 'present') {
-            for (const key1 in _Locations) { //update to its locations
-                // console.log(_Locations[key1].locationId + '-G   x   S-' + _Units[key].locationId + ' match ?' + _c2++);
-
-                if (_Locations[key1].locationId == _Units[key].locationId) {
+        for (const key1 in _Locations) { //update to its locations
+            if (_Locations[key1].locationId == _Units[key].locationId) {
+                _Locations[key1].Allunits++;
+                if (_Units[key].lifeCycleState == 'present') {
                     _Locations[key1].gwOnline = true;
                     _Locations[key1].Onlineunits++;
-                    break;
                 }
+                if (_Units[key].isChassis == 'true') { _Locations[key1].units++; }
+                break;
             }
-
-
-
-        };
-
+        }
 
     }
 
     //list each active location
     for (const key1 in _Locations) {
         if (_Locations[key1].gwOnline)
-            console.log('Location:' + _Locations[key1].locationId + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors');
+            console.log('Location:' + _Locations[key1].locationId + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors, ' + _Locations[key1].Allunits + ' logical');
     }
-    console.log("total " + _Units.length + " Sensors under live locations while " + _OnlineUnitsCounter + ' online') //+ JSON.stringify(_Units))
+    console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online') //+ JSON.stringify(_Units))
     clearTimeout(TimeoutId);
     process.exit();
 }

@@ -12,7 +12,10 @@ var password = "Internetofthing";
 //var LocationId = '83561' //1005
 //var LocationId = '521209' //wafer-shanghai 
 //var LocationId = '503370' //wanshen
-var LocationId = '797296' //novah
+//var LocationId = '797296' //novah
+//var LocationId = '223516' //huamao
+var LocationId = '783825' //浦发11
+
 
 
 //For log use only
@@ -29,22 +32,24 @@ var assetTimeStamps1 = '';
 var assetTimeStamps2 = '';
 var assetTimeStamps3 = '';
 
+LocationId = process.argv[2] || LocationId;
+console.log(LocationId);
 
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 
-client.on('connectFailed', function (error) {
+client.on('connectFailed', function(error) {
     console.log('Connect Error: ' + error.toString());
     connection.close();
 });
 
-client.on('connect', function (connection) {
+client.on('connect', function(connection) {
     //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function (message) {
+    connection.on('message', function(message) {
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
             var t = new Date().getTime();
@@ -61,8 +66,7 @@ client.on('connect', function (connection) {
                     sensorcounter++;
                     if (output == "") {
                         output = sensorArray[key];
-                    }
-                    else {
+                    } else {
                         output += "," + sensorArray[key];
                     }
                 } // do some report before exit
@@ -92,6 +96,7 @@ client.on('connect', function (connection) {
                         sendPeriodicRequest(); //as keepalive
                         //sendGetLocationsRequest();// not mandatory 
                         sendSubscribeRequest(LocationId); //test
+                        console.log('    Analyzing Location:' + LocationId);
                         //sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId);
                         //sendSubscribeRequest_lifecircle(LocationId); //eventDTO
 
@@ -105,7 +110,7 @@ client.on('connect', function (connection) {
 
                 case 'PeriodicResponse':
                     setTimeout(sendPeriodicRequest, 60000);
-                    console.log(_Counter + '# ' + "periodic response-keepalive");
+                    //console.log(_Counter + '# ' + "periodic response-keepalive");
                     break;
                 case 'SubscribeResponse':
                     var now = new Date().getTime();
@@ -197,10 +202,10 @@ client.on('connect', function (connection) {
                                     break;
 
                                 case 'SlotDTO':
-                                    console.log('      ' + _Counter + '# ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
+                                    console.log('      ' + _Counter + '# SlotDTO ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
                                     break;
                                 case 'SampleEndOfSlot':
-                                    console.log('      ' + _Counter + '# ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.resourceType + ' ' + json.list[0].list[0].sample.assetState.name);
+                                    console.log('     ' + _Counter + '# EndofDTO ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.assetState.name);
                                     break;
                                 case 'SampleVOC':
                                 case 'SampleTemp':
@@ -209,8 +214,7 @@ client.on('connect', function (connection) {
                                 case 'SampleSoundPressureLevel':
                                 case 'SampleIlluminance':
                                 case 'SampleCO2':
-                                    // _t3.setTime(json.list[0].list[0].sampleTime);
-                                    //console.log(_Counter + '# ' + _t3.toLocaleTimeString() + ' Envrmt ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].resourceType + ' ' + json.list[0].list[0].value);
+                                    console.log('     ' + _Counter + '# Sample ' + _t3.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
                                     console.log("!!!! cannot understand samplelist resourcetype" + json.list[0].list[0].resourceType);
@@ -224,9 +228,9 @@ client.on('connect', function (connection) {
                                 case 'physicalDeviceIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowUP':
-                                // _t2.setTime(json.list[0].timeOfEvent);
-                                // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
-                                //  break;
+                                    // _t2.setTime(json.list[0].timeOfEvent);
+                                    // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
+                                    //  break;
                                 default:
                                     //console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
                                     console.log("!!!! cannot understand this Event" + json.list[0].eventType.name);
@@ -246,11 +250,11 @@ client.on('connect', function (connection) {
         }
     });
 
-    connection.on('error', function (error) {
+    connection.on('error', function(error) {
         console.log("Connection Error: " + error.toString());
     });
 
-    connection.on('close', function (error) {
+    connection.on('close', function(error) {
         console.log('Connection closed!');
     });
 
