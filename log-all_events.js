@@ -18,6 +18,8 @@ var _t3 = new Date();
 var _OnlineUnitsCounter = 0;
 var _Locations = [];
 var _Units = [];
+var _Events = [];
+
 //var TimeoutId = setTimeout(doReport, 10000);
 var _UnitsCounter = 0;
 // Create a web socket client initialized with the options as above
@@ -93,37 +95,11 @@ var unitObj = {
 }
 
 var eventObj = {
-    // "resourceType":"EventDTO",
-    // "timeCreated":1569232419674,
     "timeOfEvent": 1569232419674,
-    // "unitAddress":{
-    //  "resourceType":"UnitAddress",
-    //  "timeCreated":1569232419674,
     "did": "EUI64-0080E10300099999",
-    "locationId": "123456",
-    "serverDid": "EUI64-0080E10300012345",
-    //  },
-    //  "list":[
-    //  {
-    "resourceType": "AcceptEntityDTO",
-    //  "timeCreated":1569232419674,
-    "timeWhenAccepted": 1428996894,
-    "timeFirstSeen": 1569232409674,
-    "acceptState": {
-        "resourceType": "DeviceAcceptState",
-        "name": "discovered"
-    },
-    //"acceptUserid":"giorgos@yanzi.se",
-    // "did":"EUI64-0080E10300099999",
-    // "productType":"0090DA12121212",
-    //"inetAddress":"178.45.224.13",
-    //"macAddress":"00-14-22-01-23-45",
-    "gwdid": "EUI64-0080E10300012345",
-    "locationId": "123456",
-    //  }
-    //  ],
-    // "eventType":{"resourceType":"EventType",
-    "name": "physicalDeviceIsNowUP"
+    "name": "discovered",
+    "locationId": "123456"
+
 }
 
 
@@ -143,6 +119,8 @@ client.on('connect', function(connection) {
         // TimeoutId = setTimeout(doReport, 10000); //exit after 10 seconds idle
 
 
+
+
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
             var t = new Date().getTime();
@@ -157,108 +135,116 @@ client.on('connect', function(connection) {
                 doReport();
                 process.exit();
             } //for log use only
+            try {
+                // Print all messages with type
+                // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+                // console.log(JSON.stringify(json));
+                switch (json.messageType) {
+                    case 'ServiceResponse':
+                        sendLoginRequest();
+                        break;
+                    case 'LoginResponse':
+                        if (json.responseCode.name == 'success') {
+                            sendPeriodicRequest(); //as keepalive
+                            sendGetLocationsRequest(); // not mandatory 
 
-            // Print all messages with type
-            // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
-            // console.log(JSON.stringify(json));
-            switch (json.messageType) {
-                case 'ServiceResponse':
-                    sendLoginRequest();
-                    break;
-                case 'LoginResponse':
-                    if (json.responseCode.name == 'success') {
-                        sendPeriodicRequest(); //as keepalive
-                        sendGetLocationsRequest(); // not mandatory 
+                        } else {
+                            console.log(json.responseCode.name);
+                            console.log("Couldn't login, check your username and passoword");
+                            connection.close();
+                            process.exit();
+                        }
+                        break;
+                    case 'GetLocationsResponse':
+                        if (json.responseCode.name == 'success') {
+                            //UPDATE location IDs
+                            if (json.list.length != 0) { //收到一组新的location
+                                for (var i = 0; i < json.list.length; i++) {
+                                    let _locationExist = false;
 
-                    } else {
-                        console.log(json.responseCode.name);
-                        console.log("Couldn't login, check your username and passoword");
-                        connection.close();
-                        process.exit();
-                    }
-                    break;
-                case 'GetLocationsResponse':
-                    if (json.responseCode.name == 'success') {
-                        //UPDATE location IDs
-                        if (json.list.length != 0) { //收到一组新的location
-                            for (var i = 0; i < json.list.length; i++) {
-                                let _locationExist = false;
+                                    for (const key in _Locations) { //already exits in Array?
 
-                                for (const key in _Locations) { //already exits in Array?
+                                        if (_Locations[key].locationID || (_Locations[key].locationID == json.list[i].locationAddress.locationId)) {
+                                            _locationExist = true;
+                                        }
+                                    }
 
-                                    if (_Locations[key].locationID || (_Locations[key].locationID == json.list[i].locationAddress.locationId)) {
-                                        _locationExist = true;
+                                    var _templocationObj;
+                                    if (!_locationExist) {
+                                        locationObj.locationId = json.list[i].locationAddress.locationId
+                                        locationObj.serverDid = json.list[i].locationAddress.serverDid
+                                        locationObj.accountId = json.list[i].accountId
+                                        locationObj.name = json.list[i].name
+                                        locationObj.gwdid = json.list[i].gwdid
+
+                                        _templocationObj = JSON.parse(JSON.stringify(locationObj));
+
+                                        _Locations.push(_templocationObj);
+                                        sendSubscribeRequest_lifecircle(locationObj.locationId); //subscribe eventDTO
+                                        sendSubscribeRequest_config(locationObj.locationId)
+
                                     }
                                 }
+                            }
+                        } else {
+                            console.log(json.responseCode.name);
+                            console.log("Couldn't get location");
+                            connection.close();
+                            process.exit();
+                        };
+                        break;
+                    case 'GetSamplesResponse':
+                        break;
+                    case 'GetUnitsResponse':
+                        break;
+                    case 'PeriodicResponse':
+                        setTimeout(sendPeriodicRequest, 60000);
+                        //console.log(_Counter + '# ' + "periodic response-keepalive");
+                        break;
+                    case 'SubscribeResponse':
+                        break;
 
-                                var _templocationObj;
-                                if (!_locationExist) {
-                                    locationObj.locationId = json.list[i].locationAddress.locationId
-                                    locationObj.serverDid = json.list[i].locationAddress.serverDid
-                                    locationObj.accountId = json.list[i].accountId
-                                    locationObj.name = json.list[i].name
-                                    locationObj.gwdid = json.list[i].gwdid
+                    case 'SubscribeData':
+                        // console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
+                        switch (json.list[0].resourceType) {
+                            case 'SampleList':
+                                break;
+                            case 'EventDTO':
+                                //console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
+                                switch (json.list[0].eventType.name) {
+                                    case 'newUnAcceptedDeviceSeenByDiscovery':
+                                    case 'physicalDeviceIsNowUP':
+                                    case 'physicalDeviceIsNowDOWN':
+                                    case 'remoteLocationGatewayIsNowDOWN':
+                                    case 'remoteLocationGatewayIsNowUP':
+                                    default:
+                                        _t2.setTime(json.list[0].timeOfEvent);
+                                        var _tempeventObj;
+                                        eventObj.timeOfEvent = json.list[0].timeOfEvent
+                                        eventObj.did = json.list[0].unitAddress.did
+                                        eventObj.locationId = json.list[0].unitAddress.locationId
+                                        eventObj.name = json.list[0].eventType.name
+                                        _tempeventObj = JSON.parse(JSON.stringify(eventObj));
 
-                                    _templocationObj = JSON.parse(JSON.stringify(locationObj));
-
-                                    _Locations.push(_templocationObj);
-                                    sendSubscribeRequest_lifecircle(locationObj.locationId); //subscribe eventDTO
-                                    sendSubscribeRequest_config(locationObj.locationId)
+                                        _Events.push(_tempeventObj);
+                                        console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].unitAddress.did + ' in ' + json.list[0].unitAddress.locationId + ':' + json.list[0].eventType.name);
 
                                 }
-                            }
+                                break;
+                            default:
+                                console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType);
                         }
-                    } else {
-                        console.log(json.responseCode.name);
-                        console.log("Couldn't get location");
-                        connection.close();
-                        process.exit();
-                    };
-                    break;
-                case 'GetSamplesResponse':
+                        break;
 
-                    break;
-                case 'GetUnitsResponse':
-                    break;
-                case 'PeriodicResponse':
-                    setTimeout(sendPeriodicRequest, 60000);
-                    //console.log(_Counter + '# ' + "periodic response-keepalive");
-                    break;
-                case 'SubscribeResponse':
-                    break;
+                    default:
+                        console.log("!!!! cannot understand" + JSON.stringify(json));
 
-                case 'SubscribeData':
-                    console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
-                    switch (json.list[0].resourceType) {
-                        case 'SampleList':
-                            break;
-                        case 'EventDTO':
-                            //console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
-                            switch (json.list[0].eventType.name) {
-                                case 'newUnAcceptedDeviceSeenByDiscovery':
-                                case 'physicalDeviceIsNowUP':
-                                case 'physicalDeviceIsNowDOWN':
-                                case 'remoteLocationGatewayIsNowDOWN':
-                                case 'remoteLocationGatewayIsNowUP':
-                                default:
-                                    _t2.setTime(json.list[0].timeOfEvent);
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].unitAddress.did + ' in ' + json.list[0].unitAddress.locationId + ':' + json.list[0].eventType.name);
+                        break;
+                }
 
-                                    //  console.log("!!!! cannot understand this Event" + json.list[0].eventType.name + '\n' + JSON.stringify(json));
-                                    // process.exit();
-                            }
-                            break;
-                        default:
-                            console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType);
-                    }
-                    break;
-
-                default:
-                    console.log("!!!! cannot understand" + JSON.stringify(json));
-
-                    break;
+            } catch (error) {
+                console.log(JSON.stringify(json))
             }
-
         }
     });
 
@@ -273,9 +259,7 @@ client.on('connect', function(connection) {
 
     function sendMessage(message) {
         if (connection.connected) {
-            // Create the text to be sent
             var json = JSON.stringify(message, null, 1);
-            //    console.log('sending' + JSON.stringify(json));
             connection.sendUTF(json);
         } else {
             console.log("sendMessage: Couldn't send message, the connection is not open");
@@ -300,7 +284,6 @@ client.on('connect', function(connection) {
 
     function sendGetLocationsRequest() {
         var now = new Date().getTime();
-        //var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
             "messageType": "GetLocationsRequest",
             "timeSent": now
@@ -308,10 +291,8 @@ client.on('connect', function(connection) {
         sendMessage(request);
     }
 
-
     function sendSubscribeRequest_lifecircle(location_ID) {
         var now = new Date().getTime();
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
             "messageType": "SubscribeRequest",
             "timeSent": now,
@@ -330,7 +311,6 @@ client.on('connect', function(connection) {
 
     function sendSubscribeRequest_config(location_ID) {
         var now = new Date().getTime();
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
             "messageType": "SubscribeRequest",
             "timeSent": now,
