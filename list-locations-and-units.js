@@ -242,8 +242,11 @@ client.on('connect', function(connection) {
 
                         for (let index = 0; index < json.list.length; index++) { //process each response packet
 
-                            if (json.list[index].unitTypeFixed.name == 'gateway') { continue };
-                            // record physical sensors 
+                            if (json.list[index].unitTypeFixed.name == 'gateway' || json.list[index].unitAddress.did.indexOf('AP') != -1) { //console.log(json.list[index].unitAddress.did); 
+                                continue
+                            }; //GW and AP are not sensor
+
+                            // record all sensors 
                             unitObj.did = json.list[index].unitAddress.did //
                             unitObj.locationId = json.locationAddress.locationId
                             unitObj.chassisDid = json.list[index].chassisDid
@@ -375,33 +378,61 @@ function doReport() {
     var _c2 = 0;
     var output = '';
 
+    _Locations.sort(function(a, b) {
+        var x = a.locationId
+        var y = b.locationId
+        if (x > y) return 1;
+        if (x < y) return -1;
+        return 0;
+
+    });
+    _Units.sort(function(a, b) {
+        var x = a.locationId
+        var y = b.locationId
+        if (x > y) return 1;
+        if (x < y) return -1;
+        return 0;
+    });
+
     for (const key in _Locations) {
         output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n';
 
     }
-    console.log("total " + _Locations.length + " locations: \n" + output)
-        //do some work to match sensor to locations
+    console.log("total " + _Locations.length + " locations: \n" + output) //print all locations with name
+
+    //do some work to match sensor to locations
     for (const key in _Units) {
         for (const key1 in _Locations) { //update to its locations
             if (_Locations[key1].locationId == _Units[key].locationId) {
                 _Locations[key1].Allunits++;
-                if (_Units[key].lifeCycleState == 'present') {
+                if (_Units[key].lifeCycleState == 'present') { //mark live gateways
                     _Locations[key1].gwOnline = true;
                     _Locations[key1].Onlineunits++;
                 }
-                if (_Units[key].isChassis == 'true') { _Locations[key1].units++; }
+                if (_Units[key].isChassis == 'true') { _Locations[key1].units++; } //mark physical sensors
                 break;
             }
         }
 
     }
 
-    //list each active location
+    //list each active location with sensors
     for (const key1 in _Locations) {
         if (_Locations[key1].gwOnline)
-            console.log('Location:' + _Locations[key1].locationId + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors, ' + _Locations[key1].Allunits + ' logical');
+            console.log('' + _Locations[key1].locationId + '-' + _Locations[key1].name + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors, ' + _Locations[key1].Allunits + ' logical');
     }
-    console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online') //+ JSON.stringify(_Units))
+    console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online')
+
+    //list all online physical sensors
+    for (const key1 in _Units) {
+        if (_Units[key1].lifeCycleState == 'present')
+            console.log(_Units[key1].did + ' in ' + _Units[key1].locationId);
+    }
+    for (const key1 in _Units) {
+        if (_Units[key1].lifeCycleState == 'subUnit' && _Units[key1].isChassis == false)
+            console.log(_Units[key1].did + ' as a ' + _Units[key1].type + ' in ' + _Units[key1].locationId);
+    }
+
     clearTimeout(TimeoutId);
     process.exit();
 }
