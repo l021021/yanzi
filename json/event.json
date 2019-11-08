@@ -1,0 +1,27 @@
+{
+    "messageType": "SubscribeData",
+    "timeSent": 1573189554899,
+    "list": [{
+        "resourceType": "EventDTO",
+        "timeOfEvent": 1573189554071,
+        "list": [{
+            "resourceType": "LocationDTO",
+            "timeCreated": 1573189554071,
+            "locationAddress": {
+                "resourceType": "LocationAddress",
+                "locationId": "783825",
+                "serverDid": "EUI64-0090DAFFFF00738A"
+            },
+            "timeModified": 1568248667254,
+            "accountId": "338354",
+            "name": "Test26(PF11)",
+            "gwdid": "EUI64-0090DAFFFF00738A",
+            "linkServerDid": "EUI64-0090DAFFFF0040AA",
+            "isMultiLocation": false
+        }],
+        "eventType": {
+            "resourceType": "EventType",
+            "name": "locationChanged"
+        }
+    }]
+}

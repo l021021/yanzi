@@ -243,7 +243,7 @@ client.on('connect', function(connection) {
                 }
 
             } catch (error) {
-                console.log(JSON.stringify(json))
+                console.log(serror + '\n' + JSON.stringify(json))
             }
         }
     });
