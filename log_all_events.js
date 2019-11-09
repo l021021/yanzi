@@ -76,7 +76,7 @@ var sampleObj = {
     "timeCreated": 1569232419466,
     "sampleTime": 1569232419466,
     "value": 30.5
-        //  "temperature":296.45
+    //  "temperature":296.45
 
 }
 
@@ -104,17 +104,17 @@ var eventObj = {
 
 
 //Program body 
-client.on('connectFailed', function(error) {
+client.on('connectFailed', function (error) {
     console.log('Connect Error: reconnect' + error.toString());
     beginPOLL();
 });
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         // clearTimeout(TimeoutId);
         // TimeoutId = setTimeout(doReport, 10000); //exit after 10 seconds idle
 
@@ -130,15 +130,14 @@ client.on('connect', function(connection) {
 
             if (_Counter > _logLimit) {
                 console.log("Enough Data!")
-                    //console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
+                //console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
                 connection.close();
                 doReport();
                 process.exit();
             } //for log use only
             try {
                 // Print all messages with type
-                // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
-                // console.log(JSON.stringify(json));
+                console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
                 switch (json.messageType) {
                     case 'ServiceResponse':
                         sendLoginRequest();
@@ -205,31 +204,44 @@ client.on('connect', function(connection) {
                         break;
 
                     case 'SubscribeData':
-                        // console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
+                        console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
                         switch (json.list[0].resourceType) {
                             case 'SampleList':
                                 break;
                             case 'EventDTO':
+                                var _tempeventObj;
+                                console.log(JSON.stringify(json))
                                 //console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
                                 switch (json.list[0].eventType.name) {
+
                                     case 'newUnAcceptedDeviceSeenByDiscovery':
                                     case 'physicalDeviceIsNowUP':
                                     case 'physicalDeviceIsNowDOWN':
                                     case 'remoteLocationGatewayIsNowDOWN':
                                     case 'remoteLocationGatewayIsNowUP':
-                                    default:
-                                        _t2.setTime(json.list[0].timeOfEvent);
-                                        var _tempeventObj;
-                                        eventObj.timeOfEvent = json.list[0].timeOfEvent
+                                    case 'unitConfigurationChanged':
+
+                                        console.log(json.list[0].unitAddress.did + '' + json.list[0].unitAddress.locationId)
                                         eventObj.did = json.list[0].unitAddress.did
                                         eventObj.locationId = json.list[0].unitAddress.locationId
-                                        eventObj.name = json.list[0].eventType.name
-                                        _tempeventObj = JSON.parse(JSON.stringify(eventObj));
-
-                                        _Events.push(_tempeventObj);
-                                        console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].unitAddress.did + ' in ' + json.list[0].unitAddress.locationId + ':' + json.list[0].eventType.name);
+                                        break;
+                                    case 'locationChanged':
+                                        console.log(json.list[0].list[0].locationAddress.serverDid + '' + json.list[0].list[0].locationAddress.locationId)
+                                        eventObj.did = json.list[0].list[0].locationAddress.serverDid
+                                        eventObj.locationId = json.list[0].list[0].locationAddress.locationId
+                                    default:
 
                                 }
+                                _t2.setTime(json.list[0].timeOfEvent);
+
+                                eventObj.timeOfEvent = json.list[0].timeOfEvent
+                                eventObj.name = json.list[0].eventType.name
+                                _tempeventObj = JSON.parse(JSON.stringify(eventObj));
+
+                                _Events.push(_tempeventObj);
+                                console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].unitAddress.did + ' in ' + json.list[0].unitAddress.locationId + ':' + json.list[0].eventType.name);
+
+
                                 break;
                             default:
                                 console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType);
@@ -243,17 +255,17 @@ client.on('connect', function(connection) {
                 }
 
             } catch (error) {
-                console.log(error.toString() + '\n' + JSON.stringify(json))
+                console.log(error.toString() + '----\n' + JSON.stringify(json))
             }
         }
     });
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         console.log("Connection Error: reconnect" + error.toString());
         beginPOLL();
     });
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         console.log('Connection closed!');
     });
 
@@ -365,7 +377,7 @@ function doReport() {
     var _c2 = 0;
     var output = '';
 
-    _Locations.sort(function(a, b) {
+    _Locations.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
@@ -373,7 +385,7 @@ function doReport() {
         return 0;
 
     });
-    _Units.sort(function(a, b) {
+    _Units.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
