@@ -49,3 +49,35 @@
         }
     ]
 }
+
+{
+    "messageType": "SubscribeData",
+    "timeSent": 1573305475464,
+    "list": [
+        {
+            "resourceType": "EventDTO",
+            "timeOfEvent": 1573305474821,
+            "list": [
+                {
+                    "resourceType": "LocationDTO",
+                    "timeCreated": 1573305474821,
+                    "locationAddress": {
+                        "resourceType": "LocationAddress",
+                        "locationId": "499735",
+                        "serverDid": "EUI64-0090DAFFFF006438"
+                    },
+                    "timeModified": 1572501203481,
+                    "accountId": "220781",
+                    "name": "hzft",
+                    "gwdid": "EUI64-0090DAFFFF006438",
+                    "linkServerDid": "EUI64-0090DAFFFF0040AA",
+                    "isMultiLocation": false
+                }
+            ],
+            "eventType": {
+                "resourceType": "EventType",
+                "name": "locationChanged"
+            }
+        }
+    ]
+}

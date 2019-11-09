@@ -1,0 +1,330 @@
+1# 20:28:44 RCVD_MSG:ServiceResponse
+2# 20:28:44 RCVD_MSG:LoginResponse
+3# 20:28:44 RCVD_MSG:PeriodicResponse
+4# 20:28:45 RCVD_MSG:GetLocationsResponse
+5# 20:28:45 RCVD_MSG:GetLocationsResponse
+6# 20:28:45 RCVD_MSG:GetLocationsResponse
+7# 20:28:45 RCVD_MSG:GetLocationsResponse
+8# 20:28:45 RCVD_MSG:GetLocationsResponse
+9# 20:28:45 RCVD_MSG:GetLocationsResponse
+10# 20:28:45 RCVD_MSG:GetLocationsResponse
+11# 20:28:45 RCVD_MSG:GetLocationsResponse
+12# 20:28:45 RCVD_MSG:GetLocationsResponse
+13# 20:28:45 RCVD_MSG:GetLocationsResponse
+14# 20:28:45 RCVD_MSG:GetLocationsResponse
+15# 20:28:45 RCVD_MSG:GetLocationsResponse
+16# 20:28:45 RCVD_MSG:GetLocationsResponse
+17# 20:28:45 RCVD_MSG:GetLocationsResponse
+18# 20:28:45 RCVD_MSG:GetLocationsResponse
+19# 20:28:45 RCVD_MSG:GetLocationsResponse
+20# 20:28:45 RCVD_MSG:GetLocationsResponse
+21# 20:28:46 RCVD_MSG:GetLocationsResponse
+22# 20:28:46 RCVD_MSG:SubscribeResponse
+23# 20:28:46 RCVD_MSG:SubscribeResponse
+24# 20:28:46 RCVD_MSG:SubscribeResponse
+25# 20:28:46 RCVD_MSG:SubscribeResponse
+26# 20:28:46 RCVD_MSG:SubscribeResponse
+27# 20:28:46 RCVD_MSG:SubscribeResponse
+28# 20:28:46 RCVD_MSG:SubscribeResponse
+29# 20:28:46 RCVD_MSG:SubscribeResponse
+30# 20:28:46 RCVD_MSG:SubscribeResponse
+31# 20:28:46 RCVD_MSG:SubscribeResponse
+32# 20:28:46 RCVD_MSG:SubscribeResponse
+33# 20:28:46 RCVD_MSG:SubscribeResponse
+34# 20:28:46 RCVD_MSG:GetLocationsResponse
+35# 20:28:46 RCVD_MSG:GetLocationsResponse
+36# 20:28:46 RCVD_MSG:SubscribeResponse
+37# 20:28:46 RCVD_MSG:SubscribeResponse
+38# 20:28:46 RCVD_MSG:SubscribeResponse
+39# 20:28:46 RCVD_MSG:SubscribeResponse
+40# 20:28:46 RCVD_MSG:SubscribeResponse
+41# 20:28:46 RCVD_MSG:SubscribeResponse
+42# 20:28:46 RCVD_MSG:SubscribeResponse
+43# 20:28:46 RCVD_MSG:SubscribeResponse
+44# 20:28:46 RCVD_MSG:SubscribeResponse
+45# 20:28:46 RCVD_MSG:SubscribeResponse
+46# 20:28:46 RCVD_MSG:SubscribeResponse
+47# 20:28:46 RCVD_MSG:SubscribeResponse
+48# 20:28:46 RCVD_MSG:SubscribeResponse
+49# 20:28:46 RCVD_MSG:SubscribeResponse
+50# 20:28:46 RCVD_MSG:GetLocationsResponse
+51# 20:28:46 RCVD_MSG:SubscribeResponse
+52# 20:28:46 RCVD_MSG:GetLocationsResponse
+53# 20:28:46 RCVD_MSG:SubscribeResponse
+54# 20:28:47 RCVD_MSG:SubscribeResponse
+55# 20:28:47 RCVD_MSG:SubscribeResponse
+56# 20:28:47 RCVD_MSG:SubscribeResponse
+57# 20:28:47 RCVD_MSG:SubscribeResponse
+58# 20:28:47 RCVD_MSG:SubscribeResponse
+59# 20:28:47 RCVD_MSG:SubscribeResponse
+60# 20:28:47 RCVD_MSG:SubscribeResponse
+61# 20:28:47 RCVD_MSG:SubscribeResponse
+62# 20:28:47 RCVD_MSG:SubscribeResponse
+63# 20:28:47 RCVD_MSG:SubscribeResponse
+64# 20:28:47 RCVD_MSG:SubscribeResponse
+65# 20:28:47 RCVD_MSG:SubscribeResponse
+66# 20:28:47 RCVD_MSG:SubscribeResponse
+67# 20:28:47 RCVD_MSG:SubscribeResponse
+68# 20:28:47 RCVD_MSG:SubscribeResponse
+69# 20:28:47 RCVD_MSG:SubscribeResponse
+70# 20:28:47 RCVD_MSG:SubscribeResponse
+71# 20:28:47 RCVD_MSG:SubscribeResponse
+72# 20:28:47 RCVD_MSG:SubscribeResponse
+73# 20:28:47 RCVD_MSG:SubscribeResponse
+74# 20:28:47 RCVD_MSG:SubscribeResponse
+75# 20:28:47 RCVD_MSG:SubscribeResponse
+76# 20:28:47 RCVD_MSG:SubscribeResponse
+77# 20:28:47 RCVD_MSG:SubscribeResponse
+78# 20:28:47 RCVD_MSG:SubscribeResponse
+79# 20:28:47 RCVD_MSG:SubscribeResponse
+80# 20:28:47 RCVD_MSG:SubscribeResponse
+81# 20:28:47 RCVD_MSG:SubscribeResponse
+82# 20:28:47 RCVD_MSG:SubscribeResponse
+83# 20:28:47 RCVD_MSG:SubscribeResponse
+84# 20:28:47 RCVD_MSG:SubscribeResponse
+85# 20:28:47 RCVD_MSG:SubscribeResponse
+86# 20:28:47 RCVD_MSG:SubscribeResponse
+87# 20:28:47 RCVD_MSG:SubscribeResponse
+88# 20:28:47 RCVD_MSG:SubscribeResponse
+89# 20:28:47 RCVD_MSG:SubscribeResponse
+90# 20:28:47 RCVD_MSG:SubscribeResponse
+91# 20:28:47 RCVD_MSG:SubscribeResponse
+92# 20:28:47 RCVD_MSG:SubscribeResponse
+93# 20:28:47 RCVD_MSG:SubscribeResponse
+94# 20:28:47 RCVD_MSG:SubscribeResponse
+95# 20:28:47 RCVD_MSG:SubscribeResponse
+96# 20:28:47 RCVD_MSG:SubscribeResponse
+97# 20:28:47 RCVD_MSG:SubscribeResponse
+98# 20:28:47 RCVD_MSG:SubscribeResponse
+99# 20:28:47 RCVD_MSG:SubscribeResponse
+100# 20:28:47 RCVD_MSG:SubscribeResponse
+101# 20:28:47 RCVD_MSG:SubscribeResponse
+102# 20:28:47 RCVD_MSG:SubscribeResponse
+103# 20:28:47 RCVD_MSG:SubscribeResponse
+104# 20:28:47 RCVD_MSG:SubscribeResponse
+105# 20:28:47 RCVD_MSG:SubscribeResponse
+106# 20:28:47 RCVD_MSG:SubscribeResponse
+107# 20:28:47 RCVD_MSG:SubscribeResponse
+108# 20:28:47 RCVD_MSG:SubscribeResponse
+109# 20:28:47 RCVD_MSG:SubscribeResponse
+110# 20:28:47 RCVD_MSG:SubscribeResponse
+111# 20:28:47 RCVD_MSG:SubscribeResponse
+112# 20:28:47 RCVD_MSG:SubscribeResponse
+113# 20:28:47 RCVD_MSG:SubscribeResponse
+114# 20:28:47 RCVD_MSG:SubscribeResponse
+115# 20:28:47 RCVD_MSG:SubscribeResponse
+116# 20:28:47 RCVD_MSG:SubscribeResponse
+117# 20:28:47 RCVD_MSG:SubscribeResponse
+118# 20:28:47 RCVD_MSG:SubscribeResponse
+119# 20:28:47 RCVD_MSG:SubscribeResponse
+120# 20:28:47 RCVD_MSG:SubscribeResponse
+121# 20:28:47 RCVD_MSG:SubscribeResponse
+122# 20:28:47 RCVD_MSG:SubscribeResponse
+123# 20:28:47 RCVD_MSG:SubscribeResponse
+124# 20:28:47 RCVD_MSG:SubscribeResponse
+125# 20:28:47 RCVD_MSG:SubscribeResponse
+126# 20:28:47 RCVD_MSG:SubscribeResponse
+127# 20:28:47 RCVD_MSG:SubscribeResponse
+128# 20:28:47 RCVD_MSG:SubscribeResponse
+129# 20:28:47 RCVD_MSG:SubscribeResponse
+130# 20:28:47 RCVD_MSG:SubscribeResponse
+131# 20:28:47 RCVD_MSG:SubscribeResponse
+132# 20:28:47 RCVD_MSG:SubscribeResponse
+133# 20:28:47 RCVD_MSG:SubscribeResponse
+134# 20:28:48 RCVD_MSG:SubscribeResponse
+135# 20:28:48 RCVD_MSG:SubscribeResponse
+136# 20:28:48 RCVD_MSG:SubscribeResponse
+137# 20:28:48 RCVD_MSG:SubscribeResponse
+138# 20:28:48 RCVD_MSG:SubscribeResponse
+139# 20:28:48 RCVD_MSG:SubscribeResponse
+140# 20:28:48 RCVD_MSG:SubscribeResponse
+141# 20:28:48 RCVD_MSG:SubscribeResponse
+142# 20:28:48 RCVD_MSG:SubscribeResponse
+143# 20:28:48 RCVD_MSG:SubscribeResponse
+144# 20:28:48 RCVD_MSG:SubscribeResponse
+145# 20:28:48 RCVD_MSG:SubscribeResponse
+146# 20:28:48 RCVD_MSG:SubscribeResponse
+147# 20:28:48 RCVD_MSG:SubscribeResponse
+148# 20:28:48 RCVD_MSG:SubscribeResponse
+149# 20:28:48 RCVD_MSG:SubscribeResponse
+150# 20:28:48 RCVD_MSG:SubscribeResponse
+151# 20:28:48 RCVD_MSG:SubscribeResponse
+152# 20:28:48 RCVD_MSG:SubscribeResponse
+153# 20:28:48 RCVD_MSG:SubscribeResponse
+154# 20:28:48 RCVD_MSG:SubscribeResponse
+155# 20:28:48 RCVD_MSG:SubscribeResponse
+156# 20:28:48 RCVD_MSG:SubscribeResponse
+157# 20:28:48 RCVD_MSG:SubscribeResponse
+158# 20:28:48 RCVD_MSG:SubscribeResponse
+159# 20:28:48 RCVD_MSG:SubscribeResponse
+160# 20:28:48 RCVD_MSG:SubscribeResponse
+161# 20:28:48 RCVD_MSG:SubscribeResponse
+162# 20:28:48 RCVD_MSG:SubscribeResponse
+163# 20:28:48 RCVD_MSG:SubscribeResponse
+164# 20:28:48 RCVD_MSG:SubscribeResponse
+165# 20:28:49 RCVD_MSG:SubscribeResponse
+166# 20:28:49 RCVD_MSG:SubscribeResponse
+167# 20:28:49 RCVD_MSG:SubscribeResponse
+168# 20:28:49 RCVD_MSG:SubscribeResponse
+169# 20:28:49 RCVD_MSG:SubscribeResponse
+170# 20:28:49 RCVD_MSG:SubscribeResponse
+171# 20:28:49 RCVD_MSG:SubscribeResponse
+172# 20:28:49 RCVD_MSG:SubscribeResponse
+173# 20:28:49 RCVD_MSG:SubscribeResponse
+174# 20:28:49 RCVD_MSG:SubscribeResponse
+175# 20:28:49 RCVD_MSG:SubscribeResponse
+176# 20:28:49 RCVD_MSG:SubscribeResponse
+177# 20:28:49 RCVD_MSG:SubscribeResponse
+178# 20:28:49 RCVD_MSG:SubscribeResponse
+179# 20:28:49 RCVD_MSG:SubscribeResponse
+180# 20:28:49 RCVD_MSG:SubscribeResponse
+181# 20:28:49 RCVD_MSG:SubscribeResponse
+182# 20:28:49 RCVD_MSG:SubscribeResponse
+183# 20:28:49 RCVD_MSG:SubscribeResponse
+184# 20:28:49 RCVD_MSG:SubscribeResponse
+185# 20:28:49 RCVD_MSG:SubscribeResponse
+186# 20:28:49 RCVD_MSG:SubscribeResponse
+187# 20:28:49 RCVD_MSG:SubscribeResponse
+188# 20:28:49 RCVD_MSG:SubscribeResponse
+189# 20:28:49 RCVD_MSG:SubscribeResponse
+190# 20:28:49 RCVD_MSG:SubscribeResponse
+191# 20:28:49 RCVD_MSG:SubscribeResponse
+192# 20:28:49 RCVD_MSG:SubscribeResponse
+193# 20:28:49 RCVD_MSG:SubscribeResponse
+194# 20:28:49 RCVD_MSG:SubscribeResponse
+195# 20:28:49 RCVD_MSG:SubscribeResponse
+196# 20:28:49 RCVD_MSG:SubscribeResponse
+197# 20:28:49 RCVD_MSG:SubscribeResponse
+198# 20:28:49 RCVD_MSG:SubscribeResponse
+199# 20:28:49 RCVD_MSG:SubscribeResponse
+200# 20:28:49 RCVD_MSG:SubscribeResponse
+201# 20:28:49 RCVD_MSG:SubscribeResponse
+202# 20:28:49 RCVD_MSG:SubscribeResponse
+203# 20:28:49 RCVD_MSG:SubscribeResponse
+204# 20:28:49 RCVD_MSG:SubscribeResponse
+205# 20:28:49 RCVD_MSG:SubscribeResponse
+206# 20:28:49 RCVD_MSG:SubscribeResponse
+207# 20:28:49 RCVD_MSG:SubscribeResponse
+208# 20:28:49 RCVD_MSG:SubscribeResponse
+209# 20:28:49 RCVD_MSG:SubscribeResponse
+210# 20:28:49 RCVD_MSG:SubscribeResponse
+211# 20:28:49 RCVD_MSG:SubscribeResponse
+212# 20:28:49 RCVD_MSG:SubscribeResponse
+213# 20:28:49 RCVD_MSG:SubscribeResponse
+214# 20:28:49 RCVD_MSG:SubscribeResponse
+215# 20:28:49 RCVD_MSG:SubscribeResponse
+216# 20:28:49 RCVD_MSG:SubscribeResponse
+217# 20:28:49 RCVD_MSG:SubscribeResponse
+218# 20:28:49 RCVD_MSG:SubscribeResponse
+219# 20:28:49 RCVD_MSG:SubscribeResponse
+220# 20:28:49 RCVD_MSG:SubscribeResponse
+221# 20:28:49 RCVD_MSG:SubscribeResponse
+222# 20:29:45 RCVD_MSG:PeriodicResponse
+223# 20:30:45 RCVD_MSG:PeriodicResponse
+224# 20:30:48 RCVD_MSG:SubscribeData
+  224# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573302649736,"list":[{"resourceType":"EventDTO","timeOfEvent":1573296204558,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-90FD9FFFFEA94252","locationId":"88252","serverDid":"EUI64-0090DAFFFF00699C"},"list":[{"resourceType":"AcceptEntityDTO","timeCreated":1573302649406,"timeWhenAccepted":-1,"timeFirstSeen":1573296204558,"acceptState":{"resourceType":"DeviceAcceptState","name":"discovered"},"did":"EUI64-90FD9FFFFEA94252","productType":"0090DA0301010532","inetAddress":"fd7a:f26f:5cc9:58bc:92fd:9fff:fea9:4252","gwdid":"UdpLinkTop","locationId":"88252"}],"eventType":{"resourceType":"EventType","name":"newUnAcceptedDeviceSeenByDiscovery"}}]}
+EUI64-90FD9FFFFEA9425288252
+      224# 18:43:24 EUI64-90FD9FFFFEA94252 in 88252:newUnAcceptedDeviceSeenByDiscovery
+225# 20:31:10 RCVD_MSG:SubscribeData
+  225# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573302671278,"list":[{"resourceType":"EventDTO","timeOfEvent":1573302671275,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowDOWN"}}]}
+EUI64-0090DAFFFF006438499735
+      225# 20:31:11 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+226# 20:31:10 RCVD_MSG:SubscribeData
+  226# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573302671386,"list":[{"resourceType":"EventDTO","timeOfEvent":1573302671385,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowUP"}}]}
+EUI64-0090DAFFFF006438499735
+      226# 20:31:11 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+227# 20:31:17 RCVD_MSG:SubscribeResponse
+228# 20:31:17 RCVD_MSG:SubscribeData
+  228# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573302679030,"list":[{"resourceType":"EventDTO","unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"unitConfigurationChanged"}}]}
+EUI64-0090DAFFFF006438499735
+      228# Invalid Date EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+229# 20:31:26 RCVD_MSG:SubscribeResponse
+230# 20:31:44 RCVD_MSG:SubscribeData
+  230# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573302705631,"list":[{"resourceType":"EventDTO","timeOfEvent":1573302704937,"list":[{"resourceType":"LocationDTO","timeCreated":1573302704937,"locationAddress":{"resourceType":"LocationAddress","locationId":"499735","serverDid":"EUI64-0090DAFFFF006438"},"timeModified":1572501203481,"accountId":"220781","name":"hzft","gwdid":"EUI64-0090DAFFFF006438","linkServerDid":"EUI64-0090DAFFFF0040AA","isMultiLocation":false}],"eventType":{"resourceType":"EventType","name":"locationChanged"}}]}
+EUI64-0090DAFFFF006438499735
+TypeError: Cannot read property 'did' of undefined----
+{"messageType":"SubscribeData","timeSent":1573302705631,"list":[{"resourceType":"EventDTO","timeOfEvent":1573302704937,"list":[{"resourceType":"LocationDTO","timeCreated":1573302704937,"locationAddress":{"resourceType":"LocationAddress","locationId":"499735","serverDid":"EUI64-0090DAFFFF006438"},"timeModified":1572501203481,"accountId":"220781","name":"hzft","gwdid":"EUI64-0090DAFFFF006438","linkServerDid":"EUI64-0090DAFFFF0040AA","isMultiLocation":false}],"eventType":{"resourceType":"EventType","name":"locationChanged"}}]}
+231# 20:31:45 RCVD_MSG:PeriodicResponse
+232# 20:32:46 RCVD_MSG:PeriodicResponse
+233# 20:33:46 RCVD_MSG:PeriodicResponse
+234# 20:34:46 RCVD_MSG:PeriodicResponse
+235# 20:34:50 RCVD_MSG:SubscribeData
+  235# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573302892156,"list":[{"resourceType":"EventDTO","timeOfEvent":1573296204558,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-90FD9FFFFEA94252","locationId":"88252","serverDid":"EUI64-0090DAFFFF00699C"},"list":[{"resourceType":"AcceptEntityDTO","timeCreated":1573302891517,"timeWhenAccepted":-1,"timeFirstSeen":1573296204558,"acceptState":{"resourceType":"DeviceAcceptState","name":"discovered"},"did":"EUI64-90FD9FFFFEA94252","productType":"0090DA0301010532","inetAddress":"fd7a:f26f:5cc9:58bc:92fd:9fff:fea9:4252","gwdid":"UdpLinkTop","locationId":"88252"}],"eventType":{"resourceType":"EventType","name":"newUnAcceptedDeviceSeenByDiscovery"}}]}
+EUI64-90FD9FFFFEA9425288252
+      235# 18:43:24 EUI64-90FD9FFFFEA94252 in 88252:newUnAcceptedDeviceSeenByDiscovery
+236# 20:35:46 RCVD_MSG:PeriodicResponse
+237# 20:36:39 RCVD_MSG:SubscribeData
+  237# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303001216,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303000025,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0080E10300056884","locationId":"190773","serverDid":"EUI64-0090DAFFFF0063DE"},"eventType":{"resourceType":"EventType","name":"physicalDeviceIsNowDOWN"}}]}
+EUI64-0080E10300056884190773
+      237# 20:36:40 EUI64-0080E10300056884 in 190773:physicalDeviceIsNowDOWN
+238# 20:36:47 RCVD_MSG:PeriodicResponse
+239# 20:36:55 RCVD_MSG:SubscribeData
+  239# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303016161,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303016160,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowDOWN"}}]}
+EUI64-0090DAFFFF006438499735
+      239# 20:36:56 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+240# 20:37:06 RCVD_MSG:SubscribeData
+  240# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303027832,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303027831,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowUP"}}]}
+EUI64-0090DAFFFF006438499735
+      240# 20:37:07 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+241# 20:37:14 RCVD_MSG:SubscribeData
+  241# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303035459,"list":[{"resourceType":"EventDTO","unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"unitConfigurationChanged"}}]}
+EUI64-0090DAFFFF006438499735
+      241# Invalid Date EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+242# 20:37:23 RCVD_MSG:SubscribeResponse
+243# 20:37:23 RCVD_MSG:SubscribeResponse
+244# 20:37:29 RCVD_MSG:SubscribeData
+  244# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303051079,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303050173,"list":[{"resourceType":"LocationDTO","timeCreated":1573303050173,"locationAddress":{"resourceType":"LocationAddress","locationId":"499735","serverDid":"EUI64-0090DAFFFF006438"},"timeModified":1572501203481,"accountId":"220781","name":"hzft","gwdid":"EUI64-0090DAFFFF006438","linkServerDid":"EUI64-0090DAFFFF0040AA","isMultiLocation":false}],"eventType":{"resourceType":"EventType","name":"locationChanged"}}]}
+EUI64-0090DAFFFF006438499735
+TypeError: Cannot read property 'did' of undefined----
+{"messageType":"SubscribeData","timeSent":1573303051079,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303050173,"list":[{"resourceType":"LocationDTO","timeCreated":1573303050173,"locationAddress":{"resourceType":"LocationAddress","locationId":"499735","serverDid":"EUI64-0090DAFFFF006438"},"timeModified":1572501203481,"accountId":"220781","name":"hzft","gwdid":"EUI64-0090DAFFFF006438","linkServerDid":"EUI64-0090DAFFFF0040AA","isMultiLocation":false}],"eventType":{"resourceType":"EventType","name":"locationChanged"}}]}
+245# 20:37:47 RCVD_MSG:PeriodicResponse
+246# 20:37:56 RCVD_MSG:SubscribeData
+  246# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303077322,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303077322,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowDOWN"}}]}
+EUI64-0090DAFFFF006438499735
+      246# 20:37:57 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+247# 20:38:15 RCVD_MSG:SubscribeData
+  247# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303096821,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303096821,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowUP"}}]}
+EUI64-0090DAFFFF006438499735
+      247# 20:38:16 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+248# 20:38:22 RCVD_MSG:SubscribeData
+  248# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303103651,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303103650,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowDOWN"}}]}
+EUI64-0090DAFFFF006438499735
+      248# 20:38:23 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+249# 20:38:22 RCVD_MSG:SubscribeData
+  249# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303103675,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303103675,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"remoteLocationGatewayIsNowUP"}}]}
+EUI64-0090DAFFFF006438499735
+      249# 20:38:23 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+250# 20:38:30 RCVD_MSG:SubscribeData
+  250# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303111301,"list":[{"resourceType":"EventDTO","unitAddress":{"resourceType":"UnitAddress","did":"EUI64-0090DAFFFF006438","locationId":"499735","serverDid":"EUI64-0090DAFFFF0040AA"},"eventType":{"resourceType":"EventType","name":"unitConfigurationChanged"}}]}
+EUI64-0090DAFFFF006438499735
+      250# Invalid Date EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+251# 20:38:31 RCVD_MSG:SubscribeResponse
+252# 20:38:32 RCVD_MSG:SubscribeResponse
+253# 20:38:48 RCVD_MSG:PeriodicResponse
+254# 20:38:54 RCVD_MSG:SubscribeData
+  254# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303136036,"list":[{"resourceType":"EventDTO","timeOfEvent":1573296204558,"unitAddress":{"resourceType":"UnitAddress","did":"EUI64-90FD9FFFFEA94252","locationId":"88252","serverDid":"EUI64-0090DAFFFF00699C"},"list":[{"resourceType":"AcceptEntityDTO","timeCreated":1573303135707,"timeWhenAccepted":-1,"timeFirstSeen":1573296204558,"acceptState":{"resourceType":"DeviceAcceptState","name":"discovered"},"did":"EUI64-90FD9FFFFEA94252","productType":"0090DA0301010532","inetAddress":"fd7a:f26f:5cc9:58bc:92fd:9fff:fea9:4252","gwdid":"UdpLinkTop","locationId":"88252"}],"eventType":{"resourceType":"EventType","name":"newUnAcceptedDeviceSeenByDiscovery"}}]}
+EUI64-90FD9FFFFEA9425288252
+      254# 18:43:24 EUI64-90FD9FFFFEA94252 in 88252:newUnAcceptedDeviceSeenByDiscovery
+255# 20:38:57 RCVD_MSG:SubscribeData
+  255# SubscribeData: EventDTO
+{"messageType":"SubscribeData","timeSent":1573303138760,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303137150,"list":[{"resourceType":"LocationDTO","timeCreated":1573303137150,"locationAddress":{"resourceType":"LocationAddress","locationId":"499735","serverDid":"EUI64-0090DAFFFF006438"},"timeModified":1572501203481,"accountId":"220781","name":"hzft","gwdid":"EUI64-0090DAFFFF006438","linkServerDid":"EUI64-0090DAFFFF0040AA","isMultiLocation":false}],"eventType":{"resourceType":"EventType","name":"locationChanged"}}]}
+EUI64-0090DAFFFF006438499735
+TypeError: Cannot read property 'did' of undefined----
+{"messageType":"SubscribeData","timeSent":1573303138760,"list":[{"resourceType":"EventDTO","timeOfEvent":1573303137150,"list":[{"resourceType":"LocationDTO","timeCreated":1573303137150,"locationAddress":{"resourceType":"LocationAddress","locationId":"499735","serverDid":"EUI64-0090DAFFFF006438"},"timeModified":1572501203481,"accountId":"220781","name":"hzft","gwdid":"EUI64-0090DAFFFF006438","linkServerDid":"EUI64-0090DAFFFF0040AA","isMultiLocation":false}],"eventType":{"resourceType":"EventType","name":"locationChanged"}}]}
