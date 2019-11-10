@@ -220,15 +220,15 @@ client.on('connect', function (connection) {
                                     case 'remoteLocationGatewayIsNowDOWN':
                                     case 'remoteLocationGatewayIsNowUP':
                                     case 'unitConfigurationChanged':
-                                        // console.log(json.list[0].unitAddress.did + ' 1  ' + json.list[0].unitAddress.locationId)
-                                        eventObj.did = json.list[0].unitAddress.did
-                                        eventObj.locationId = json.list[0].unitAddress.locationId
-                                        break;
                                     case 'locationChanged':
-                                        //  console.log(json.list[0].list[0].locationAddress.serverDid + ' 2  ' + json.list[0].list[0].locationAddress.locationId)
-                                        eventObj.did = json.list[0].list[0].locationAddress.serverDid
-                                        eventObj.locationId = json.list[0].list[0].locationAddress.locationId
+                                        // console.log(json.list[0].unitAddress.did + ' 1  ' + json.list[0].unitAddress.locationId)
+                                        eventObj.did = json.list[0].unitAddress.did || json.list[0].list[0].locationAddress.serverDid
+                                        eventObj.locationId = json.list[0].unitAddress.locationId || json.list[0].list[0].locationAddress.locationId
                                         break;
+                                    //  console.log(json.list[0].list[0].locationAddress.serverDid + ' 2  ' + json.list[0].list[0].locationAddress.locationId)
+                                    //eventObj.did = 
+                                    // eventObj.locationId = 
+                                    // break;
                                     default:
                                         console.log("!!!! cannot understand this resourcetype " + json.list[0].eventType.name);
                                 }
@@ -238,10 +238,11 @@ client.on('connect', function (connection) {
                                 _tempeventObj = JSON.parse(JSON.stringify(eventObj));
 
                                 _Events.push(_tempeventObj);
-                                console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name);
+                                console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ': ' + eventObj.name);
                                 break;
                             default:
-                                console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType);
+                                console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType);//TODO
+
                         }
                         break;
 

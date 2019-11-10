@@ -1,0 +1,351 @@
+  220# SubscribeData: EventDTO
+      220# 10:04:43 EUI64-D0CF5EFFFE59E2AE in 213806:newUnAcceptedDeviceSeenByDiscovery
+  221# SubscribeData: EventDTO
+      221# 10:04:44 EUI64-D0CF5EFFFE7B2951 in 783825:physicalDeviceIsNowDOWN
+  222# SubscribeData: EventDTO
+      222# 10:04:47 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  229# SubscribeData: EventDTO
+      229# 10:08:52 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  231# SubscribeData: EventDTO
+      231# 10:09:47 EUI64-90FD9FFFFEA950EA in 783825:physicalDeviceIsNowUP
+  232# SubscribeData: EventDTO
+      232# 10:09:58 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowDOWN
+  233# SubscribeData: EventDTO
+      233# 10:09:58 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowUP
+  236# SubscribeData: EventDTO
+      236# 10:10:06 EUI64-0090DAFFFF006AAC in 399621:unitConfigurationChanged
+  237# SubscribeData: EventDTO
+      237# 10:10:06 EUI64-0090DAFFFF006AAC in 399621:locationChanged
+  238# SubscribeData: EventDTO
+      238# 10:10:16 EUI64-D0CF5EFFFE7B2951 in 783825:physicalDeviceIsNowUP
+  242# SubscribeData: EventDTO
+      242# 10:12:57 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  247# SubscribeData: EventDTO
+      247# 10:17:01 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  249# SubscribeData: EventDTO
+      249# 10:17:42 EUI64-90FD9FFFFEA939CF in 797296:physicalDeviceIsNowUP
+  253# SubscribeData: EventDTO
+      253# 10:20:56 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  258# SubscribeData: EventDTO
+      258# 10:24:56 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  263# SubscribeData: EventDTO
+      263# 10:28:54 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowDOWN
+  264# SubscribeData: EventDTO
+      264# 10:28:54 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowUP
+  265# SubscribeData: EventDTO
+      265# 10:29:00 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  268# SubscribeData: EventDTO
+      268# 10:29:01 EUI64-0090DAFFFF006AAC in 399621:unitConfigurationChanged
+  269# SubscribeData: EventDTO
+      269# 10:29:02 EUI64-0090DAFFFF006AAC in 399621:locationChanged
+  274# SubscribeData: EventDTO
+      274# 10:33:01 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  278# SubscribeData: EventDTO
+      278# 10:35:50 EUI64-D0CF5EFFFE793790 in 212446:physicalDeviceIsNowDOWN
+  280# SubscribeData: EventDTO
+      280# 10:36:57 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  281# SubscribeData: EventDTO
+      281# 10:37:06 EUI64-D0CF5EFFFE59E619 in 212446:physicalDeviceIsNowDOWN
+  286# SubscribeData: EventDTO
+      286# 10:40:53 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  287# SubscribeData: EventDTO
+      287# 10:41:28 EUI64-D0CF5EFFFE59E619 in 212446:physicalDeviceIsNowUP
+  291# SubscribeData: EventDTO
+      291# 10:44:26 EUI64-D0CF5EFFFE7B2951 in 783825:physicalDeviceIsNowDOWN
+  292# SubscribeData: EventDTO
+      292# 10:44:46 EUI64-D0CF5EFFFE793790 in 212446:physicalDeviceIsNowUP
+  294# SubscribeData: EventDTO
+      294# 10:44:57 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  296# SubscribeData: EventDTO
+      296# 10:46:12 EUI64-D0CF5EFFFE7B2951 in 783825:physicalDeviceIsNowUP
+  299# SubscribeData: EventDTO
+      299# 10:48:14 EUI64-90FD9FFFFEA94252 in 229349:newUnAcceptedDeviceSeenByDiscovery
+  300# SubscribeData: EventDTO
+      300# 10:48:15 EUI64-90FD9FFFFEA94252 in 88252:newUnAcceptedDeviceSeenByDiscovery
+  301# SubscribeData: EventDTO
+      301# 10:48:22 EUI64-90FD9FFFFEA94252 in 573742:newUnAcceptedDeviceSeenByDiscovery
+  302# SubscribeData: EventDTO
+      302# 10:48:22 EUI64-90FD9FFFFEA94252 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  303# SubscribeData: EventDTO
+      303# 10:48:23 EUI64-90FD9FFFFEA94252 in 537931:newUnAcceptedDeviceSeenByDiscovery
+  305# SubscribeData: EventDTO
+      305# 10:48:59 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  308# SubscribeData: EventDTO
+      308# 10:51:32 EUI64-00124B0018ED2A3A in 212446:physicalDeviceIsNowDOWN
+  309# SubscribeData: EventDTO
+      309# 10:51:35 EUI64-D0CF5EFFFE69E1D7 in 212446:physicalDeviceIsNowDOWN
+  310# SubscribeData: EventDTO
+      310# 10:51:49 EUI64-0080E103000375DF in 212446:physicalDeviceIsNowDOWN
+  312# SubscribeData: EventDTO
+      312# 10:52:38 EUI64-D0CF5EFFFE793D95 in 212446:physicalDeviceIsNowDOWN
+  314# SubscribeData: EventDTO
+      314# 10:52:57 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  316# SubscribeData: EventDTO
+      316# 10:54:19 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  317# SubscribeData: EventDTO
+      317# 10:54:20 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  318# SubscribeData: EventDTO
+      318# 10:54:27 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  321# SubscribeData: EventDTO
+      321# 10:54:39 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  324# SubscribeData: EventDTO
+      324# 10:56:17 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  325# SubscribeData: EventDTO
+      325# 10:56:29 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  328# SubscribeData: EventDTO
+      328# 10:56:36 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  329# SubscribeData: EventDTO
+      329# 10:56:36 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  331# SubscribeData: EventDTO
+      331# 10:56:57 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  333# SubscribeData: EventDTO
+      333# 10:58:22 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  334# SubscribeData: EventDTO
+      334# 10:58:33 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  337# SubscribeData: EventDTO
+      337# 10:58:39 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  338# SubscribeData: EventDTO
+      338# 10:58:40 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  339# SubscribeData: EventDTO
+      339# 10:58:44 EUI64-0080E103000375DF in 212446:physicalDeviceIsNowUP
+  340# SubscribeData: EventDTO
+      340# 10:58:47 EUI64-D0CF5EFFFE59E619 in 212446:physicalDeviceIsNowDOWN
+  343# SubscribeData: EventDTO
+      343# 11:00:05 EUI64-0090DAFFFF006A98 in 797296:remoteLocationGatewayIsNowDOWN
+  344# SubscribeData: EventDTO
+      344# 11:00:17 EUI64-D0CF5EFFFE69E40B in 212446:physicalDeviceIsNowDOWN
+  345# SubscribeData: EventDTO
+      345# 11:00:19 EUI64-0090DAFFFF006A98 in 797296:remoteLocationGatewayIsNowUP
+  346# SubscribeData: EventDTO
+      346# 11:00:27 EUI64-0090DAFFFF006A98 in 797296:unitConfigurationChanged
+  347# SubscribeData: EventDTO
+      347# 11:00:28 EUI64-0090DAFFFF006A98 in 797296:remoteLocationGatewayIsNowDOWN
+  348# SubscribeData: EventDTO
+      348# 11:00:28 EUI64-0090DAFFFF006A98 in 797296:remoteLocationGatewayIsNowUP
+  351# SubscribeData: EventDTO
+      351# 11:00:32 EUI64-0090DAFFFF006A98 in 797296:locationChanged
+  354# SubscribeData: EventDTO
+      354# 11:00:33 EUI64-0090DAFFFF006A98 in 797296:locationChanged
+  357# SubscribeData: EventDTO
+      357# 11:00:35 EUI64-0090DAFFFF006A98 in 797296:locationChanged
+  358# SubscribeData: EventDTO
+      358# 11:00:36 EUI64-0090DAFFFF006A98 in 797296:unitConfigurationChanged
+  360# SubscribeData: EventDTO
+      360# 11:00:56 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  362# SubscribeData: EventDTO
+      362# 11:02:46 EUI64-00124B0018ED2A3A in 212446:physicalDeviceIsNowUP
+  366# SubscribeData: EventDTO
+      366# 11:04:55 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  369# SubscribeData: EventDTO
+      369# 11:06:57 EUI64-D0CF5EFFFE69E1D7 in 212446:physicalDeviceIsNowUP
+  370# SubscribeData: EventDTO
+      370# 11:07:53 EUI64-D0CF5EFFFE793D95 in 212446:physicalDeviceIsNowUP
+  372# SubscribeData: EventDTO
+      372# 11:08:06 EUI64-D0CF5EFFFE59E619 in 212446:physicalDeviceIsNowUP
+  373# SubscribeData: EventDTO
+      373# 11:08:53 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  375# SubscribeData: EventDTO
+      375# 11:09:34 EUI64-D0CF5EFFFE69E1D7 in 212446:physicalDeviceIsNowDOWN
+  377# SubscribeData: EventDTO
+      377# 11:10:39 EUI64-D0CF5EFFFE69E40B in 212446:physicalDeviceIsNowUP
+  379# SubscribeData: EventDTO
+      379# 11:11:12 EUI64-D0CF5EFFFE69E1D7 in 212446:physicalDeviceIsNowUP
+  380# SubscribeData: EventDTO
+      380# 11:11:26 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  381# SubscribeData: EventDTO
+      381# 11:11:26 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  382# SubscribeData: EventDTO
+      382# 11:11:34 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  385# SubscribeData: EventDTO
+      385# 11:11:39 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  387# SubscribeData: EventDTO
+      387# 11:12:53 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  389# SubscribeData: EventDTO
+      389# 11:13:41 EUI64-D0CF5EFFFE59E3E5 in 212446:physicalDeviceIsNowDOWN
+  393# SubscribeData: EventDTO
+      393# 11:16:50 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  398# SubscribeData: EventDTO
+      398# 11:20:38 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowDOWN
+  399# SubscribeData: EventDTO
+      399# 11:20:38 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowUP
+  400# SubscribeData: EventDTO
+      400# 11:20:46 EUI64-0090DAFFFF006A4C in 897737:unitConfigurationChanged
+  403# SubscribeData: EventDTO
+      403# 11:20:47 EUI64-0090DAFFFF006A4C in 897737:locationChanged
+  404# SubscribeData: EventDTO
+      404# 11:20:48 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  409# SubscribeData: EventDTO
+      409# 11:24:23 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowDOWN
+  410# SubscribeData: EventDTO
+      410# 11:24:44 EUI64-D0CF5EFFFE59E3E5 in 212446:physicalDeviceIsNowUP
+  411# SubscribeData: EventDTO
+      411# 11:24:44 EUI64-D0CF5EFFFE59F2D6 in 74365:newUnAcceptedDeviceSeenByDiscovery
+  414# SubscribeData: EventDTO
+      414# 11:26:35 EUI64-0090DAFFFF0070EA in 74365:remoteLocationGatewayIsNowDOWN
+  415# SubscribeData: EventDTO
+      415# 11:26:44 EUI64-0090DAFFFF0040AA in 74365:locationChanged
+  419# SubscribeData: EventDTO
+      419# 11:29:48 EUI64-D0CF5EFFFE59E3E5 in 212446:physicalDeviceIsNowDOWN
+  425# SubscribeData: EventDTO
+      425# 11:34:44 EUI64-D0CF5EFFFE59E3E5 in 212446:physicalDeviceIsNowUP
+  430# SubscribeData: EventDTO
+      430# 11:38:14 EUI64-0090DAFFFF00699C in 88252:remoteLocationGatewayIsNowDOWN
+  431# SubscribeData: EventDTO
+      431# 11:38:14 EUI64-0090DAFFFF00699C in 88252:remoteLocationGatewayIsNowUP
+  432# SubscribeData: EventDTO
+      432# 11:38:20 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowDOWN
+  433# SubscribeData: EventDTO
+      433# 11:38:20 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowUP
+  436# SubscribeData: EventDTO
+      436# 11:38:21 EUI64-0090DAFFFF00699C in 88252:locationChanged
+  437# SubscribeData: EventDTO
+      437# 11:38:22 EUI64-0090DAFFFF00699C in 88252:unitConfigurationChanged
+  440# SubscribeData: EventDTO
+      440# 11:38:34 EUI64-0090DAFFFF00586C in 229349:locationChanged
+  441# SubscribeData: EventDTO
+      441# 11:38:35 EUI64-0090DAFFFF00586C in 229349:unitConfigurationChanged
+  443# SubscribeData: EventDTO
+      443# 11:39:55 EUI64-0090DAFFFF007136 in 537931:remoteLocationGatewayIsNowDOWN
+  447# SubscribeData: EventDTO
+      447# 11:42:12 EUI64-0090DAFFFF007136 in 537931:remoteLocationGatewayIsNowUP
+  450# SubscribeData: EventDTO
+      450# 11:42:20 EUI64-0090DAFFFF007136 in 537931:locationChanged
+  451# SubscribeData: EventDTO
+      451# 11:42:20 EUI64-0090DAFFFF007136 in 537931:unitConfigurationChanged
+  454# SubscribeData: EventDTO
+      454# 11:44:13 EUI64-0090DAFFFF007136 in 537931:remoteLocationGatewayIsNowDOWN
+  455# SubscribeData: EventDTO
+      455# 11:44:14 EUI64-0090DAFFFF007136 in 537931:remoteLocationGatewayIsNowUP
+  458# SubscribeData: EventDTO
+      458# 11:44:20 EUI64-0090DAFFFF007136 in 537931:locationChanged
+  459# SubscribeData: EventDTO
+      459# 11:44:21 EUI64-0090DAFFFF007136 in 537931:unitConfigurationChanged
+  463# SubscribeData: EventDTO
+      463# 11:47:52 EUI64-90FD9FFFFEA78410 in 499735:newUnAcceptedDeviceSeenByDiscovery
+  466# SubscribeData: EventDTO
+      466# 11:49:15 EUI64-0090DAFFFF00699C in 88252:remoteLocationGatewayIsNowDOWN
+  467# SubscribeData: EventDTO
+      467# 11:49:15 EUI64-0090DAFFFF00699C in 88252:remoteLocationGatewayIsNowUP
+  470# SubscribeData: EventDTO
+      470# 11:49:22 EUI64-0090DAFFFF00699C in 88252:unitConfigurationChanged
+  471# SubscribeData: EventDTO
+      471# 11:49:23 EUI64-0090DAFFFF00699C in 88252:locationChanged
+  480# SubscribeData: EventDTO
+      480# 11:57:25 EUI64-D0CF5EFFFE7B25B0 in 88252:physicalDeviceIsNowDOWN
+  511# SubscribeData: EventDTO
+      511# 12:28:14 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  512# SubscribeData: EventDTO
+      512# 12:28:14 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  515# SubscribeData: EventDTO
+      515# 12:28:22 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  517# SubscribeData: EventDTO
+      517# 12:28:25 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  530# SubscribeData: EventDTO
+      530# 12:40:33 EUI64-D0CF5EFFFE793878 in 499735:newUnAcceptedDeviceSeenByDiscovery
+  535# SubscribeData: EventDTO
+      535# 12:44:54 EUI64-0090DAFFFF006922 in 805136:remoteLocationGatewayIsNowDOWN
+  536# SubscribeData: EventDTO
+      536# 12:45:10 EUI64-0090DAFFFF006922 in 805136:remoteLocationGatewayIsNowUP
+  537# SubscribeData: EventDTO
+      537# 12:45:17 EUI64-0090DAFFFF006922 in 805136:unitConfigurationChanged
+  540# SubscribeData: EventDTO
+      540# 12:45:18 EUI64-0090DAFFFF006922 in 805136:locationChanged
+  542# SubscribeData: EventDTO
+      542# 12:46:01 EUI64-D0CF5EFFFE59F2D6 in 537931:newUnAcceptedDeviceSeenByDiscovery
+  543# SubscribeData: EventDTO
+      543# 12:46:03 EUI64-D0CF5EFFFE59F2D6 in 229349:newUnAcceptedDeviceSeenByDiscovery
+  544# SubscribeData: EventDTO
+      544# 12:46:03 EUI64-D0CF5EFFFE59F2D6 in 88252:newUnAcceptedDeviceSeenByDiscovery
+  591# SubscribeData: EventDTO
+      591# 13:32:22 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  592# SubscribeData: EventDTO
+      592# 13:32:25 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  593# SubscribeData: EventDTO
+      593# 13:32:33 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  596# SubscribeData: EventDTO
+      596# 13:32:36 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  599# SubscribeData: EventDTO
+      599# 13:34:25 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  600# SubscribeData: EventDTO
+      600# 13:34:31 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowUP
+  601# SubscribeData: EventDTO
+      601# 13:34:35 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowDOWN
+  602# SubscribeData: EventDTO
+      602# 13:34:35 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowUP
+  605# SubscribeData: EventDTO
+      605# 13:34:43 EUI64-0090DAFFFF006A4C in 897737:unitConfigurationChanged
+  606# SubscribeData: EventDTO
+      606# 13:34:44 EUI64-0090DAFFFF006A4C in 897737:locationChanged
+  608# SubscribeData: EventDTO
+      608# 13:35:00 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  611# SubscribeData: EventDTO
+      611# 13:35:06 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  612# SubscribeData: EventDTO
+      612# 13:35:07 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  614# SubscribeData: EventDTO
+      614# 13:36:36 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowDOWN
+  615# SubscribeData: EventDTO
+      615# 13:36:36 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  616# SubscribeData: EventDTO
+      616# 13:36:36 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  617# SubscribeData: EventDTO
+      617# 13:36:42 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowUP
+  620# SubscribeData: EventDTO
+      620# 13:36:43 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  621# SubscribeData: EventDTO
+      621# 13:36:44 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  625# SubscribeData: EventDTO
+      625# 13:36:49 EUI64-0090DAFFFF006A4C in 897737:unitConfigurationChanged
+  626# SubscribeData: EventDTO
+      626# 13:36:49 EUI64-0090DAFFFF006A4C in 897737:locationChanged
+  628# SubscribeData: EventDTO
+      628# 13:38:04 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowDOWN
+  629# SubscribeData: EventDTO
+      629# 13:38:04 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowUP
+  632# SubscribeData: EventDTO
+      632# 13:38:12 EUI64-0090DAFFFF006A4C in 897737:unitConfigurationChanged
+  633# SubscribeData: EventDTO
+      633# 13:38:12 EUI64-0090DAFFFF006A4C in 897737:locationChanged
+  634# SubscribeData: EventDTO
+      634# 13:38:22 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowDOWN
+  635# SubscribeData: EventDTO
+      635# 13:38:25 EUI64-0090DAFFFF006438 in 499735:remoteLocationGatewayIsNowUP
+  638# SubscribeData: EventDTO
+      638# 13:38:29 EUI64-0090DAFFFF006438 in 499735:locationChanged
+  639# SubscribeData: EventDTO
+      639# 13:38:32 EUI64-0090DAFFFF006438 in 499735:unitConfigurationChanged
+  642# SubscribeData: EventDTO
+      642# 13:40:35 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowDOWN
+  643# SubscribeData: EventDTO
+      643# 13:40:35 EUI64-0090DAFFFF006A4C in 897737:remoteLocationGatewayIsNowUP
+  644# SubscribeData: EventDTO
+      644# 13:40:43 EUI64-0090DAFFFF006A4C in 897737:unitConfigurationChanged
+  648# SubscribeData: EventDTO
+      648# 13:40:46 EUI64-0090DAFFFF006A4C in 897737:locationChanged
+  669# SubscribeData: EventDTO
+      669# 14:00:56 EUI64-90FD9FFFFEA781D3 in 499735:newUnAcceptedDeviceSeenByDiscovery
+  682# SubscribeData: EventDTO
+      682# 14:13:14 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowDOWN
+  683# SubscribeData: EventDTO
+      683# 14:13:33 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowUP
+  684# SubscribeData: EventDTO
+      684# 14:13:41 EUI64-0090DAFFFF00586C in 229349:unitConfigurationChanged
+  685# SubscribeData: EventDTO
+      685# 14:13:44 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowDOWN
+  686# SubscribeData: EventDTO
+      686# 14:13:44 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowUP
+  689# SubscribeData: EventDTO
+      689# 14:13:56 EUI64-0090DAFFFF00586C in 229349:locationChanged
+  691# SubscribeData: EventDTO
+      691# 14:13:59 EUI64-0090DAFFFF00586C in 229349:unitConfigurationChanged
+  694# SubscribeData: EventDTO
+      694# 14:16:26 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowDOWN
+  695# SubscribeData: EventDTO
+      695# 14:16:29 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowUP
+  698# SubscribeData: EventDTO
+      698# 14:16:43 EUI64-0090DAFFFF00586C in 229349:locationChanged
+  699# SubscribeData: EventDTO
+      699# 14:16:44 EUI64-0090DAFFFF00586C in 229349:unitConfigurationChanged
+  733# SubscribeData: EventDTO
+      733# 14:49:30 EUI64-90FD9FFFFEA94252 in 537931:newUnAcceptedDeviceSeenByDiscovery
+Connection closed!
