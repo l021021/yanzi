@@ -8,6 +8,20 @@ var password = "Internetofthing";
 //var password = "000000";
 
 
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+//var LocationId = '83561' //1005
+//var LocationId = '521209' //wafer-shanghai 
+//var LocationId = '503370' //wanshen
+//var LocationId = '797296' //novah
+//var LocationId = '223516' //huamao
+var LocationId = '783825' //浦发11
+
+
+
 // ################################################
 
 //For log use only
@@ -19,7 +33,7 @@ var _t3 = new Date();
 var _OnlineUnitsCounter = 0;
 var _Locations = [];
 var _Units = [];
-var TimeoutId = setTimeout(doReport, 20000);
+var TimeoutId = setTimeout(doReport, 10000);
 var _UnitsCounter = 0;
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
@@ -75,7 +89,7 @@ var sampleObj = {
     "timeCreated": 1569232419466,
     "sampleTime": 1569232419466,
     "value": 30.5
-    //  "temperature":296.45
+        //  "temperature":296.45
 
 }
 
@@ -129,19 +143,19 @@ var eventObj = {
 
 
 //Program body 
-client.on('connectFailed', function (error) {
+client.on('connectFailed', function(error) {
     console.log('Connect Error: reconnect' + error.toString());
     beginPOLL();
 });
 
-client.on('connect', function (connection) {
+client.on('connect', function(connection) {
     //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function (message) {
+    connection.on('message', function(message) {
         clearTimeout(TimeoutId);
-        TimeoutId = setTimeout(doReport, 20000); //exit after 10 seconds idle
+        TimeoutId = setTimeout(doReport, 10000); //exit after 10 seconds idle
 
 
         if (message.type === 'utf8') {
@@ -278,12 +292,12 @@ client.on('connect', function (connection) {
         }
     });
 
-    connection.on('error', function (error) {
+    connection.on('error', function(error) {
         console.log("Connection Error: reconnect" + error.toString());
         beginPOLL();
     });
 
-    connection.on('close', function (error) {
+    connection.on('close', function(error) {
         console.log('Connection closed!');
     });
 
@@ -364,7 +378,7 @@ function doReport() {
     var _c2 = 0;
     var output = '';
 
-    _Locations.sort(function (a, b) {
+    _Locations.sort(function(a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
@@ -372,7 +386,7 @@ function doReport() {
         return 0;
 
     });
-    _Units.sort(function (a, b) {
+    _Units.sort(function(a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
@@ -395,9 +409,7 @@ function doReport() {
                     _Locations[key1].gwOnline = true;
                     _Locations[key1].Onlineunits++;
                 }
-                if (_Units[key].isChassis == 'true') {
-                    _Locations[key1].units++;
-                } //mark physical sensors
+                if (_Units[key].isChassis == 'true') { _Locations[key1].units++; } //mark physical sensors
                 break;
             }
         }

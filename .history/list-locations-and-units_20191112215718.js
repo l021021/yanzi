@@ -19,7 +19,7 @@ var _t3 = new Date();
 var _OnlineUnitsCounter = 0;
 var _Locations = [];
 var _Units = [];
-var TimeoutId = setTimeout(doReport, 20000);
+var TimeoutId = setTimeout(doReport, 10000);
 var _UnitsCounter = 0;
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
