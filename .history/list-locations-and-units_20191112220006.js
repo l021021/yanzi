@@ -1,31 +1,40 @@
 var WebSocketClient = require('websocket').client;
-var cirrusAPIendpoint = "cirrus5.yanzi.se";
+var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
 
 var username = "frank.shen@pinyuaninfo.com";
 var password = "Internetofthing";
-// var username = "653498331@qq.com";
-// var password = "000000";
+//var username = "653498331@qq.com";
+//var password = "000000";
 
 
 // ################################################
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 20000; //will exit when this number of messages has been logged
+var _logLimit = 200; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
 var _OnlineUnitsCounter = 0;
 var _Locations = [];
 var _Units = [];
-var TimeoutId = setTimeout(doReport, 30000);
+var TimeoutId = setTimeout(doReport, 20000);
 var _UnitsCounter = 0;
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 
 
 // All Objs definition 
+var accountObj = {
+    "resourceType": "",
+    "userId": "",
+    "systemUserAcl": {
+        "resourceType": "",
+        "name": ""
+    }
+}
+
 var locationObj = {
 
     "locationId": "123456",
@@ -36,8 +45,37 @@ var locationObj = {
     "units": 0,
     "Allunits": 0,
     "Onlineunits": 0,
-    "gwOnline": false
     //"activityLevel": "medium"
+
+}
+
+var sampleObj = {
+    // "resourceType":"SampleList",
+    // "dataSourceAddress":{
+    // "resourceType":"DataSourceAddress",
+    //  "timeCreated":1569232419466,
+    "did": "EUI64-0080E10300099999-3-Humd",
+    "locationId": "123456",
+    // "variableName":{
+    // "resourceType":"VariableName",
+    "name": "relativeHumidity",
+    //  },
+    //  "instanceNumber":0
+    // },"timeCreated":1569232419466,
+    //  "range":{
+    //  "resourceType":"Range",
+    // "timeCreated":1569232419466,
+    // "timeStart":1569232119466,
+    // "timeEnd":1569232419466,
+    // "numberOfSamples":50
+    // },
+    // "list":[
+    // {
+    "resourceType": "SampleHumidity",
+    "timeCreated": 1569232419466,
+    "sampleTime": 1569232419466,
+    "value": 30.5
+    //  "temperature":296.45
 
 }
 
@@ -47,11 +85,46 @@ var unitObj = {
     "serverDid": "",
     "productType": "",
     "lifeCycleState": "",
-    "isChassis": "",
+    "isChassis": true,
     "chassisDid": "",
+    "unitTypeFixed": "in",
     "nameSetByUser": "",
     "type": ""
 
+}
+
+var eventObj = {
+    // "resourceType":"EventDTO",
+    // "timeCreated":1569232419674,
+    "timeOfEvent": 1569232419674,
+    // "unitAddress":{
+    //  "resourceType":"UnitAddress",
+    //  "timeCreated":1569232419674,
+    "did": "EUI64-0080E10300099999",
+    "locationId": "123456",
+    "serverDid": "EUI64-0080E10300012345",
+    //  },
+    //  "list":[
+    //  {
+    "resourceType": "AcceptEntityDTO",
+    //  "timeCreated":1569232419674,
+    "timeWhenAccepted": 1428996894,
+    "timeFirstSeen": 1569232409674,
+    "acceptState": {
+        "resourceType": "DeviceAcceptState",
+        "name": "discovered"
+    },
+    //"acceptUserid":"giorgos@yanzi.se",
+    // "did":"EUI64-0080E10300099999",
+    // "productType":"0090DA12121212",
+    //"inetAddress":"178.45.224.13",
+    //"macAddress":"00-14-22-01-23-45",
+    "gwdid": "EUI64-0080E10300012345",
+    "locationId": "123456",
+    //  }
+    //  ],
+    // "eventType":{"resourceType":"EventType",
+    "name": "physicalDeviceIsNowUP"
 }
 
 
@@ -68,8 +141,7 @@ client.on('connect', function (connection) {
     // Handle messages
     connection.on('message', function (message) {
         clearTimeout(TimeoutId);
-        TimeoutId = setTimeout(doReport, 30000); //exit after 10 seconds idle
-
+        TimeoutId = setTimeout(doReport, 20000); //exit after 10 seconds idle
 
 
         if (message.type === 'utf8') {
@@ -79,16 +151,17 @@ client.on('connect', function (connection) {
             timestamp.setTime(t);
             _Counter = _Counter + 1; //counter of all received packets
 
-            // if (_Counter > _logLimit) {
-            //     console.log("Enough Data!")
-            //     console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
-            //     connection.close();
-            //     doReport();
-            //     process.exit();
-            // } //for log use only
+            if (_Counter > _logLimit) {
+                console.log("Enough Data!")
+                console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
+                connection.close();
+                doReport();
+                process.exit();
+            } //for log use only
 
             // Print all messages with type
-            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType);
+            // console.log(JSON.stringify(json));
             switch (json.messageType) {
                 case 'ServiceResponse':
                     sendLoginRequest();
@@ -128,7 +201,9 @@ client.on('connect', function (connection) {
                                     locationObj.accountId = json.list[i].accountId
                                     locationObj.name = json.list[i].name
                                     locationObj.gwdid = json.list[i].gwdid
-                                    _templocationObj = JSON.parse(JSON.stringify(locationObj)); //deep copy
+
+                                    _templocationObj = JSON.parse(JSON.stringify(locationObj));
+
                                     _Locations.push(_templocationObj);
                                     sendGetUnitsRequest(json.list[i].locationAddress.locationId); //get units under this location
                                 }
@@ -152,32 +227,31 @@ client.on('connect', function (connection) {
                         var _tempunitObj;
 
                         for (let index = 0; index < json.list.length; index++) { //process each response packet
-                            console.log('seeing ' + json.list.length + ' in  ' + json.locationAddress.locationId);
+
                             if (json.list[index].unitTypeFixed.name == 'gateway' || json.list[index].unitAddress.did.indexOf('AP') != -1) { //console.log(json.list[index].unitAddress.did); 
-                                console.log('GW or AP') //GW and AP are not sensor
+                                continue
+                            }; //GW and AP are not sensor
 
-                            } else { 
-                                // record all sensors 
-                                unitObj.did = json.list[index].unitAddress.did //
-                                unitObj.locationId = json.locationAddress.locationId
-                                unitObj.chassisDid = json.list[index].chassisDid
-                                unitObj.productType = json.list[index].productType
-                                unitObj.lifeCycleState = json.list[index].lifeCycleState.name
-                                unitObj.isChassis = json.list[index].isChassis
-                                unitObj.nameSetByUser = json.list[index].nameSetByUser
-                                unitObj.serverDid = json.list[index].unitAddress.serverDid
+                            // record all sensors 
+                            unitObj.did = json.list[index].unitAddress.did //
+                            unitObj.locationId = json.locationAddress.locationId
+                            unitObj.chassisDid = json.list[index].chassisDid
+                            unitObj.productType = json.list[index].productType
+                            unitObj.lifeCycleState = json.list[index].lifeCycleState.name
+                            unitObj.isChassis = json.list[index].isChassis
+                            unitObj.nameSetByUser = json.list[index].nameSetByUser
+                            unitObj.serverDid = json.list[index].unitAddress.serverDid
 
-                                unitObj.type = json.list[index].unitTypeFixed.name
+                            unitObj.type = json.list[index].unitTypeFixed.name
 
-                                // console.log(json.list[index].unitTypeFixed.name + '\n\n');
+                            // console.log(json.list[index].unitTypeFixed.name + '\n\n');
 
-                                _tempunitObj = JSON.parse(JSON.stringify(unitObj));
-                                _Units.push(_tempunitObj);
-                                //_UnitsCounter++;
-                                if (json.list[index].lifeCycleState.name == 'present') {
-                                    _OnlineUnitsCounter++;
-                                }
-                            };
+                            _tempunitObj = JSON.parse(JSON.stringify(unitObj));
+                            _Units.push(_tempunitObj);
+                            //_UnitsCounter++;
+                            if (json.list[index].lifeCycleState.name == 'present') {
+                                _OnlineUnitsCounter++;
+                            }
                         }
 
                         //console.log(_UnitsCounter + ' Units in Location:  while ' + _OnlineUnitsCounter + ' online');
@@ -263,7 +337,7 @@ client.on('connect', function (connection) {
                 "locationId": locationID,
             }
         }
-        console.log('sending request for ' + locationID);
+
         sendMessage(request);
     }
 
@@ -289,12 +363,7 @@ function doReport() {
     var _c1 = 0;
     var _c2 = 0;
     var output = '';
-    var t = new Date().getTime();
-    var timestamp = new Date();
-    timestamp.setTime(t);
-    console.log('Reporting：')
-    console.log(timestamp.toLocaleTimeString() + '')
-    //sorting
+
     _Locations.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
@@ -311,62 +380,47 @@ function doReport() {
         return 0;
     });
 
-    //record all  Locations
-
     for (const key in _Locations) {
         output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n';
 
     }
     console.log("total " + _Locations.length + " locations: \n" + output) //print all locations with name
-    console.log("total " + _Units.length + " Units: \n") //print all Units with name
 
-    // match sensor to locations
-    for (let i = 0; i < _Units.length; i++) { //TODO: for each could be wrong
-
-        for (let j = 0; j < _Locations.length; j++) { //update to its locations
-            if (_Locations[j].locationId == _Units[i].locationId) { //Location match
-                _Locations[j].Allunits++;
-                if (_Units[i].lifeCycleState == 'present') { //mark live gateways
-                    _Locations[j].gwOnline = true; //Location Online
-                    _Locations[j].Onlineunits++; //mark online sensors
+    //do some work to match sensor to locations
+    for (const key in _Units) {
+        for (const key1 in _Locations) { //update to its locations
+            if (_Locations[key1].locationId == _Units[key].locationId) {
+                _Locations[key1].Allunits++;
+                if (_Units[key].lifeCycleState == 'present') { //mark live gateways
+                    _Locations[key1].gwOnline = true;
+                    _Locations[key1].Onlineunits++;
                 }
-                if (_Units[i].isChassis == 'true') {
-                    _Locations[j].units++;
+                if (_Units[key].isChassis == 'true') {
+                    _Locations[key1].units++;
                 } //mark physical sensors
-                break; //跳出循环
+                break;
             }
         }
 
     }
 
     //list each active location with sensors
-    for (let j = 0; j < _Locations.length; j++) { //TODO：for each
-        if (_Locations[j].gwOnline)
-            console.log('' + _Locations[j].locationId + '-' + _Locations[j].name + ' is online  with ' + _Locations[j].Onlineunits + ' active sensors, ' + _Locations[j].Allunits + ' logical');
+    for (const key1 in _Locations) {
+        if (_Locations[key1].gwOnline)
+            console.log('' + _Locations[key1].locationId + '-' + _Locations[key1].name + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors, ' + _Locations[key1].Allunits + ' logical');
     }
-    console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online') //sum up
+    console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online')
 
     //list all online physical sensors
-    for (let j = 0; j < _Units.length; j++) {
-        if (_Units[j].lifeCycleState == 'present')
-            console.log(_Units[j].did + ' in ' + _Units[j].locationId);
+    for (const key1 in _Units) {
+        if (_Units[key1].lifeCycleState == 'present')
+            console.log(_Units[key1].did + ' in ' + _Units[key1].locationId);
+    }
+    for (const key1 in _Units) {
+        if (_Units[key1].lifeCycleState == 'subUnit' && _Units[key1].isChassis == false)
+            console.log(_Units[key1].did + ' as a ' + _Units[key1].type + ' in ' + _Units[key1].locationId);
     }
 
-    //list all online logical  sensors
-    for (let j = 0; j < _Units.length; j++) {
-        if (_Units[j].lifeCycleState == 'subUnit' && _Units[j].isChassis == false)
-            console.log(_Units[j].did + ' as a ' + _Units[j].type + ' in ' + _Units[j].locationId);
-    }
-
-
-    // _Units.forEach(function (x, i, a) {
-    //     if (a[1].lifeCycleState == 'subUnit' && a[i].isChassis == false) console.log(_Units[key1].did + ' as a ' + _Units[key1].type + ' in ' + _Units[key1].locationId);
-
-    // });
-    t = new Date().getTime();
-    timestamp = new Date();
-    timestamp.setTime(t);
-    console.log(timestamp.toLocaleTimeString() + 'ok!')
     clearTimeout(TimeoutId);
     process.exit();
 }

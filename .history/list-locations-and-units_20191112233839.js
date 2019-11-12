@@ -154,9 +154,9 @@ client.on('connect', function (connection) {
                         for (let index = 0; index < json.list.length; index++) { //process each response packet
                             console.log('seeing ' + json.list.length + ' in  ' + json.locationAddress.locationId);
                             if (json.list[index].unitTypeFixed.name == 'gateway' || json.list[index].unitAddress.did.indexOf('AP') != -1) { //console.log(json.list[index].unitAddress.did); 
-                                console.log('GW or AP') //GW and AP are not sensor
+                                console.log('GW or AP')
+                            } else { //GW and AP are not sensor
 
-                            } else { 
                                 // record all sensors 
                                 unitObj.did = json.list[index].unitAddress.did //
                                 unitObj.locationId = json.locationAddress.locationId

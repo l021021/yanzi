@@ -1,5 +1,5 @@
 var WebSocketClient = require('websocket').client;
-var cirrusAPIendpoint = "cirrus5.yanzi.se";
+var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
 
 var username = "frank.shen@pinyuaninfo.com";
@@ -47,9 +47,8 @@ var unitObj = {
     "serverDid": "",
     "productType": "",
     "lifeCycleState": "",
-    "isChassis": "",
+    "isChassis": '',
     "chassisDid": "",
-    "nameSetByUser": "",
     "type": ""
 
 }
@@ -68,8 +67,8 @@ client.on('connect', function (connection) {
     // Handle messages
     connection.on('message', function (message) {
         clearTimeout(TimeoutId);
-        TimeoutId = setTimeout(doReport, 30000); //exit after 10 seconds idle
-
+        TimeoutId = setTimeout(doReport, 20000); //exit after 10 seconds idle
+       
 
 
         if (message.type === 'utf8') {
@@ -152,32 +151,31 @@ client.on('connect', function (connection) {
                         var _tempunitObj;
 
                         for (let index = 0; index < json.list.length; index++) { //process each response packet
-                            console.log('seeing ' + json.list.length + ' in  ' + json.locationAddress.locationId);
+
                             if (json.list[index].unitTypeFixed.name == 'gateway' || json.list[index].unitAddress.did.indexOf('AP') != -1) { //console.log(json.list[index].unitAddress.did); 
-                                console.log('GW or AP') //GW and AP are not sensor
+                                continue
+                            }; //GW and AP are not sensor
 
-                            } else { 
-                                // record all sensors 
-                                unitObj.did = json.list[index].unitAddress.did //
-                                unitObj.locationId = json.locationAddress.locationId
-                                unitObj.chassisDid = json.list[index].chassisDid
-                                unitObj.productType = json.list[index].productType
-                                unitObj.lifeCycleState = json.list[index].lifeCycleState.name
-                                unitObj.isChassis = json.list[index].isChassis
-                                unitObj.nameSetByUser = json.list[index].nameSetByUser
-                                unitObj.serverDid = json.list[index].unitAddress.serverDid
+                            // record all sensors 
+                            unitObj.did = json.list[index].unitAddress.did //
+                            unitObj.locationId = json.locationAddress.locationId
+                            unitObj.chassisDid = json.list[index].chassisDid
+                            unitObj.productType = json.list[index].productType
+                            unitObj.lifeCycleState = json.list[index].lifeCycleState.name
+                            unitObj.isChassis = json.list[index].isChassis
+                            unitObj.nameSetByUser = json.list[index].nameSetByUser
+                            unitObj.serverDid = json.list[index].unitAddress.serverDid
 
-                                unitObj.type = json.list[index].unitTypeFixed.name
+                            unitObj.type = json.list[index].unitTypeFixed.name
 
-                                // console.log(json.list[index].unitTypeFixed.name + '\n\n');
+                            // console.log(json.list[index].unitTypeFixed.name + '\n\n');
 
-                                _tempunitObj = JSON.parse(JSON.stringify(unitObj));
-                                _Units.push(_tempunitObj);
-                                //_UnitsCounter++;
-                                if (json.list[index].lifeCycleState.name == 'present') {
-                                    _OnlineUnitsCounter++;
-                                }
-                            };
+                            _tempunitObj = JSON.parse(JSON.stringify(unitObj));
+                            _Units.push(_tempunitObj);
+                            //_UnitsCounter++;
+                            if (json.list[index].lifeCycleState.name == 'present') {
+                                _OnlineUnitsCounter++;
+                            }
                         }
 
                         //console.log(_UnitsCounter + ' Units in Location:  while ' + _OnlineUnitsCounter + ' online');
@@ -263,7 +261,7 @@ client.on('connect', function (connection) {
                 "locationId": locationID,
             }
         }
-        console.log('sending request for ' + locationID);
+
         sendMessage(request);
     }
 
@@ -289,11 +287,8 @@ function doReport() {
     var _c1 = 0;
     var _c2 = 0;
     var output = '';
-    var t = new Date().getTime();
-    var timestamp = new Date();
-    timestamp.setTime(t);
     console.log('Reporting：')
-    console.log(timestamp.toLocaleTimeString() + '')
+
     //sorting
     _Locations.sort(function (a, b) {
         var x = a.locationId
@@ -363,10 +358,7 @@ function doReport() {
     //     if (a[1].lifeCycleState == 'subUnit' && a[i].isChassis == false) console.log(_Units[key1].did + ' as a ' + _Units[key1].type + ' in ' + _Units[key1].locationId);
 
     // });
-    t = new Date().getTime();
-    timestamp = new Date();
-    timestamp.setTime(t);
-    console.log(timestamp.toLocaleTimeString() + 'ok!')
+
     clearTimeout(TimeoutId);
     process.exit();
 }
