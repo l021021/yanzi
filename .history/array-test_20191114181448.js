@@ -8,9 +8,8 @@ var RecordArray = [{ "type": "samplemotion", "Did": "EUI64-D0CF5EFFFE59F50A-3-Mo
 var t1 = new Date();
 var t2 = new Date();
 var t1m = new Date();
-var timeMap = new Array();
-var timeObj = { "timeStamp": '', "Value": '' }
-    //var t1s = new Date();
+var timeMap = new Map();
+//var t1s = new Date();
 var t2m = new Date();
 //t2s = new Date();
 
@@ -44,7 +43,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     if (RecordArray[i].value == 'in' && RecordArray[i - 1].value == 'in') { //全部=1
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 1);
+        timeMap.push(t1m.toLocaleTimeString, 1);
         timeMap.push(t2m.toLocaleTimeString(), 1);
 
         //process middle 
@@ -52,7 +51,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
             t1m.setTime(t1m.getTime + 60 * 1000);
             //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 1);
+            timeMap.push(t1m.toLocaleTimeString, 1);
 
         }
 
@@ -61,7 +60,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     } else { //全部标0
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 0);
+        timeMap.push(t1m.toLocaleTimeString, 0);
         timeMap.push(t2m.toLocaleTimeString(), 0);
 
         //process middle 
@@ -69,7 +68,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
             t1m.setTime(t1m.getTime + 60 * 1000);
             //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 0);
+            timeMap.push(t1m.toLocaleTimeString, 0);
 
         }
 

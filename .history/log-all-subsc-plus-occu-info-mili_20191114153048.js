@@ -239,7 +239,7 @@ client.on('connect', function(connection) {
                                 case 'SampleSoundPressureLevel':
                                 case 'SampleIlluminance':
                                 case 'SampleCO2':
-                                    //console.log('     ' + _Counter + '# Sample ' + _t3.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].value);
+                                    console.log('     ' + _Counter + '# Sample ' + _t3.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
                                     console.log("!!!! cannot understand samplelist resourcetype" + json.list[0].list[0].resourceType);

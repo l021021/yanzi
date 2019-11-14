@@ -8,9 +8,8 @@ var RecordArray = [{ "type": "samplemotion", "Did": "EUI64-D0CF5EFFFE59F50A-3-Mo
 var t1 = new Date();
 var t2 = new Date();
 var t1m = new Date();
-var timeMap = new Array();
-var timeObj = { "timeStamp": '', "Value": '' }
-    //var t1s = new Date();
+var timeMap = new Map();
+//var t1s = new Date();
 var t2m = new Date();
 //t2s = new Date();
 
@@ -44,7 +43,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     if (RecordArray[i].value == 'in' && RecordArray[i - 1].value == 'in') { //全部=1
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 1);
+        timeMap.push(t1m.toLocaleTimeString, 1);
         timeMap.push(t2m.toLocaleTimeString(), 1);
 
         //process middle 
@@ -52,7 +51,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
             t1m.setTime(t1m.getTime + 60 * 1000);
             //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 1);
+            timeMap.push(t1m.toLocaleTimeString, 1);
 
         }
 
@@ -61,7 +60,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     } else { //全部标0
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 0);
+        timeMap.push(t1m.toLocaleTimeString, 0);
         timeMap.push(t2m.toLocaleTimeString(), 0);
 
         //process middle 
@@ -69,31 +68,28 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
             t1m.setTime(t1m.getTime + 60 * 1000);
             //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 0);
+            timeMap.push(t1m.toLocaleTimeString, 0);
 
         }
 
 
 
     }
-}
 
-console.log(timeMap)
-
-//处理逻辑：一分钟切片
-//每一分钟 ：12:01:00 有一个对应的占用 0-1，比如0.5 :代表50%的利用率
-//算法:每一个时间戳看前一个： 当前占用-前一个占用，标记为100%
-// 当前占用 前一个空闲 标记为0
-// 当前空闲 均标记为0
-// 标记举例 1:01.11 in 1:05:44 in
-//         1:01:00 49/60 
-//         1:02:00 1 
-//         1:03:00 1 
-//         1:04:00 1 
-//         1:05:00 1 
-//         标记举例 1:01.11 out 1:05:44 in
-//         1:01:00 0 
-//         1:02:00 0 
-//         1:03:00 0 
-//         1:04:00 0 
-//         1:05:00 16/60
+    //处理逻辑：一分钟切片
+    //每一分钟 ：12:01:00 有一个对应的占用 0-1，比如0.5 :代表50%的利用率
+    //算法:每一个时间戳看前一个： 当前占用-前一个占用，标记为100%
+    // 当前占用 前一个空闲 标记为0
+    // 当前空闲 均标记为0
+    // 标记举例 1:01.11 in 1:05:44 in
+    //         1:01:00 49/60 
+    //         1:02:00 1 
+    //         1:03:00 1 
+    //         1:04:00 1 
+    //         1:05:00 1 
+    //         标记举例 1:01.11 out 1:05:44 in
+    //         1:01:00 0 
+    //         1:02:00 0 
+    //         1:03:00 0 
+    //         1:04:00 0 
+    //         1:05:00 16/60

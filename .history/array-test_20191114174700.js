@@ -8,9 +8,7 @@ var RecordArray = [{ "type": "samplemotion", "Did": "EUI64-D0CF5EFFFE59F50A-3-Mo
 var t1 = new Date();
 var t2 = new Date();
 var t1m = new Date();
-var timeMap = new Array();
-var timeObj = { "timeStamp": '', "Value": '' }
-    //var t1s = new Date();
+//var t1s = new Date();
 var t2m = new Date();
 //t2s = new Date();
 
@@ -19,7 +17,7 @@ var minDiff, secAfter, secBefore;
 for (let i = 1; i < RecordArray.length; i++) { //start from Second element 
 
     t1.setTime(RecordArray[i - 1].timeStamp);
-    t1m.setTime(RecordArray[i - 1].timeStamp); //t1m：靠近后一个整分
+    t1m.setTime(RecordArray[i - 1].timeStamp + 60 * 1000); //t1m：靠近后一个整分
     t1m.setMilliseconds(0);
     t1m.setSeconds(0); //second=0
     t1.setMilliseconds(0); //取整数秒
@@ -39,46 +37,29 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
 
 
     //var timeDiff=RecordArray[i].timeStamp-RecordArray[i-1].timeStamp;
-    console.log(t1.toLocaleTimeString() + '-前  ' + t1m.toLocaleTimeString() + '  ' + minDiff + '  ' + secAfter + ' ' + secBefore + '   ' + t2.toLocaleTimeString() + '-后  ' + t2m.toLocaleTimeString());
+    console.log(t1.toLocaleTimeString() + '-前  ' + t1m.toLocaleTimeString() + '  ' + minDiff + '  ' + secAfter + ' ' + secBefore) + '   ' + t2.toLocaleTimeString() + '-后  ' + t2m.toLocaleTimeString();
 
     if (RecordArray[i].value == 'in' && RecordArray[i - 1].value == 'in') { //全部=1
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 1);
-        timeMap.push(t2m.toLocaleTimeString(), 1);
 
         //process middle 
-        for (let j = 0; j < minDiff; j++) {
-            t1m.setTime(t1m.getTime + 60 * 1000);
-            //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 1);
-
-        }
 
         //process tail
-        timeMap.push(t2m.toLocaleTimeString(), 1);
     } else { //全部标0
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 0);
-        timeMap.push(t2m.toLocaleTimeString(), 0);
 
         //process middle 
-        for (let j = 0; j < minDiff; j++) {
-            t1m.setTime(t1m.getTime + 60 * 1000);
-            //t1m.setTime(t1m.getTime+60*1000);
-
-            timeMap.push(t1m.toLocaleTimeString(), 0);
-
-        }
 
 
-
+        //process tail
     }
-}
 
-console.log(timeMap)
+
+
+}
 
 //处理逻辑：一分钟切片
 //每一分钟 ：12:01:00 有一个对应的占用 0-1，比如0.5 :代表50%的利用率

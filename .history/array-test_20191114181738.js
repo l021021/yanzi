@@ -44,7 +44,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     if (RecordArray[i].value == 'in' && RecordArray[i - 1].value == 'in') { //全部=1
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 1);
+        timeMap.push(t1m.toLocaleTimeString, 1);
         timeMap.push(t2m.toLocaleTimeString(), 1);
 
         //process middle 
@@ -52,7 +52,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
             t1m.setTime(t1m.getTime + 60 * 1000);
             //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 1);
+            timeMap.push(t1m.toLocaleTimeString, 1);
 
         }
 
@@ -61,7 +61,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     } else { //全部标0
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 0);
+        timeMap.push(t1m.toLocaleTimeString, 0);
         timeMap.push(t2m.toLocaleTimeString(), 0);
 
         //process middle 
@@ -69,7 +69,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
             t1m.setTime(t1m.getTime + 60 * 1000);
             //t1m.setTime(t1m.getTime+60*1000);
 
-            timeMap.push(t1m.toLocaleTimeString(), 0);
+            timeMap.push(t1m.toLocaleTimeString, 0);
 
         }
 

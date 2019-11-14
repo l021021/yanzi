@@ -44,7 +44,7 @@ for (let i = 1; i < RecordArray.length; i++) { //start from Second element
     if (RecordArray[i].value == 'in' && RecordArray[i - 1].value == 'in') { //全部=1
         //process head
 
-        timeMap.push(t1m.toLocaleTimeString(), 1);
+        timeMap.push(t1m.toLocaleTimeString, 1);
         timeMap.push(t2m.toLocaleTimeString(), 1);
 
         //process middle 
