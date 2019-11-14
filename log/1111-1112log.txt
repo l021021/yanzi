@@ -1,0 +1,2878 @@
+  103# SubscribeData: EventDTO
+      103# 18:05:21 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowDOWN
+  240# SubscribeData: EventDTO
+      240# 18:06:19 EUI64-D0CF5EFFFE59F15E in 797296:physicalDeviceIsNowDOWN
+  241# SubscribeData: EventDTO
+      241# 18:06:29 EUI64-D0CF5EFFFE59E2AE in 499735:newUnAcceptedDeviceSeenByDiscovery
+  242# SubscribeData: EventDTO
+      242# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  243# SubscribeData: EventDTO
+      243# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  244# SubscribeData: EventDTO
+      244# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  245# SubscribeData: EventDTO
+      245# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  246# SubscribeData: EventDTO
+      246# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  247# SubscribeData: EventDTO
+      247# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  248# SubscribeData: EventDTO
+      248# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  249# SubscribeData: EventDTO
+      249# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  250# SubscribeData: EventDTO
+      250# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  251# SubscribeData: EventDTO
+      251# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  252# SubscribeData: EventDTO
+      252# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  253# SubscribeData: EventDTO
+      253# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  254# SubscribeData: EventDTO
+      254# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  255# SubscribeData: EventDTO
+      255# 18:06:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  256# SubscribeData: EventDTO
+      256# 18:06:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  257# SubscribeData: EventDTO
+      257# 18:06:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  258# SubscribeData: EventDTO
+      258# 18:06:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  259# SubscribeData: EventDTO
+      259# 18:06:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  260# SubscribeData: EventDTO
+      260# 18:06:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  261# SubscribeData: EventDTO
+      261# 18:06:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  262# SubscribeData: EventDTO
+      262# 18:06:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  263# SubscribeData: EventDTO
+      263# 18:06:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  264# SubscribeData: EventDTO
+      264# 18:06:36 EUI64-90FD9FFFFEA94B8C in 797296:physicalDeviceIsNowDOWN
+  265# SubscribeData: EventDTO
+      265# 18:06:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  266# SubscribeData: EventDTO
+      266# 18:06:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  267# SubscribeData: EventDTO
+      267# 18:06:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  268# SubscribeData: EventDTO
+      268# 18:06:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  269# SubscribeData: EventDTO
+      269# 18:07:12 EUI64-0080E10300043219 in 797296:physicalDeviceIsNowDOWN
+  270# SubscribeData: EventDTO
+      270# 18:07:16 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowUP
+  272# SubscribeData: EventDTO
+      272# 18:07:22 EUI64-D0CF5EFFFE59F578 in 797296:physicalDeviceIsNowDOWN
+  273# SubscribeData: EventDTO
+      273# 18:07:44 EUI64-00124B0018ED2E02 in 797296:physicalDeviceIsNowDOWN
+  274# SubscribeData: EventDTO
+      274# 18:07:44 EUI64-90FD9FFFFEA93F98 in 797296:physicalDeviceIsNowDOWN
+  275# SubscribeData: EventDTO
+      275# 18:07:55 EUI64-90FD9FFFFEA939FC in 797296:physicalDeviceIsNowDOWN
+  276# SubscribeData: EventDTO
+      276# 18:07:57 EUI64-D0CF5EFFFE59F3F7 in 797296:physicalDeviceIsNowDOWN
+  277# SubscribeData: EventDTO
+      277# 18:08:06 EUI64-90FD9FFFFEA93F8D in 797296:physicalDeviceIsNowDOWN
+  278# SubscribeData: EventDTO
+      278# 18:08:12 EUI64-90FD9FFFFEA938D9 in 797296:physicalDeviceIsNowDOWN
+  280# SubscribeData: EventDTO
+      280# 18:08:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  281# SubscribeData: EventDTO
+      281# 18:08:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  282# SubscribeData: EventDTO
+      282# 18:08:32 EUI64-90FD9FFFFEA938E0 in 797296:physicalDeviceIsNowDOWN
+  283# SubscribeData: EventDTO
+      283# 18:08:32 EUI64-D0CF5EFFFE59D249 in 797296:physicalDeviceIsNowDOWN
+  284# SubscribeData: EventDTO
+      284# 18:08:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  285# SubscribeData: EventDTO
+      285# 18:08:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  286# SubscribeData: EventDTO
+      286# 18:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  287# SubscribeData: EventDTO
+      287# 18:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  288# SubscribeData: EventDTO
+      288# 18:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  289# SubscribeData: EventDTO
+      289# 18:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  290# SubscribeData: EventDTO
+      290# 18:08:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  291# SubscribeData: EventDTO
+      291# 18:08:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  292# SubscribeData: EventDTO
+      292# 18:08:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  293# SubscribeData: EventDTO
+      293# 18:08:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  294# SubscribeData: EventDTO
+      294# 18:08:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  295# SubscribeData: EventDTO
+      295# 18:08:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  296# SubscribeData: EventDTO
+      296# 18:08:47 EUI64-D0CF5EFFFE59D212 in 797296:physicalDeviceIsNowDOWN
+  297# SubscribeData: EventDTO
+      297# 18:08:54 EUI64-90FD9FFFFEA939FC in 797296:physicalDeviceIsNowUP
+  298# SubscribeData: EventDTO
+      298# 18:08:57 EUI64-90FD9FFFFEA93F8C in 797296:physicalDeviceIsNowDOWN
+  299# SubscribeData: EventDTO
+      299# 18:08:57 EUI64-D0CF5EFFFE59F4DE in 797296:physicalDeviceIsNowDOWN
+  300# SubscribeData: EventDTO
+      300# 18:09:14 EUI64-D0CF5EFFFE59DF13 in 797296:physicalDeviceIsNowDOWN
+  301# SubscribeData: EventDTO
+      301# 18:09:15 EUI64-D0CF5EFFFE59D212 in 797296:physicalDeviceIsNowUP
+  303# SubscribeData: EventDTO
+      303# 18:09:20 EUI64-D0CF5EFFFE793DD2 in 797296:physicalDeviceIsNowDOWN
+  304# SubscribeData: EventDTO
+      304# 18:09:37 EUI64-90FD9FFFFEA94B8C in 797296:physicalDeviceIsNowUP
+  305# SubscribeData: EventDTO
+      305# 18:10:01 EUI64-D0CF5EFFFE793256 in 797296:physicalDeviceIsNowDOWN
+  306# SubscribeData: EventDTO
+      306# 18:10:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  307# SubscribeData: EventDTO
+      307# 18:10:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  308# SubscribeData: EventDTO
+      308# 18:10:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  309# SubscribeData: EventDTO
+      309# 18:10:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  310# SubscribeData: EventDTO
+      310# 18:10:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  311# SubscribeData: EventDTO
+      311# 18:10:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  312# SubscribeData: EventDTO
+      312# 18:10:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  313# SubscribeData: EventDTO
+      313# 18:10:19 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  314# SubscribeData: EventDTO
+      314# 18:10:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  315# SubscribeData: EventDTO
+      315# 18:10:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  316# SubscribeData: EventDTO
+      316# 18:10:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  317# SubscribeData: EventDTO
+      317# 18:10:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  319# SubscribeData: EventDTO
+      319# 18:10:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  320# SubscribeData: EventDTO
+      320# 18:10:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  321# SubscribeData: EventDTO
+      321# 18:10:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  322# SubscribeData: EventDTO
+      322# 18:10:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  323# SubscribeData: EventDTO
+      323# 18:10:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  324# SubscribeData: EventDTO
+      324# 18:10:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  325# SubscribeData: EventDTO
+      325# 18:10:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  326# SubscribeData: EventDTO
+      326# 18:10:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  327# SubscribeData: EventDTO
+      327# 18:10:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  328# SubscribeData: EventDTO
+      328# 18:10:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  329# SubscribeData: EventDTO
+      329# 18:10:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  330# SubscribeData: EventDTO
+      330# 18:10:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  331# SubscribeData: EventDTO
+      331# 18:10:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  332# SubscribeData: EventDTO
+      332# 18:10:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  333# SubscribeData: EventDTO
+      333# 18:10:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  334# SubscribeData: EventDTO
+      334# 18:10:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  335# SubscribeData: EventDTO
+      335# 18:10:58 EUI64-90FD9FFFFEA938D9 in 797296:physicalDeviceIsNowUP
+  337# SubscribeData: EventDTO
+      337# 18:11:35 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowDOWN
+  338# SubscribeData: EventDTO
+      338# 18:11:46 EUI64-0090DAFFFF006A3A in 329312:remoteLocationGatewayIsNowDOWN
+  339# SubscribeData: EventDTO
+      339# 18:11:48 EUI64-D0CF5EFFFE7B282F in 306571:physicalDeviceIsNowDOWN
+  340# SubscribeData: EventDTO
+      340# 18:12:16 EUI64-D0CF5EFFFE59F578 in 797296:physicalDeviceIsNowUP
+  342# SubscribeData: EventDTO
+      342# 18:12:21 EUI64-D0CF5EFFFE793DD2 in 797296:physicalDeviceIsNowUP
+  343# SubscribeData: EventDTO
+      343# 18:12:31 EUI64-90FD9FFFFEA93F98 in 797296:physicalDeviceIsNowUP
+  344# SubscribeData: EventDTO
+      344# 18:12:32 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowUP
+  345# SubscribeData: EventDTO
+      345# 18:12:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  346# SubscribeData: EventDTO
+      346# 18:12:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  347# SubscribeData: EventDTO
+      347# 18:12:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  348# SubscribeData: EventDTO
+      348# 18:12:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  349# SubscribeData: EventDTO
+      349# 18:12:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  350# SubscribeData: EventDTO
+      350# 18:12:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  351# SubscribeData: EventDTO
+      351# 18:12:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  352# SubscribeData: EventDTO
+      352# 18:12:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  353# SubscribeData: EventDTO
+      353# 18:12:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  354# SubscribeData: EventDTO
+      354# 18:12:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  355# SubscribeData: EventDTO
+      355# 18:12:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  356# SubscribeData: EventDTO
+      356# 18:12:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  357# SubscribeData: EventDTO
+      357# 18:12:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  358# SubscribeData: EventDTO
+      358# 18:12:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  359# SubscribeData: EventDTO
+      359# 18:13:08 EUI64-D0CF5EFFFE7B282F in 306571:physicalDeviceIsNowUP
+  360# SubscribeData: EventDTO
+      360# 18:13:09 EUI64-90FD9FFFFEA95E18 in 797296:physicalDeviceIsNowUP
+  361# SubscribeData: EventDTO
+      361# 18:13:19 EUI64-D0CF5EFFFE59F15E in 797296:physicalDeviceIsNowUP
+  363# SubscribeData: EventDTO
+      363# 18:13:23 EUI64-00124B0018ED2E02 in 797296:physicalDeviceIsNowUP
+  364# SubscribeData: EventDTO
+      364# 18:13:44 EUI64-90FD9FFFFEA93F8C in 797296:physicalDeviceIsNowUP
+  365# SubscribeData: EventDTO
+      365# 18:13:58 EUI64-D0CF5EFFFE59DF13 in 797296:physicalDeviceIsNowUP
+  366# SubscribeData: EventDTO
+      366# 18:14:06 EUI64-0080E10300043219 in 797296:physicalDeviceIsNowUP
+  367# SubscribeData: EventDTO
+      367# 18:14:15 EUI64-90FD9FFFFEA938E0 in 797296:physicalDeviceIsNowUP
+  369# SubscribeData: EventDTO
+      369# 18:14:28 EUI64-D0CF5EFFFE59D249 in 797296:physicalDeviceIsNowUP
+  370# SubscribeData: EventDTO
+      370# 18:14:32 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowUP
+  371# SubscribeData: EventDTO
+      371# 18:14:35 EUI64-D0CF5EFFFE793256 in 797296:physicalDeviceIsNowUP
+  372# SubscribeData: EventDTO
+      372# 18:14:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  373# SubscribeData: EventDTO
+      373# 18:14:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  374# SubscribeData: EventDTO
+      374# 18:14:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  375# SubscribeData: EventDTO
+      375# 18:14:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  376# SubscribeData: EventDTO
+      376# 18:14:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  377# SubscribeData: EventDTO
+      377# 18:14:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  378# SubscribeData: EventDTO
+      378# 18:14:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  379# SubscribeData: EventDTO
+      379# 18:14:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  380# SubscribeData: EventDTO
+      380# 18:14:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  381# SubscribeData: EventDTO
+      381# 18:14:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  382# SubscribeData: EventDTO
+      382# 18:14:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  383# SubscribeData: EventDTO
+      383# 18:14:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  384# SubscribeData: EventDTO
+      384# 18:14:45 EUI64-D0CF5EFFFE59F3F7 in 797296:physicalDeviceIsNowUP
+  385# SubscribeData: EventDTO
+      385# 18:14:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  386# SubscribeData: EventDTO
+      386# 18:14:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  387# SubscribeData: EventDTO
+      387# 18:14:54 EUI64-90FD9FFFFEA93F8D in 797296:physicalDeviceIsNowUP
+  388# SubscribeData: EventDTO
+      388# 18:15:21 EUI64-0080E103000376C0 in 503370:physicalDeviceIsNowDOWN
+  390# SubscribeData: EventDTO
+      390# 18:15:52 EUI64-D0CF5EFFFE59F4DE in 797296:physicalDeviceIsNowUP
+  391# SubscribeData: EventDTO
+      391# 18:16:10 EUI64-0090DAFFFF00744A in 996052:remoteLocationGatewayIsNowDOWN
+  392# SubscribeData: EventDTO
+      392# 18:16:10 EUI64-0090DAFFFF00744A in 996052:remoteLocationGatewayIsNowUP
+  393# SubscribeData: EventDTO
+      393# 18:16:18 EUI64-0090DAFFFF00744A in 996052:unitConfigurationChanged
+  396# SubscribeData: EventDTO
+      396# 18:16:19 EUI64-0090DAFFFF00744A in 996052:locationChanged
+  397# SubscribeData: EventDTO
+      397# 18:16:21 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowDOWN
+  399# SubscribeData: EventDTO
+      399# 18:16:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  400# SubscribeData: EventDTO
+      400# 18:16:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  401# SubscribeData: EventDTO
+      401# 18:16:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  402# SubscribeData: EventDTO
+      402# 18:16:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  403# SubscribeData: EventDTO
+      403# 18:16:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  404# SubscribeData: EventDTO
+      404# 18:16:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  405# SubscribeData: EventDTO
+      405# 18:16:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  406# SubscribeData: EventDTO
+      406# 18:16:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  407# SubscribeData: EventDTO
+      407# 18:16:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  408# SubscribeData: EventDTO
+      408# 18:16:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  409# SubscribeData: EventDTO
+      409# 18:16:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  410# SubscribeData: EventDTO
+      410# 18:16:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  411# SubscribeData: EventDTO
+      411# 18:16:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  412# SubscribeData: EventDTO
+      412# 18:16:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  413# SubscribeData: EventDTO
+      413# 18:17:07 EUI64-D0CF5EFFFE7B251B in 797296:physicalDeviceIsNowUP
+  414# SubscribeData: EventDTO
+      414# 18:17:21 EUI64-90FD9FFFFEA7756C in 783825:physicalDeviceIsNowDOWN
+  416# SubscribeData: EventDTO
+      416# 18:17:26 EUI64-90FD9FFFFEA77EF4 in 797296:physicalDeviceIsNowDOWN
+  418# SubscribeData: EventDTO
+      418# 18:18:29 EUI64-0090DAFFFF006A16 in 221376:remoteLocationGatewayIsNowDOWN
+  419# SubscribeData: EventDTO
+      419# 18:18:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  420# SubscribeData: EventDTO
+      420# 18:18:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  421# SubscribeData: EventDTO
+      421# 18:18:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  422# SubscribeData: EventDTO
+      422# 18:18:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  423# SubscribeData: EventDTO
+      423# 18:18:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  424# SubscribeData: EventDTO
+      424# 18:18:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  425# SubscribeData: EventDTO
+      425# 18:18:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  426# SubscribeData: EventDTO
+      426# 18:18:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  427# SubscribeData: EventDTO
+      427# 18:18:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  428# SubscribeData: EventDTO
+      428# 18:18:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  429# SubscribeData: EventDTO
+      429# 18:18:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  430# SubscribeData: EventDTO
+      430# 18:18:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  431# SubscribeData: EventDTO
+      431# 18:18:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  432# SubscribeData: EventDTO
+      432# 18:18:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  433# SubscribeData: EventDTO
+      433# 18:18:43 EUI64-0090DAFFFF006A16 in 221376:remoteLocationGatewayIsNowUP
+  434# SubscribeData: EventDTO
+      434# 18:18:51 EUI64-0090DAFFFF006A16 in 221376:unitConfigurationChanged
+  437# SubscribeData: EventDTO
+      437# 18:18:51 EUI64-0090DAFFFF006A16 in 221376:locationChanged
+  438# SubscribeData: EventDTO
+      438# 18:19:01 EUI64-90FD9FFFFEA93D87 in 797296:physicalDeviceIsNowUP
+  439# SubscribeData: EventDTO
+      439# 18:19:07 EUI64-90FD9FFFFEA7756C in 783825:physicalDeviceIsNowUP
+  442# SubscribeData: EventDTO
+      442# 18:20:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  443# SubscribeData: EventDTO
+      443# 18:20:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  444# SubscribeData: EventDTO
+      444# 18:20:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  445# SubscribeData: EventDTO
+      445# 18:20:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  446# SubscribeData: EventDTO
+      446# 18:20:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  447# SubscribeData: EventDTO
+      447# 18:20:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  448# SubscribeData: EventDTO
+      448# 18:20:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  449# SubscribeData: EventDTO
+      449# 18:20:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  450# SubscribeData: EventDTO
+      450# 18:20:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  451# SubscribeData: EventDTO
+      451# 18:20:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  452# SubscribeData: EventDTO
+      452# 18:20:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  453# SubscribeData: EventDTO
+      453# 18:20:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  454# SubscribeData: EventDTO
+      454# 18:20:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  455# SubscribeData: EventDTO
+      455# 18:20:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  456# SubscribeData: EventDTO
+      456# 18:20:53 EUI64-D0CF5EFFFE792D88 in 229349:physicalDeviceIsNowDOWN
+  458# SubscribeData: EventDTO
+      458# 18:21:32 EUI64-00124B0018ED2E6C in 503370:physicalDeviceIsNowDOWN
+  459# SubscribeData: EventDTO
+      459# 18:22:01 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowDOWN
+  461# SubscribeData: EventDTO
+      461# 18:22:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  462# SubscribeData: EventDTO
+      462# 18:22:34 EUI64-90FD9FFFFEA938CA in 797296:physicalDeviceIsNowDOWN
+  463# SubscribeData: EventDTO
+      463# 18:22:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  464# SubscribeData: EventDTO
+      464# 18:22:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  465# SubscribeData: EventDTO
+      465# 18:22:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  466# SubscribeData: EventDTO
+      466# 18:22:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  467# SubscribeData: EventDTO
+      467# 18:22:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  468# SubscribeData: EventDTO
+      468# 18:22:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  469# SubscribeData: EventDTO
+      469# 18:22:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  470# SubscribeData: EventDTO
+      470# 18:22:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  471# SubscribeData: EventDTO
+      471# 18:22:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  472# SubscribeData: EventDTO
+      472# 18:22:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  473# SubscribeData: EventDTO
+      473# 18:22:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  474# SubscribeData: EventDTO
+      474# 18:22:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  475# SubscribeData: EventDTO
+      475# 18:22:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  478# SubscribeData: EventDTO
+      478# 18:24:25 EUI64-0080E103000376C0 in 503370:physicalDeviceIsNowUP
+  479# SubscribeData: EventDTO
+      479# 18:24:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  480# SubscribeData: EventDTO
+      480# 18:24:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  481# SubscribeData: EventDTO
+      481# 18:24:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  482# SubscribeData: EventDTO
+      482# 18:24:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  483# SubscribeData: EventDTO
+      483# 18:24:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  484# SubscribeData: EventDTO
+      484# 18:24:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  485# SubscribeData: EventDTO
+      485# 18:24:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  486# SubscribeData: EventDTO
+      486# 18:24:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  487# SubscribeData: EventDTO
+      487# 18:24:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  488# SubscribeData: EventDTO
+      488# 18:24:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  489# SubscribeData: EventDTO
+      489# 18:24:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  490# SubscribeData: EventDTO
+      490# 18:24:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  491# SubscribeData: EventDTO
+      491# 18:24:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  492# SubscribeData: EventDTO
+      492# 18:24:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  493# SubscribeData: EventDTO
+      493# 18:25:06 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowUP
+  494# SubscribeData: EventDTO
+      494# 18:25:18 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowUP
+  497# SubscribeData: EventDTO
+      497# 18:26:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  498# SubscribeData: EventDTO
+      498# 18:26:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  499# SubscribeData: EventDTO
+      499# 18:26:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  500# SubscribeData: EventDTO
+      500# 18:26:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  501# SubscribeData: EventDTO
+      501# 18:26:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  502# SubscribeData: EventDTO
+      502# 18:26:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  503# SubscribeData: EventDTO
+      503# 18:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  504# SubscribeData: EventDTO
+      504# 18:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  505# SubscribeData: EventDTO
+      505# 18:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  506# SubscribeData: EventDTO
+      506# 18:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  507# SubscribeData: EventDTO
+      507# 18:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  508# SubscribeData: EventDTO
+      508# 18:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  509# SubscribeData: EventDTO
+      509# 18:26:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  510# SubscribeData: EventDTO
+      510# 18:26:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  511# SubscribeData: EventDTO
+      511# 18:26:40 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowUP
+  514# SubscribeData: EventDTO
+      514# 18:28:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  515# SubscribeData: EventDTO
+      515# 18:28:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  516# SubscribeData: EventDTO
+      516# 18:28:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  517# SubscribeData: EventDTO
+      517# 18:28:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  518# SubscribeData: EventDTO
+      518# 18:28:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  519# SubscribeData: EventDTO
+      519# 18:28:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  520# SubscribeData: EventDTO
+      520# 18:28:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  521# SubscribeData: EventDTO
+      521# 18:28:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  522# SubscribeData: EventDTO
+      522# 18:28:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  523# SubscribeData: EventDTO
+      523# 18:28:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  524# SubscribeData: EventDTO
+      524# 18:28:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  525# SubscribeData: EventDTO
+      525# 18:28:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  526# SubscribeData: EventDTO
+      526# 18:28:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  527# SubscribeData: EventDTO
+      527# 18:28:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  528# SubscribeData: EventDTO
+      528# 18:28:42 EUI64-D0CF5EFFFE792A8C in 223516:physicalDeviceIsNowDOWN
+  529# SubscribeData: EventDTO
+      529# 18:28:46 EUI64-90FD9FFFFEA77C85 in 223516:physicalDeviceIsNowDOWN
+  530# SubscribeData: EventDTO
+      530# 18:28:58 EUI64-90FD9FFFFEA95DFD in 223516:physicalDeviceIsNowDOWN
+  531# SubscribeData: EventDTO
+      531# 18:29:00 EUI64-D0CF5EFFFE59F106 in 223516:physicalDeviceIsNowDOWN
+  533# SubscribeData: EventDTO
+      533# 18:29:33 EUI64-D0CF5EFFFE793267 in 223516:physicalDeviceIsNowDOWN
+  534# SubscribeData: EventDTO
+      534# 18:29:37 EUI64-D0CF5EFFFE59F453 in 223516:physicalDeviceIsNowDOWN
+  535# SubscribeData: EventDTO
+      535# 18:29:42 EUI64-D0CF5EFFFE59CE7F in 223516:physicalDeviceIsNowDOWN
+  536# SubscribeData: EventDTO
+      536# 18:29:46 EUI64-D0CF5EFFFE69DFA4 in 223516:physicalDeviceIsNowDOWN
+  537# SubscribeData: EventDTO
+      537# 18:29:47 EUI64-90FD9FFFFEA77CF1 in 223516:physicalDeviceIsNowDOWN
+  538# SubscribeData: EventDTO
+      538# 18:29:53 EUI64-90FD9FFFFEA9511A in 797296:physicalDeviceIsNowDOWN
+  539# SubscribeData: EventDTO
+      539# 18:30:06 EUI64-90FD9FFFFEA95EA4 in 223516:physicalDeviceIsNowDOWN
+  540# SubscribeData: EventDTO
+      540# 18:30:25 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowDOWN
+  542# SubscribeData: EventDTO
+      542# 18:30:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  543# SubscribeData: EventDTO
+      543# 18:30:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  544# SubscribeData: EventDTO
+      544# 18:30:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  545# SubscribeData: EventDTO
+      545# 18:30:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  546# SubscribeData: EventDTO
+      546# 18:30:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  547# SubscribeData: EventDTO
+      547# 18:30:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  548# SubscribeData: EventDTO
+      548# 18:30:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  549# SubscribeData: EventDTO
+      549# 18:30:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  550# SubscribeData: EventDTO
+      550# 18:30:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  551# SubscribeData: EventDTO
+      551# 18:30:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  552# SubscribeData: EventDTO
+      552# 18:30:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  553# SubscribeData: EventDTO
+      553# 18:30:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  554# SubscribeData: EventDTO
+      554# 18:30:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  555# SubscribeData: EventDTO
+      555# 18:30:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  556# SubscribeData: EventDTO
+      556# 18:30:47 EUI64-90FD9FFFFEA780B9 in 223516:physicalDeviceIsNowDOWN
+  557# SubscribeData: EventDTO
+      557# 18:30:58 EUI64-D0CF5EFFFE79326A in 223516:physicalDeviceIsNowDOWN
+  558# SubscribeData: EventDTO
+      558# 18:30:59 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowUP
+  559# SubscribeData: EventDTO
+      559# 18:30:59 EUI64-90FD9FFFFEA95EA4 in 223516:physicalDeviceIsNowUP
+  560# SubscribeData: EventDTO
+      560# 18:31:05 EUI64-0090DAFFFF0064AC in 573742:remoteLocationGatewayIsNowDOWN
+  561# SubscribeData: EventDTO
+      561# 18:31:06 EUI64-0090DAFFFF0064AC in 573742:remoteLocationGatewayIsNowUP
+  562# SubscribeData: EventDTO
+      562# 18:31:13 EUI64-0090DAFFFF0064AC in 573742:unitConfigurationChanged
+  565# SubscribeData: EventDTO
+      565# 18:31:15 EUI64-0090DAFFFF0064AC in 573742:locationChanged
+  566# SubscribeData: EventDTO
+      566# 18:31:21 EUI64-90FD9FFFFEA938CA in 797296:physicalDeviceIsNowUP
+  567# SubscribeData: EventDTO
+      567# 18:31:26 EUI64-D0CF5EFFFE59E6E2 in 223516:physicalDeviceIsNowDOWN
+  569# SubscribeData: EventDTO
+      569# 18:31:37 EUI64-90FD9FFFFEA77C58 in 223516:physicalDeviceIsNowDOWN
+  570# SubscribeData: EventDTO
+      570# 18:32:09 EUI64-90FD9FFFFEA77C85 in 223516:physicalDeviceIsNowUP
+  571# SubscribeData: EventDTO
+      571# 18:32:14 EUI64-90FD9FFFFEA77C58 in 223516:physicalDeviceIsNowUP
+  572# SubscribeData: EventDTO
+      572# 18:32:24 EUI64-90FD9FFFFEA95938 in 223516:physicalDeviceIsNowDOWN
+  574# SubscribeData: EventDTO
+      574# 18:32:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  575# SubscribeData: EventDTO
+      575# 18:32:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  576# SubscribeData: EventDTO
+      576# 18:32:34 EUI64-90FD9FFFFEA77CF1 in 223516:physicalDeviceIsNowUP
+  577# SubscribeData: EventDTO
+      577# 18:32:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  578# SubscribeData: EventDTO
+      578# 18:32:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  579# SubscribeData: EventDTO
+      579# 18:32:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  580# SubscribeData: EventDTO
+      580# 18:32:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  581# SubscribeData: EventDTO
+      581# 18:32:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  582# SubscribeData: EventDTO
+      582# 18:32:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  583# SubscribeData: EventDTO
+      583# 18:32:41 EUI64-D0CF5EFFFE793466 in 223516:physicalDeviceIsNowDOWN
+  584# SubscribeData: EventDTO
+      584# 18:32:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  585# SubscribeData: EventDTO
+      585# 18:32:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  586# SubscribeData: EventDTO
+      586# 18:32:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  587# SubscribeData: EventDTO
+      587# 18:32:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  588# SubscribeData: EventDTO
+      588# 18:32:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  589# SubscribeData: EventDTO
+      589# 18:32:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  590# SubscribeData: EventDTO
+      590# 18:33:20 EUI64-D0CF5EFFFE79326A in 223516:physicalDeviceIsNowUP
+  591# SubscribeData: EventDTO
+      591# 18:33:27 EUI64-90FD9FFFFEA93984 in 223516:physicalDeviceIsNowDOWN
+  592# SubscribeData: EventDTO
+      592# 18:33:27 EUI64-D0CF5EFFFE793466 in 223516:physicalDeviceIsNowUP
+  594# SubscribeData: EventDTO
+      594# 18:33:38 EUI64-D0CF5EFFFE69E1D5 in 223516:physicalDeviceIsNowDOWN
+  595# SubscribeData: EventDTO
+      595# 18:33:47 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowDOWN
+  596# SubscribeData: EventDTO
+      596# 18:33:49 EUI64-90FD9FFFFEA77EF4 in 797296:physicalDeviceIsNowUP
+  597# SubscribeData: EventDTO
+      597# 18:33:57 EUI64-D0CF5EFFFE69DFA4 in 223516:physicalDeviceIsNowUP
+  598# SubscribeData: EventDTO
+      598# 18:34:09 EUI64-90FD9FFFFEA9511A in 797296:physicalDeviceIsNowUP
+  599# SubscribeData: EventDTO
+      599# 18:34:18 EUI64-90FD9FFFFEA780B9 in 223516:physicalDeviceIsNowUP
+  600# SubscribeData: EventDTO
+      600# 18:34:25 EUI64-D0CF5EFFFE59E6E2 in 223516:physicalDeviceIsNowUP
+  601# SubscribeData: EventDTO
+      601# 18:34:26 EUI64-00124B0018ED2E6C in 503370:physicalDeviceIsNowUP
+  603# SubscribeData: EventDTO
+      603# 18:34:31 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowDOWN
+  604# SubscribeData: EventDTO
+      604# 18:34:33 EUI64-D0CF5EFFFE59CE7F in 223516:physicalDeviceIsNowUP
+  605# SubscribeData: EventDTO
+      605# 18:34:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  606# SubscribeData: EventDTO
+      606# 18:34:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  607# SubscribeData: EventDTO
+      607# 18:34:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  608# SubscribeData: EventDTO
+      608# 18:34:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  609# SubscribeData: EventDTO
+      609# 18:34:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  610# SubscribeData: EventDTO
+      610# 18:34:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  611# SubscribeData: EventDTO
+      611# 18:34:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  612# SubscribeData: EventDTO
+      612# 18:34:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  613# SubscribeData: EventDTO
+      613# 18:34:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  614# SubscribeData: EventDTO
+      614# 18:34:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  615# SubscribeData: EventDTO
+      615# 18:34:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  616# SubscribeData: EventDTO
+      616# 18:34:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  617# SubscribeData: EventDTO
+      617# 18:34:45 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowUP
+  618# SubscribeData: EventDTO
+      618# 18:34:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  619# SubscribeData: EventDTO
+      619# 18:34:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  620# SubscribeData: EventDTO
+      620# 18:35:18 EUI64-D0CF5EFFFE69E1D5 in 223516:physicalDeviceIsNowUP
+  621# SubscribeData: EventDTO
+      621# 18:35:23 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowUP
+  622# SubscribeData: EventDTO
+      622# 18:35:26 EUI64-90FD9FFFFEA95938 in 223516:physicalDeviceIsNowUP
+  623# SubscribeData: EventDTO
+      623# 18:35:27 EUI64-D0CF5EFFFE792A8C in 223516:physicalDeviceIsNowUP
+  625# SubscribeData: EventDTO
+      625# 18:35:45 EUI64-D0CF5EFFFE59F106 in 223516:physicalDeviceIsNowUP
+  626# SubscribeData: EventDTO
+      626# 18:35:50 EUI64-D0CF5EFFFE59E3B2 in 783825:physicalDeviceIsNowDOWN
+  627# SubscribeData: EventDTO
+      627# 18:36:13 EUI64-90FD9FFFFEA93984 in 223516:physicalDeviceIsNowUP
+  628# SubscribeData: EventDTO
+      628# 18:36:16 EUI64-D0CF5EFFFE792CD8 in 306571:physicalDeviceIsNowDOWN
+  629# SubscribeData: EventDTO
+      629# 18:36:25 EUI64-D0CF5EFFFE793267 in 223516:physicalDeviceIsNowUP
+  631# SubscribeData: EventDTO
+      631# 18:36:29 EUI64-D0CF5EFFFE59F453 in 223516:physicalDeviceIsNowUP
+  632# SubscribeData: EventDTO
+      632# 18:36:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  633# SubscribeData: EventDTO
+      633# 18:36:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  634# SubscribeData: EventDTO
+      634# 18:36:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  635# SubscribeData: EventDTO
+      635# 18:36:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  636# SubscribeData: EventDTO
+      636# 18:36:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  637# SubscribeData: EventDTO
+      637# 18:36:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  638# SubscribeData: EventDTO
+      638# 18:36:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  639# SubscribeData: EventDTO
+      639# 18:36:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  640# SubscribeData: EventDTO
+      640# 18:36:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  641# SubscribeData: EventDTO
+      641# 18:36:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  642# SubscribeData: EventDTO
+      642# 18:36:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  643# SubscribeData: EventDTO
+      643# 18:36:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  644# SubscribeData: EventDTO
+      644# 18:36:51 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  645# SubscribeData: EventDTO
+      645# 18:36:51 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  646# SubscribeData: EventDTO
+      646# 18:37:15 EUI64-D0CF5EFFFE59E3B2 in 783825:physicalDeviceIsNowUP
+  648# SubscribeData: EventDTO
+      648# 18:37:42 EUI64-D0CF5EFFFE792D88 in 229349:physicalDeviceIsNowUP
+  649# SubscribeData: EventDTO
+      649# 18:38:08 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowUP
+  651# SubscribeData: EventDTO
+      651# 18:38:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  652# SubscribeData: EventDTO
+      652# 18:38:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  653# SubscribeData: EventDTO
+      653# 18:38:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  654# SubscribeData: EventDTO
+      654# 18:38:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  655# SubscribeData: EventDTO
+      655# 18:38:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  656# SubscribeData: EventDTO
+      656# 18:38:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  657# SubscribeData: EventDTO
+      657# 18:38:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  658# SubscribeData: EventDTO
+      658# 18:38:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  659# SubscribeData: EventDTO
+      659# 18:38:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  660# SubscribeData: EventDTO
+      660# 18:38:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  661# SubscribeData: EventDTO
+      661# 18:38:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  662# SubscribeData: EventDTO
+      662# 18:38:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  663# SubscribeData: EventDTO
+      663# 18:38:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  664# SubscribeData: EventDTO
+      664# 18:38:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  666# SubscribeData: EventDTO
+      666# 18:39:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  667# SubscribeData: EventDTO
+      667# 18:39:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  668# SubscribeData: EventDTO
+      668# 18:39:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  669# SubscribeData: EventDTO
+      669# 18:39:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  670# SubscribeData: EventDTO
+      670# 18:39:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  671# SubscribeData: EventDTO
+      671# 18:39:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  672# SubscribeData: EventDTO
+      672# 18:39:48 EUI64-90FD9FFFFEA95DFD in 223516:physicalDeviceIsNowUP
+  673# SubscribeData: EventDTO
+      673# 18:39:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  674# SubscribeData: EventDTO
+      674# 18:39:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  675# SubscribeData: EventDTO
+      675# 18:39:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  676# SubscribeData: EventDTO
+      676# 18:39:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  677# SubscribeData: EventDTO
+      677# 18:39:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  678# SubscribeData: EventDTO
+      678# 18:39:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  679# SubscribeData: EventDTO
+      679# 18:39:51 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  680# SubscribeData: EventDTO
+      680# 18:39:51 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  682# SubscribeData: EventDTO
+      682# 18:40:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  683# SubscribeData: EventDTO
+      683# 18:40:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  684# SubscribeData: EventDTO
+      684# 18:40:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  685# SubscribeData: EventDTO
+      685# 18:40:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  686# SubscribeData: EventDTO
+      686# 18:40:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  687# SubscribeData: EventDTO
+      687# 18:40:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  688# SubscribeData: EventDTO
+      688# 18:40:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  689# SubscribeData: EventDTO
+      689# 18:40:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  690# SubscribeData: EventDTO
+      690# 18:40:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  691# SubscribeData: EventDTO
+      691# 18:40:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  692# SubscribeData: EventDTO
+      692# 18:40:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  693# SubscribeData: EventDTO
+      693# 18:40:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  694# SubscribeData: EventDTO
+      694# 18:40:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  695# SubscribeData: EventDTO
+      695# 18:40:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  696# SubscribeData: EventDTO
+      696# 18:41:07 EUI64-D0CF5EFFFE792CD8 in 306571:physicalDeviceIsNowUP
+  698# SubscribeData: EventDTO
+      698# 18:41:37 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowDOWN
+  699# SubscribeData: EventDTO
+      699# 18:42:00 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowDOWN
+  700# SubscribeData: EventDTO
+      700# 18:42:12 EUI64-00124B0018ED2E6C in 503370:physicalDeviceIsNowDOWN
+  701# SubscribeData: EventDTO
+      701# 18:42:17 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowUP
+  703# SubscribeData: EventDTO
+      703# 18:42:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  704# SubscribeData: EventDTO
+      704# 18:42:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  705# SubscribeData: EventDTO
+      705# 18:42:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  706# SubscribeData: EventDTO
+      706# 18:42:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  707# SubscribeData: EventDTO
+      707# 18:42:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  708# SubscribeData: EventDTO
+      708# 18:42:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  709# SubscribeData: EventDTO
+      709# 18:42:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  710# SubscribeData: EventDTO
+      710# 18:42:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  711# SubscribeData: EventDTO
+      711# 18:42:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  712# SubscribeData: EventDTO
+      712# 18:42:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  713# SubscribeData: EventDTO
+      713# 18:42:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  714# SubscribeData: EventDTO
+      714# 18:42:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  715# SubscribeData: EventDTO
+      715# 18:42:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  716# SubscribeData: EventDTO
+      716# 18:42:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  717# SubscribeData: EventDTO
+      717# 18:43:08 EUI64-90FD9FFFFEA95EB4 in 797296:physicalDeviceIsNowDOWN
+  719# SubscribeData: EventDTO
+      719# 18:44:16 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowDOWN
+  720# SubscribeData: EventDTO
+      720# 18:44:30 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowDOWN
+  722# SubscribeData: EventDTO
+      722# 18:44:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  723# SubscribeData: EventDTO
+      723# 18:44:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  724# SubscribeData: EventDTO
+      724# 18:44:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  725# SubscribeData: EventDTO
+      725# 18:44:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  726# SubscribeData: EventDTO
+      726# 18:44:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  727# SubscribeData: EventDTO
+      727# 18:44:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  728# SubscribeData: EventDTO
+      728# 18:44:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  729# SubscribeData: EventDTO
+      729# 18:44:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  730# SubscribeData: EventDTO
+      730# 18:44:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  731# SubscribeData: EventDTO
+      731# 18:44:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  732# SubscribeData: EventDTO
+      732# 18:44:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  733# SubscribeData: EventDTO
+      733# 18:44:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  734# SubscribeData: EventDTO
+      734# 18:44:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  735# SubscribeData: EventDTO
+      735# 18:44:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  736# SubscribeData: EventDTO
+      736# 18:44:56 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowUP
+  737# SubscribeData: EventDTO
+      737# 18:45:10 EUI64-90FD9FFFFEA7756C in 783825:physicalDeviceIsNowDOWN
+  739# SubscribeData: EventDTO
+      739# 18:45:39 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowDOWN
+  740# SubscribeData: EventDTO
+      740# 18:45:57 EUI64-90FD9FFFFEA95EB4 in 797296:physicalDeviceIsNowUP
+  742# SubscribeData: EventDTO
+      742# 18:46:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  743# SubscribeData: EventDTO
+      743# 18:46:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  744# SubscribeData: EventDTO
+      744# 18:46:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  745# SubscribeData: EventDTO
+      745# 18:46:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  746# SubscribeData: EventDTO
+      746# 18:46:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  747# SubscribeData: EventDTO
+      747# 18:46:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  748# SubscribeData: EventDTO
+      748# 18:46:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  749# SubscribeData: EventDTO
+      749# 18:46:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  750# SubscribeData: EventDTO
+      750# 18:46:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  751# SubscribeData: EventDTO
+      751# 18:46:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  752# SubscribeData: EventDTO
+      752# 18:46:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  753# SubscribeData: EventDTO
+      753# 18:46:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  754# SubscribeData: EventDTO
+      754# 18:46:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  755# SubscribeData: EventDTO
+      755# 18:46:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  756# SubscribeData: EventDTO
+      756# 18:47:02 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowDOWN
+  757# SubscribeData: EventDTO
+      757# 18:47:06 EUI64-90FD9FFFFEA7756C in 783825:physicalDeviceIsNowUP
+  759# SubscribeData: EventDTO
+      759# 18:47:41 EUI64-90FD9FFFFEA9511A in 797296:physicalDeviceIsNowDOWN
+  761# SubscribeData: EventDTO
+      761# 18:48:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  762# SubscribeData: EventDTO
+      762# 18:48:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  763# SubscribeData: EventDTO
+      763# 18:48:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  764# SubscribeData: EventDTO
+      764# 18:48:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  765# SubscribeData: EventDTO
+      765# 18:48:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  766# SubscribeData: EventDTO
+      766# 18:48:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  767# SubscribeData: EventDTO
+      767# 18:48:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  768# SubscribeData: EventDTO
+      768# 18:48:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  769# SubscribeData: EventDTO
+      769# 18:48:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  770# SubscribeData: EventDTO
+      770# 18:48:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  771# SubscribeData: EventDTO
+      771# 18:48:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  772# SubscribeData: EventDTO
+      772# 18:48:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  773# SubscribeData: EventDTO
+      773# 18:48:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  774# SubscribeData: EventDTO
+      774# 18:48:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  775# SubscribeData: EventDTO
+      775# 18:49:32 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowUP
+  777# SubscribeData: EventDTO
+      777# 18:50:27 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowDOWN
+  778# SubscribeData: EventDTO
+      778# 18:50:27 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowUP
+  782# SubscribeData: EventDTO
+      782# 18:50:35 EUI64-0090DAFFFF006AAC in 399621:unitConfigurationChanged
+  783# SubscribeData: EventDTO
+      783# 18:50:35 EUI64-0090DAFFFF006AAC in 399621:locationChanged
+  784# SubscribeData: EventDTO
+      784# 18:50:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  785# SubscribeData: EventDTO
+      785# 18:50:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  786# SubscribeData: EventDTO
+      786# 18:50:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  787# SubscribeData: EventDTO
+      787# 18:50:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  788# SubscribeData: EventDTO
+      788# 18:50:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  789# SubscribeData: EventDTO
+      789# 18:50:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  790# SubscribeData: EventDTO
+      790# 18:50:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  791# SubscribeData: EventDTO
+      791# 18:50:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  792# SubscribeData: EventDTO
+      792# 18:50:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  793# SubscribeData: EventDTO
+      793# 18:50:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  794# SubscribeData: EventDTO
+      794# 18:50:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  795# SubscribeData: EventDTO
+      795# 18:50:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  796# SubscribeData: EventDTO
+      796# 18:50:51 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  797# SubscribeData: EventDTO
+      797# 18:50:51 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  798# SubscribeData: EventDTO
+      798# 18:51:30 EUI64-90FD9FFFFEA93F4E in 306571:physicalDeviceIsNowDOWN
+  800# SubscribeData: EventDTO
+      800# 18:52:14 EUI64-D0CF5EFFFE59F416 in 252208:physicalDeviceIsNowDOWN
+  801# SubscribeData: EventDTO
+      801# 18:52:32 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowDOWN
+  803# SubscribeData: EventDTO
+      803# 18:52:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  804# SubscribeData: EventDTO
+      804# 18:52:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  805# SubscribeData: EventDTO
+      805# 18:52:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  806# SubscribeData: EventDTO
+      806# 18:52:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  807# SubscribeData: EventDTO
+      807# 18:52:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  808# SubscribeData: EventDTO
+      808# 18:52:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  809# SubscribeData: EventDTO
+      809# 18:52:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  810# SubscribeData: EventDTO
+      810# 18:52:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  811# SubscribeData: EventDTO
+      811# 18:52:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  812# SubscribeData: EventDTO
+      812# 18:52:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  813# SubscribeData: EventDTO
+      813# 18:53:03 EUI64-D0CF5EFFFE59F416 in 252208:physicalDeviceIsNowUP
+  814# SubscribeData: EventDTO
+      814# 18:53:08 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  815# SubscribeData: EventDTO
+      815# 18:53:08 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  816# SubscribeData: EventDTO
+      816# 18:53:08 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  817# SubscribeData: EventDTO
+      817# 18:53:09 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  818# SubscribeData: EventDTO
+      818# 18:53:20 EUI64-D0CF5EFFFE793DA1 in 503370:physicalDeviceIsNowUP
+  821# SubscribeData: EventDTO
+      821# 18:54:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  822# SubscribeData: EventDTO
+      822# 18:54:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  823# SubscribeData: EventDTO
+      823# 18:54:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  824# SubscribeData: EventDTO
+      824# 18:54:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  825# SubscribeData: EventDTO
+      825# 18:54:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  826# SubscribeData: EventDTO
+      826# 18:54:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  827# SubscribeData: EventDTO
+      827# 18:54:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  828# SubscribeData: EventDTO
+      828# 18:54:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  829# SubscribeData: EventDTO
+      829# 18:54:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  830# SubscribeData: EventDTO
+      830# 18:54:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  831# SubscribeData: EventDTO
+      831# 18:54:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  832# SubscribeData: EventDTO
+      832# 18:54:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  833# SubscribeData: EventDTO
+      833# 18:54:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  834# SubscribeData: EventDTO
+      834# 18:54:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  836# SubscribeData: EventDTO
+      836# 18:56:15 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowUP
+  838# SubscribeData: EventDTO
+      838# 18:57:01 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  839# SubscribeData: EventDTO
+      839# 18:57:11 EUI64-90FD9FFFFEA94252 in 229349:newUnAcceptedDeviceSeenByDiscovery
+  840# SubscribeData: EventDTO
+      840# 18:57:14 EUI64-90FD9FFFFEA94252 in 996052:newUnAcceptedDeviceSeenByDiscovery
+  841# SubscribeData: EventDTO
+      841# 18:57:16 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  842# SubscribeData: EventDTO
+      842# 18:57:17 EUI64-90FD9FFFFEA94252 in 573742:newUnAcceptedDeviceSeenByDiscovery
+  843# SubscribeData: EventDTO
+      843# 18:57:18 EUI64-90FD9FFFFEA94252 in 537931:newUnAcceptedDeviceSeenByDiscovery
+  844# SubscribeData: EventDTO
+      844# 18:57:24 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  847# SubscribeData: EventDTO
+      847# 18:57:25 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  850# SubscribeData: EventDTO
+      850# 18:58:37 EUI64-D0CF5EFFFE79344F in 783825:physicalDeviceIsNowDOWN
+  851# SubscribeData: EventDTO
+      851# 18:58:38 EUI64-D0CF5EFFFE79344F in 783825:physicalDeviceIsNowUP
+  852# SubscribeData: EventDTO
+      852# 18:58:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  853# SubscribeData: EventDTO
+      853# 18:58:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  854# SubscribeData: EventDTO
+      854# 18:58:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  855# SubscribeData: EventDTO
+      855# 18:58:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  856# SubscribeData: EventDTO
+      856# 18:58:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  857# SubscribeData: EventDTO
+      857# 18:58:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  858# SubscribeData: EventDTO
+      858# 18:58:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  859# SubscribeData: EventDTO
+      859# 18:58:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  860# SubscribeData: EventDTO
+      860# 18:58:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  861# SubscribeData: EventDTO
+      861# 18:58:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  862# SubscribeData: EventDTO
+      862# 18:58:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  863# SubscribeData: EventDTO
+      863# 18:58:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  864# SubscribeData: EventDTO
+      864# 18:58:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  865# SubscribeData: EventDTO
+      865# 18:58:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  867# SubscribeData: EventDTO
+      867# 19:00:13 EUI64-90FD9FFFFEA950EA in 783825:physicalDeviceIsNowDOWN
+  868# SubscribeData: EventDTO
+      868# 19:00:36 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowUP
+  870# SubscribeData: EventDTO
+      870# 19:00:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  871# SubscribeData: EventDTO
+      871# 19:00:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  872# SubscribeData: EventDTO
+      872# 19:00:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  873# SubscribeData: EventDTO
+      873# 19:00:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  874# SubscribeData: EventDTO
+      874# 19:00:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  875# SubscribeData: EventDTO
+      875# 19:00:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  876# SubscribeData: EventDTO
+      876# 19:00:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  877# SubscribeData: EventDTO
+      877# 19:00:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  878# SubscribeData: EventDTO
+      878# 19:00:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  879# SubscribeData: EventDTO
+      879# 19:00:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  880# SubscribeData: EventDTO
+      880# 19:00:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  881# SubscribeData: EventDTO
+      881# 19:00:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  883# SubscribeData: EventDTO
+      883# 19:01:56 EUI64-90FD9FFFFEA950EA in 783825:physicalDeviceIsNowUP
+  884# SubscribeData: EventDTO
+      884# 19:02:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  885# SubscribeData: EventDTO
+      885# 19:02:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  886# SubscribeData: EventDTO
+      886# 19:02:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  887# SubscribeData: EventDTO
+      887# 19:02:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  889# SubscribeData: EventDTO
+      889# 19:02:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  890# SubscribeData: EventDTO
+      890# 19:02:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  891# SubscribeData: EventDTO
+      891# 19:02:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  892# SubscribeData: EventDTO
+      892# 19:02:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  893# SubscribeData: EventDTO
+      893# 19:02:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  894# SubscribeData: EventDTO
+      894# 19:02:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  895# SubscribeData: EventDTO
+      895# 19:02:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  896# SubscribeData: EventDTO
+      896# 19:02:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  897# SubscribeData: EventDTO
+      897# 19:02:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  898# SubscribeData: EventDTO
+      898# 19:02:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  899# SubscribeData: EventDTO
+      899# 19:03:08 EUI64-90FD9FFFFEA782EE in 783825:physicalDeviceIsNowDOWN
+  900# SubscribeData: EventDTO
+      900# 19:03:12 EUI64-90FD9FFFFEA782EE in 783825:physicalDeviceIsNowUP
+  901# SubscribeData: EventDTO
+      901# 19:03:26 EUI64-D0CF5EFFFE792997 in 503370:physicalDeviceIsNowDOWN
+  903# SubscribeData: EventDTO
+      903# 19:03:57 EUI64-90FD9FFFFEA93DF6 in 499735:physicalDeviceIsNowUP
+  904# SubscribeData: EventDTO
+      904# 19:04:24 EUI64-90FD9FFFFEA9511A in 797296:physicalDeviceIsNowUP
+  905# SubscribeData: EventDTO
+      905# 19:04:28 EUI64-D0CF5EFFFE792997 in 503370:physicalDeviceIsNowUP
+  906# SubscribeData: EventDTO
+      906# 19:04:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  907# SubscribeData: EventDTO
+      907# 19:04:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  908# SubscribeData: EventDTO
+      908# 19:04:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  909# SubscribeData: EventDTO
+      909# 19:04:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  911# SubscribeData: EventDTO
+      911# 19:04:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  912# SubscribeData: EventDTO
+      912# 19:04:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  913# SubscribeData: EventDTO
+      913# 19:04:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  914# SubscribeData: EventDTO
+      914# 19:04:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  915# SubscribeData: EventDTO
+      915# 19:04:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  916# SubscribeData: EventDTO
+      916# 19:04:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  917# SubscribeData: EventDTO
+      917# 19:04:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  918# SubscribeData: EventDTO
+      918# 19:04:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  919# SubscribeData: EventDTO
+      919# 19:04:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  920# SubscribeData: EventDTO
+      920# 19:04:45 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  921# SubscribeData: EventDTO
+      921# 19:05:00 EUI64-D0CF5EFFFE59DF13 in 797296:physicalDeviceIsNowDOWN
+  922# SubscribeData: EventDTO
+      922# 19:05:12 EUI64-D0CF5EFFFE59F578 in 797296:physicalDeviceIsNowDOWN
+  923# SubscribeData: EventDTO
+      923# 19:05:16 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowDOWN
+  924# SubscribeData: EventDTO
+      924# 19:05:24 EUI64-D0CF5EFFFE59D249 in 797296:physicalDeviceIsNowDOWN
+  926# SubscribeData: EventDTO
+      926# 19:06:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  927# SubscribeData: EventDTO
+      927# 19:06:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  928# SubscribeData: EventDTO
+      928# 19:06:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  929# SubscribeData: EventDTO
+      929# 19:06:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  931# SubscribeData: EventDTO
+      931# 19:06:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  932# SubscribeData: EventDTO
+      932# 19:06:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  933# SubscribeData: EventDTO
+      933# 19:06:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  934# SubscribeData: EventDTO
+      934# 19:06:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  935# SubscribeData: EventDTO
+      935# 19:06:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  936# SubscribeData: EventDTO
+      936# 19:06:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  937# SubscribeData: EventDTO
+      937# 19:06:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  938# SubscribeData: EventDTO
+      938# 19:06:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  940# SubscribeData: EventDTO
+      940# 19:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  941# SubscribeData: EventDTO
+      941# 19:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  942# SubscribeData: EventDTO
+      942# 19:08:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  943# SubscribeData: EventDTO
+      943# 19:08:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  944# SubscribeData: EventDTO
+      944# 19:08:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  945# SubscribeData: EventDTO
+      945# 19:08:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  946# SubscribeData: EventDTO
+      946# 19:08:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  947# SubscribeData: EventDTO
+      947# 19:08:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  949# SubscribeData: EventDTO
+      949# 19:08:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  950# SubscribeData: EventDTO
+      950# 19:08:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  951# SubscribeData: EventDTO
+      951# 19:08:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  952# SubscribeData: EventDTO
+      952# 19:08:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  953# SubscribeData: EventDTO
+      953# 19:08:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  954# SubscribeData: EventDTO
+      954# 19:08:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  955# SubscribeData: EventDTO
+      955# 19:08:47 EUI64-90FD9FFFFEA93F8C in 797296:physicalDeviceIsNowDOWN
+  956# SubscribeData: EventDTO
+      956# 19:08:52 EUI64-0090DAFFFF0071AA in 912706:remoteLocationGatewayIsNowUP
+  959# SubscribeData: EventDTO
+      959# 19:08:56 EUI64-0090DAFFFF0071AA in 912706:locationChanged
+  960# SubscribeData: EventDTO
+      960# 19:08:59 EUI64-0090DAFFFF0071AA in 912706:unitConfigurationChanged
+  961# SubscribeData: EventDTO
+      961# 19:09:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  962# SubscribeData: EventDTO
+      962# 19:09:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  963# SubscribeData: EventDTO
+      963# 19:09:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  964# SubscribeData: EventDTO
+      964# 19:09:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  965# SubscribeData: EventDTO
+      965# 19:09:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  966# SubscribeData: EventDTO
+      966# 19:09:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  967# SubscribeData: EventDTO
+      967# 19:09:19 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  968# SubscribeData: EventDTO
+      968# 19:09:19 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  969# SubscribeData: EventDTO
+      969# 19:09:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  970# SubscribeData: EventDTO
+      970# 19:09:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  971# SubscribeData: EventDTO
+      971# 19:09:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  972# SubscribeData: EventDTO
+      972# 19:09:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  973# SubscribeData: EventDTO
+      973# 19:09:21 EUI64-D0CF5EFFFE793DD2 in 797296:physicalDeviceIsNowDOWN
+  974# SubscribeData: EventDTO
+      974# 19:09:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  975# SubscribeData: EventDTO
+      975# 19:09:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  976# SubscribeData: EventDTO
+      976# 19:09:21 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowDOWN
+  978# SubscribeData: EventDTO
+      978# 19:10:04 EUI64-0080E103000378D8 in 797296:physicalDeviceIsNowDOWN
+  979# SubscribeData: EventDTO
+      979# 19:10:05 EUI64-90FD9FFFFEA78A01 in 797296:physicalDeviceIsNowDOWN
+  980# SubscribeData: EventDTO
+      980# 19:10:07 EUI64-90FD9FFFFEA95E18 in 797296:physicalDeviceIsNowDOWN
+  981# SubscribeData: EventDTO
+      981# 19:10:09 EUI64-90FD9FFFFEA938D9 in 797296:physicalDeviceIsNowDOWN
+  982# SubscribeData: EventDTO
+      982# 19:10:15 EUI64-D0CF5EFFFE59D212 in 797296:physicalDeviceIsNowDOWN
+  983# SubscribeData: EventDTO
+      983# 19:10:29 EUI64-90FD9FFFFEA94B8C in 797296:physicalDeviceIsNowDOWN
+  984# SubscribeData: EventDTO
+      984# 19:10:32 EUI64-D0CF5EFFFE793732 in 783825:physicalDeviceIsNowDOWN
+  985# SubscribeData: EventDTO
+      985# 19:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  986# SubscribeData: EventDTO
+      986# 19:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  987# SubscribeData: EventDTO
+      987# 19:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  988# SubscribeData: EventDTO
+      988# 19:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  989# SubscribeData: EventDTO
+      989# 19:10:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  990# SubscribeData: EventDTO
+      990# 19:10:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  991# SubscribeData: EventDTO
+      991# 19:10:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  992# SubscribeData: EventDTO
+      992# 19:10:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  994# SubscribeData: EventDTO
+      994# 19:10:40 EUI64-90FD9FFFFEA939FC in 797296:physicalDeviceIsNowDOWN
+  995# SubscribeData: EventDTO
+      995# 19:10:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  996# SubscribeData: EventDTO
+      996# 19:10:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  997# SubscribeData: EventDTO
+      997# 19:10:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  998# SubscribeData: EventDTO
+      998# 19:10:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  999# SubscribeData: EventDTO
+      999# 19:10:58 EUI64-D0CF5EFFFE793732 in 783825:physicalDeviceIsNowUP
+  1000# SubscribeData: EventDTO
+      1000# 19:11:39 EUI64-90FD9FFFFEA93F98 in 797296:physicalDeviceIsNowDOWN
+  1003# SubscribeData: EventDTO
+      1003# 19:12:48 EUI64-D0CF5EFFFE59F15E in 797296:physicalDeviceIsNowDOWN
+  1004# SubscribeData: EventDTO
+      1004# 19:13:14 EUI64-0080E10300043219 in 797296:physicalDeviceIsNowDOWN
+  1006# SubscribeData: EventDTO
+      1006# 19:13:49 EUI64-90FD9FFFFEA9511A in 797296:physicalDeviceIsNowDOWN
+  1007# SubscribeData: EventDTO
+      1007# 19:13:55 EUI64-D0CF5EFFFE59F4DE in 797296:physicalDeviceIsNowDOWN
+  1008# SubscribeData: EventDTO
+      1008# 19:13:58 EUI64-90FD9FFFFEA938E0 in 797296:physicalDeviceIsNowDOWN
+  1009# SubscribeData: EventDTO
+      1009# 19:14:22 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1010# SubscribeData: EventDTO
+      1010# 19:14:22 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1013# SubscribeData: EventDTO
+      1013# 19:14:30 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1014# SubscribeData: EventDTO
+      1014# 19:14:31 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1015# SubscribeData: EventDTO
+      1015# 19:14:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1016# SubscribeData: EventDTO
+      1016# 19:14:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1017# SubscribeData: EventDTO
+      1017# 19:14:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1018# SubscribeData: EventDTO
+      1018# 19:14:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1019# SubscribeData: EventDTO
+      1019# 19:14:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1020# SubscribeData: EventDTO
+      1020# 19:14:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1022# SubscribeData: EventDTO
+      1022# 19:14:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1023# SubscribeData: EventDTO
+      1023# 19:14:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1024# SubscribeData: EventDTO
+      1024# 19:14:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1025# SubscribeData: EventDTO
+      1025# 19:14:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1026# SubscribeData: EventDTO
+      1026# 19:14:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1027# SubscribeData: EventDTO
+      1027# 19:14:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1028# SubscribeData: EventDTO
+      1028# 19:14:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1029# SubscribeData: EventDTO
+      1029# 19:14:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1030# SubscribeData: EventDTO
+      1030# 19:14:49 EUI64-0080E10300043F72 in 797296:physicalDeviceIsNowDOWN
+  1031# SubscribeData: EventDTO
+      1031# 19:14:54 EUI64-00124B0018ED2E6C in 503370:physicalDeviceIsNowUP
+  1032# SubscribeData: EventDTO
+      1032# 19:15:27 EUI64-0080E10300043F72 in 797296:physicalDeviceIsNowUP
+  1034# SubscribeData: EventDTO
+      1034# 19:16:10 EUI64-D0CF5EFFFE59F3F7 in 797296:physicalDeviceIsNowDOWN
+  1035# SubscribeData: EventDTO
+      1035# 19:16:12 EUI64-00124B0018ED2A2E in 797296:physicalDeviceIsNowDOWN
+  1036# SubscribeData: EventDTO
+      1036# 19:16:16 EUI64-00124B0018F05BC6 in 797296:physicalDeviceIsNowDOWN
+  1037# SubscribeData: EventDTO
+      1037# 19:16:17 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowDOWN
+  1038# SubscribeData: EventDTO
+      1038# 19:16:20 EUI64-90FD9FFFFEA93F8D in 797296:physicalDeviceIsNowDOWN
+  1039# SubscribeData: EventDTO
+      1039# 19:16:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1040# SubscribeData: EventDTO
+      1040# 19:16:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1041# SubscribeData: EventDTO
+      1041# 19:16:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1042# SubscribeData: EventDTO
+      1042# 19:16:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1043# SubscribeData: EventDTO
+      1043# 19:16:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1044# SubscribeData: EventDTO
+      1044# 19:16:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1045# SubscribeData: EventDTO
+      1045# 19:16:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1046# SubscribeData: EventDTO
+      1046# 19:16:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1047# SubscribeData: EventDTO
+      1047# 19:16:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1048# SubscribeData: EventDTO
+      1048# 19:16:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1050# SubscribeData: EventDTO
+      1050# 19:16:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1051# SubscribeData: EventDTO
+      1051# 19:16:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1052# SubscribeData: EventDTO
+      1052# 19:16:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1053# SubscribeData: EventDTO
+      1053# 19:16:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1054# SubscribeData: EventDTO
+      1054# 19:17:30 EUI64-D0CF5EFFFE793256 in 797296:physicalDeviceIsNowDOWN
+  1056# SubscribeData: EventDTO
+      1056# 19:17:46 EUI64-00124B0018ED2E02 in 797296:physicalDeviceIsNowDOWN
+  1057# SubscribeData: EventDTO
+      1057# 19:17:49 EUI64-90FD9FFFFEA7756C in 783825:physicalDeviceIsNowDOWN
+  1059# SubscribeData: EventDTO
+      1059# 19:19:22 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1060# SubscribeData: EventDTO
+      1060# 19:19:22 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1063# SubscribeData: EventDTO
+      1063# 19:19:27 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1064# SubscribeData: EventDTO
+      1064# 19:19:29 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1066# SubscribeData: EventDTO
+      1066# 19:19:59 EUI64-90FD9FFFFEA93F8C in 797296:physicalDeviceIsNowUP
+  1067# SubscribeData: EventDTO
+      1067# 19:20:11 EUI64-00124B0018ED2E6C in 503370:physicalDeviceIsNowDOWN
+  1068# SubscribeData: EventDTO
+      1068# 19:20:20 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowUP
+  1069# SubscribeData: EventDTO
+      1069# 19:20:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1070# SubscribeData: EventDTO
+      1070# 19:20:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1071# SubscribeData: EventDTO
+      1071# 19:20:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1072# SubscribeData: EventDTO
+      1072# 19:20:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1073# SubscribeData: EventDTO
+      1073# 19:20:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1074# SubscribeData: EventDTO
+      1074# 19:20:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1075# SubscribeData: EventDTO
+      1075# 19:20:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1076# SubscribeData: EventDTO
+      1076# 19:20:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1077# SubscribeData: EventDTO
+      1077# 19:20:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1078# SubscribeData: EventDTO
+      1078# 19:20:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1079# SubscribeData: EventDTO
+      1079# 19:20:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1080# SubscribeData: EventDTO
+      1080# 19:20:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1082# SubscribeData: EventDTO
+      1082# 19:20:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1083# SubscribeData: EventDTO
+      1083# 19:20:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1084# SubscribeData: EventDTO
+      1084# 19:20:44 EUI64-D0CF5EFFFE59D249 in 797296:physicalDeviceIsNowUP
+  1085# SubscribeData: EventDTO
+      1085# 19:20:48 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1086# SubscribeData: EventDTO
+      1086# 19:20:51 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1089# SubscribeData: EventDTO
+      1089# 19:20:57 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1090# SubscribeData: EventDTO
+      1090# 19:20:58 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1092# SubscribeData: EventDTO
+      1092# 19:21:59 EUI64-D0CF5EFFFE59DF13 in 797296:physicalDeviceIsNowUP
+  1093# SubscribeData: EventDTO
+      1093# 19:22:15 EUI64-D0CF5EFFFE59F578 in 797296:physicalDeviceIsNowUP
+  1094# SubscribeData: EventDTO
+      1094# 19:22:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1095# SubscribeData: EventDTO
+      1095# 19:22:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1096# SubscribeData: EventDTO
+      1096# 19:22:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1097# SubscribeData: EventDTO
+      1097# 19:22:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1098# SubscribeData: EventDTO
+      1098# 19:22:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1099# SubscribeData: EventDTO
+      1099# 19:22:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1100# SubscribeData: EventDTO
+      1100# 19:22:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1101# SubscribeData: EventDTO
+      1101# 19:22:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1102# SubscribeData: EventDTO
+      1102# 19:22:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1103# SubscribeData: EventDTO
+      1103# 19:22:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1104# SubscribeData: EventDTO
+      1104# 19:22:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1105# SubscribeData: EventDTO
+      1105# 19:22:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1106# SubscribeData: EventDTO
+      1106# 19:22:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1107# SubscribeData: EventDTO
+      1107# 19:22:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1109# SubscribeData: EventDTO
+      1109# 19:22:48 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1110# SubscribeData: EventDTO
+      1110# 19:22:48 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1113# SubscribeData: EventDTO
+      1113# 19:22:56 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1114# SubscribeData: EventDTO
+      1114# 19:22:56 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1116# SubscribeData: EventDTO
+      1116# 19:24:30 EUI64-D0CF5EFFFE793DD2 in 797296:physicalDeviceIsNowUP
+  1117# SubscribeData: EventDTO
+      1117# 19:24:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1118# SubscribeData: EventDTO
+      1118# 19:24:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1119# SubscribeData: EventDTO
+      1119# 19:24:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1120# SubscribeData: EventDTO
+      1120# 19:24:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1121# SubscribeData: EventDTO
+      1121# 19:24:32 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowUP
+  1122# SubscribeData: EventDTO
+      1122# 19:24:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1123# SubscribeData: EventDTO
+      1123# 19:24:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1124# SubscribeData: EventDTO
+      1124# 19:24:34 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1125# SubscribeData: EventDTO
+      1125# 19:24:35 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1126# SubscribeData: EventDTO
+      1126# 19:24:43 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1130# SubscribeData: EventDTO
+      1130# 19:24:45 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1131# SubscribeData: EventDTO
+      1131# 19:24:56 EUI64-90FD9FFFFEA93F98 in 797296:physicalDeviceIsNowUP
+  1132# SubscribeData: EventDTO
+      1132# 19:25:14 EUI64-00124B0018ED2E6C in 503370:physicalDeviceIsNowUP
+  1133# SubscribeData: EventDTO
+      1133# 19:25:31 EUI64-D0CF5EFFFE59D212 in 797296:physicalDeviceIsNowUP
+  1134# SubscribeData: EventDTO
+      1134# 19:25:34 EUI64-90FD9FFFFEA938D9 in 797296:physicalDeviceIsNowUP
+  1136# SubscribeData: EventDTO
+      1136# 19:25:52 EUI64-90FD9FFFFEA939FC in 797296:physicalDeviceIsNowUP
+  1137# SubscribeData: EventDTO
+      1137# 19:26:21 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1138# SubscribeData: EventDTO
+      1138# 19:26:24 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1141# SubscribeData: EventDTO
+      1141# 19:26:29 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1142# SubscribeData: EventDTO
+      1142# 19:26:30 EUI64-D0CF5EFFFE59F4DE in 797296:physicalDeviceIsNowUP
+  1143# SubscribeData: EventDTO
+      1143# 19:26:32 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1144# SubscribeData: EventDTO
+      1144# 19:26:37 EUI64-0080E103000378D8 in 797296:physicalDeviceIsNowUP
+  1145# SubscribeData: EventDTO
+      1145# 19:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1146# SubscribeData: EventDTO
+      1146# 19:26:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1147# SubscribeData: EventDTO
+      1147# 19:26:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1148# SubscribeData: EventDTO
+      1148# 19:26:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1149# SubscribeData: EventDTO
+      1149# 19:26:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1150# SubscribeData: EventDTO
+      1150# 19:26:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1151# SubscribeData: EventDTO
+      1151# 19:26:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1152# SubscribeData: EventDTO
+      1152# 19:26:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1153# SubscribeData: EventDTO
+      1153# 19:26:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1154# SubscribeData: EventDTO
+      1154# 19:26:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1155# SubscribeData: EventDTO
+      1155# 19:26:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1156# SubscribeData: EventDTO
+      1156# 19:26:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1158# SubscribeData: EventDTO
+      1158# 19:26:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1159# SubscribeData: EventDTO
+      1159# 19:26:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1160# SubscribeData: EventDTO
+      1160# 19:27:38 EUI64-90FD9FFFFEA94B8C in 797296:physicalDeviceIsNowUP
+  1162# SubscribeData: EventDTO
+      1162# 19:28:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1163# SubscribeData: EventDTO
+      1163# 19:28:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1164# SubscribeData: EventDTO
+      1164# 19:28:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1165# SubscribeData: EventDTO
+      1165# 19:28:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1166# SubscribeData: EventDTO
+      1166# 19:28:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1167# SubscribeData: EventDTO
+      1167# 19:28:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1169# SubscribeData: EventDTO
+      1169# 19:28:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1170# SubscribeData: EventDTO
+      1170# 19:28:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1171# SubscribeData: EventDTO
+      1171# 19:28:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1172# SubscribeData: EventDTO
+      1172# 19:28:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1173# SubscribeData: EventDTO
+      1173# 19:28:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1174# SubscribeData: EventDTO
+      1174# 19:28:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1175# SubscribeData: EventDTO
+      1175# 19:28:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1176# SubscribeData: EventDTO
+      1176# 19:28:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1177# SubscribeData: EventDTO
+      1177# 19:29:02 EUI64-90FD9FFFFEA938E0 in 797296:physicalDeviceIsNowUP
+  1179# SubscribeData: EventDTO
+      1179# 19:29:49 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowDOWN
+  1180# SubscribeData: EventDTO
+      1180# 19:29:54 EUI64-0080E10300043219 in 797296:physicalDeviceIsNowUP
+  1181# SubscribeData: EventDTO
+      1181# 19:30:26 EUI64-90FD9FFFFEA9511A in 797296:physicalDeviceIsNowUP
+  1183# SubscribeData: EventDTO
+      1183# 19:31:23 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowDOWN
+  1184# SubscribeData: EventDTO
+      1184# 19:31:23 EUI64-0090DAFFFF00692E in 306571:remoteLocationGatewayIsNowUP
+  1187# SubscribeData: EventDTO
+      1187# 19:31:28 EUI64-0090DAFFFF00692E in 306571:locationChanged
+  1188# SubscribeData: EventDTO
+      1188# 19:31:30 EUI64-0090DAFFFF00692E in 306571:unitConfigurationChanged
+  1189# SubscribeData: EventDTO
+      1189# 19:31:41 EUI64-90FD9FFFFEA93F8D in 797296:physicalDeviceIsNowUP
+  1191# SubscribeData: EventDTO
+      1191# 19:32:05 EUI64-00124B0018ED2A2E in 797296:physicalDeviceIsNowUP
+  1192# SubscribeData: EventDTO
+      1192# 19:32:10 EUI64-90FD9FFFFEA95E18 in 797296:physicalDeviceIsNowUP
+  1193# SubscribeData: EventDTO
+      1193# 19:32:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1194# SubscribeData: EventDTO
+      1194# 19:32:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1195# SubscribeData: EventDTO
+      1195# 19:32:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1196# SubscribeData: EventDTO
+      1196# 19:32:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1197# SubscribeData: EventDTO
+      1197# 19:32:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1198# SubscribeData: EventDTO
+      1198# 19:32:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1199# SubscribeData: EventDTO
+      1199# 19:32:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1200# SubscribeData: EventDTO
+      1200# 19:32:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1201# SubscribeData: EventDTO
+      1201# 19:32:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1202# SubscribeData: EventDTO
+      1202# 19:32:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1203# SubscribeData: EventDTO
+      1203# 19:32:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1204# SubscribeData: EventDTO
+      1204# 19:32:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1205# SubscribeData: EventDTO
+      1205# 19:32:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1206# SubscribeData: EventDTO
+      1206# 19:32:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1209# SubscribeData: EventDTO
+      1209# 19:34:33 EUI64-D0CF5EFFFE793A07 in 223516:physicalDeviceIsNowDOWN
+  1210# SubscribeData: EventDTO
+      1210# 19:34:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1211# SubscribeData: EventDTO
+      1211# 19:34:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1212# SubscribeData: EventDTO
+      1212# 19:34:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1213# SubscribeData: EventDTO
+      1213# 19:34:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1214# SubscribeData: EventDTO
+      1214# 19:34:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1215# SubscribeData: EventDTO
+      1215# 19:34:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1216# SubscribeData: EventDTO
+      1216# 19:34:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1217# SubscribeData: EventDTO
+      1217# 19:34:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1218# SubscribeData: EventDTO
+      1218# 19:34:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1219# SubscribeData: EventDTO
+      1219# 19:34:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1220# SubscribeData: EventDTO
+      1220# 19:34:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1221# SubscribeData: EventDTO
+      1221# 19:34:41 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1223# SubscribeData: EventDTO
+      1223# 19:35:12 EUI64-90FD9FFFFEA7756C in 783825:physicalDeviceIsNowUP
+  1225# SubscribeData: EventDTO
+      1225# 19:36:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1226# SubscribeData: EventDTO
+      1226# 19:36:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1227# SubscribeData: EventDTO
+      1227# 19:36:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1228# SubscribeData: EventDTO
+      1228# 19:36:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1229# SubscribeData: EventDTO
+      1229# 19:36:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1230# SubscribeData: EventDTO
+      1230# 19:36:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1231# SubscribeData: EventDTO
+      1231# 19:36:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1232# SubscribeData: EventDTO
+      1232# 19:36:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1233# SubscribeData: EventDTO
+      1233# 19:36:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1234# SubscribeData: EventDTO
+      1234# 19:36:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1235# SubscribeData: EventDTO
+      1235# 19:36:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1236# SubscribeData: EventDTO
+      1236# 19:36:40 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1237# SubscribeData: EventDTO
+      1237# 19:36:42 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1238# SubscribeData: EventDTO
+      1238# 19:36:43 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1240# SubscribeData: EventDTO
+      1240# 19:36:52 EUI64-D0CF5EFFFE7B28ED in 212446:physicalDeviceIsNowDOWN
+  1241# SubscribeData: EventDTO
+      1241# 19:37:29 EUI64-90FD9FFFFEA95E18 in 797296:physicalDeviceIsNowDOWN
+  1243# SubscribeData: EventDTO
+      1243# 19:38:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1244# SubscribeData: EventDTO
+      1244# 19:38:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1245# SubscribeData: EventDTO
+      1245# 19:38:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1246# SubscribeData: EventDTO
+      1246# 19:38:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1247# SubscribeData: EventDTO
+      1247# 19:38:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1248# SubscribeData: EventDTO
+      1248# 19:38:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1249# SubscribeData: EventDTO
+      1249# 19:38:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1250# SubscribeData: EventDTO
+      1250# 19:38:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1251# SubscribeData: EventDTO
+      1251# 19:38:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1252# SubscribeData: EventDTO
+      1252# 19:38:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1253# SubscribeData: EventDTO
+      1253# 19:38:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1254# SubscribeData: EventDTO
+      1254# 19:38:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1255# SubscribeData: EventDTO
+      1255# 19:38:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1256# SubscribeData: EventDTO
+      1256# 19:38:39 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1257# SubscribeData: EventDTO
+      1257# 19:38:43 EUI64-D0CF5EFFFE793A07 in 223516:physicalDeviceIsNowUP
+  1258# SubscribeData: EventDTO
+      1258# 19:38:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1259# SubscribeData: EventDTO
+      1259# 19:38:44 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1260# SubscribeData: EventDTO
+      1260# 19:38:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1261# SubscribeData: EventDTO
+      1261# 19:38:46 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1262# SubscribeData: EventDTO
+      1262# 19:38:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1263# SubscribeData: EventDTO
+      1263# 19:38:47 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1264# SubscribeData: EventDTO
+      1264# 19:38:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1265# SubscribeData: EventDTO
+      1265# 19:38:48 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1266# SubscribeData: EventDTO
+      1266# 19:38:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1267# SubscribeData: EventDTO
+      1267# 19:38:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1268# SubscribeData: EventDTO
+      1268# 19:38:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1269# SubscribeData: EventDTO
+      1269# 19:38:49 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1271# SubscribeData: EventDTO
+      1271# 19:38:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1272# SubscribeData: EventDTO
+      1272# 19:38:50 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1274# SubscribeData: EventDTO
+      1274# 19:39:59 EUI64-D0CF5EFFFE793256 in 797296:physicalDeviceIsNowUP
+  1275# SubscribeData: EventDTO
+      1275# 19:40:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1276# SubscribeData: EventDTO
+      1276# 19:40:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1277# SubscribeData: EventDTO
+      1277# 19:40:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1278# SubscribeData: EventDTO
+      1278# 19:40:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1279# SubscribeData: EventDTO
+      1279# 19:40:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1280# SubscribeData: EventDTO
+      1280# 19:40:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1281# SubscribeData: EventDTO
+      1281# 19:40:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1282# SubscribeData: EventDTO
+      1282# 19:40:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1283# SubscribeData: EventDTO
+      1283# 19:40:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1284# SubscribeData: EventDTO
+      1284# 19:40:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1285# SubscribeData: EventDTO
+      1285# 19:40:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1286# SubscribeData: EventDTO
+      1286# 19:40:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1287# SubscribeData: EventDTO
+      1287# 19:40:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1288# SubscribeData: EventDTO
+      1288# 19:40:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1290# SubscribeData: EventDTO
+      1290# 19:41:06 EUI64-00124B0018ED2A2E in 797296:physicalDeviceIsNowDOWN
+  1292# SubscribeData: EventDTO
+      1292# 19:42:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1293# SubscribeData: EventDTO
+      1293# 19:42:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1294# SubscribeData: EventDTO
+      1294# 19:42:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1295# SubscribeData: EventDTO
+      1295# 19:42:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1296# SubscribeData: EventDTO
+      1296# 19:42:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1297# SubscribeData: EventDTO
+      1297# 19:42:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1298# SubscribeData: EventDTO
+      1298# 19:42:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1299# SubscribeData: EventDTO
+      1299# 19:42:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1300# SubscribeData: EventDTO
+      1300# 19:42:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1301# SubscribeData: EventDTO
+      1301# 19:42:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1302# SubscribeData: EventDTO
+      1302# 19:42:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1303# SubscribeData: EventDTO
+      1303# 19:42:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1306# SubscribeData: EventDTO
+      1306# 19:44:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1307# SubscribeData: EventDTO
+      1307# 19:44:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1308# SubscribeData: EventDTO
+      1308# 19:44:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1309# SubscribeData: EventDTO
+      1309# 19:44:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1310# SubscribeData: EventDTO
+      1310# 19:44:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1311# SubscribeData: EventDTO
+      1311# 19:44:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1312# SubscribeData: EventDTO
+      1312# 19:44:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1313# SubscribeData: EventDTO
+      1313# 19:44:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1314# SubscribeData: EventDTO
+      1314# 19:44:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1315# SubscribeData: EventDTO
+      1315# 19:44:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1316# SubscribeData: EventDTO
+      1316# 19:44:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1317# SubscribeData: EventDTO
+      1317# 19:44:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1318# SubscribeData: EventDTO
+      1318# 19:44:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1319# SubscribeData: EventDTO
+      1319# 19:44:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1320# SubscribeData: EventDTO
+      1320# 19:44:41 EUI64-90FD9FFFFEA78A01 in 797296:physicalDeviceIsNowUP
+  1322# SubscribeData: EventDTO
+      1322# 19:45:01 EUI64-D0CF5EFFFE793256 in 797296:physicalDeviceIsNowDOWN
+  1324# SubscribeData: EventDTO
+      1324# 19:46:01 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowDOWN
+  1325# SubscribeData: EventDTO
+      1325# 19:46:15 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowUP
+  1326# SubscribeData: EventDTO
+      1326# 19:46:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1327# SubscribeData: EventDTO
+      1327# 19:46:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1328# SubscribeData: EventDTO
+      1328# 19:46:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1329# SubscribeData: EventDTO
+      1329# 19:46:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1330# SubscribeData: EventDTO
+      1330# 19:46:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1331# SubscribeData: EventDTO
+      1331# 19:46:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1334# SubscribeData: EventDTO
+      1334# 19:46:22 EUI64-0090DAFFFF006AAC in 399621:unitConfigurationChanged
+  1335# SubscribeData: EventDTO
+      1335# 19:46:22 EUI64-0090DAFFFF006AAC in 399621:locationChanged
+  1336# SubscribeData: EventDTO
+      1336# 19:46:25 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowUP
+  1337# SubscribeData: EventDTO
+      1337# 19:46:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1338# SubscribeData: EventDTO
+      1338# 19:46:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1339# SubscribeData: EventDTO
+      1339# 19:46:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1340# SubscribeData: EventDTO
+      1340# 19:46:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1341# SubscribeData: EventDTO
+      1341# 19:46:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1342# SubscribeData: EventDTO
+      1342# 19:46:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1343# SubscribeData: EventDTO
+      1343# 19:46:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1344# SubscribeData: EventDTO
+      1344# 19:46:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1347# SubscribeData: EventDTO
+      1347# 19:48:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1348# SubscribeData: EventDTO
+      1348# 19:48:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1349# SubscribeData: EventDTO
+      1349# 19:48:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1350# SubscribeData: EventDTO
+      1350# 19:48:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1351# SubscribeData: EventDTO
+      1351# 19:48:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1352# SubscribeData: EventDTO
+      1352# 19:48:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1353# SubscribeData: EventDTO
+      1353# 19:48:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1354# SubscribeData: EventDTO
+      1354# 19:48:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1355# SubscribeData: EventDTO
+      1355# 19:48:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1356# SubscribeData: EventDTO
+      1356# 19:48:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1357# SubscribeData: EventDTO
+      1357# 19:48:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1358# SubscribeData: EventDTO
+      1358# 19:48:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1359# SubscribeData: EventDTO
+      1359# 19:48:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1360# SubscribeData: EventDTO
+      1360# 19:48:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1361# SubscribeData: EventDTO
+      1361# 19:48:49 EUI64-D0CF5EFFFE793F2F in 223516:physicalDeviceIsNowDOWN
+  1363# SubscribeData: EventDTO
+      1363# 19:48:54 EUI64-90FD9FFFFEA95DFD in 223516:physicalDeviceIsNowDOWN
+  1364# SubscribeData: EventDTO
+      1364# 19:48:55 EUI64-90FD9FFFFEA77C58 in 223516:physicalDeviceIsNowDOWN
+  1365# SubscribeData: EventDTO
+      1365# 19:49:15 EUI64-D0CF5EFFFE793267 in 223516:physicalDeviceIsNowDOWN
+  1366# SubscribeData: EventDTO
+      1366# 19:49:29 EUI64-90FD9FFFFEA78410 in 499735:newUnAcceptedDeviceSeenByDiscovery
+  1367# SubscribeData: EventDTO
+      1367# 19:49:29 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowDOWN
+  1368# SubscribeData: EventDTO
+      1368# 19:49:42 EUI64-D0CF5EFFFE108F63 in 223516:physicalDeviceIsNowDOWN
+  1369# SubscribeData: EventDTO
+      1369# 19:49:45 EUI64-D0CF5EFFFE59F453 in 223516:physicalDeviceIsNowDOWN
+  1371# SubscribeData: EventDTO
+      1371# 19:50:03 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowUP
+  1372# SubscribeData: EventDTO
+      1372# 19:50:03 EUI64-90FD9FFFFEA78027 in 223516:physicalDeviceIsNowDOWN
+  1373# SubscribeData: EventDTO
+      1373# 19:50:12 EUI64-D0CF5EFFFE59F5C1 in 223516:physicalDeviceIsNowDOWN
+  1374# SubscribeData: EventDTO
+      1374# 19:50:14 EUI64-90FD9FFFFEA77C85 in 223516:physicalDeviceIsNowDOWN
+  1375# SubscribeData: EventDTO
+      1375# 19:50:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1376# SubscribeData: EventDTO
+      1376# 19:50:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1377# SubscribeData: EventDTO
+      1377# 19:50:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1378# SubscribeData: EventDTO
+      1378# 19:50:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1379# SubscribeData: EventDTO
+      1379# 19:50:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1380# SubscribeData: EventDTO
+      1380# 19:50:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1381# SubscribeData: EventDTO
+      1381# 19:50:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1382# SubscribeData: EventDTO
+      1382# 19:50:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1383# SubscribeData: EventDTO
+      1383# 19:50:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1384# SubscribeData: EventDTO
+      1384# 19:50:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1385# SubscribeData: EventDTO
+      1385# 19:50:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1386# SubscribeData: EventDTO
+      1386# 19:50:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1387# SubscribeData: EventDTO
+      1387# 19:50:34 EUI64-90FD9FFFFEA95EA4 in 223516:physicalDeviceIsNowDOWN
+  1388# SubscribeData: EventDTO
+      1388# 19:50:34 EUI64-D0CF5EFFFE792A8C in 223516:physicalDeviceIsNowDOWN
+  1389# SubscribeData: EventDTO
+      1389# 19:50:34 EUI64-D0CF5EFFFE59F106 in 223516:physicalDeviceIsNowDOWN
+  1391# SubscribeData: EventDTO
+      1391# 19:51:15 EUI64-90FD9FFFFEA77CF1 in 223516:physicalDeviceIsNowDOWN
+  1392# SubscribeData: EventDTO
+      1392# 19:51:15 EUI64-90FD9FFFFEA93984 in 223516:physicalDeviceIsNowDOWN
+  1393# SubscribeData: EventDTO
+      1393# 19:51:28 EUI64-D0CF5EFFFE793466 in 223516:physicalDeviceIsNowDOWN
+  1394# SubscribeData: EventDTO
+      1394# 19:51:34 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowDOWN
+  1395# SubscribeData: EventDTO
+      1395# 19:51:42 EUI64-D0CF5EFFFE59E61D in 223516:physicalDeviceIsNowDOWN
+  1397# SubscribeData: EventDTO
+      1397# 19:51:59 EUI64-90FD9FFFFEA95DFD in 223516:physicalDeviceIsNowUP
+  1398# SubscribeData: EventDTO
+      1398# 19:52:02 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowUP
+  1399# SubscribeData: EventDTO
+      1399# 19:52:04 EUI64-D0CF5EFFFE7B28ED in 212446:physicalDeviceIsNowUP
+  1400# SubscribeData: EventDTO
+      1400# 19:52:16 EUI64-90FD9FFFFEA77C53 in 223516:physicalDeviceIsNowDOWN
+  1401# SubscribeData: EventDTO
+      1401# 19:52:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1402# SubscribeData: EventDTO
+      1402# 19:52:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1403# SubscribeData: EventDTO
+      1403# 19:52:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1404# SubscribeData: EventDTO
+      1404# 19:52:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1405# SubscribeData: EventDTO
+      1405# 19:52:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1406# SubscribeData: EventDTO
+      1406# 19:52:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1407# SubscribeData: EventDTO
+      1407# 19:52:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1408# SubscribeData: EventDTO
+      1408# 19:52:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1409# SubscribeData: EventDTO
+      1409# 19:52:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1410# SubscribeData: EventDTO
+      1410# 19:52:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1411# SubscribeData: EventDTO
+      1411# 19:52:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1412# SubscribeData: EventDTO
+      1412# 19:52:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1413# SubscribeData: EventDTO
+      1413# 19:52:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1414# SubscribeData: EventDTO
+      1414# 19:52:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1415# SubscribeData: EventDTO
+      1415# 19:52:34 EUI64-D0CF5EFFFE793A07 in 223516:physicalDeviceIsNowDOWN
+  1416# SubscribeData: EventDTO
+      1416# 19:52:40 EUI64-0080E10300043219 in 797296:physicalDeviceIsNowDOWN
+  1418# SubscribeData: EventDTO
+      1418# 19:52:55 EUI64-D0CF5EFFFE59E472 in 223516:physicalDeviceIsNowDOWN
+  1419# SubscribeData: EventDTO
+      1419# 19:53:38 EUI64-00124B0018ED2A2E in 797296:physicalDeviceIsNowUP
+  1420# SubscribeData: EventDTO
+      1420# 19:53:41 EUI64-90FD9FFFFEA78A01 in 797296:physicalDeviceIsNowDOWN
+  1421# SubscribeData: EventDTO
+      1421# 19:53:50 EUI64-00124B0018ED2E02 in 797296:physicalDeviceIsNowUP
+  1423# SubscribeData: EventDTO
+      1423# 19:53:57 EUI64-D0CF5EFFFE793A07 in 223516:physicalDeviceIsNowUP
+  1424# SubscribeData: EventDTO
+      1424# 19:54:10 EUI64-D0CF5EFFFE793256 in 797296:physicalDeviceIsNowUP
+  1425# SubscribeData: EventDTO
+      1425# 19:54:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1426# SubscribeData: EventDTO
+      1426# 19:54:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1427# SubscribeData: EventDTO
+      1427# 19:54:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1428# SubscribeData: EventDTO
+      1428# 19:54:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1429# SubscribeData: EventDTO
+      1429# 19:54:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1430# SubscribeData: EventDTO
+      1430# 19:54:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1431# SubscribeData: EventDTO
+      1431# 19:54:19 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1432# SubscribeData: EventDTO
+      1432# 19:54:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1433# SubscribeData: EventDTO
+      1433# 19:54:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1434# SubscribeData: EventDTO
+      1434# 19:54:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1435# SubscribeData: EventDTO
+      1435# 19:54:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1436# SubscribeData: EventDTO
+      1436# 19:54:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1437# SubscribeData: EventDTO
+      1437# 19:54:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1438# SubscribeData: EventDTO
+      1438# 19:54:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1439# SubscribeData: EventDTO
+      1439# 19:54:25 EUI64-D0CF5EFFFE59F106 in 223516:physicalDeviceIsNowUP
+  1440# SubscribeData: EventDTO
+      1440# 19:54:25 EUI64-90FD9FFFFEA78A01 in 797296:physicalDeviceIsNowUP
+  1441# SubscribeData: EventDTO
+      1441# 19:54:28 EUI64-D0CF5EFFFE793466 in 223516:physicalDeviceIsNowUP
+  1442# SubscribeData: EventDTO
+      1442# 19:54:33 EUI64-D0CF5EFFFE59F15E in 797296:physicalDeviceIsNowUP
+  1443# SubscribeData: EventDTO
+      1443# 19:54:38 EUI64-D0CF5EFFFE69DFA4 in 223516:physicalDeviceIsNowDOWN
+  1444# SubscribeData: EventDTO
+      1444# 19:54:44 EUI64-D0CF5EFFFE59F3F7 in 797296:physicalDeviceIsNowUP
+  1446# SubscribeData: EventDTO
+      1446# 19:54:56 EUI64-90FD9FFFFEA77C85 in 223516:physicalDeviceIsNowUP
+  1447# SubscribeData: EventDTO
+      1447# 19:54:59 EUI64-90FD9FFFFEA78027 in 223516:physicalDeviceIsNowUP
+  1448# SubscribeData: EventDTO
+      1448# 19:55:12 EUI64-D0CF5EFFFE59E472 in 223516:physicalDeviceIsNowUP
+  1449# SubscribeData: EventDTO
+      1449# 19:55:23 EUI64-00124B0018F05BC6 in 797296:physicalDeviceIsNowUP
+  1451# SubscribeData: EventDTO
+      1451# 19:56:06 EUI64-90FD9FFFFEA95E18 in 797296:physicalDeviceIsNowUP
+  1452# SubscribeData: EventDTO
+      1452# 19:56:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1453# SubscribeData: EventDTO
+      1453# 19:56:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1454# SubscribeData: EventDTO
+      1454# 19:56:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1455# SubscribeData: EventDTO
+      1455# 19:56:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1456# SubscribeData: EventDTO
+      1456# 19:56:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1457# SubscribeData: EventDTO
+      1457# 19:56:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1458# SubscribeData: EventDTO
+      1458# 19:56:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1459# SubscribeData: EventDTO
+      1459# 19:56:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1460# SubscribeData: EventDTO
+      1460# 19:56:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1461# SubscribeData: EventDTO
+      1461# 19:56:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1462# SubscribeData: EventDTO
+      1462# 19:56:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1463# SubscribeData: EventDTO
+      1463# 19:56:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1464# SubscribeData: EventDTO
+      1464# 19:56:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1465# SubscribeData: EventDTO
+      1465# 19:56:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1467# SubscribeData: EventDTO
+      1467# 19:56:56 EUI64-D0CF5EFFFE59F5C1 in 223516:physicalDeviceIsNowUP
+  1468# SubscribeData: EventDTO
+      1468# 19:57:34 EUI64-0080E10300037BCF in 783825:physicalDeviceIsNowDOWN
+  1470# SubscribeData: EventDTO
+      1470# 19:57:59 EUI64-90FD9FFFFEA93FAC in 797296:physicalDeviceIsNowUP
+  1471# SubscribeData: EventDTO
+      1471# 19:58:10 EUI64-D0CF5EFFFE793267 in 223516:physicalDeviceIsNowUP
+  1472# SubscribeData: EventDTO
+      1472# 19:58:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1473# SubscribeData: EventDTO
+      1473# 19:58:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1474# SubscribeData: EventDTO
+      1474# 19:58:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1475# SubscribeData: EventDTO
+      1475# 19:58:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1476# SubscribeData: EventDTO
+      1476# 19:58:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1477# SubscribeData: EventDTO
+      1477# 19:58:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1478# SubscribeData: EventDTO
+      1478# 19:58:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1479# SubscribeData: EventDTO
+      1479# 19:58:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1480# SubscribeData: EventDTO
+      1480# 19:58:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1481# SubscribeData: EventDTO
+      1481# 19:58:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1482# SubscribeData: EventDTO
+      1482# 19:58:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1483# SubscribeData: EventDTO
+      1483# 19:58:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1484# SubscribeData: EventDTO
+      1484# 19:58:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1485# SubscribeData: EventDTO
+      1485# 19:58:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1486# SubscribeData: EventDTO
+      1486# 19:58:31 EUI64-D0CF5EFFFE59E61D in 223516:physicalDeviceIsNowUP
+  1487# SubscribeData: EventDTO
+      1487# 19:58:34 EUI64-D0CF5EFFFE59F453 in 223516:physicalDeviceIsNowUP
+  1489# SubscribeData: EventDTO
+      1489# 19:59:19 EUI64-D0CF5EFFFE69DFA4 in 223516:physicalDeviceIsNowUP
+  1490# SubscribeData: EventDTO
+      1490# 19:59:29 EUI64-D0CF5EFFFE59F106 in 223516:physicalDeviceIsNowDOWN
+  1491# SubscribeData: EventDTO
+      1491# 19:59:42 EUI64-D0CF5EFFFE108F63 in 223516:physicalDeviceIsNowUP
+  1492# SubscribeData: EventDTO
+      1492# 19:59:48 EUI64-90FD9FFFFEA77C58 in 223516:physicalDeviceIsNowUP
+  1493# SubscribeData: EventDTO
+      1493# 19:59:50 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowDOWN
+  1494# SubscribeData: EventDTO
+      1494# 19:59:53 EUI64-D0CF5EFFFE793A07 in 223516:physicalDeviceIsNowDOWN
+  1496# SubscribeData: EventDTO
+      1496# 20:00:16 EUI64-90FD9FFFFEA93984 in 223516:physicalDeviceIsNowUP
+  1497# SubscribeData: EventDTO
+      1497# 20:00:22 EUI64-90FD9FFFFEA95EA4 in 223516:physicalDeviceIsNowUP
+  1498# SubscribeData: EventDTO
+      1498# 20:00:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1499# SubscribeData: EventDTO
+      1499# 20:00:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1500# SubscribeData: EventDTO
+      1500# 20:00:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1501# SubscribeData: EventDTO
+      1501# 20:00:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1502# SubscribeData: EventDTO
+      1502# 20:00:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1503# SubscribeData: EventDTO
+      1503# 20:00:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1504# SubscribeData: EventDTO
+      1504# 20:00:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1505# SubscribeData: EventDTO
+      1505# 20:00:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1506# SubscribeData: EventDTO
+      1506# 20:00:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1507# SubscribeData: EventDTO
+      1507# 20:00:31 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1508# SubscribeData: EventDTO
+      1508# 20:00:32 EUI64-90FD9FFFFEA77CF1 in 223516:physicalDeviceIsNowUP
+  1509# SubscribeData: EventDTO
+      1509# 20:00:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1510# SubscribeData: EventDTO
+      1510# 20:00:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1511# SubscribeData: EventDTO
+      1511# 20:00:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1512# SubscribeData: EventDTO
+      1512# 20:00:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1513# SubscribeData: EventDTO
+      1513# 20:00:52 EUI64-90FD9FFFFEA77C53 in 223516:physicalDeviceIsNowUP
+  1515# SubscribeData: EventDTO
+      1515# 20:01:05 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowDOWN
+  1516# SubscribeData: EventDTO
+      1516# 20:01:48 EUI64-D0CF5EFFFE793F2F in 223516:physicalDeviceIsNowUP
+  1517# SubscribeData: EventDTO
+      1517# 20:01:55 EUI64-D0CF5EFFFE793166 in 223516:physicalDeviceIsNowUP
+  1519# SubscribeData: EventDTO
+      1519# 20:02:26 EUI64-D0CF5EFFFE59F106 in 223516:physicalDeviceIsNowUP
+  1520# SubscribeData: EventDTO
+      1520# 20:02:36 EUI64-D0CF5EFFFE793A07 in 223516:physicalDeviceIsNowUP
+Connection Error: reconnectError: read ECONNRESET
+Connection closed!
+Connect Error: reconnectError: connect ETIMEDOUT 34.76.79.187:443
+Connect Error: reconnectError: connect ETIMEDOUT 34.76.79.187:443
+  1758# SubscribeData: EventDTO
+      1758# 20:04:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1759# SubscribeData: EventDTO
+      1759# 20:04:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1760# SubscribeData: EventDTO
+      1760# 20:04:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1761# SubscribeData: EventDTO
+      1761# 20:04:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1762# SubscribeData: EventDTO
+      1762# 20:04:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1763# SubscribeData: EventDTO
+      1763# 20:04:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1764# SubscribeData: EventDTO
+      1764# 20:04:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1765# SubscribeData: EventDTO
+      1765# 20:04:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1766# SubscribeData: EventDTO
+      1766# 20:04:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1767# SubscribeData: EventDTO
+      1767# 20:04:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1768# SubscribeData: EventDTO
+      1768# 20:04:31 EUI64-D0CF5EFFFE59F453 in 223516:physicalDeviceIsNowUP
+  1769# SubscribeData: EventDTO
+      1769# 20:04:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1770# SubscribeData: EventDTO
+      1770# 20:04:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1771# SubscribeData: EventDTO
+      1771# 20:04:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1772# SubscribeData: EventDTO
+      1772# 20:04:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1776# SubscribeData: EventDTO
+      1776# 20:05:26 EUI64-0090DAFFFF007136 in 537931:remoteLocationGatewayIsNowDOWN
+  1777# SubscribeData: EventDTO
+      1777# 20:05:36 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowDOWN
+  1778# SubscribeData: EventDTO
+      1778# 20:05:40 EUI64-0090DAFFFF00586C in 229349:remoteLocationGatewayIsNowUP
+  1779# SubscribeData: EventDTO
+      1779# 20:05:44 EUI64-0090DAFFFF007136 in 537931:remoteLocationGatewayIsNowUP
+  1780# SubscribeData: EventDTO
+      1780# 20:05:48 EUI64-0090DAFFFF00586C in 229349:unitConfigurationChanged
+  1783# SubscribeData: EventDTO
+      1783# 20:05:49 EUI64-0090DAFFFF00586C in 229349:locationChanged
+  1786# SubscribeData: EventDTO
+      1786# 20:05:52 EUI64-0090DAFFFF007136 in 537931:unitConfigurationChanged
+  1787# SubscribeData: EventDTO
+      1787# 20:05:52 EUI64-0090DAFFFF007136 in 537931:locationChanged
+  1789# SubscribeData: EventDTO
+      1789# 20:06:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1790# SubscribeData: EventDTO
+      1790# 20:06:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1791# SubscribeData: EventDTO
+      1791# 20:06:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1792# SubscribeData: EventDTO
+      1792# 20:06:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1793# SubscribeData: EventDTO
+      1793# 20:06:29 EUI64-0090DAFFFF0071AA in 912706:remoteLocationGatewayIsNowDOWN
+  1794# SubscribeData: EventDTO
+      1794# 20:06:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1795# SubscribeData: EventDTO
+      1795# 20:06:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1796# SubscribeData: EventDTO
+      1796# 20:06:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1797# SubscribeData: EventDTO
+      1797# 20:06:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1798# SubscribeData: EventDTO
+      1798# 20:06:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1799# SubscribeData: EventDTO
+      1799# 20:06:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1800# SubscribeData: EventDTO
+      1800# 20:06:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1801# SubscribeData: EventDTO
+      1801# 20:06:37 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1802# SubscribeData: EventDTO
+      1802# 20:06:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1803# SubscribeData: EventDTO
+      1803# 20:06:38 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1804# SubscribeData: EventDTO
+      1804# 20:06:49 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowDOWN
+  1806# SubscribeData: EventDTO
+      1806# 20:07:52 EUI64-0090DAFFFF0071AA in 912706:remoteLocationGatewayIsNowUP
+  1807# SubscribeData: EventDTO
+      1807# 20:07:55 EUI64-0090DAFFFF0071AA in 912706:remoteLocationGatewayIsNowDOWN
+  1808# SubscribeData: EventDTO
+      1808# 20:07:55 EUI64-0090DAFFFF0071AA in 912706:remoteLocationGatewayIsNowUP
+  1811# SubscribeData: EventDTO
+      1811# 20:08:03 EUI64-0090DAFFFF0071AA in 912706:unitConfigurationChanged
+  1812# SubscribeData: EventDTO
+      1812# 20:08:04 EUI64-0090DAFFFF0071AA in 912706:locationChanged
+  1814# SubscribeData: EventDTO
+      1814# 20:08:14 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1815# SubscribeData: EventDTO
+      1815# 20:08:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1816# SubscribeData: EventDTO
+      1816# 20:08:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1817# SubscribeData: EventDTO
+      1817# 20:08:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1818# SubscribeData: EventDTO
+      1818# 20:08:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1819# SubscribeData: EventDTO
+      1819# 20:08:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1820# SubscribeData: EventDTO
+      1820# 20:08:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1821# SubscribeData: EventDTO
+      1821# 20:08:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1822# SubscribeData: EventDTO
+      1822# 20:08:19 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1823# SubscribeData: EventDTO
+      1823# 20:08:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1824# SubscribeData: EventDTO
+      1824# 20:08:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1825# SubscribeData: EventDTO
+      1825# 20:08:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1826# SubscribeData: EventDTO
+      1826# 20:08:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1827# SubscribeData: EventDTO
+      1827# 20:08:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1828# SubscribeData: EventDTO
+      1828# 20:08:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1829# SubscribeData: EventDTO
+      1829# 20:08:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1830# SubscribeData: EventDTO
+      1830# 20:08:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1831# SubscribeData: EventDTO
+      1831# 20:08:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1832# SubscribeData: EventDTO
+      1832# 20:08:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1833# SubscribeData: EventDTO
+      1833# 20:08:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1834# SubscribeData: EventDTO
+      1834# 20:08:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1835# SubscribeData: EventDTO
+      1835# 20:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1836# SubscribeData: EventDTO
+      1836# 20:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1837# SubscribeData: EventDTO
+      1837# 20:08:34 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1838# SubscribeData: EventDTO
+      1838# 20:08:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1839# SubscribeData: EventDTO
+      1839# 20:08:35 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1840# SubscribeData: EventDTO
+      1840# 20:08:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1841# SubscribeData: EventDTO
+      1841# 20:08:36 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1842# SubscribeData: EventDTO
+      1842# 20:09:04 EUI64-D0CF5EFFFE59F0B9 in 797296:physicalDeviceIsNowDOWN
+  1844# SubscribeData: EventDTO
+      1844# 20:09:53 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowUP
+  1846# SubscribeData: EventDTO
+      1846# 20:10:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1847# SubscribeData: EventDTO
+      1847# 20:10:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1848# SubscribeData: EventDTO
+      1848# 20:10:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1849# SubscribeData: EventDTO
+      1849# 20:10:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1850# SubscribeData: EventDTO
+      1850# 20:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1851# SubscribeData: EventDTO
+      1851# 20:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1852# SubscribeData: EventDTO
+      1852# 20:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1853# SubscribeData: EventDTO
+      1853# 20:10:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1854# SubscribeData: EventDTO
+      1854# 20:10:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1855# SubscribeData: EventDTO
+      1855# 20:10:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1856# SubscribeData: EventDTO
+      1856# 20:10:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1857# SubscribeData: EventDTO
+      1857# 20:10:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1858# SubscribeData: EventDTO
+      1858# 20:10:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1859# SubscribeData: EventDTO
+      1859# 20:10:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1862# SubscribeData: EventDTO
+      1862# 20:12:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1863# SubscribeData: EventDTO
+      1863# 20:12:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1864# SubscribeData: EventDTO
+      1864# 20:12:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1865# SubscribeData: EventDTO
+      1865# 20:12:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1866# SubscribeData: EventDTO
+      1866# 20:12:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1867# SubscribeData: EventDTO
+      1867# 20:12:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1868# SubscribeData: EventDTO
+      1868# 20:12:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1869# SubscribeData: EventDTO
+      1869# 20:12:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1870# SubscribeData: EventDTO
+      1870# 20:12:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1871# SubscribeData: EventDTO
+      1871# 20:12:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1872# SubscribeData: EventDTO
+      1872# 20:12:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1873# SubscribeData: EventDTO
+      1873# 20:12:29 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1874# SubscribeData: EventDTO
+      1874# 20:12:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1875# SubscribeData: EventDTO
+      1875# 20:12:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1878# SubscribeData: EventDTO
+      1878# 20:14:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1879# SubscribeData: EventDTO
+      1879# 20:14:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1880# SubscribeData: EventDTO
+      1880# 20:14:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1881# SubscribeData: EventDTO
+      1881# 20:14:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1882# SubscribeData: EventDTO
+      1882# 20:14:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1883# SubscribeData: EventDTO
+      1883# 20:14:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1884# SubscribeData: EventDTO
+      1884# 20:14:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1885# SubscribeData: EventDTO
+      1885# 20:14:23 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1886# SubscribeData: EventDTO
+      1886# 20:14:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1887# SubscribeData: EventDTO
+      1887# 20:14:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1888# SubscribeData: EventDTO
+      1888# 20:14:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1889# SubscribeData: EventDTO
+      1889# 20:14:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1890# SubscribeData: EventDTO
+      1890# 20:14:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1891# SubscribeData: EventDTO
+      1891# 20:14:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1894# SubscribeData: EventDTO
+      1894# 20:16:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1895# SubscribeData: EventDTO
+      1895# 20:16:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1896# SubscribeData: EventDTO
+      1896# 20:16:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1897# SubscribeData: EventDTO
+      1897# 20:16:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1898# SubscribeData: EventDTO
+      1898# 20:16:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1899# SubscribeData: EventDTO
+      1899# 20:16:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1900# SubscribeData: EventDTO
+      1900# 20:16:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1901# SubscribeData: EventDTO
+      1901# 20:16:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1902# SubscribeData: EventDTO
+      1902# 20:16:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1903# SubscribeData: EventDTO
+      1903# 20:16:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1904# SubscribeData: EventDTO
+      1904# 20:16:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1905# SubscribeData: EventDTO
+      1905# 20:16:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1906# SubscribeData: EventDTO
+      1906# 20:16:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1907# SubscribeData: EventDTO
+      1907# 20:16:33 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1909# SubscribeData: EventDTO
+      1909# 20:18:13 EUI64-D0CF5EFFFE7B2A14 in 499735:newUnAcceptedDeviceSeenByDiscovery
+  1911# SubscribeData: EventDTO
+      1911# 20:18:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1912# SubscribeData: EventDTO
+      1912# 20:18:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1913# SubscribeData: EventDTO
+      1913# 20:18:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1914# SubscribeData: EventDTO
+      1914# 20:18:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1915# SubscribeData: EventDTO
+      1915# 20:18:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1916# SubscribeData: EventDTO
+      1916# 20:18:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1917# SubscribeData: EventDTO
+      1917# 20:18:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1918# SubscribeData: EventDTO
+      1918# 20:18:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1919# SubscribeData: EventDTO
+      1919# 20:18:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1920# SubscribeData: EventDTO
+      1920# 20:18:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1921# SubscribeData: EventDTO
+      1921# 20:18:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1922# SubscribeData: EventDTO
+      1922# 20:18:30 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1923# SubscribeData: EventDTO
+      1923# 20:18:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1924# SubscribeData: EventDTO
+      1924# 20:18:32 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1927# SubscribeData: EventDTO
+      1927# 20:20:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1928# SubscribeData: EventDTO
+      1928# 20:20:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1929# SubscribeData: EventDTO
+      1929# 20:20:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1930# SubscribeData: EventDTO
+      1930# 20:20:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1931# SubscribeData: EventDTO
+      1931# 20:20:19 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1932# SubscribeData: EventDTO
+      1932# 20:20:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1933# SubscribeData: EventDTO
+      1933# 20:20:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1934# SubscribeData: EventDTO
+      1934# 20:20:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1935# SubscribeData: EventDTO
+      1935# 20:20:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1936# SubscribeData: EventDTO
+      1936# 20:20:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1937# SubscribeData: EventDTO
+      1937# 20:20:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1938# SubscribeData: EventDTO
+      1938# 20:20:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1939# SubscribeData: EventDTO
+      1939# 20:20:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1940# SubscribeData: EventDTO
+      1940# 20:20:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1943# SubscribeData: EventDTO
+      1943# 20:22:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1944# SubscribeData: EventDTO
+      1944# 20:22:17 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1945# SubscribeData: EventDTO
+      1945# 20:22:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1946# SubscribeData: EventDTO
+      1946# 20:22:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1947# SubscribeData: EventDTO
+      1947# 20:22:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1948# SubscribeData: EventDTO
+      1948# 20:22:20 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1949# SubscribeData: EventDTO
+      1949# 20:22:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1950# SubscribeData: EventDTO
+      1950# 20:22:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1951# SubscribeData: EventDTO
+      1951# 20:22:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1952# SubscribeData: EventDTO
+      1952# 20:22:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1953# SubscribeData: EventDTO
+      1953# 20:22:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1954# SubscribeData: EventDTO
+      1954# 20:22:25 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1955# SubscribeData: EventDTO
+      1955# 20:22:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1956# SubscribeData: EventDTO
+      1956# 20:22:28 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1957# SubscribeData: EventDTO
+      1957# 20:22:55 EUI64-0080E1030005DFA9 in 229349:physicalDeviceIsNowDOWN
+  1960# SubscribeData: EventDTO
+      1960# 20:24:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1961# SubscribeData: EventDTO
+      1961# 20:24:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1962# SubscribeData: EventDTO
+      1962# 20:24:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1963# SubscribeData: EventDTO
+      1963# 20:24:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1964# SubscribeData: EventDTO
+      1964# 20:24:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1965# SubscribeData: EventDTO
+      1965# 20:24:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1966# SubscribeData: EventDTO
+      1966# 20:24:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1967# SubscribeData: EventDTO
+      1967# 20:24:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1968# SubscribeData: EventDTO
+      1968# 20:24:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1969# SubscribeData: EventDTO
+      1969# 20:24:24 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1970# SubscribeData: EventDTO
+      1970# 20:24:26 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1971# SubscribeData: EventDTO
+      1971# 20:24:27 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1972# SubscribeData: EventDTO
+      1972# 20:25:13 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowDOWN
+  1973# SubscribeData: EventDTO
+      1973# 20:25:13 EUI64-0090DAFFFF006AAC in 399621:remoteLocationGatewayIsNowUP
+  1977# SubscribeData: EventDTO
+      1977# 20:25:20 EUI64-0090DAFFFF006AAC in 399621:unitConfigurationChanged
+  1978# SubscribeData: EventDTO
+      1978# 20:25:21 EUI64-0090DAFFFF006AAC in 399621:locationChanged
+  1979# SubscribeData: EventDTO
+      1979# 20:26:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1980# SubscribeData: EventDTO
+      1980# 20:26:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1981# SubscribeData: EventDTO
+      1981# 20:26:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1982# SubscribeData: EventDTO
+      1982# 20:26:16 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1984# SubscribeData: EventDTO
+      1984# 20:26:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1985# SubscribeData: EventDTO
+      1985# 20:26:18 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1986# SubscribeData: EventDTO
+      1986# 20:26:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1987# SubscribeData: EventDTO
+      1987# 20:26:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1988# SubscribeData: EventDTO
+      1988# 20:26:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1989# SubscribeData: EventDTO
+      1989# 20:26:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1990# SubscribeData: EventDTO
+      1990# 20:26:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1991# SubscribeData: EventDTO
+      1991# 20:26:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1992# SubscribeData: EventDTO
+      1992# 20:26:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1993# SubscribeData: EventDTO
+      1993# 20:26:22 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1995# SubscribeData: EventDTO
+      1995# 20:28:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1996# SubscribeData: EventDTO
+      1996# 20:28:15 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  1998# SubscribeData: EventDTO
+      1998# 20:28:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+  1999# SubscribeData: EventDTO
+      1999# 20:28:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowUP
+  2000# SubscribeData: EventDTO
+      2000# 20:28:21 EUI64-DS-2CDFFFF3325-I in 306571:physicalDeviceIsNowDOWN
+Enough Data!
+total 174 locations: 
+108899 or Test45
+108899 or Test45
+113302 or HZFT
+113302 or HZFT
+114190 or Test43
+114190 or Test43
+114877 or test36
+114877 or test36
+116251 or Wafer_test
+116251 or Wafer_test
+117445 or Test21
+117445 or Test21
+11902 or Test18
+11902 or Test18
+119371 or TEST29
+119371 or TEST29
+127449 or Test20（ZZNOKIE）
+127449 or Test20（ZZNOKIE）
+127776 or Test17(wafer-test)
+127776 or Test17(wafer-test)
+128423 or Test22
+128423 or Test22
+157285 or Test41
+157285 or Test41
+160792 or envision
+160792 or envision
+162495 or RJS-TRIAL
+162495 or RJS-TRIAL
+186981 or Test23
+186981 or Test23
+18735 or Test23
+18735 or Test23
+190773 or TEST7（JQ2）
+190773 or TEST7（JQ2）
+194130 or Dfocus
+194130 or Dfocus
+212446 or Test29(PF15)
+212446 or Test29(PF15)
+213806 or Demo
+213806 or Demo
+221376 or KPCPMSH
+221376 or KPCPMSH
+222223 or Test13
+222223 or Test13
+223516 or YKGC_huamao
+223516 or YKGC_huamao
+224112 or TEST14-HI
+224112 or TEST14-HI
+229349 or Fangtang
+229349 or Fangtang
+248795 or Test19
+248795 or Test19
+25029 or Test15
+25029 or Test15
+252208 or YKGC_weituo
+252208 or YKGC_weituo
+264135 or Wafer_SH
+264135 or Wafer_SH
+264768 or Test28
+264768 or Test28
+285048 or Test16-skyfm
+285048 or Test16-skyfm
+29409 or Sugarcube
+29409 or Sugarcube
+306571 or Test22（leinuo）
+306571 or Test22（leinuo）
+329312 or Test48
+329312 or Test48
+338119 or ROAMING-TEST-GW1
+338119 or ROAMING-TEST-GW1
+396612 or Test42
+396612 or Test42
+399621 or TEST8 (4U)
+399621 or TEST8 (4U)
+405639 or TeDavid
+405639 or TeDavid
+445778 or Test18
+445778 or Test18
+447223 or TEST12
+447223 or TEST12
+460286 or Test4(yinlian)
+460286 or Test4(yinlian)
+464916 or Sugarcube
+464916 or Sugarcube
+480686 or Test14
+480686 or Test14
+499735 or hzft
+499735 or hzft
+503370 or wanshen
+503370 or wanshen
+507675 or TEST9(JQ3）
+507675 or TEST9(JQ3）
+507828 or Test47
+507828 or Test47
+521209 or Wafer-ShangHai
+521209 or Wafer-ShangHai
+537931 or TEST36
+537931 or TEST36
+545528 or Tutorial
+545528 or Tutorial
+569453 or Test35
+569453 or Test35
+573742 or shibo
+573742 or shibo
+576515 or UNICROSS
+576515 or UNICROSS
+595846 or Test20
+595846 or Test20
+598597 or Test17(wafer_test)
+598597 or Test17(wafer_test)
+59902 or TestAP（shibo)
+59902 or TestAP（shibo)
+60116 or GATEWAY1001
+60116 or GATEWAY1001
+60358 or GATEWAY-1003
+60358 or GATEWAY-1003
+607891 or Test36(4U)
+607891 or Test36(4U)
+618079 or Test5(kuban)
+618079 or Test5(kuban)
+652990 or Test50
+668617 or Test49
+673792 or KPCPMSH
+673792 or KPCPMSH
+689955 or Test12(焕鸿)
+689955 or Test12(焕鸿)
+696237 or TEST10
+696237 or TEST10
+715357 or Sugarcube
+715357 or Sugarcube
+733297 or Test44
+733297 or Test44
+737919 or Test17
+737919 or Test17
+74365 or JiaLi
+74365 or JiaLi
+750043 or Kelly_Two
+750043 or Kelly_Two
+771289 or TEST25
+771289 or TEST25
+783825 or Test26(PF11)
+783825 or Test26(PF11)
+786462 or kelly
+786462 or kelly
+795131 or TestLast
+795131 or TestLast
+797296 or Novah
+797296 or Novah
+805136 or Test40
+805136 or Test40
+81386 or Test46
+81386 or Test46
+83561 or GATEWAY-1005
+83561 or GATEWAY-1005
+854940 or Test21
+854940 or Test21
+872436 or TEST11(JQ1)
+872436 or TEST11(JQ1)
+88252 or GATEWAY-1002
+88252 or GATEWAY-1002
+897737 or Test17(wafer-test)
+897737 or Test17(wafer-test)
+90399 or TEST14
+90399 or TEST14
+912706 or Test-11
+912706 or Test-11
+917830 or Test25
+917830 or Test25
+938433 or GATEWAY-1004
+938433 or GATEWAY-1004
+981791 or Test19
+981791 or Test19
+996052 or Test33
+996052 or Test33
+
+total 0 logical sensors live while 0 sensors online

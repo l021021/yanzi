@@ -20,7 +20,7 @@ var LocationId = '229349' //fangtang
 var LocationId = '797296' //novah
     //var LocationId = '223516' //huamao
     //var LocationId = '783825' //浦发11
-    //var LocationId = '581669' //test36
+var LocationId = '581669' //test36
 
 
 

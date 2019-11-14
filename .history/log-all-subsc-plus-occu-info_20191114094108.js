@@ -5,8 +5,8 @@ var WebSocketClient = require('websocket').client;
 var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
 
-var username = "frank.shen@pinyuaninfo.com";
-var password = "Internetofthing";
+var username = "";
+var password = "";
 var LocationId = '229349' //fangtang 
     //var LocationId = '188559' //1001
     //var LocationId = '88252' //1002

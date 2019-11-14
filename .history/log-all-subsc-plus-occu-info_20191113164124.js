@@ -1,6 +1,3 @@
-//Check a location by log all subscribe data (data and lifecycle),especilly the motion data( 3 types) , also can check the activilty level and sensor healthy
-
-
 var WebSocketClient = require('websocket').client;
 var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
@@ -17,17 +14,15 @@ var LocationId = '229349' //fangtang
 
 //var LocationId = '521209' //wafer-shanghai 
 //var LocationId = '503370' //wanshen
-var LocationId = '797296' //novah
-    //var LocationId = '223516' //huamao
-    //var LocationId = '783825' //浦发11
-    //var LocationId = '581669' //test36
-
+//var LocationId = '797296' //novah
+//var LocationId = '223516' //huamao
+//var LocationId = '783825' //浦发11
 
 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 1500; //will exit when this number of messages has been logged
+var _logLimit = 500; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -130,7 +125,7 @@ client.on('connect', function(connection) {
                     switch (json.list[0].resourceType) {
                         case 'SampleList':
                             //Sensor DATA
-                            // console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
+                            console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
                             switch (json.list[0].list[0].resourceType) {
                                 case 'SampleMotion': //sampleMotion
                                     _t1.setTime(json.list[0].list[0].sampleTime);
@@ -212,10 +207,10 @@ client.on('connect', function(connection) {
                                     break;
 
                                 case 'SlotDTO':
-                                    // console.log('      ' + _Counter + '# SlotDTO ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
+                                    console.log('      ' + _Counter + '# SlotDTO ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
                                     break;
                                 case 'SampleEndOfSlot':
-                                    // console.log('     ' + _Counter + '# EndofDTO ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.assetState.name);
+                                    console.log('     ' + _Counter + '# EndofDTO ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.assetState.name);
                                     break;
                                 case 'SampleVOC':
                                 case 'SampleTemp':

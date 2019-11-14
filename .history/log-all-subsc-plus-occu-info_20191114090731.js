@@ -1,6 +1,3 @@
-//Check a location by log all subscribe data (data and lifecycle),especilly the motion data( 3 types) , also can check the activilty level and sensor healthy
-
-
 var WebSocketClient = require('websocket').client;
 var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
@@ -130,7 +127,7 @@ client.on('connect', function(connection) {
                     switch (json.list[0].resourceType) {
                         case 'SampleList':
                             //Sensor DATA
-                            // console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
+                            console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
                             switch (json.list[0].list[0].resourceType) {
                                 case 'SampleMotion': //sampleMotion
                                     _t1.setTime(json.list[0].list[0].sampleTime);

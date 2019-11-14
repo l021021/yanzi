@@ -1,43 +1,47 @@
-//Check a location by log all subscribe data (data and lifecycle),especilly the motion data( 3 types) , also can check the activilty level and sensor healthy
-
-
+//TODO:数据结构
 var WebSocketClient = require('websocket').client;
 var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
 
 var username = "frank.shen@pinyuaninfo.com";
 var password = "Internetofthing";
-var LocationId = '229349' //fangtang 
-    //var LocationId = '188559' //1001
-    //var LocationId = '88252' //1002
-    //var LocationId = '60358' //1003
-    //var LocationId = '938433' //1004
-    //var LocationId = '83561' //1005
-    //var LocationId = '306571' //雷诺
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+//var LocationId = '83561' //1005
+//var LocationId = '306571' //雷诺
 
 //var LocationId = '521209' //wafer-shanghai 
 //var LocationId = '503370' //wanshen
-var LocationId = '797296' //novah
-    //var LocationId = '223516' //huamao
+//var LocationId = '797296' //novah
+var LocationId = '223516' //huamao
     //var LocationId = '783825' //浦发11
-    //var LocationId = '581669' //test36
-
 
 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 1500; //will exit when this number of messages has been logged
+var _logLimit = 200; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
 
 var _Locations = [];
 var sensorArray = new Array();
-var motionTimeStamps = '';
+var motionTimeStamps = new Array();
 var assetTimeStamps1 = '';
 var assetTimeStamps2 = '';
 var assetTimeStamps3 = '';
+
+var recordObj = {
+    "type": "",
+    "Did": "",
+    "timeStamp": "",
+    "value": ""
+
+}
 
 LocationId = process.argv[2] || LocationId;
 console.log('Probing: ' + LocationId + ': ');
@@ -81,7 +85,7 @@ client.on('connect', function(connection) {
                 // console.log(sensorArray.toString());
                 console.log('Total Motions Sensors seen： ' + sensorcounter + ' : with counters as :' + output);
                 console.log('Motion records calculated from counters:');
-                console.log(motionTimeStamps.toString());
+                console.log(JSON.stringify(motionTimeStamps));
                 console.log('Motion records calculated from motion/nomotion packets:');
                 console.log(assetTimeStamps1.toString());
                 console.log('Motion records calculated from free/occupy packets:');
@@ -93,7 +97,7 @@ client.on('connect', function(connection) {
             } //for log use only
 
             // Print all messages with DTO type
-            // console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ':' + json.messageType);
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ':' + json.messageType);
             switch (json.messageType) {
                 case 'ServiceResponse':
                     sendLoginRequest();
@@ -126,11 +130,11 @@ client.on('connect', function(connection) {
                     console.log("Susbscribe renew in (min)： " + (json.expireTime - now) / 60000); //100min
                     break;
                 case 'SubscribeData':
-                    //console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
+                    console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
                     switch (json.list[0].resourceType) {
                         case 'SampleList':
                             //Sensor DATA
-                            // console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
+                            console.log('    ' + _Counter + '# ' + 'SampleList: ' + json.list[0].list[0].resourceType)
                             switch (json.list[0].list[0].resourceType) {
                                 case 'SampleMotion': //sampleMotion
                                     _t1.setTime(json.list[0].list[0].sampleTime);
@@ -139,16 +143,23 @@ client.on('connect', function(connection) {
 
                                     //algorithm based on SampleMotion；
                                     var temp1 = sensorArray[json.list[0].dataSourceAddress.did];
+                                    var temprecordObj;
                                     var motionFlag = ' ?? '; //update new value 
+                                    recordObj.type = 'samplemotion';
+                                    recordObj.Did = json.list[0].dataSourceAddress.did
+                                    recordObj.timeStamp = _t1.getTime()
                                     sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value;
                                     if (temp1 == (json.list[0].list[0].value - 1)) { //Value changed!
-                                        //console.log("        Motion detected..");
                                         motionFlag = ' ++ ';
-                                        motionTimeStamps += json.list[0].dataSourceAddress.did + ',in,' + _t1.toLocaleTimeString() + '\n';
+                                        recordObj.value = 'in'
+                                        temprecordObj = JSON.parse(JSON.stringify(recordObj));
+                                        motionTimeStamps.push(temprecordObj)
                                     } else if (temp1 == json.list[0].list[0].value) {
-                                        // console.log("        No motion Detected..");
                                         motionFlag = ' == ';
-                                        motionTimeStamps += json.list[0].dataSourceAddress.did + ',ot,' + _t1.toLocaleTimeString() + '\n';
+                                        recordObj.value = 'ot'
+                                        temprecordObj = JSON.parse(JSON.stringify(recordObj));
+                                        motionTimeStamps.push(temprecordObj)
+                                        motionTimeStamps.push(json.list[0].dataSourceAddress.did + ',ot,' + _t1.getTime());
 
                                     } else {
                                         //console.log("        Sensor first seen, cannot tell");
@@ -164,24 +175,29 @@ client.on('connect', function(connection) {
                                     _t2.setTime(json.timeSent);
                                     _t3.setTime(json.list[0].list[0].sampleTime);
                                     var motionFlag = ' ? '; //update new value 
+                                    var temprecordObj;
+                                    //var motionFlag = ' ?? '; //update new value 
+                                    recordObj.type = 'samplemotion';
+                                    recordObj.Did = json.list[0].dataSourceAddress.did
+                                    recordObj.timeStamp = _t1.getTime()
                                     console.log('      ' + _Counter + '# ' + json.list[0].list[0].assetState.name + ' ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
                                         json.list[0].list[0].assetState.name);
                                     switch (json.list[0].list[0].assetState.name) {
 
                                         case 'isMotion':
-                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.getTime() + '\n';
                                             break;
                                         case 'isNoMotion':
-                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',nm,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',nm,' + _t3.getTime() + '\n';
                                             break;
                                         case 'free':
-                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',fr,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',fr,' + _t3.getTime() + '\n';
                                             break;
                                         case 'occupied':
-                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',oc,' + _t3.getTime() + '\n';
                                             break;
                                         case 'missingInput':
-                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',mi,' + _t3.toLocaleTimeString() + '\n';
+                                            assetTimeStamps2 += json.list[0].dataSourceAddress.did + ',mi,' + _t3.getTime() + '\n';
                                             break;
                                         default:
                                             console.log("!!!! cannot understand assetname " + json.list[0].list[0].assetState.name);
@@ -212,10 +228,10 @@ client.on('connect', function(connection) {
                                     break;
 
                                 case 'SlotDTO':
-                                    // console.log('      ' + _Counter + '# SlotDTO ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
+                                    console.log('      ' + _Counter + '# SlotDTO ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
                                     break;
                                 case 'SampleEndOfSlot':
-                                    // console.log('     ' + _Counter + '# EndofDTO ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.assetState.name);
+                                    console.log('     ' + _Counter + '# EndofDTO ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.assetState.name);
                                     break;
                                 case 'SampleVOC':
                                 case 'SampleTemp':
@@ -224,7 +240,7 @@ client.on('connect', function(connection) {
                                 case 'SampleSoundPressureLevel':
                                 case 'SampleIlluminance':
                                 case 'SampleCO2':
-                                    // console.log('     ' + _Counter + '# Sample ' + _t3.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].value);
+                                    console.log('     ' + _Counter + '# Sample ' + _t3.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].value);
                                     break;
                                 default:
                                     console.log("!!!! cannot understand samplelist resourcetype" + json.list[0].list[0].resourceType);
