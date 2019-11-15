@@ -239,7 +239,7 @@ client.on('connect', function(connection) {
                                 case 'remoteLocationGatewayIsNowDOWN':
                                 case 'remoteLocationGatewayIsNowUP':
                                     // _t2.setTime(json.list[0].timeOfEvent);
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
+                                    // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
                                     break;
                                 default:
                                     //console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);

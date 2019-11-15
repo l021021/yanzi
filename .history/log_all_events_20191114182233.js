@@ -1,5 +1,5 @@
 var WebSocketClient = require('websocket').client;
-var cirrusAPIendpoint = "cirrus11.yanzi.se";
+var cirrusAPIendpoint = "cirrus21.yanzi.se";
 
 
 var username = "frank.shen@pinyuaninfo.com";

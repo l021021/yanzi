@@ -1,5 +1,5 @@
 var WebSocketClient = require('websocket').client;
-var cirrusAPIendpoint = "cirrus11.yanzi.se";
+var cirrusAPIendpoint = "cirrus21.yanzi.se";
 
 
 var username = "frank.shen@pinyuaninfo.com";
@@ -11,7 +11,7 @@ var password = "Internetofthing";
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 5000; //will exit when this number of messages has been logged
+var _logLimit = 2000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -76,7 +76,7 @@ var sampleObj = {
     "timeCreated": 1569232419466,
     "sampleTime": 1569232419466,
     "value": 30.5
-        //  "temperature":296.45
+    //  "temperature":296.45
 
 }
 
@@ -104,17 +104,17 @@ var eventObj = {
 
 
 //Program body 
-client.on('connectFailed', function(error) {
+client.on('connectFailed', function (error) {
     console.log('Connect Error: reconnect' + error.toString());
     beginPOLL();
 });
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         // clearTimeout(TimeoutId);
         // TimeoutId = setTimeout(doReport, 10000); //exit after 10 seconds idle
 
@@ -130,7 +130,7 @@ client.on('connect', function(connection) {
 
             if (_Counter > _logLimit) {
                 console.log("Enough Data!")
-                    //console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
+                //console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
                 connection.close();
                 doReport();
                 process.exit();
@@ -241,7 +241,7 @@ client.on('connect', function(connection) {
                                 console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name);
                                 break;
                             default:
-                                console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType); //TODO
+                                console.log("!!!! cannot understand this resourcetype " + json.list[0].resourceType);//TODO
 
                         }
                         break;
@@ -258,12 +258,12 @@ client.on('connect', function(connection) {
         }
     });
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         console.log("Connection Error: reconnect" + error.toString());
         beginPOLL();
     });
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         console.log('Connection closed!');
     });
 
@@ -375,7 +375,7 @@ function doReport() {
     var _c2 = 0;
     var output = '';
 
-    _Locations.sort(function(a, b) {
+    _Locations.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
@@ -383,7 +383,7 @@ function doReport() {
         return 0;
 
     });
-    _Units.sort(function(a, b) {
+    _Units.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;

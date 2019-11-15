@@ -36,12 +36,6 @@ var t2m = new Date();
 
 var minDiff, Aftert1, Beforet2;
 
-//处理一下 record，每一个ID分开成一个Array
-
-var recordArraybyId = new Array();
-
-
-
 for (let i = 1; i < RecordArray.length; i++) { //start from Second element //TODO 重大错误；ID没有分开
 
     t1.setTime(RecordArray[i - 1].timeStamp); //前一个事件时间
