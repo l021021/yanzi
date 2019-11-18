@@ -5,27 +5,27 @@ var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
 var username = "frank.shen@pinyuaninfo.com";
 var password = "Internetofthing";
-var LocationId = '229349' //fangtang 
-    //var LocationId = '188559' //1001
-    //var LocationId = '88252' //1002
-    //var LocationId = '60358' //1003
-    //var LocationId = '938433' //1004
-    //var LocationId = '83561' //1005
-    //var LocationId = '306571' //雷诺
+//var LocationId = '229349' //fangtang 
+//var LocationId = '188559' //1001
+//var LocationId = '88252' //1002
+//var LocationId = '60358' //1003
+//var LocationId = '938433' //1004
+//var LocationId = '83561' //1005
+//var LocationId = '306571' //雷诺
 
 //var LocationId = '521209' //wafer-shanghai 
 //var LocationId = '503370' //wanshen
 //var LocationId = '797296' //novah
 //var LocationId = '223516' //huamao
 //var LocationId = '783825' //浦发11
-//var LocationId = '581669' //TEST36
+var LocationId = '581669' //TEST36
 
 
 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 200; //will exit when this number of messages has been logged
+var _logLimit = 1000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -34,7 +34,7 @@ var _Locations = [];
 var sensorArray = new Array();
 var motionTimeStamps = new Array();
 var assetTimeStamps1 = new Array();
-var assetTimeStamps2 = new Array();
+var assetTimeStamps2 = '';
 var assetTimeStamps3 = '';
 
 var recordObj = {
@@ -88,9 +88,9 @@ client.on('connect', function(connection) {
                 console.log('Motion records calculated from counters:');
                 console.log(JSON.stringify(motionTimeStamps));
                 console.log('Motion records calculated from motion/nomotion packets:');
-                console.log(JSON.stringify(assetTimeStamps1));
+                console.log(assetTimeStamps1.toString());
                 console.log('Motion records calculated from free/occupy packets:');
-                console.log(JSON.stringify(assetTimeStamps2));
+                console.log(assetTimeStamps2.toString());
                 console.log('Motion records calculated from assetUtilization packets:');
                 console.log(assetTimeStamps3.toString());
                 console.log("That's all");

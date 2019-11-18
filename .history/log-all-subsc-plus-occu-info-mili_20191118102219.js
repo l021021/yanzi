@@ -25,7 +25,7 @@ var LocationId = '229349' //fangtang
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 200; //will exit when this number of messages has been logged
+var _logLimit = 1000; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();
@@ -88,9 +88,9 @@ client.on('connect', function(connection) {
                 console.log('Motion records calculated from counters:');
                 console.log(JSON.stringify(motionTimeStamps));
                 console.log('Motion records calculated from motion/nomotion packets:');
-                console.log(JSON.stringify(assetTimeStamps1));
+                console.log(assetTimeStamps1.toString());
                 console.log('Motion records calculated from free/occupy packets:');
-                console.log(JSON.stringify(assetTimeStamps2));
+                console.log(assetTimeStamps2.toString());
                 console.log('Motion records calculated from assetUtilization packets:');
                 console.log(assetTimeStamps3.toString());
                 console.log("That's all");
