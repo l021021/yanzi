@@ -11,21 +11,21 @@ var LocationId = '229349' //fangtang
     //var LocationId = '60358' //1003
     //var LocationId = '938433' //1004
     //var LocationId = '83561' //1005
-var LocationId = '306571' //雷诺
+    //var LocationId = '306571' //雷诺
 
 //var LocationId = '521209' //wafer-shanghai 
 //var LocationId = '503370' //wanshen
 //var LocationId = '797296' //novah
-//var LocationId = '223516' //huamao
-//var LocationId = '783825' //浦发11
-//var LocationId = '581669' //TEST36
+var LocationId = '223516' //huamao
+    //var LocationId = '783825' //浦发11
+    //var LocationId = '581669' //TEST36
 
 
 
 
 //For log use only
 var _Counter = 0; //message counter
-var _logLimit = 2000; //will exit when this number of messages has been logged
+var _logLimit = 200; //will exit when this number of messages has been logged
 var _t1 = new Date();
 var _t2 = new Date();
 var _t3 = new Date();

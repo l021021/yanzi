@@ -1090,7 +1090,7 @@ for (let i = 1; i < sArray.length; i++) {
 }
 
 
-//console.log(JSON.stringify(timeArray))
+console.log(JSON.stringify(timeArray))
 
 // timeArray.sort(function (a, b) {
 //     //if (a.ID > b.ID) { return true } else

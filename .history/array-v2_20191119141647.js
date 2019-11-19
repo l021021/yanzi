@@ -978,7 +978,7 @@ for (let i = 1; i < sArray.length; i++) {
         }
 
         { //tail会重复？
-            t0.setTime(t2m.getTime()); //tail
+            t0.setTime(t2m); //tail
             for (const key in timeArray) { //already exits in Array?
                 if (timeArray[key].timeStamp == t0.toLocaleTimeString()) {
                     console.log('----这一分存在！增加尾部数值  ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
@@ -1002,7 +1002,7 @@ for (let i = 1; i < sArray.length; i++) {
         let j = 1;
         console.log('----准备加入中部记录?');
         while (j < minDiff) {
-            t0.setTime(t1m.getTime() + j * 60 * 1000); //下一分
+            t0.setTime(t1m.getTime + j * 60 * 1000); //下一分
             timeObj.timeStamp = t1m.toLocaleTimeString();
             timeObj.value = 1;
 
@@ -1076,7 +1076,7 @@ for (let i = 1; i < sArray.length; i++) {
     let j = 1;
     console.log('----准备加入中部记录：');
     while (j < minDiff) {
-        t0.setTime(t1m.getTime() + j * 60 * 1000);
+        t0.setTime(t1m.getTime + j * 60 * 1000);
         timeObj.timeStamp = t0.toLocaleTimeString();
         timeObj.value = 0;
 
@@ -1090,7 +1090,7 @@ for (let i = 1; i < sArray.length; i++) {
 }
 
 
-//console.log(JSON.stringify(timeArray))
+console.log(JSON.stringify(timeArray))
 
 // timeArray.sort(function (a, b) {
 //     //if (a.ID > b.ID) { return true } else

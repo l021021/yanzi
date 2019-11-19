@@ -883,7 +883,7 @@ RecordArray = [{
 var t1 = new Date();
 var t2 = new Date();
 var t1m = new Date();
-var t0 = new Date();
+var t = new Date();
 var t2m = new Date();
 var timeArray = new Array();
 var timeObj = {
@@ -900,9 +900,7 @@ var sArray = new Array();
 var id = 'EUI64-0080E1030005453A-4-Motion';
 
 
-
-
-console.log('处理原始数据,仅留下某一个传感器,验证算法');
+//var recordArraybyId = new Array();
 
 for (let i = 0; i < RecordArray.length; i++) {
 
@@ -915,11 +913,9 @@ for (let i = 0; i < RecordArray.length; i++) {
     }
 
 }
-
+// sArray = RecordArray.groupby("EUI64 - 90 FD9FFFFEA9505A - 3 - Motion");
 
 for (let i = 1; i < sArray.length; i++) {
-    console.log('循环处理数据,这是第:' + i);
-
 
     t1.setTime(sArray[i - 1].timeStamp); //前一个事件时间
     t1.setMilliseconds(0); //得到整秒
@@ -943,45 +939,55 @@ for (let i = 1; i < sArray.length; i++) {
     console.log('seeing  ' + t1.toLocaleTimeString() + '-前  ' + t1m.toLocaleTimeString() + '整  ' + minDiff + ' 分 ' + t1ToNext + '前 ' + PrevTot2 + ' 后  ' + t2.toLocaleTimeString() + '-后  ' + t2m.toLocaleTimeString());
 
     if (sArray[i - 1].value == 'in') { //全部=1
-        console.log('--is a ' + sArray[i - 1].value)
+        console.log('--is a in' + sArray[i - 1].value)
 
-        console.log("头尾在一分钟内? " + (t1m == t2m) ? true : False);
+        console.log("same min" + (t1m == t2m) ? true : False);
 
         if (t1m >= t2m) {
-            console.log("头尾在同样的一分钟");
+
+            console.log("same min");
             t1ToNext = (t1ToNext + PrevTot2 - 60); ///计算缝隙
             PrevTot2 = 0; //计算头部即可
-        }
 
-        t0.setTime(t1m.getTime()); //前一整分
+        }
+        t.setTime(t1m); //前一整分
 
         let _RecordExist = false; //记录不存在
         let _ExistValue = 0;
 
         for (const key in timeArray) { //already exits in Array?
-            if (timeArray[key].timeStamp == t0.toLocaleTimeString()) {
-                console.log('----这一分存在！增加头部的数值' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]))
+
+            if (timeArray[key].timeStamp == t.toLocaleTimeString()) {
+
+                console.log('----这一分存在！加头部的数值' + t.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]))
+
                 _RecordExist = true;
                 //_ExistValue = timeArray[key].value;
                 timeArray[key].value += t1ToNext / 60; //增加新的占用
+
+
                 break;
             }
-        }
 
+
+        }
         if (!_RecordExist) { //这一分不存在
-            timeObj.timeStamp = t0.toLocaleTimeString();
+            timeObj.timeStamp = t.toLocaleTimeString();
             timeObj.value = t1ToNext / 60;
+
             var _timeObj = JSON.parse(JSON.stringify(timeObj));
             timeArray.push(_timeObj); //增加记录
-            console.log('----这一分不存在！头部加入新记录：' + t0.toLocaleTimeString())
+            console.log('----这一分不存在！头部加入记录：' + t.toLocaleTimeString())
 
         }
 
         { //tail会重复？
-            t0.setTime(t2m.getTime()); //tail
+            t.setTime(t2m); //tail
             for (const key in timeArray) { //already exits in Array?
-                if (timeArray[key].timeStamp == t0.toLocaleTimeString()) {
-                    console.log('----这一分存在！增加尾部数值  ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
+
+                if (timeArray[key].timeStamp == t.toLocaleTimeString()) {
+
+                    console.log('----这一分存在！加尾部数值  ' + t.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
                     _RecordExist = true;
                     timeArray[key].value += PrevTot2 / 60;
                     break;
@@ -989,39 +995,43 @@ for (let i = 1; i < sArray.length; i++) {
             }
 
             if (!_RecordExist) {
+
                 timeObj.timeStamp = t2m.toLocaleTimeString();
                 timeObj.value = PrevTot2 / 60;
                 var _timeObj = JSON.parse(JSON.stringify(timeObj));
                 timeArray.push(_timeObj);
-                console.log('----这一分不存在，加入新尾部记录：' + t2m.toLocaleTimeString());
+
+                console.log('----不存在，加入新尾部记录：' + t2m.toLocaleTimeString());
             }
 
         }
 
         //process middle 
         let j = 1;
-        console.log('----准备加入中部记录?');
+        console.log('----加入中部记录?');
         while (j < minDiff) {
-            t0.setTime(t1m.getTime() + j * 60 * 1000); //下一分
+            t1m.setTime(t1m.getTime + j * 60 * 1000);
             timeObj.timeStamp = t1m.toLocaleTimeString();
             timeObj.value = 1;
 
             var _timeObj = JSON.parse(JSON.stringify(timeObj));
             timeArray.push(_timeObj);
-            console.log('------加入中部记录：' + t0.toLocaleTimeString());
+            // timeArray.push(t1m.toLocaleTimeString(), 1);
             j++
-
+            console.log('------加入中部记录：' + t1m.toLocaleTimeString());
         }
 
 
     } else { //全部标0
 
-        console.log('--is a ' + sArray[i - 1].value);
+        console.log('--is out ' + sArray[i - 1].value);
+        t.setTime(t1m); //Previous
 
-        console.log("头尾在一分钟内? " + (t1m == t2m) ? true : False);
+        let _RecordExist = false;
+        console.log("same min" + (t1m == t2m) ? true : False);
 
         if (t1m >= t2m) {
-            console.log("头尾在相同的一分钟");
+            console.log("same min");
             t1ToNext = (t1ToNext + PrevTot2 - 60); ///计算缝隙
             PrevTot2 = 0; //计算头部即可
 
@@ -1029,34 +1039,36 @@ for (let i = 1; i < sArray.length; i++) {
             console.log('not same')
         };
 
-        t0.setTime(t1m); //Previous
-        let _RecordExist = false;
-
         for (const key in timeArray) { //already exits in Array?
-            if (timeArray[key].timeStamp == t0.toLocaleTimeString()) {
-                console.log('----这一分存在！头部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
+
+            if (timeArray[key].timeStamp == t.toLocaleTimeString()) {
+
+                console.log('----这一分存在！头部原值不变 ' + t.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
                 _RecordExist = true;
                 _ExistValue = timeArray[key].value;
                 break;
             }
-        }
 
+            //do nothing
+        }
         if (!_RecordExist) { //这一分不存在
-            timeObj.timeStamp = t0.toLocaleTimeString();
+            timeObj.timeStamp = t.toLocaleTimeString();
             timeObj.value = 0;
 
             var _timeObj = JSON.parse(JSON.stringify(timeObj));
             timeArray.push(_timeObj); //增加记录
-            console.log('----这一分不存在！头部加入新记录：' + t0.toLocaleTimeString())
+            console.log('----这一分不存在！头部加入新记录：' + t.toLocaleTimeString())
 
         }
 
         { //tail会重复？
-            t0.setTime(t2m); //tail
+            t.setTime(t2m); //tail
 
             for (const key in timeArray) { //already exits in Array?
-                if (timeArray[key].timeStamp == t0.toLocaleTimeString()) {
-                    console.log('----这一分存在！尾部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
+
+                if (timeArray[key].timeStamp == t.toLocaleTimeString()) {
+
+                    console.log('----这一分存在！尾部原值不变 ' + t.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(sArray[i]))
                     _RecordExist = true;
                     // _ExistValue = timeArray[key].value;
                     break
@@ -1066,6 +1078,7 @@ for (let i = 1; i < sArray.length; i++) {
             if (!_RecordExist) {
                 timeObj.timeStamp = t2m.toLocaleTimeString();
                 timeObj.value = 0;
+
                 var _timeObj = JSON.parse(JSON.stringify(timeObj));
                 timeArray.push(_timeObj);
                 console.log('----不存在，加入新尾部记录：' + t2m.toLocaleTimeString());
@@ -1074,15 +1087,16 @@ for (let i = 1; i < sArray.length; i++) {
     }
     //process middle 
     let j = 1;
-    console.log('----准备加入中部记录：');
+    console.log('----加入中部记录：');
     while (j < minDiff) {
-        t0.setTime(t1m.getTime() + j * 60 * 1000);
-        timeObj.timeStamp = t0.toLocaleTimeString();
+        t1m.setTime(t1m.getTime + j * 60 * 1000);
+        timeObj.timeStamp = t1m.toLocaleTimeString();
         timeObj.value = 0;
 
         var _timeObj = JSON.parse(JSON.stringify(timeObj));
         timeArray.push(_timeObj);
-        console.log('------加入中部记录：' + t0.toLocaleTimeString());
+        console.log('----加入中部记录：' + t1m.toLocaleTimeString());
+        // timeArray.push(t1m.toLocaleTimeString(), 1);
         j++
 
     }
@@ -1090,7 +1104,7 @@ for (let i = 1; i < sArray.length; i++) {
 }
 
 
-//console.log(JSON.stringify(timeArray))
+console.log(JSON.stringify(timeArray))
 
 // timeArray.sort(function (a, b) {
 //     //if (a.ID > b.ID) { return true } else
