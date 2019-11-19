@@ -1,5 +1,7 @@
+//列出所有的Location已经其下的传感器;可能需要几分钟才能收全
+
 var WebSocketClient = require('websocket').client;
-var cirrusAPIendpoint = "cirrus11.yanzi.se";
+var cirrusAPIendpoint = "cirrus21.yanzi.se";
 
 
 var username = "frank.shen@pinyuaninfo.com";
@@ -19,7 +21,7 @@ var _t3 = new Date();
 var _OnlineUnitsCounter = 0;
 var _Locations = [];
 var _Units = [];
-var TimeoutId = setTimeout(doReport, 30000);
+var TimeoutId = setTimeout(doReport, 60000);
 var _UnitsCounter = 0;
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
@@ -37,7 +39,7 @@ var locationObj = {
     "Allunits": 0,
     "Onlineunits": 0,
     "gwOnline": false
-        //"activityLevel": "medium"
+    //"activityLevel": "medium"
 
 }
 
@@ -56,19 +58,20 @@ var unitObj = {
 
 
 //Program body 
-client.on('connectFailed', function(error) {
+client.on('connectFailed', function (error) {
     console.log('Connect Error: reconnect' + error.toString());
     beginPOLL();
 });
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     //console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         clearTimeout(TimeoutId);
-        TimeoutId = setTimeout(doReport, 30000); //exit after 10 seconds idle
+        TimeoutId = setTimeout(doReport, 60000); //exit after 10 seconds idle
+        console.log("timer reset  ");
 
 
 
@@ -154,7 +157,7 @@ client.on('connect', function(connection) {
                         console.log('seeing ' + json.list.length + ' in  ' + json.locationAddress.locationId);
                         for (let index = 0; index < json.list.length; index++) { //process each response packet
                             if (json.list[index].unitTypeFixed.name == 'gateway' || json.list[index].unitAddress.did.indexOf('AP') != -1) { //console.log(json.list[index].unitAddress.did); 
-                                console.log('GW or AP') //GW and AP are not sensor
+                                console.log('GW or AP in ' + json.locationAddress.locationId) //GW and AP are not sensor
 
                             } else {
                                 // record all sensors 
@@ -204,12 +207,12 @@ client.on('connect', function(connection) {
         }
     });
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         console.log("Connection Error: reconnect" + error.toString());
         beginPOLL();
     });
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         console.log('Connection closed!');
     });
 
@@ -294,8 +297,8 @@ function doReport() {
     timestamp.setTime(t);
     console.log('Reporting：')
     console.log(timestamp.toLocaleTimeString() + '')
-        //sorting
-    _Locations.sort(function(a, b) {
+    //sorting
+    _Locations.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
@@ -303,7 +306,7 @@ function doReport() {
         return 0;
 
     });
-    _Units.sort(function(a, b) {
+    _Units.sort(function (a, b) {
         var x = a.locationId
         var y = b.locationId
         if (x > y) return 1;
@@ -346,17 +349,17 @@ function doReport() {
     }
     console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online') //sum up
 
-    //list all online physical sensors
-    for (let j = 0; j < _Units.length; j++) {
-        if (_Units[j].lifeCycleState == 'present')
-            console.log(_Units[j].did + ' in ' + _Units[j].locationId);
-    }
+    // //list all online physical sensors
+    // for (let j = 0; j < _Units.length; j++) {
+    //     if (_Units[j].lifeCycleState == 'present')
+    //         console.log(_Units[j].did + ' in ' + _Units[j].locationId);
+    // }
 
-    //list all online logical  sensors
-    for (let j = 0; j < _Units.length; j++) {
-        if (_Units[j].lifeCycleState == 'subUnit' && _Units[j].isChassis == false)
-            console.log(_Units[j].did + ' as a ' + _Units[j].type + ' in ' + _Units[j].locationId);
-    }
+    // //list all online logical  sensors
+    // for (let j = 0; j < _Units.length; j++) {
+    //     if (_Units[j].lifeCycleState == 'subUnit' && _Units[j].isChassis == false)
+    //         console.log(_Units[j].did + ' as a ' + _Units[j].type + ' in ' + _Units[j].locationId);
+    // }
 
 
     // _Units.forEach(function (x, i, a) {
