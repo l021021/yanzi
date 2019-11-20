@@ -2,7 +2,7 @@ var WebSocketClient = require('websocket').client;
 //var async = require('async');
 
 //Set up endpoint, you'll probably need to change this
-var cirrusAPIendpoint = "cirrus21.yanzi.se";
+var cirrusAPIendpoint = "cirrus11.yanzi.se";
 
 // ##########CHANGE BELOW TO YOUR OWN DATA##########
 
@@ -12,27 +12,31 @@ var password = "000000";
 
 //Set up Location ID and Device ID, please change this to your own, can be found in Yanzi Live
 var locationId = "229349" //Usually a 6 digit number
-var deviceID = "UUID-A9899341F08A49279C04EAC3E6C05094"
+//var deviceID = "UUID-A9899341F08A49279C04EAC3E6C05094"
+var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient();
 var connection;
-var TimeoutId = setTimeout(doReport, 10000);
+var TimeoutId = setTimeout(doReport, 30000);
 
-client.on('connectFailed', function(error) {
+const oneDay = 864000000;
+const _12Hour = 86400000;
+
+client.on('connectFailed', function (error) {
     console.log('Connect Error: ' + error.toString());
     connection.close();
 });
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     console.log('Websocket open!');
     console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest();
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         clearTimeout(TimeoutId);
-        TimeoutId = setTimeout(doReport, 10000);
+        TimeoutId = setTimeout(doReport, 30000);
 
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data);
@@ -46,7 +50,7 @@ client.on('connect', function(connection) {
                 if (json.responseCode.name == 'success') {
 
                     now = new Date().getTime();
-                    sendGetSamplesRequest(deviceID, now - 3600000 * 100, now);
+                    sendGetSamplesRequest(deviceID, now - oneDay, now);
                 } else {
                     console.log(json.responseCode.name);
                     console.log("Couldn't login, check your username and passoword");
@@ -55,8 +59,9 @@ client.on('connect', function(connection) {
             } else if (json.messageType == 'GetSamplesResponse') {
                 if (json.responseCode.name == 'success' && json.sampleListDto.list) {
 
-                    console.log(json.sampleListDto.list)
-                        //   connection.close();
+                    //           console.log(json.sampleListDto.list)
+                    console.log("receiving " + json.sampleListDto.list.length + ' lists');
+                    //   connection.close();
                 } else {
                     console.log("no samples.");
 
@@ -69,11 +74,11 @@ client.on('connect', function(connection) {
         }
     });
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         console.log("Connection Error: " + error.toString());
     });
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         console.log('Connection closed!');
     });
 
@@ -81,7 +86,7 @@ client.on('connect', function(connection) {
         if (connection.connected) {
             // Create the text to be sent
             var json = JSON.stringify(message, null, 1);
-            console.log('sending' + JSON.stringify(json));
+            //console.log('sending' + JSON.stringify(json));
             connection.sendUTF(json);
         } else {
             console.log("sendMessage: Couldn't send message, the connection is not open");
@@ -106,7 +111,7 @@ client.on('connect', function(connection) {
 
 
     function sendGetSamplesRequest(deviceID, timeStart, timeEnd) {
-        if ((timeEnd - timeStart) >= 10000000) {
+        if ((timeEnd - timeStart) >= _12Hour) {
             var request = {
                 "messageType": "GetSamplesRequest",
                 "dataSourceAddress": {
@@ -121,13 +126,13 @@ client.on('connect', function(connection) {
                 "timeSerieSelection": {
                     "resourceType": "TimeSerieSelection",
                     "timeStart": timeStart,
-                    "timeEnd": timeStart + 10000000
+                    "timeEnd": timeStart + _12Hour
                 }
             };
             //console.log(Date(timeEnd).toTimeString());
             sendMessage(request);
             //setTimeout('
-            sendGetSamplesRequest(deviceID, timeStart + 10000000, timeEnd);
+            sendGetSamplesRequest(deviceID, timeStart + _12Hour, timeEnd);
         } else {
             if (timeStart >= timeEnd) { return null };
 
@@ -177,6 +182,7 @@ function processArgs() {
 function doReport() {
 
     clearTimeout(TimeoutId);
+    console.log("Time is Up...")
     process.exit();
 }
 
