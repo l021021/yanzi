@@ -22,4 +22,4 @@ myDate.setMilliseconds(0);
 
 myDate.setTime(Date.parse('2019/01/01/12:00:00'))
 
-console.log(myDate.toLocaleString()) // get the even clock 8:00:00
+console.log(myDate.toLocaleTimeString()) // get the even clock 8:00:00
