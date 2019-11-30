@@ -91,7 +91,7 @@ client.on('connect', function (connection) {
           sendLoginRequest()
           break
         case 'LoginResponse':
-          if (json.responseCode.name == 'success') {
+          if (json.responseCode.name === 'success') {
             // sendPeriodicRequest() // as keepalive
             sendGetLocationsRequest() // not mandatory
             // sendSubscribeRequest(LocationId); //test one location
@@ -104,9 +104,9 @@ client.on('connect', function (connection) {
           }
           break
         case 'GetLocationsResponse':
-          if (json.responseCode.name == 'success') {
+          if (json.responseCode.name === 'success') {
             // UPDATE location IDs
-            if (json.list.length != 0) {
+            if (json.list.length !== 0) {
               // 收到一组新的location
               for (var i = 0; i < json.list.length; i++) {
                 let _locationExist = false
@@ -116,7 +116,7 @@ client.on('connect', function (connection) {
 
                   if (
                     _Locations[key].locationID ||
-                    _Locations[key].locationID ==
+                    _Locations[key].locationID ===
                       json.list[i].locationAddress.locationId
                   ) {
                     _locationExist = true
@@ -149,7 +149,7 @@ client.on('connect', function (connection) {
         case 'GetSamplesResponse':
           break
         case 'GetUnitsResponse':
-          if (json.responseCode.name == 'success') {
+          if (json.responseCode.name === 'success') {
             // console.log(JSON.stringify(json) + '\n\n');
 
             var _tempunitObj
@@ -163,8 +163,8 @@ client.on('connect', function (connection) {
             for (let index = 0; index < json.list.length; index++) {
               // process each response packet
               if (
-                json.list[index].unitTypeFixed.name == 'gateway' ||
-                json.list[index].unitAddress.did.indexOf('AP') != -1
+                json.list[index].unitTypeFixed.name === 'gateway' ||
+                json.list[index].unitAddress.did.indexOf('AP') !== -1
               ) {
                 // console.log(json.list[index].unitAddress.did);
                 console.log('GW or AP in ' + json.locationAddress.locationId) // GW and AP are not sensor
@@ -186,7 +186,7 @@ client.on('connect', function (connection) {
                 _tempunitObj = JSON.parse(JSON.stringify(unitObj))
                 _Units.push(_tempunitObj)
                 // _UnitsCounter++;
-                if (json.list[index].lifeCycleState.name == 'present') {
+                if (json.list[index].lifeCycleState.name === 'present') {
                   _OnlineUnitsCounter++
                 }
               }
@@ -331,15 +331,15 @@ function doReport () {
 
     for (let j = 0; j < _Locations.length; j++) {
       // update to its locations
-      if (_Locations[j].locationId == _Units[i].locationId) {
+      if (_Locations[j].locationId === _Units[i].locationId) {
         // Location match
         _Locations[j].Allunits++
-        if (_Units[i].lifeCycleState == 'present') {
+        if (_Units[i].lifeCycleState === 'present') {
           // mark live gateways
           _Locations[j].gwOnline = true // Location Online
           _Locations[j].Onlineunits++ // mark online sensors
         }
-        if (_Units[i].isChassis == 'true') {
+        if (_Units[i].isChassis === 'true') {
           _Locations[j].units++
         } // mark physical sensors
         break // 跳出循环
