@@ -11937,3 +11937,4 @@ node_modules/npm/scripts/publish-tag.js
 node_modules/npm/scripts/release.sh
 node_modules/npm/scripts/relocate.sh
 node_modules/npm/scripts/update-authors.sh
+.gitignore
