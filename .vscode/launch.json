@@ -1,0 +1,6 @@
+{
+    "name": "调试 Node.js 程序",
+    "type": "node",
+    "request": "launch",
+    "program": ""
+  }

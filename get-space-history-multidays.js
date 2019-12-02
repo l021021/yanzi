@@ -4,6 +4,8 @@
 counter+1就是in,反之ot,否则抛弃;
 根据motionstamp数组来结算占用;得到time数组
 
+TODO:有个数据先来后到的问题,所以需要先把DTO存起来排序,再进行处理.
+
 */
 
 var WebSocketClient = require('websocket').client
@@ -22,6 +24,7 @@ var TimeoutId = setTimeout(doReport, 30000)
 // const tenDay = 8640000;
 const _24Hour = 86400000
 var motionTimeStamps = []
+var DTOs = []
 const startDate = '2019/11/21/01:00:00'
 const endDate = '2019/11/21/22:59:59'
 var recordObj = {
@@ -82,9 +85,9 @@ client.on('connect', function (connection) {
     } else if (json.messageType === 'GetSamplesResponse') {
       if (json.responseCode.name === 'success' && json.sampleListDto.list) {
         c('receiving ' + json.sampleListDto.list.length + ' lists') // json.sampleListDto.list.length json.sampleListDto.dataSourceAddress.variableName.name
-
+        DTOs += json.sampleListDto.list
         // Process records
-        var temprecordObj
+        var _rObj
         switch (json.sampleListDto.dataSourceAddress.variableName.name) { // json.sampleListDto.list[0].resourceType  json.sampleListDto.list[0].sampleTime  json.sampleListDto.list[0].value
           case 'motion':
             for (let index = 1; index < json.sampleListDto.list.length; index++) {
@@ -94,12 +97,12 @@ client.on('connect', function (connection) {
               recordObj.timeStamp = json.sampleListDto.list[index].sampleTime
               if (lastValue !== json.sampleListDto.list[index].value) { // Value changed!
                 recordObj.value = 'in'
-                temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                motionTimeStamps.push(temprecordObj)
+                _rObj = JSON.parse(JSON.stringify(recordObj))
+                motionTimeStamps.push(_rObj)
               } else if (lastValue === json.sampleListDto.list[index].value) { // Value unchanged!
                 recordObj.value = 'ot'
-                temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                motionTimeStamps.push(temprecordObj)
+                _rObj = JSON.parse(JSON.stringify(recordObj))
+                motionTimeStamps.push(_rObj)
               } else { // do not write to recordarray
                 c('        Sensor first seen, cannot tell')
               };
@@ -116,16 +119,16 @@ client.on('connect', function (connection) {
               recordObj.timeStamp = json.sampleListDto.list[index].sampleTime
               if (json.sampleListDto.list[index].assetState.name === 'occupied') { //
                 recordObj.value = 'in'
-                temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                motionTimeStamps.push(temprecordObj)
+                _rObj = JSON.parse(JSON.stringify(recordObj))
+                motionTimeStamps.push(_rObj)
               } else if (json.sampleListDto.list[index].assetState.name === 'free') { // Value unchanged!
                 recordObj.value = 'ot'
-                temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                motionTimeStamps.push(temprecordObj)
+                _rObj = JSON.parse(JSON.stringify(recordObj))
+                motionTimeStamps.push(_rObj)
               } else {
                 recordObj.value = 'ms'
-                temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                motionTimeStamps.push(temprecordObj)
+                _rObj = JSON.parse(JSON.stringify(recordObj))
+                motionTimeStamps.push(_rObj)
               };
             }
             break
