@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 /* eslint-disable no-redeclare */
 /*
 首先拉回历史数据dtolist,根据counter推测in 还是 ot,写入motionstamp数组;
@@ -104,6 +105,7 @@ client.on('connect', function (connection) {
         // Process records
         var _rObj
         switch (
+        // eslint-disable-next-line indent
         json.sampleListDto.dataSourceAddress.variableName.name // json.sampleListDto.list[0].resourceType  json.sampleListDto.list[0].sampleTime  json.sampleListDto.list[0].value
         ) {
           case 'motion':
