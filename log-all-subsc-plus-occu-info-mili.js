@@ -49,6 +49,7 @@ var client = new WebSocketClient()
 
 client.on('connectFailed', function (error) {
     console.log('Connect Error: ' + error.toString())
+    // eslint-disable-next-line no-undef
     connection.close()
 })
 
@@ -192,7 +193,9 @@ client.on('connect', function (connection) {
                                 case 'SampleAsset': // sampleAsset- free occupied ismotion isnomotion
                                     _t2.setTime(json.timeSent)
                                     _t3.setTime(json.list[0].list[0].sampleTime)
+                                    // eslint-disable-next-line no-redeclare
                                     var motionFlag = ' ? ' // update new value
+                                    // eslint-disable-next-line no-redeclare
                                     var temprecordObj
                                     // var motionFlag = ' ?? '; //update new value
                                     recordObj.type = 'sampleAsset'
@@ -364,6 +367,7 @@ client.on('connect', function (connection) {
                                 // _t2.setTime(json.list[0].timeOfEvent);
                                 // console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' EVENTS' + json.list[0].unitAddress.did + ' ' + json.list[0].eventType.name);
                                 //  break;
+                                // eslint-disable-next-line no-fallthrough
                                 default:
                                     // console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
                                     console.log(
