@@ -4,6 +4,8 @@
 counter+1就是in,反之ot,否则抛弃;
 根据motionstamp数组来结算占用;得到time数组
 
+TODO:迭代有问题
+
 */
 
 var WebSocketClient = require('websocket').client

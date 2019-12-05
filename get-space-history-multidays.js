@@ -6,6 +6,7 @@ counter+1就是in,反之ot,否则抛弃;
 根据motionstamp数组来结算占用;得到time数组
 
 TODO:有个数据先来后到的问题,所以需要先把DTO存起来排序,再进行处理.
+TODO:getsamples 迭代有问题
 
 */
 
