@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // 记录实时MOTION数据,形成记录文件,供后续分析
 
 var WebSocketClient = require('websocket').client
@@ -5,7 +6,7 @@ var cirrusAPIendpoint = 'cirrus11.yanzi.se'
 
 var username = 'frank.shen@pinyuaninfo.com'
 var password = 'Internetofthing'
-var LocationId = '229349' // fangtang
+// var LocationId = '229349' // fangtang
 // var LocationId = '188559' //1001
 // var LocationId = '88252' //1002
 // var LocationId = '60358' //1003
@@ -27,11 +28,10 @@ var _t1 = new Date()
 var _t2 = new Date()
 var _t3 = new Date()
 
-var _Locations = []
-var sensorArray = new Array()
-var motionTimeStamps = new Array()
-var assetTimeStamps1 = new Array()
-var assetTimeStamps2 = new Array()
+var sensorArray = []
+var motionTimeStamps = []
+var assetTimeStamps1 = []
+var assetTimeStamps2 = []
 var assetTimeStamps3 = ''
 
 var recordObj = {
@@ -72,7 +72,7 @@ client.on('connect', function (connection) {
                 var sensorcounter = 0
                 for (var key in sensorArray) {
                     sensorcounter++
-                    if (output == '') {
+                    if (output === '') {
                         output = sensorArray[key]
                     } else {
                         output += ',' + sensorArray[key]
@@ -80,7 +80,12 @@ client.on('connect', function (connection) {
                 } // do some report before exit
 
                 // console.log(sensorArray.toString());
-                console.log('Total Motions Sensors seen： ' + sensorcounter + ' : with counters as :' + output)
+                console.log(
+                    'Total Motions Sensors seen： ' +
+                    sensorcounter +
+                    ' : with counters as :' +
+                    output
+                )
                 console.log('Motion records calculated from counters:')
                 console.log(JSON.stringify(motionTimeStamps))
                 console.log('Motion records calculated from motion/nomotion packets:')
@@ -100,7 +105,7 @@ client.on('connect', function (connection) {
                     sendLoginRequest()
                     break
                 case 'LoginResponse':
-                    if (json.responseCode.name == 'success') {
+                    if (json.responseCode.name === 'success') {
                         sendPeriodicRequest() // as keepalive
                         // sendGetLocationsRequest();// not mandatory
                         sendSubscribeRequest(LocationId) // test
@@ -123,7 +128,9 @@ client.on('connect', function (connection) {
                     var now = new Date().getTime()
                     setTimeout(sendGetLocationsRequest, json.expireTime - now)
                     _t1.setTime(json.expireTime)
-                    console.log('Susbscribe renew in (min)： ' + (json.expireTime - now) / 60000) // 100min
+                    console.log(
+                        'Susbscribe renew in (min)： ' + (json.expireTime - now) / 60000
+                    ) // 100min
                     break
                 case 'SubscribeData':
                     // console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
@@ -144,29 +151,45 @@ client.on('connect', function (connection) {
                                     recordObj.type = 'samplemotion'
                                     recordObj.Did = json.list[0].dataSourceAddress.did
                                     recordObj.timeStamp = _t1.getTime()
-                                    sensorArray[json.list[0].dataSourceAddress.did] = json.list[0].list[0].value // setup sensor array
-                                    if (temp1 == (json.list[0].list[0].value - 1)) { // Value changed!
+                                    sensorArray[json.list[0].dataSourceAddress.did] =
+                                        json.list[0].list[0].value // setup sensor array
+                                    if (temp1 === json.list[0].list[0].value - 1) {
+                                        // Value changed!
                                         motionFlag = ' ++ '
                                         recordObj.value = 'in'
                                         temprecordObj = JSON.parse(JSON.stringify(recordObj))
                                         motionTimeStamps.push(temprecordObj)
-                                    } else if (temp1 == json.list[0].list[0].value) {
+                                    } else if (temp1 === json.list[0].list[0].value) {
                                         motionFlag = ' == '
                                         recordObj.value = 'ot'
                                         temprecordObj = JSON.parse(JSON.stringify(recordObj))
                                         motionTimeStamps.push(temprecordObj)
                                         // motionTimeStamps.push(json.list[0].dataSourceAddress.did + ',ot,' + _t1.getTime());
-                                    } else { // do not record to record
+                                    } else {
+                                        // do not record to record
                                         // console.log("        Sensor first seen, cannot tell");
-                                    };
+                                    }
 
-                                    console.log('      ' + _Counter + '# ' + _t3.toLocaleTimeString() + ' SampleMotion ' + json.list[0].dataSourceAddress.did + motionFlag +
-                                        _t1.toLocaleTimeString() + ' # ' + json.list[0].list[0].value +
-                                        ' Last: ' + _t2.toLocaleTimeString() + ' static(s)：  ' +
-                                        (json.list[0].list[0].sampleTime - json.list[0].list[0].timeLastMotion) / 1000)
+                                    console.log(
+                                        '      ' +
+                                        _Counter +
+                                        '# ' +
+                                        _t3.toLocaleTimeString() +
+                                        ' SampleMotion ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        motionFlag +
+                                        _t1.toLocaleTimeString() +
+                                        ' # ' +
+                                        json.list[0].list[0].value +
+                                        ' Last: ' +
+                                        _t2.toLocaleTimeString() +
+                                        ' static(s)：  ' +
+                                        (json.list[0].list[0].sampleTime -
+                                            json.list[0].list[0].timeLastMotion) /
+                                        1000
+                                    )
                                     break
                                 case 'SampleAsset': // sampleAsset- free occupied ismotion isnomotion
-
                                     _t2.setTime(json.timeSent)
                                     _t3.setTime(json.list[0].list[0].sampleTime)
                                     var motionFlag = ' ? ' // update new value
@@ -175,8 +198,18 @@ client.on('connect', function (connection) {
                                     recordObj.type = 'sampleAsset'
                                     recordObj.Did = json.list[0].dataSourceAddress.did
                                     recordObj.timeStamp = _t1.getTime()
-                                    console.log('      ' + _Counter + '# ' + json.list[0].list[0].assetState.name + ' ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() + '  ' +
-                                        json.list[0].list[0].assetState.name)
+                                    console.log(
+                                        '      ' +
+                                        _Counter +
+                                        '# ' +
+                                        json.list[0].list[0].assetState.name +
+                                        ' ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        ' @ ' +
+                                        _t3.toLocaleTimeString() +
+                                        '  ' +
+                                        json.list[0].list[0].assetState.name
+                                    )
                                     switch (json.list[0].list[0].assetState.name) {
                                         case 'isMotion':
                                             // assetTimeStamps1 += json.list[0].dataSourceAddress.did + ',mo,' + _t3.getTime() + '\n';
@@ -210,38 +243,94 @@ client.on('connect', function (connection) {
                                             assetTimeStamps2.push(temprecordObj)
                                             break
                                         default:
-                                            console.log('!!!! cannot understand assetname ' + json.list[0].list[0].assetState.name)
+                                            console.log(
+                                                '!!!! cannot understand assetname ' +
+                                                json.list[0].list[0].assetState.name
+                                            )
                                             break
-                                    };
+                                    }
 
                                     break
                                 case 'SamplePercentage': // SamplePercentage
                                     _t2.setTime(json.timeSent)
                                     _t3.setTime(json.list[0].list[0].sampleTime)
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SamplePercentage ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
-                                        ' Occu%:' + json.list[0].list[0].value)
+                                    console.log(
+                                        '      ' +
+                                        _Counter +
+                                        '# ' +
+                                        _t2.toLocaleTimeString() +
+                                        ' SamplePercentage ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        ' @ ' +
+                                        _t3.toLocaleTimeString() +
+                                        ' Occu%:' +
+                                        json.list[0].list[0].value
+                                    )
                                     break
                                 case 'SampleUtilization': // SampleUtilization
-
                                     _t2.setTime(json.timeSent)
                                     _t3.setTime(json.list[0].list[0].sampleTime)
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' SampleUtilization ' + json.list[0].dataSourceAddress.did + ' @ ' + _t3.toLocaleTimeString() +
-                                        ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied)
-                                    assetTimeStamps3 += _t2.toLocaleTimeString() + ' AsstUT ' + json.list[0].dataSourceAddress.did + ' free:' + json.list[0].list[0].free + ' occupied:' + json.list[0].list[0].occupied + '\n'
+                                    console.log(
+                                        '      ' +
+                                        _Counter +
+                                        '# ' +
+                                        _t2.toLocaleTimeString() +
+                                        ' SampleUtilization ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        ' @ ' +
+                                        _t3.toLocaleTimeString() +
+                                        ' free:' +
+                                        json.list[0].list[0].free +
+                                        ' occupied:' +
+                                        json.list[0].list[0].occupied
+                                    )
+                                    assetTimeStamps3 +=
+                                        _t2.toLocaleTimeString() +
+                                        ' AsstUT ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        ' free:' +
+                                        json.list[0].list[0].free +
+                                        ' occupied:' +
+                                        json.list[0].list[0].occupied +
+                                        '\n'
 
                                     break
 
                                 case 'SampleUpState':
                                     _t2.setTime(json.list[0].list[0].sampleTime)
-                                    console.log(_Counter + '# ' + _t2.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].deviceUpState.name)
+                                    console.log(
+                                        _Counter +
+                                        '# ' +
+                                        _t2.toLocaleTimeString() +
+                                        ' ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        ' ' +
+                                        json.list[0].list[0].deviceUpState.name
+                                    )
                                     // console.log(JSON.stringify(json));
                                     break
 
                                 case 'SlotDTO':
-                                    console.log('      ' + _Counter + '# SlotDTO ' + json.list[0].dataSourceAddress.did + '=' + (json.list[0].list[0].maxValue + json.list[0].list[0].minValue) / 2)
+                                    console.log(
+                                        '      ' +
+                                        _Counter +
+                                        '# SlotDTO ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        '=' +
+                                        (json.list[0].list[0].maxValue +
+                                            json.list[0].list[0].minValue) /
+                                        2
+                                    )
                                     break
                                 case 'SampleEndOfSlot':
-                                    console.log('     ' + _Counter + '# EndofDTO ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].sample.assetState.name)
+                                    console.log(
+                                        '     ' +
+                                        _Counter +
+                                        '# EndofDTO ' +
+                                        json.list[0].dataSourceAddress.did +
+                                        ' ' +
+                                        json.list[0].list[0].sample.assetState.name
+                                    )
                                     break
                                 case 'SampleVOC':
                                 case 'SampleTemp':
@@ -253,11 +342,19 @@ client.on('connect', function (connection) {
                                     // console.log('     ' + _Counter + '# Sample ' + _t3.toLocaleTimeString() + ' ' + json.list[0].dataSourceAddress.did + ' ' + json.list[0].list[0].value);
                                     break
                                 default:
-                                    console.log('!!!! cannot understand samplelist resourcetype' + json.list[0].list[0].resourceType)
+                                    console.log(
+                                        '!!!! cannot understand samplelist resourcetype' +
+                                        json.list[0].list[0].resourceType
+                                    )
                             }
                             break
                         case 'EventDTO':
-                            console.log('    ' + _Counter + '#    Event DTO : ' + json.list[0].eventType.name)
+                            console.log(
+                                '    ' +
+                                _Counter +
+                                '#    Event DTO : ' +
+                                json.list[0].eventType.name
+                            )
                             switch (json.list[0].eventType.name) {
                                 case 'newUnAcceptedDeviceSeenByDiscovery':
                                 case 'physicalDeviceIsNowUP':
@@ -269,16 +366,24 @@ client.on('connect', function (connection) {
                                 //  break;
                                 default:
                                     // console.log(_Counter + '#    Event DTO : ' + json.list[0].eventType.name);
-                                    console.log('!!!! cannot understand this Event' + json.list[0].eventType.name)
+                                    console.log(
+                                        '!!!! cannot understand this Event' +
+                                        json.list[0].eventType.name
+                                    )
                             }
                             break
                         default:
-                            console.log('!!!! cannot understand this rsourcetype ' + json.list[0].resourceType)
+                            console.log(
+                                '!!!! cannot understand this rsourcetype ' +
+                                json.list[0].resourceType
+                            )
                     }
                     break
 
                 default:
-                    console.log('!!!! cannot understand this messagetype' + json.messageType)
+                    console.log(
+                        '!!!! cannot understand this messagetype' + json.messageType
+                    )
                     // connection.close();
                     break
             }
@@ -289,7 +394,8 @@ client.on('connect', function (connection) {
         console.log('Connection Error: ' + error.toString())
     })
 
-    connection.on('close', function (error) {
+    // eslint-disable-next-line handle-callback-err
+    connection.on('close', function () {
         console.log('Connection closed!')
     })
 
@@ -300,7 +406,9 @@ client.on('connect', function (connection) {
             //    console.log('sending' + JSON.stringify(json));
             connection.sendUTF(json)
         } else {
-            console.log("sendMessage: Couldn't send message, the connection is not open")
+            console.log(
+                "sendMessage: Couldn't send message, the connection is not open"
+            )
         }
     }
 
@@ -330,45 +438,6 @@ client.on('connect', function (connection) {
         sendMessage(request)
     }
 
-    function sendGetSamplesRequest() {
-        var now = new Date().getTime()
-        var nowMinusOneHour = now - 60 * 60 * 1000
-        var request = {
-            messageType: 'GetSamplesRequest',
-            dataSourceAddress: {
-                resourceType: 'DataSourceAddress',
-                did: deviceID,
-                locationId: locationId,
-                variableName: {
-                    resourceType: 'VariableName',
-                    name: 'temperatureC'
-                }
-            },
-            timeSerieSelection: {
-                resourceType: 'TimeSerieSelection',
-                timeStart: nowMinusOneHour,
-                timeEnd: now
-            }
-        }
-        sendMessage(request)
-    }
-
-    function sendGetUnitsRequest() {
-        var now = new Date().getTime()
-        var nowMinusOneHour = now - 60 * 60 * 1000
-        var request = {
-
-            messageType: 'GetUnitsRequest',
-            timeSent: now,
-            locationAddress: {
-                resourceType: 'LocationAddress',
-                locationId: locationID
-            }
-        }
-
-        sendMessage(request)
-    }
-
     function sendSubscribeRequest(location_ID) {
         var now = new Date().getTime()
         //   var nowMinusOneHour = now - 60 * 60 * 1000;
@@ -382,25 +451,6 @@ client.on('connect', function (connection) {
             subscriptionType: {
                 resourceType: 'SubscriptionType',
                 name: 'data' // data   |  lifecircle  |  config
-            }
-        }
-
-        sendMessage(request)
-    }
-
-    function sendSubscribeRequest_lifecircle(location_ID) {
-        var now = new Date().getTime()
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
-        var request = {
-            messageType: 'SubscribeRequest',
-            timeSent: now,
-            unitAddress: {
-                resourceType: 'UnitAddress',
-                locationId: location_ID
-            },
-            subscriptionType: {
-                resourceType: 'SubscriptionType',
-                name: 'lifecircle' // data   |  lifecircle  |  config
             }
         }
 
