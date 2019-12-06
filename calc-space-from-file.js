@@ -14,6 +14,11 @@ FS.readFile('UUID-17B30675BC5849C2AD81F2448E772705_2019_11_08_0_00_00_2019_11_08
     str = str.replace(/\]\[/gi, ',')
 
     json = JSON.parse(str)
+    c(JSON.stringify(json))
 })
 
-c(JSON.stringify(json))
+for (var i = 0; i < json.length)
+
+//json[0].assetState.name
+
+//json[0].sampleTime
