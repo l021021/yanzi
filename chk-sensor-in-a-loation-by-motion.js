@@ -26,7 +26,8 @@ var password = 'Internetofthing'
 // var LocationId = '83561' //1005
 
 // var LocationId = '521209' //wafer-shanghai
-var LocationId = '74365' // kerry 静安
+// var LocationId = '74365' // kerry 静安
+var LocationId = '306571' // leino
 
 var _logLimit = 1000 // will exit when this number of messages has been logged
 
@@ -51,23 +52,23 @@ var sensorNoMotionMap = new Map()
 var client = new WebSocketClient()
 const c = console.log
 
-client.on('connectFailed', function (error) {
+client.on('connectFailed', function(error) {
     c('Connect Error: ' + error.toString())
     connection.close()
     beginPOLL()
 })
 
-client.on('connect', function (connection) {
+client.on('connect', function(connection) {
     // c("Checking API service status with ServiceRequest.");
     sendServiceRequest()
-    // Handle messages
-    connection.on('message', function (message) {
+        // Handle messages
+    connection.on('message', function(message) {
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data)
             var t = new Date().getTime()
             var timestamp = new Date()
             timestamp.setTime(t)
-            //        c(timestamp.toLocaleTimeString());
+                //        c(timestamp.toLocaleTimeString());
 
             _Counter = _Counter + 1 // counter of all received packets
 
@@ -79,16 +80,16 @@ client.on('connect', function (connection) {
                 // do some report before exit
                 c('Total sensors detected ' + sensorCounterMap.size)
 
-                sensorCounterMap.forEach(function (value, key, map) {
+                sensorCounterMap.forEach(function(value, key, map) {
                     c('key:%s,value:%s', key, value)
                 })
 
                 c('\n\nSensors and Motion data counter: ')
-                sensorMotionMap.forEach(function (value, key, map) {
+                sensorMotionMap.forEach(function(value, key, map) {
                     c('key:%s,total:%s', key, value)
                 })
                 c('\n\nSensors and noMotion data counter:')
-                sensorNoMotionMap.forEach(function (value, key, map) {
+                sensorNoMotionMap.forEach(function(value, key, map) {
                     c('key:%s,total:%s', key, value)
                 })
                 process.exit()
@@ -131,7 +132,7 @@ client.on('connect', function (connection) {
                                     if (temp1 === (json.list[0].list[0].value - 1)) { // Value changed!
                                         c(timestamp.toLocaleTimeString() + ' ' + _Counter + '# ' + 'Motion!')
                                         sensorMotionMap.set(json.list[0].dataSourceAddress.did, sensorMotionMap.get(json.list[0].dataSourceAddress.did) + 1)
-                                        //     motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
+                                            //     motionTimeStamps = motionTimeStamps + '{"ID":' + '"' + json.list[0].dataSourceAddress.did + '","in":"' + _t1.toLocaleTimeString() + '"},';
                                     } else if (temp1 === json.list[0].list[0].value) {
                                         c(timestamp.toLocaleTimeString() + ' ' + _Counter + '# ' + 'No motion!')
                                         sensorNoMotionMap.set(json.list[0].dataSourceAddress.did, sensorNoMotionMap.get(json.list[0].dataSourceAddress.did) + 1)
@@ -154,19 +155,19 @@ client.on('connect', function (connection) {
 
                 default:
                     c('!!!! cannot understand' + json)
-                    // connection.close();
+                        // connection.close();
                     break
             }
         }
     })
 
-    connection.on('error', function (error) {
+    connection.on('error', function(error) {
         c('Connection Error: ' + error.toString())
         beginPOLL()
-        // process.exit();
+            // process.exit();
     })
 
-    connection.on('close', function (error) {
+    connection.on('close', function(error) {
         c('Connection closed!')
         beginPOLL()
         process.exit()
@@ -176,7 +177,7 @@ client.on('connect', function (connection) {
         if (connection.connected) {
             // Create the text to be sent
             var json = JSON.stringify(message, null, 1)
-            //    c('sending' + JSON.stringify(json));
+                //    c('sending' + JSON.stringify(json));
             connection.sendUTF(json)
         } else {
             c("sendMessage: Couldn't send message, the connection is not open")
@@ -201,7 +202,7 @@ client.on('connect', function (connection) {
 
     function sendGetLocationsRequest() {
         var now = new Date().getTime()
-        // var nowMinusOneHour = now - 60 * 60 * 1000;
+            // var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
             messageType: 'GetLocationsRequest',
             timeSent: now
@@ -211,7 +212,7 @@ client.on('connect', function (connection) {
 
     function sendSubscribeRequest(location_ID) {
         var now = new Date().getTime()
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
+            //   var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
             messageType: 'SubscribeRequest',
             timeSent: now,
@@ -230,7 +231,7 @@ client.on('connect', function (connection) {
 
     function sendSubscribeRequest_lifecircle(location_ID) {
         var now = new Date().getTime()
-        //   var nowMinusOneHour = now - 60 * 60 * 1000;
+            //   var nowMinusOneHour = now - 60 * 60 * 1000;
         var request = {
             messageType: 'SubscribeRequest',
             timeSent: now,
@@ -267,7 +268,7 @@ function beginPOLL() {
         return
     }
     client.connect('wss://' + cirrusAPIendpoint + '/cirrusAPI')
-    // c("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
+        // c("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
 }
 
 beginPOLL()
