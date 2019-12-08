@@ -1,6 +1,9 @@
 /*
 从 log-sapce-history-to-file 产生的文件中计算占用数据,精确到分
 
+TODO:移植算法
+
+
 */
 const FS = require('fs')
 var str
