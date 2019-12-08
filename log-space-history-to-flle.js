@@ -20,7 +20,7 @@ var client = new WebSocketClient()
 var connection
 var c = console.log
 var locationId = '229349' // fangtang
-    // var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
+// var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
 
 const startDate = '2019/11/08/0:00:00'
 const endDate = '2019/11/08/23:59:59'
@@ -58,7 +58,7 @@ var t1m = new Date()
 var t0 = new Date()
 var t2m = new Date()
 var timeArray = []
-    // var _timeObj
+// var _timeObj
 var timeObj = {
     ID: '',
     timeStamp: '',
@@ -67,18 +67,18 @@ var timeObj = {
 
 var minDiff, t1ToNext, PrevTot2
 
-client.on('connectFailed', function(error) {
+client.on('connectFailed', function (error) {
     c('Connect Error: ' + error.toString())
     connection.close()
 })
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     c('Websocket open!')
     c('Checking API service status with ServiceRequest.')
     sendServiceRequest()
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         clearTimeout(TimeoutId)
         TimeoutId = setTimeout(doReport, 30000)
 
@@ -93,10 +93,10 @@ client.on('connect', function(connection) {
             if (json.responseCode.name === 'success') {
                 // now = new Date().getTime()
                 sendGetSamplesRequest(
-                        deviceID,
-                        Date.parse(startDate),
-                        Date.parse(endDate)
-                    ) // 历史数据拉回
+                    deviceID,
+                    Date.parse(startDate),
+                    Date.parse(endDate)
+                ) // 历史数据拉回
             } else {
                 c(json.responseCode.name)
                 c("Couldn't login, check your username and passoword")
@@ -106,7 +106,7 @@ client.on('connect', function(connection) {
             if (json.responseCode.name === 'success' && json.sampleListDto.list) {
                 c('receiving ' + json.sampleListDto.list.length + ' lists') // json.sampleListDto.list.length json.sampleListDto.dataSourceAddress.variableName.name
 
-                logStream.write(JSON.stringify(json.sampleListDto.list))
+                logStream.write(JSON.stringify(json.sampleListDto.list))// log very lists to file
 
                 // Process records
             } else {
@@ -118,11 +118,11 @@ client.on('connect', function(connection) {
         }
     })
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         c('Connection Error: ' + error.toString())
     })
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         c('Connection closed!' + error.message)
     })
 
@@ -130,7 +130,7 @@ client.on('connect', function(connection) {
         if (connection.connected) {
             // Create the text to be sent
             var json = JSON.stringify(message, null, 1)
-                // c('sending' + JSON.stringify(json));
+            // c('sending' + JSON.stringify(json));
             connection.sendUTF(json)
         } else {
             c("sendMessage: Couldn't send message, the connection is not open")
@@ -225,7 +225,7 @@ function doReport() {
     clearTimeout(TimeoutId)
     c('Total motion records: ' + motionTimeStamps.length)
     c('for ' + deviceID + ' from ' + startDate + ' to ' + endDate)
-        // c("Time is Up...")
+    // c("Time is Up...")
     c('all samplemotion records:')
     for (let i = 0; i < motionTimeStamps.length; i++) {
         t1.setTime(motionTimeStamps[i].timeStamp)
@@ -275,7 +275,7 @@ function doReport() {
             t0.setTime(t1m.getTime()) // 前一整分
 
             let _RecordExist = false // 记录不存在
-                // eslint-disable-next-line no-unused-vars
+            // eslint-disable-next-line no-unused-vars
             var _ExistValue = 0
 
             for (const key in timeArray) {
@@ -283,7 +283,7 @@ function doReport() {
                 if (timeArray[key].timeStamp === t0.toLocaleTimeString()) {
                     // c('      这一分记录存在！增加头部的数值' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]))
                     _RecordExist = true
-                        // _ExistValue = timeArray[key].value;
+                    // _ExistValue = timeArray[key].value;
                     timeArray[key].value += t1ToNext / 60 // 增加新的占用
                     break
                 }
@@ -295,7 +295,7 @@ function doReport() {
                 timeObj.value = t1ToNext / 60
                 var _timeObj = JSON.parse(JSON.stringify(timeObj))
                 timeArray.push(_timeObj) // 增加记录
-                    //  c('      这一分不存在！头部加入新记录：' + t0.toLocaleTimeString())
+                //  c('      这一分不存在！头部加入新记录：' + t0.toLocaleTimeString())
             }
 
             {
@@ -317,13 +317,13 @@ function doReport() {
                     timeObj.value = PrevTot2 / 60
                     var _timeObj = JSON.parse(JSON.stringify(timeObj))
                     timeArray.push(_timeObj)
-                        //  c('      这一分不存在，加入新尾部记录：' + t2m.toLocaleTimeString())
+                    //  c('      这一分不存在，加入新尾部记录：' + t2m.toLocaleTimeString())
                 }
             }
 
             // process middle
             let j = 1
-                // c('      准备加入中部记录');
+            // c('      准备加入中部记录');
             while (j < minDiff) {
                 t0.setTime(t1m.getTime() + j * 60 * 1000) // 下一分
                 timeObj.timeStamp = t0.toLocaleTimeString()
@@ -370,7 +370,7 @@ function doReport() {
 
                 var _timeObj = JSON.parse(JSON.stringify(timeObj))
                 timeArray.push(_timeObj) // 增加记录
-                    //  c('      这一分不存在！头部加入新记录 0：' + t0.toLocaleTimeString())
+                //  c('      这一分不存在！头部加入新记录 0：' + t0.toLocaleTimeString())
             }
 
             // tail会重复？
@@ -381,7 +381,7 @@ function doReport() {
                 if (timeArray[key].timeStamp === t0.toLocaleTimeString()) {
                     //   c('      这一分尾部存在！尾部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
                     _RecordExist = true
-                        // _ExistValue = timeArray[key].value;
+                    // _ExistValue = timeArray[key].value;
                     break
                 }
             }
@@ -391,12 +391,12 @@ function doReport() {
                 timeObj.value = 0
                 var _timeObj = JSON.parse(JSON.stringify(timeObj))
                 timeArray.push(_timeObj)
-                    // c('      这一分尾部不存在，加入新尾部记录：' + t2m.toLocaleTimeString())
+                // c('      这一分尾部不存在，加入新尾部记录：' + t2m.toLocaleTimeString())
             }
 
             // process middle
             let j = 1
-                // c('      准备加入中部记录：');
+            // c('      准备加入中部记录：');
             while (j < minDiff) {
                 t0.setTime(t1m.getTime() + j * 60 * 1000)
                 timeObj.timeStamp = t0.toLocaleTimeString()
@@ -411,7 +411,7 @@ function doReport() {
     }
 
     c('timearray:sorting ')
-    timeArray.sort(function(a, b) {
+    timeArray.sort(function (a, b) {
         if (
             Date.parse('2019/1/1/' + a.timeStamp) >
             Date.parse('2019/1/1/' + b.timeStamp)
