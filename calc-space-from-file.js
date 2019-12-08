@@ -3,7 +3,6 @@
 
 TODO:移植算法
 
-
 */
 const FS = require('fs')
 var str
@@ -99,9 +98,8 @@ for (var i = 0; i < json.length; i++) {
         default:
             c('!!!! cannot understand this rsourcetype ' + json.list[0].resourceType)
     }
-
 }
 
-//json[0].assetState.name
+// json[0].assetState.name
 
-//json[0].sampleTime
+// json[0].sampleTime
