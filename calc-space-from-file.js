@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 /*
 从 log-sapce-history-to-file 产生的文件中计算占用数据,精确到分
 
@@ -12,11 +13,13 @@ const FS = require('fs')
 var str
 var json
 var recordObj = {
-    type: '',
+    // type: '',
     // Did: '',
     timeStamp: '',
     value: ''
 }
+
+var filename = 'EUI64-D0CF5EFFFE792D84-3-Motion_2019_11_08_0_00_00_2019_11_11_23_59_59'
 
 var t1 = new Date()
 var t2 = new Date()
@@ -25,7 +28,6 @@ var t0 = new Date()
 var t2m = new Date()
 var timeArray = []
 var motionTimeStamps = []
-var timeArray = []
     // var _timeObj
 var timeObj = {
     ID: '',
@@ -37,12 +39,14 @@ var minDiff, t1ToNext, PrevTot2
 
 var lastValue = -1
 const c = console.log
-str = FS.readFileSync('UUID-17B30675BC5849C2AD81F2448E772705_2019_11_08_0_00_00_2019_12_08_23_59_59.json', 'utf-8')
+
+str = FS.readFileSync(filename + '.json', 'utf-8')
+var writetoCVS = FS.createWriteStream(filename + '.csv', 'utf-8')
 
 str = str.replace(/\]\[/gi, ',') // change ][ to , which was caused by consecutive packets
 
 json = JSON.parse(str)
-c(JSON.stringify(json))
+    // c(JSON.stringify(json))
 
 /*
 json
@@ -54,11 +58,18 @@ json[0].sampleTime 1573176377796
 */
 // Process records
 // write into motiontimestamps
-if (json[0].assetState.resourceType === 'AssetState') {
+var tempObj
+
+json.sort(function(a, b) {
+    if (Date.parse(a.sampleTime) > Date.parse(b.sampleTime)) {
+        return -1
+    } else {
+        return 1
+    };
+})
+if (json[0].assetState && json[0].assetState.resourceType === 'AssetState') {
     c('calculating ' + json.length + ' lists')
     for (var i = 0; i < json.length; i++) {
-        var tempObj
-
         recordObj.timeStamp = json[i].sampleTime
         if (json[i].assetState.name === 'occupied') {
             recordObj.value = 'in'
@@ -74,9 +85,33 @@ if (json[0].assetState.resourceType === 'AssetState') {
             motionTimeStamps.push(tempObj)
         };
     }
+} else if (json[0].resourceType === 'SampleMotion') { // json[1].value json[1].sampleTime
+    c('calculating ' + json.length + ' lists')
+    for (let i = 1; i < json.length; i++) {
+        lastValue = json[i - 1].value // update new value ,if the first ,take -1
+            // recordObj.type = json[index].resourceType
+            // recordObj.Did = json.sampleListDto.dataSourceAddress.did
+        recordObj.timeStamp = json[i].sampleTime
+        if (lastValue !== json[i].value) { // Value changed!
+            recordObj.value = 'in'
+            tempObj = JSON.parse(JSON.stringify(recordObj))
+            motionTimeStamps.push(tempObj)
+        } else if (lastValue === json[i].value) { // Value unchanged!
+            recordObj.value = 'ot'
+            tempObj = JSON.parse(JSON.stringify(recordObj))
+            motionTimeStamps.push(tempObj)
+        } else { // do not write to recordarray
+            c('        Sensor first seen, cannot tell')
+        };
+    }
 }
 
 doReport()
+
+// FS.writeFileSync(filename + '.csv', JSON.stringify(timeArray), 'utf8')
+writetoCVS.end()
+process.exit()
+    // write to csv
 
 function doReport() {
     c('Total motion records: ' + motionTimeStamps.length)
@@ -87,9 +122,8 @@ function doReport() {
         t1.setTime(motionTimeStamps[i].timeStamp)
         c(motionTimeStamps[i].value + '  ' + t1.toLocaleString())
     }
+    c('processing: ')
     for (let i = 1; i < motionTimeStamps.length; i++) { //
-        c('processing: #' + i)
-
         t1.setTime(motionTimeStamps[i - 1].timeStamp) // 前一个事件时间
         t1.setMilliseconds(0) // 得到整秒
         t1m.setTime(motionTimeStamps[i - 1].timeStamp) // t1m：前一个事件的整分
@@ -263,39 +297,13 @@ function doReport() {
         };
     })
 
-    for (let i = 0; i < timeArray.length; i++) {
-        var element = timeArray[i]
+    writetoCVS.write('时间戳，占用率\n')
 
-        if (!element.timeStamp) continue
-        c(element.timeStamp + ' = ' + element.value + '')
+    for (let i = 0; i < timeArray.length; i++) {
+        var e = timeArray[i]
+
+        // if (!e.timeStamp) continue
+        c(e.timeStamp + ' = ' + e.value + '')
+        writetoCVS.write(e.timeStamp + ',' + e.value + '\n')
     };
 }
-
-/*
-
-    switch (json[i].assetState.resourceType) { // json.sampleListDto.list[0].resourceType  json.sampleListDto.list[0].sampleTime  json.sampleListDto.list[0].value
-        case 'motion':
-            for (let index = 1; index < json.sampleListDto.list.length; index++) {
-                lastValue = json.sampleListDto.list[index - 1].value // update new value ,if the first ,take -1
-                recordObj.type = json.sampleListDto.list[index].resourceType
-                recordObj.Did = json.sampleListDto.dataSourceAddress.did
-                recordObj.timeStamp = json.sampleListDto.list[index].sampleTime
-                if (lastValue !== json.sampleListDto.list[index].value) { // Value changed!
-                    recordObj.value = 'in'
-                    temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                    motionTimeStamps.push(temprecordObj)
-                } else if (lastValue === json.sampleListDto.list[index].value) { // Value unchanged!
-                    recordObj.value = 'ot'
-                    temprecordObj = JSON.parse(JSON.stringify(recordObj))
-                    motionTimeStamps.push(temprecordObj)
-                } else { // do not write to recordarray
-                    c('        Sensor first seen, cannot tell')
-                };
-            }
-            break
-        case 'AssetState':
-            break
-        case 'unitState':
-            // json.sampleListDto.list[0].assetState.name 'free'
-            // json.sampleListDto.list[0].sampleTime 'mili'
-*/
