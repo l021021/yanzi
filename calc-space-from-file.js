@@ -5,8 +5,7 @@
 1.从文件读入记录
 2.装换成in、ot数组 motiontimestamps
 3.计算得到timearray
-TODO:移植算法 asset wanchen,counter tobe done
-TODO:时间戳加上日期
+TODO:写入文件
 
 */
 const FS = require('fs')
@@ -19,7 +18,7 @@ var recordObj = {
     value: ''
 }
 
-var filename = 'EUI64-D0CF5EFFFE792D84-3-Motion_2019_11_08_0_00_00_2019_11_11_23_59_59'
+var filename = 'UUID-17B30675BC5849C2AD81F2448E772705_2019_12_08_0_00_00_2019_12_11_23_59_59'
 
 var t1 = new Date()
 var t2 = new Date()
@@ -40,9 +39,28 @@ var minDiff, t1ToNext, PrevTot2
 var lastValue = -1
 const c = console.log
 
-str = FS.readFileSync(filename + '.json', 'utf-8')
-var writetoCVS = FS.createWriteStream(filename + '.csv', 'utf-8')
+str = FS.readFileSync(filename + '.json', { encoding: 'utf8' })
+const CSVFile = FS.createWriteStream(filename + '.csv', { encoding: 'utf8' })
 
+// 读取文件发生错误事件
+CSVFile.on('error', (err) => {
+        console.log('发生异常:', err)
+    })
+    // 已打开要写入的文件事件
+CSVFile.on('open', (fd) => {
+        console.log('文件已打开:', fd)
+    })
+    // 文件已经就写入完成事件
+CSVFile.on('finish', () => {
+    console.log('写入已完成..')
+        // console.log('读取文件内容:', fs.readFileSync('./file-test.js', 'utf8')) // 打印写入的内容
+        // console.log(CSVFile)
+})
+
+// 文件关闭事件
+CSVFile.on('close', () => {
+    console.log('文件已关闭！')
+})
 str = str.replace(/\]\[/gi, ',') // change ][ to , which was caused by consecutive packets
 
 json = JSON.parse(str)
@@ -109,9 +127,8 @@ if (json[0].assetState && json[0].assetState.resourceType === 'AssetState') {
 doReport()
 
 // FS.writeFileSync(filename + '.csv', JSON.stringify(timeArray), 'utf8')
-writetoCVS.end()
-process.exit()
-    // write to csv
+
+// write to csv
 
 function doReport() {
     c('Total motion records: ' + motionTimeStamps.length)
@@ -296,14 +313,17 @@ function doReport() {
             return -1
         };
     })
-
-    writetoCVS.write('时间戳，占用率\n')
-
+    CSVFile.write('Time,Pct\n')
     for (let i = 0; i < timeArray.length; i++) {
         var e = timeArray[i]
 
         // if (!e.timeStamp) continue
         c(e.timeStamp + ' = ' + e.value + '')
-        writetoCVS.write(e.timeStamp + ',' + e.value + '\n')
+        CSVFile.write(e.timeStamp + ',' + e.value + '\n')
     };
+
+    CSVFile.end()
+
+    // CSVFile.end()
+    // process.exit()
 }

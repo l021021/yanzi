@@ -20,16 +20,16 @@ var client = new WebSocketClient()
 var connection
 var c = console.log
 var locationId = '229349' // fangtang
-    // var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
 
-const startDate = '2019/11/08/0:00:00'
-const endDate = '2019/11/11/23:59:59'
-var deviceID = 'UUID-17B30675BC5849C2AD81F2448E772705'
+const startDate = '2019/11/01/0:00:00'
+const endDate = '2019/11/30/23:59:59'
+    // var deviceID = 'UUID-17B30675BC5849C2AD81F2448E772705'
+var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
 
 var TimeoutId = setTimeout(doReport, 30000)
 
 // const tenDay = 8640000;
-const _12Hour = 4320000
+const _12Hour = 43200000
 var motionTimeStamps = []
 var DTO = []
 var DTO1 = []
