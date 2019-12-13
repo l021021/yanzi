@@ -5,7 +5,9 @@
 1.从文件读入记录
 2.装换成in、ot数组 motiontimestamps
 3.计算得到timearray
-TODO:写入文件
+TODO:效率很低,估计是判断有没有值存在的for循环
+
+TODO:改了算法,但是得出的数据不一致了
 
 */
 const FS = require('fs')
@@ -18,7 +20,7 @@ var recordObj = {
     value: ''
 }
 
-var filename = 'UUID-17B30675BC5849C2AD81F2448E772705_2019_12_08_0_00_00_2019_12_11_23_59_59'
+var filename = 'EUI64-D0CF5EFFFE792D84-3-Motion_2019_11_01_0_00_00_2019_11_30_23_59_59'
 
 var t1 = new Date()
 var t2 = new Date()
@@ -160,7 +162,7 @@ function doReport() {
         t1ToNext = 60 - t1.getSeconds() // 前面的零头秒数
         PrevTot2 = t2.getSeconds() // 后面的零头秒数
 
-        // c('    seeing  ' + t1.toLocaleTimeString() + '-前  ' + t1m.toLocaleTimeString() + '整  ' + minDiff + ' 分 ' + t1ToNext + '前 ' + PrevTot2 + ' 后  ' + t2.toLocaleTimeString() + '-后  ' + t2m.toLocaleTimeString() + '  相差 ' + minDiff)
+        c('    seeing  ' + t1.toLocaleString() + '-前  ' + t1m.toLocaleString() + '整  ' + minDiff + ' 分 ' + t1ToNext + '前 ' + PrevTot2 + ' 后  ' + t2.toLocaleTimeString() + '-后  ' + t2m.toLocaleTimeString() + '  相差 ' + minDiff)
 
         if (motionTimeStamps[i - 1].value === 'in') { // 如果前一个是in,那么后面的时间段应该100%占用
             // c('    before ' + i + ' was a ' + motionTimeStamps[i - 1].value)
@@ -182,13 +184,14 @@ function doReport() {
                 // eslint-disable-next-line no-unused-vars
             var _ExistValue = 0
 
-            for (const key in timeArray) { // 检查是否存在这个分钟纪录
-                if (timeArray[key].timeStamp === t0.toLocaleString()) {
-                    // c('      这一分记录存在！增加头部的数值' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]))
-                    _RecordExist = true
-                        // _ExistValue = timeArray[key].value;
-                    timeArray[key].value += t1ToNext / 60 // 增加新的占用
-                    break
+            if (timeArray.length > 1) {
+                for (let key = timeArray.length - 1; key > timeArray.length - 5; key--) { // 检查是否存在这个分钟纪录
+                    if (timeArray[key].timeStamp === t0.toLocaleString()) {
+                        c(key + '      这一分记录存在！增加头部的数值' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]))
+                        _RecordExist = true
+                        timeArray[key].value += t1ToNext / 60 // 增加新的占用
+                        break
+                    }
                 }
             }
 
@@ -203,12 +206,16 @@ function doReport() {
             { // tail会重复？
                 t0.setTime(t2m.getTime()) // tail
                 let _RecordExist = false
-                for (const key in timeArray) { // already exits in Array?
-                    if (timeArray[key].timeStamp === t0.toLocaleString()) {
-                        //  c('      这一分存在！尾部数值增加  ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
-                        _RecordExist = true
-                        timeArray[key].value += PrevTot2 / 60
-                        break
+                    // for (const key in timeArray) { // already exits in Array?
+                    //       for (let key = timeArray.length - 1; key > 0; key--) {
+                if (timeArray.length > 1) {
+                    for (let key = timeArray.length - 1; key > timeArray.length - 5; key--) { // 检查是否存在这个分钟纪录
+                        if (timeArray[key].timeStamp === t0.toLocaleString()) {
+                            c(key + '      这一分存在！尾部数值增加  ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
+                            _RecordExist = true
+                            timeArray[key].value += PrevTot2 / 60
+                            break
+                        }
                     }
                 }
 
@@ -251,15 +258,18 @@ function doReport() {
             t0.setTime(t1m) // Previous
             let _RecordExist = false
 
-            for (const key in timeArray) { // already exits in Array?
-                if (timeArray[key].timeStamp === t0.toLocaleString()) {
-                    //   c('      这一分记录存在！头部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
-                    _RecordExist = true
-                    _ExistValue = timeArray[key].value
-                    break
+            // for (const key in timeArray) { // already exits in Array?
+            //   for (let key = timeArray.length - 1; key > 0; key--) {
+            if (timeArray.length > 1) {
+                for (let key = timeArray.length - 1; key > timeArray.length - 5; key--) { // 检查是否存在这个分钟纪录
+                    if (timeArray[key].timeStamp === t0.toLocaleString()) {
+                        c(key + '      这一分记录存在！头部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
+                        _RecordExist = true
+                        _ExistValue = timeArray[key].value
+                        break
+                    }
                 }
             }
-
             if (!_RecordExist) { // 这一分不存在
                 timeObj.timeStamp = t0.toLocaleString()
                 timeObj.value = 0
@@ -272,12 +282,17 @@ function doReport() {
             // tail会重复？
             t0.setTime(t2m) // tail
             _RecordExist = false
-            for (const key in timeArray) { // already exits in Array?
-                if (timeArray[key].timeStamp === t0.toLocaleString()) {
-                    //   c('      这一分尾部存在！尾部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
-                    _RecordExist = true
-                        // _ExistValue = timeArray[key].value;
-                    break
+                // for (const key in timeArray) { // already exits in Array?
+                // for (let key = timeArray.length - 1; key > 0; key--) {
+            if (timeArray.length > 1) {
+                for (let key = timeArray.length - 1;
+                    (key > timeArray.length - 5) && (key > 0); key--) { // 检查是否存在这个分钟纪录
+                    if (timeArray[key].timeStamp === t0.toLocaleString()) {
+                        c(key + '      这一分尾部存在！尾部原值不变 ' + t0.toLocaleTimeString() + '   ' + JSON.stringify(timeArray[key]) + '  ' + JSON.stringify(motionTimeStamps[i]))
+                        _RecordExist = true
+                            // _ExistValue = timeArray[key].value;
+                        break
+                    }
                 }
             }
             // do nothing

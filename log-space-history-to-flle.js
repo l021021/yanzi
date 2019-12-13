@@ -23,8 +23,8 @@ var locationId = '229349' // fangtang
 
 const startDate = '2019/11/01/0:00:00'
 const endDate = '2019/11/30/23:59:59'
-    // var deviceID = 'UUID-17B30675BC5849C2AD81F2448E772705'
-var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
+var deviceID = 'UUID-17B30675BC5849C2AD81F2448E772705'
+    // var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
 
 var TimeoutId = setTimeout(doReport, 30000)
 
