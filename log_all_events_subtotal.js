@@ -1,3 +1,4 @@
+/* eslint-disable space-unary-ops */
 /* eslint-disable handle-callback-err */
 /* eslint-disable camelcase */
 var WebSocketClient = require('websocket').client
@@ -12,7 +13,7 @@ var password = 'Internetofthing'
 
 // For log use only
 var _Counter = 0 // message counter
-var _logLimit = 330 // will exit when this number of messages has been logged
+var _logLimit = 1000 // will exit when this number of messages has been logged
 var _t2 = new Date()
 var _Locations = []
 var _Events = []
@@ -135,44 +136,48 @@ client.on('connect', function(connection) {
 
                     case 'SubscribeData':
                         console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
-                        eventsCounter[json.list[0].eventType.name]++
-                            switch (json.list[0].resourceType) {
-                                case 'SampleList':
-                                    break
-                                case 'EventDTO':
-                                    var _tempeventObj
-                                        // console.log(JSON.stringify(json))
-                                        // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
-                                    switch (json.list[0].eventType.name) {
-                                        case 'newUnAcceptedDeviceSeenByDiscovery':
-                                        case 'physicalDeviceIsNowUP':
-                                        case 'physicalDeviceIsNowDOWN':
-                                        case 'remoteLocationGatewayIsNowDOWN':
-                                        case 'remoteLocationGatewayIsNowUP':
-                                        case 'unitConfigurationChanged':
-                                            // console.log(json.list[0].unitAddress.did + ' 1  ' + json.list[0].unitAddress.locationId)
-                                            eventObj.did = json.list[0].unitAddress.did
-                                            eventObj.locationId = json.list[0].unitAddress.locationId
-                                            break
-                                        case 'locationChanged':
-                                            //  console.log(json.list[0].list[0].locationAddress.serverDid + ' 2  ' + json.list[0].list[0].locationAddress.locationId)
-                                            eventObj.did = json.list[0].list[0].locationAddress.serverDid
-                                            eventObj.locationId = json.list[0].list[0].locationAddress.locationId
-                                            break
-                                        default:
-                                            console.log('!!!! cannot understand this resourcetype ' + json.list[0].eventType.name)
-                                    }
-                                    _t2.setTime(json.timeSent)
-                                    eventObj.timeOfEvent = json.timeSent
-                                    eventObj.name = json.list[0].eventType.name
-                                    _tempeventObj = JSON.parse(JSON.stringify(eventObj))
+                        eventsCounter[json.list[0].eventType.name] = (eventsCounter[json.list[0].eventType.name] + 1) || 0
 
-                                    _Events.push(_tempeventObj)
-                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name)
-                                    break
-                                default:
-                                    console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
-                            }
+                        switch (json.list[0].resourceType) {
+                            case 'SampleList':
+                                break
+                            case 'EventDTO':
+                                var _tempeventObj
+                                    // console.log(JSON.stringify(json))
+                                    // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
+                                switch (json.list[0].eventType.name) {
+                                    case 'newUnAcceptedDeviceSeenByDiscovery':
+                                    case 'physicalDeviceIsNowUP':
+                                    case 'physicalDeviceIsNowDOWN':
+                                    case 'remoteLocationGatewayIsNowDOWN':
+                                    case 'remoteLocationGatewayIsNowUP':
+                                    case 'unitConfigurationChanged':
+                                        // console.log(json.list[0].unitAddress.did + ' 1  ' + json.list[0].unitAddress.locationId)
+                                        eventObj.did = json.list[0].unitAddress.did
+                                        eventObj.locationId = json.list[0].unitAddress.locationId
+
+                                        break
+                                    case 'locationChanged':
+                                        //  console.log(json.list[0].list[0].locationAddress.serverDid + ' 2  ' + json.list[0].list[0].locationAddress.locationId)
+                                        eventObj.did = json.list[0].list[0].locationAddress.serverDid
+                                        eventObj.locationId = json.list[0].list[0].locationAddress.locationId
+                                        break
+                                    default:
+                                        console.log('!!!! cannot understand this resourcetype ' + json.list[0].eventType.name)
+                                }
+                                _t2.setTime(json.timeSent)
+                                eventObj.timeOfEvent = json.timeSent
+                                eventObj.name = json.list[0].eventType.name
+                                _tempeventObj = JSON.parse(JSON.stringify(eventObj))
+
+                                _Events.push(_tempeventObj)
+                                console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name)
+                                break
+                            default:
+                                console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
+                        }
+                        eventsCounter[eventObj.locationId] = (eventsCounter[eventObj.locationId] + 1) || 0
+
                         break
 
                     default:
@@ -310,10 +315,10 @@ beginPOLL()
 
 function scan_array(arr) {
     for (var key in arr) { // 这个是关键
-        if (typeof (arr[key]) === 'array' || typeof (arr[key]) === 'object') { // 递归调用
+        if (typeof(arr[key]) === 'array' || typeof(arr[key]) === 'object') { // 递归调用
             scan_array(arr[key])
         } else {
-            console.log(key + ' = ' + arr[key] + '<br>')
+            console.log(key + ' = ' + arr[key])
         }
     }
 }
