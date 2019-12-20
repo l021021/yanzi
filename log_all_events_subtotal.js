@@ -12,10 +12,11 @@ var password = 'Internetofthing'
 
 // For log use only
 var _Counter = 0 // message counter
-var _logLimit = 1000 // will exit when this number of messages has been logged
+var _logLimit = 330 // will exit when this number of messages has been logged
 var _t2 = new Date()
 var _Locations = []
 var _Events = []
+var eventsCounter = []
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient()
@@ -49,14 +50,10 @@ client.on('connectFailed', function(error) {
 })
 
 client.on('connect', function(connection) {
-    // console.log("Checking API service status with ServiceRequest.");
     sendServiceRequest()
 
     // Handle messages
     connection.on('message', function(message) {
-        // clearTimeout(TimeoutId);
-        // TimeoutId = setTimeout(doReport, 10000); //exit after 10 seconds idle
-
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data)
             var t = new Date().getTime()
@@ -138,43 +135,44 @@ client.on('connect', function(connection) {
 
                     case 'SubscribeData':
                         console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
-                        switch (json.list[0].resourceType) {
-                            case 'SampleList':
-                                break
-                            case 'EventDTO':
-                                var _tempeventObj
-                                    // console.log(JSON.stringify(json))
-                                    // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
-                                switch (json.list[0].eventType.name) {
-                                    case 'newUnAcceptedDeviceSeenByDiscovery':
-                                    case 'physicalDeviceIsNowUP':
-                                    case 'physicalDeviceIsNowDOWN':
-                                    case 'remoteLocationGatewayIsNowDOWN':
-                                    case 'remoteLocationGatewayIsNowUP':
-                                    case 'unitConfigurationChanged':
-                                        // console.log(json.list[0].unitAddress.did + ' 1  ' + json.list[0].unitAddress.locationId)
-                                        eventObj.did = json.list[0].unitAddress.did
-                                        eventObj.locationId = json.list[0].unitAddress.locationId
-                                        break
-                                    case 'locationChanged':
-                                        //  console.log(json.list[0].list[0].locationAddress.serverDid + ' 2  ' + json.list[0].list[0].locationAddress.locationId)
-                                        eventObj.did = json.list[0].list[0].locationAddress.serverDid
-                                        eventObj.locationId = json.list[0].list[0].locationAddress.locationId
-                                        break
-                                    default:
-                                        console.log('!!!! cannot understand this resourcetype ' + json.list[0].eventType.name)
-                                }
-                                _t2.setTime(json.timeSent)
-                                eventObj.timeOfEvent = json.timeSent
-                                eventObj.name = json.list[0].eventType.name
-                                _tempeventObj = JSON.parse(JSON.stringify(eventObj))
+                        eventsCounter[json.list[0].eventType.name]++
+                            switch (json.list[0].resourceType) {
+                                case 'SampleList':
+                                    break
+                                case 'EventDTO':
+                                    var _tempeventObj
+                                        // console.log(JSON.stringify(json))
+                                        // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
+                                    switch (json.list[0].eventType.name) {
+                                        case 'newUnAcceptedDeviceSeenByDiscovery':
+                                        case 'physicalDeviceIsNowUP':
+                                        case 'physicalDeviceIsNowDOWN':
+                                        case 'remoteLocationGatewayIsNowDOWN':
+                                        case 'remoteLocationGatewayIsNowUP':
+                                        case 'unitConfigurationChanged':
+                                            // console.log(json.list[0].unitAddress.did + ' 1  ' + json.list[0].unitAddress.locationId)
+                                            eventObj.did = json.list[0].unitAddress.did
+                                            eventObj.locationId = json.list[0].unitAddress.locationId
+                                            break
+                                        case 'locationChanged':
+                                            //  console.log(json.list[0].list[0].locationAddress.serverDid + ' 2  ' + json.list[0].list[0].locationAddress.locationId)
+                                            eventObj.did = json.list[0].list[0].locationAddress.serverDid
+                                            eventObj.locationId = json.list[0].list[0].locationAddress.locationId
+                                            break
+                                        default:
+                                            console.log('!!!! cannot understand this resourcetype ' + json.list[0].eventType.name)
+                                    }
+                                    _t2.setTime(json.timeSent)
+                                    eventObj.timeOfEvent = json.timeSent
+                                    eventObj.name = json.list[0].eventType.name
+                                    _tempeventObj = JSON.parse(JSON.stringify(eventObj))
 
-                                _Events.push(_tempeventObj)
-                                console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name)
-                                break
-                            default:
-                                console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
-                        }
+                                    _Events.push(_tempeventObj)
+                                    console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name)
+                                    break
+                                default:
+                                    console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
+                            }
                         break
 
                     default:
@@ -285,65 +283,37 @@ function beginPOLL() {
 }
 
 function doReport() {
-    //   var _c1 = 0
-    //   var _c2 = 0
     var output = ''
 
     _Locations.sort(function(a, b) {
-            var x = a.locationId
-            var y = b.locationId
-            if (x > y) return 1
-            if (x < y) return -1
-            return 0
-        })
-        // _Units.sort(function(a, b) {
-        //     var x = a.locationId
-        //     var y = b.locationId
-        //     if (x > y) return 1;
-        //     if (x < y) return -1;
-        //     return 0;
-        // });
+        var x = a.locationId
+        var y = b.locationId
+        if (x > y) return 1
+        if (x < y) return -1
+        return 0
+    })
 
     for (const key in _Locations) {
         output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n'
     }
     console.log('total ' + _Locations.length + ' locations: \n' + output) // print all locations with name
 
-    // //do some work to match sensor to locations
-    // for (const key in _Units) {
-    //     for (const key1 in _Locations) { //update to its locations
-    //         if (_Locations[key1].locationId == _Units[key].locationId) {
-    //             _Locations[key1].Allunits++;
-    //             if (_Units[key].lifeCycleState == 'present') { //mark live gateways
-    //                 _Locations[key1].gwOnline = true;
-    //                 _Locations[key1].Onlineunits++;
-    //             }
-    //             if (_Units[key].isChassis == 'true') { _Locations[key1].units++; } //mark physical sensors
-    //             break;
-    //         }
-    //     }
-
+    // for (const key in eventsCounter) {
+    //     console.log(eventsCounter[key])
     // }
 
-    // //list each active location with sensors
-    // for (const key1 in _Locations) {
-    //     if (_Locations[key1].gwOnline)
-    //         console.log('' + _Locations[key1].locationId + '-' + _Locations[key1].name + ' is online  with ' + _Locations[key1].Onlineunits + ' active sensors, ' + _Locations[key1].Allunits + ' logical');
-    // }
-    // console.log("total " + _Units.length + " logical sensors live while " + _OnlineUnitsCounter + ' sensors online')
-
-    // //list all online physical sensors
-    // for (const key1 in _Units) {
-    //     if (_Units[key1].lifeCycleState == 'present')
-    //         console.log(_Units[key1].did + ' in ' + _Units[key1].locationId);
-    // }
-    // for (const key1 in _Units) {
-    //     if (_Units[key1].lifeCycleState == 'subUnit' && _Units[key1].isChassis == false)
-    //         console.log(_Units[key1].did + ' as a ' + _Units[key1].type + ' in ' + _Units[key1].locationId);
-    // }
-
-    // clearTimeout(TimeoutId);
+    scan_array(eventsCounter)
     process.exit()
 }
 
 beginPOLL()
+
+function scan_array(arr) {
+    for (var key in arr) { // 这个是关键
+        if (typeof (arr[key]) === 'array' || typeof (arr[key]) === 'object') { // 递归调用
+            scan_array(arr[key])
+        } else {
+            console.log(key + ' = ' + arr[key] + '<br>')
+        }
+    }
+}
