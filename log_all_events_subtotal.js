@@ -63,7 +63,7 @@ client.on('connect', function (connection) {
             timestamp.setTime(t)
             _Counter = _Counter + 1 // counter of all received packets
 
-            if (_Counter > _logLimit) {
+            if (_Counter >= _logLimit) {
                 console.log('Enough Data!')
                 // console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
                 connection.close()
@@ -92,44 +92,40 @@ client.on('connect', function (connection) {
                         if (json.responseCode.name === 'success') {
                             // UPDATE location IDs
                             if (json.list.length !== 0) { // 收到一组新的location
-                                for (var i = 0; i < json.list.length; i++) {
-                                    let _locationExist = false
-
-                                    for (const key in _Locations) { // already exits in Array?
-                                        if (_Locations[key].locationID || (_Locations[key].locationID === json.list[i].locationAddress.locationId)) {
-                                            _locationExist = true
-                                        }
-                                    }
-
-                                    var _templocationObj
-                                    if (!_locationExist) {
-                                        locationObj.locationId = json.list[i].locationAddress.locationId
-                                        locationObj.serverDid = json.list[i].locationAddress.serverDid
-                                        locationObj.accountId = json.list[i].accountId
-                                        locationObj.name = json.list[i].name
-                                        locationObj.gwdid = json.list[i].gwdid
-
-                                        _templocationObj = JSON.parse(JSON.stringify(locationObj))
-
-                                        _Locations.push(_templocationObj)
-                                        sendSubscribeRequest_lifecircle(locationObj.locationId) // subscribe eventDTO
-                                        sendSubscribeRequest_config(locationObj.locationId)
-                                    }
-                                }
-
                                 // for (var i = 0; i < json.list.length; i++) {
-                                //     // let _locationExist = false
+                                //     let _locationExist = false
 
-                                //     if (_Locations.indexOf(json.list[i].locationAddress.locationId) < 0) {
-                                //         _Locations[json.list[i].locationAddress.locationId].serverDid = json.list[i].locationAddress.serverDid
-                                //         _Locations[json.list[i].locationAddress.locationId].accountId = json.list[i].accountId
-                                //         _Locations[json.list[i].locationAddress.locationId].name = json.list[i].name
-                                //         _Locations[json.list[i].locationAddress.locationId].gwdid = json.list[i].gwdid
+                                //     for (const key in _Locations) { // already exits in Array?
+                                //         if (_Locations[key].locationID || (_Locations[key].locationID === json.list[i].locationAddress.locationId)) {
+                                //             _locationExist = true
+                                //         }
+                                //     }
 
-                                //         sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId) // subscribe eventDTO
-                                //         sendSubscribeRequest_config(json.list[i].locationAddress.locationId)
+                                //     var _templocationObj
+                                //     if (!_locationExist) {
+                                //         locationObj.locationId = json.list[i].locationAddress.locationId
+                                //         locationObj.serverDid = json.list[i].locationAddress.serverDid
+                                //         locationObj.accountId = json.list[i].accountId
+                                //         locationObj.name = json.list[i].name
+                                //         locationObj.gwdid = json.list[i].gwdid
+
+                                //         _templocationObj = JSON.parse(JSON.stringify(locationObj))
+
+                                //         _Locations.push(_templocationObj)
+                                //         sendSubscribeRequest_lifecircle(locationObj.locationId) // subscribe eventDTO
+                                //         sendSubscribeRequest_config(locationObj.locationId)
                                 //     }
                                 // }
+
+                                for (var i = 0; i < json.list.length; i++) {
+                                    // let _locationExist = false
+
+                                    if (_Locations.indexOf(json.list[i].locationAddress.locationId) < 0) {
+                                        _Locations[json.list[i].locationAddress.locationId] = json.list[i].name
+                                        sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId) // subscribe eventDTO
+                                        sendSubscribeRequest_config(json.list[i].locationAddress.locationId)
+                                    }
+                                }
                             }
                         } else {
                             console.log(json.responseCode.name)
@@ -191,7 +187,7 @@ client.on('connect', function (connection) {
                             default:
                                 console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
                         }
-                        eventsCounter[eventObj.locationId + '_' + json.list[0].eventType.name] = (eventsCounter[eventObj.locationId + '_' + json.list[0].eventType.name] + 1) || 1
+                        eventsCounter[eventObj.locationId + '_' + _Locations[eventObj.locationId] + ':' + json.list[0].eventType.name] = (eventsCounter[eventObj.locationId + '_' + _Locations[eventObj.locationId] + ':' + json.list[0].eventType.name] + 1) || 1
 
                         break
 
