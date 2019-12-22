@@ -1,3 +1,4 @@
+/* eslint-disable valid-typeof */
 /* eslint-disable space-unary-ops */
 /* eslint-disable handle-callback-err */
 /* eslint-disable camelcase */
@@ -6,14 +7,14 @@ var cirrusAPIendpoint = 'cirrus11.yanzi.se'
 
 var username = 'frank.shen@pinyuaninfo.com'
 var password = 'Internetofthing'
-    // var username = "653498331@qq.com";
-    // var password = "000000";
+// var username = "653498331@qq.com";
+// var password = "000000";
 
 // ################################################
 
 // For log use only
 var _Counter = 0 // message counter
-var _logLimit = 1000 // will exit when this number of messages has been logged
+var _logLimit = 300 // will exit when this number of messages has been logged
 var _t2 = new Date()
 var _Locations = []
 var _Events = []
@@ -45,16 +46,16 @@ var eventObj = {
 }
 
 // Program body
-client.on('connectFailed', function(error) {
+client.on('connectFailed', function (error) {
     console.log('Connect Error: reconnect' + error.toString())
     beginPOLL()
 })
 
-client.on('connect', function(connection) {
+client.on('connect', function (connection) {
     sendServiceRequest()
 
     // Handle messages
-    connection.on('message', function(message) {
+    connection.on('message', function (message) {
         if (message.type === 'utf8') {
             var json = JSON.parse(message.utf8Data)
             var t = new Date().getTime()
@@ -64,7 +65,7 @@ client.on('connect', function(connection) {
 
             if (_Counter > _logLimit) {
                 console.log('Enough Data!')
-                    // console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
+                // console.log(_Locations.length + " locations : " + JSON.stringify(_Locations));
                 connection.close()
                 doReport()
                 process.exit()
@@ -115,6 +116,20 @@ client.on('connect', function(connection) {
                                         sendSubscribeRequest_config(locationObj.locationId)
                                     }
                                 }
+
+                                // for (var i = 0; i < json.list.length; i++) {
+                                //     // let _locationExist = false
+
+                                //     if (_Locations.indexOf(json.list[i].locationAddress.locationId) < 0) {
+                                //         _Locations[json.list[i].locationAddress.locationId].serverDid = json.list[i].locationAddress.serverDid
+                                //         _Locations[json.list[i].locationAddress.locationId].accountId = json.list[i].accountId
+                                //         _Locations[json.list[i].locationAddress.locationId].name = json.list[i].name
+                                //         _Locations[json.list[i].locationAddress.locationId].gwdid = json.list[i].gwdid
+
+                                //         sendSubscribeRequest_lifecircle(json.list[i].locationAddress.locationId) // subscribe eventDTO
+                                //         sendSubscribeRequest_config(json.list[i].locationAddress.locationId)
+                                //     }
+                                // }
                             }
                         } else {
                             console.log(json.responseCode.name)
@@ -129,22 +144,22 @@ client.on('connect', function(connection) {
                         break
                     case 'PeriodicResponse':
                         setTimeout(sendPeriodicRequest, 60000)
-                            // console.log(_Counter + '# ' + "periodic response-keepalive");
+                        // console.log(_Counter + '# ' + "periodic response-keepalive");
                         break
                     case 'SubscribeResponse':
                         break
 
                     case 'SubscribeData':
                         console.log('  ' + _Counter + '# ' + 'SubscribeData: ' + json.list[0].resourceType)
-                        eventsCounter[json.list[0].eventType.name] = (eventsCounter[json.list[0].eventType.name] + 1) || 0
+                        // eventsCounter[json.list[0].eventType.name] = (eventsCounter[json.list[0].eventType.name] + 1) || 0
 
                         switch (json.list[0].resourceType) {
                             case 'SampleList':
                                 break
                             case 'EventDTO':
                                 var _tempeventObj
-                                    // console.log(JSON.stringify(json))
-                                    // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
+                                // console.log(JSON.stringify(json))
+                                // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
                                 switch (json.list[0].eventType.name) {
                                     case 'newUnAcceptedDeviceSeenByDiscovery':
                                     case 'physicalDeviceIsNowUP':
@@ -176,7 +191,7 @@ client.on('connect', function(connection) {
                             default:
                                 console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
                         }
-                        eventsCounter[eventObj.locationId] = (eventsCounter[eventObj.locationId] + 1) || 0
+                        eventsCounter[eventObj.locationId + '_' + json.list[0].eventType.name] = (eventsCounter[eventObj.locationId + '_' + json.list[0].eventType.name] + 1) || 1
 
                         break
 
@@ -191,12 +206,12 @@ client.on('connect', function(connection) {
         }
     })
 
-    connection.on('error', function(error) {
+    connection.on('error', function (error) {
         console.log('Connection Error: reconnect' + error.toString())
         beginPOLL()
     })
 
-    connection.on('close', function(error) {
+    connection.on('close', function (error) {
         console.log('Connection closed!')
     })
 
@@ -284,28 +299,24 @@ client.on('connect', function(connection) {
 
 function beginPOLL() {
     client.connect('wss://' + cirrusAPIendpoint + '/cirrusAPI')
-        // console.log("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
+    // console.log("Connecting to wss://" + cirrusAPIendpoint + "/cirrusAPI using username " + username);
 }
 
 function doReport() {
     var output = ''
 
-    _Locations.sort(function(a, b) {
-        var x = a.locationId
-        var y = b.locationId
-        if (x > y) return 1
-        if (x < y) return -1
-        return 0
-    })
+    // _Locations.sort(function (a, b) {
+    //     var x = a.locationId
+    //     var y = b.locationId
+    //     if (x > y) return 1
+    //     if (x < y) return -1
+    //     return 0
+    // })
 
-    for (const key in _Locations) {
-        output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n'
-    }
-    console.log('total ' + _Locations.length + ' locations: \n' + output) // print all locations with name
-
-    // for (const key in eventsCounter) {
-    //     console.log(eventsCounter[key])
+    // for (const key in _Locations) {
+    //     output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n'
     // }
+    // console.log('total ' + _Locations.length + ' locations: \n' + output) // print all locations with name
 
     scan_array(eventsCounter)
     process.exit()
@@ -315,7 +326,7 @@ beginPOLL()
 
 function scan_array(arr) {
     for (var key in arr) { // 这个是关键
-        if (typeof(arr[key]) === 'array' || typeof(arr[key]) === 'object') { // 递归调用
+        if (typeof (arr[key]) === 'array' || typeof (arr[key]) === 'object') { // 递归调用
             scan_array(arr[key])
         } else {
             console.log(key + ' = ' + arr[key])
