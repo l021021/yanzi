@@ -1,3 +1,5 @@
+/* eslint-disable no-redeclare */
+/* eslint-disable eol-last */
 /* eslint-disable camelcase */
 /* eslint-disable no-fallthrough */
 /* eslint-disable eqeqeq */
@@ -24,11 +26,10 @@ const dataFile = fs.createWriteStream('./' + locationId + '_' + startDate.replac
 
 // For log use only
 var _Counter = 0 // message counter
-var _OnlineUnitsCounter = 0
-var _Locations = []
+
 var _Units = []
 
-const _24Hour = 86400000
+// const _24Hour = 86400000
 const _12Hour = 43200000
 var TimeoutId = setTimeout(doReport, 20000)
     // Create a web socket client initialized with the options as above
@@ -268,7 +269,6 @@ function beginPOLL() {
 }
 
 function doReport() {
-    var output = ''
     var t = new Date().getTime()
     var timestamp = new Date()
     timestamp.setTime(t)
