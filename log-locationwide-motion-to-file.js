@@ -5,6 +5,8 @@
 /* eslint-disable eqeqeq */
 // 列出所有的Location已经其下的传感器;可能需要几分钟才能收全
 
+// TODO: sensor 不对
+
 var WebSocketClient = require('websocket').client
 const fs = require('fs')
 
@@ -12,12 +14,15 @@ var cirrusAPIendpoint = 'cirrus5.yanzi.se'
 
 var username = 'frank.shen@pinyuaninfo.com'
 var password = 'Internetofthing'
-const locationId = '229349' // fangtang
-const startDate = '2019/11/01/15:00:00'
-const endDate = '2019/11/01/16:59:59'
+    // const locationId = '229349' // fangtang
+    // const locationId = '399621' // 4u
+const locationId = '521209' // wafer shanghai
+
+const startDate = '2019/12/11/00:00:00'
+const endDate = '2019/12/21/23:59:59'
 var c = console.log
 
-const dataFile = fs.createWriteStream('./' + locationId + '_' + startDate.replace(/[/:]/gi, '_') + '_' + endDate.replace(/[/:]/gi, '_') + '.json', { encoding: 'utf8' })
+const dataFile = fs.createWriteStream('./log/' + locationId + '_' + startDate.replace(/[/:]/gi, '_') + '_' + endDate.replace(/[/:]/gi, '_') + '.json', { encoding: 'utf8' })
 
 // var username = "653498331@qq.com";
 // var password = "000000";
