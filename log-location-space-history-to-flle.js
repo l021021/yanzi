@@ -23,8 +23,6 @@ var locationId = '229349' // fangtang
 
 const startDate = '2019/11/01/15:00:00'
 const endDate = '2019/11/01/16:59:59'
-    // var deviceID = 'UUID-17B30675BC5849C2AD81F2448E772705'
-var deviceID = 'EUI64-D0CF5EFFFE792D84-3-Motion'
 
 var TimeoutId = setTimeout(doReport, 30000)
 
@@ -37,7 +35,7 @@ var DTO1 = []
 var DTOs = []
 DTOs[0] = DTO
 DTOs[1] = DTO1
-const logStream = fs.createWriteStream('./' + deviceID + '_' + startDate.replace(/[/:]/gi, '_') + '_' + endDate.replace(/[/:]/gi, '_') + '.json', { encoding: 'utf8' })
+const logStream = fs.createWriteStream('./' + locationId + '_' + startDate.replace(/[/:]/gi, '_') + '_' + endDate.replace(/[/:]/gi, '_') + '.json', { encoding: 'utf8' })
 
 // 文件有关
 logStream.on('error', (err) => {
@@ -65,8 +63,6 @@ var timeObj = {
     value: ''
 }
 
-var minDiff, t1ToNext, PrevTot2
-
 client.on('connectFailed', function(error) {
     c('Connect Error: ' + error.toString())
     connection.close()
@@ -91,26 +87,49 @@ client.on('connect', function(connection) {
             sendLoginRequest()
         } else if (json.messageType === 'LoginResponse') {
             if (json.responseCode.name === 'success') {
-                // now = new Date().getTime()
-                sendGetSamplesRequest(
-                        deviceID,
-                        Date.parse(startDate),
-                        Date.parse(endDate)
-                    ) // 历史数据拉回
+
             } else {
                 c(json.responseCode.name)
                 c("Couldn't login, check your username and passoword")
                 connection.close()
             }
-        } else if (json.messageType === 'GetSamplesResponse') {
-            if (json.responseCode.name === 'success' && json.sampleListDto.list) {
-                c('receiving ' + json.sampleListDto.list.length + ' lists') // json.sampleListDto.list.length json.sampleListDto.dataSourceAddress.variableName.name
+        } else if (json.messageType === 'GetUnitsResponse') {
+            if (json.responseCode.name == 'success') {
+                // console.log(JSON.stringify(json) + '\n\n');
 
-                logStream.write(JSON.stringify(json.sampleListDto.list)) // log very lists to file
+                var _tempunitObj
 
-                // Process records
+                console.log('seeing ' + json.list.length + ' in  ' + json.locationAddress.locationId)
+                for (let index = 0; index < json.list.length; index++) { // process each response packet
+                    if (json.list[index].unitTypeFixed.name == 'gateway' || json.list[index].unitAddress.did.indexOf('AP') != -1) { // console.log(json.list[index].unitAddress.did);
+                        console.log('GW or AP in ' + json.locationAddress.locationId) // GW and AP are not sensor
+                    } else {
+                        // record all sensors
+                        unitObj.did = json.list[index].unitAddress.did //
+                        unitObj.locationId = json.locationAddress.locationId
+                        unitObj.chassisDid = json.list[index].chassisDid
+                        unitObj.productType = json.list[index].productType
+                        unitObj.lifeCycleState = json.list[index].lifeCycleState.name
+                        unitObj.isChassis = json.list[index].isChassis
+                        unitObj.nameSetByUser = json.list[index].nameSetByUser
+                        unitObj.serverDid = json.list[index].unitAddress.serverDid
+
+                        unitObj.type = json.list[index].unitTypeFixed.name
+
+                        // console.log(json.list[index].unitTypeFixed.name + '\n\n');
+
+                        _tempunitObj = JSON.parse(JSON.stringify(unitObj))
+                        _Units.push(_tempunitObj)
+                            // _UnitsCounter++;
+                        if (json.list[index].lifeCycleState.name == 'present') {
+                            _OnlineUnitsCounter++
+                        }
+                    };
+                }
+
+                // console.log(_UnitsCounter + ' Units in Location:  while ' + _OnlineUnitsCounter + ' online');
             } else {
-                c('no samples.')
+                console.log("Couldn't get Units")
             }
         } else {
             c("Couldn't understand")
@@ -199,6 +218,21 @@ client.on('connect', function(connection) {
         }
     }
 })
+
+function sendGetUnitsRequest(locationID) {
+    var now = new Date().getTime()
+    var request = {
+
+        messageType: 'GetUnitsRequest',
+        timeSent: now,
+        locationAddress: {
+            resourceType: 'LocationAddress',
+            locationId: locationID
+        }
+    }
+    console.log('sending request for ' + locationID)
+    sendMessage(request)
+}
 
 function beginPoll() {
     if (!username) {
