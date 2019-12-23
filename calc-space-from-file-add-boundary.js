@@ -18,7 +18,7 @@ var recordObj = {
     value: ''
 }
 
-var filename = 'EUI64-D0CF5EFFFE792D84-3-Motion_2019_11_01_0_00_00_2019_11_30_23_59_59'
+var filename = 'log\\EUI64-D0CF5EFFFE792D84-3-Motion_2019_11_01_0_00_00_2019_11_30_23_59_59'
 
 var t1 = new Date()
 var t2 = new Date()
