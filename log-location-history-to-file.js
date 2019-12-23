@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-fallthrough */
 /* eslint-disable eqeqeq */
 // 列出所有的Location已经其下的传感器;可能需要几分钟才能收全
@@ -5,7 +6,7 @@
 var WebSocketClient = require('websocket').client
 const fs = require('fs')
 
-var cirrusAPIendpoint = 'cirrus11.yanzi.se'
+var cirrusAPIendpoint = 'cirrus5.yanzi.se'
 
 var username = 'frank.shen@pinyuaninfo.com'
 var password = 'Internetofthing'
@@ -26,7 +27,10 @@ var _Counter = 0 // message counter
 var _OnlineUnitsCounter = 0
 var _Locations = []
 var _Units = []
-var TimeoutId = setTimeout(doReport, 10000)
+
+const _24Hour = 86400000
+const _12Hour = 43200000
+var TimeoutId = setTimeout(doReport, 20000)
     // Create a web socket client initialized with the options as above
 var client = new WebSocketClient()
 
@@ -55,56 +59,53 @@ client.on('connect', function(connection) {
 
     // Handle messages
     connection.on('message', function(message) {
-            clearTimeout(TimeoutId)
-            TimeoutId = setTimeout(doReport, 10000) // exit after 10 seconds idle
-            console.log('timer reset  ')
+        clearTimeout(TimeoutId)
+        TimeoutId = setTimeout(doReport, 20000) // exit after 10 seconds idle
+        console.log('timer reset  ')
 
-            if (message.type === 'utf8') {
-                var json = JSON.parse(message.utf8Data)
-                var t = new Date().getTime()
-                var timestamp = new Date()
-                timestamp.setTime(t)
-                _Counter = _Counter + 1 // counter of all received packets
+        if (message.type === 'utf8') {
+            var json = JSON.parse(message.utf8Data)
+            var t = new Date().getTime()
+            var timestamp = new Date()
+            timestamp.setTime(t)
+            _Counter = _Counter + 1 // counter of all received packets
 
-                // Print all messages with type
-                console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType)
-                switch (json.messageType) {
-                    case 'ServiceResponse':
-                        sendLoginRequest()
-                        break
-                    case 'LoginResponse':
-                        if (json.responseCode.name == 'success') {
-                            // sendPeriodicRequest() // as keepalive
-                            // sendGetLocationsRequest() // not mandatory
-                            sendGetUnitsRequest(locationId) // get units from location
-                                // sendSubscribeRequest(LocationId); //test one location
-                                // sendSubscribeRequest_lifecircle(LocationId); //eventDTO
-                        } else {
-                            console.log(json.responseCode.name)
-                            console.log("Couldn't login, check your username and passoword")
-                            connection.close()
-                            process.exit()
-                        }
-                        break
-                    case 'GetLocationsResponse':
+            // Print all messages with type
+            console.log(_Counter + '# ' + timestamp.toLocaleTimeString() + ' RCVD_MSG:' + json.messageType)
+            switch (json.messageType) {
+                case 'ServiceResponse':
+                    sendLoginRequest()
+                    break
+                case 'LoginResponse':
+                    if (json.responseCode.name == 'success') {
+                        // sendPeriodicRequest() // as keepalive
+                        // sendGetLocationsRequest() // not mandatory
+                        sendGetUnitsRequest(locationId) // get units from location
+                            // sendSubscribeRequest(LocationId); //test one location
+                            // sendSubscribeRequest_lifecircle(LocationId); //eventDTO
+                    } else {
+                        console.log(json.responseCode.name)
+                        console.log("Couldn't login, check your username and passoword")
+                        connection.close()
+                        process.exit()
+                    }
+                    break
+                case 'GetLocationsResponse':
 
-                        break
-                    case 'GetSamplesResponse':
-                        if (json.responseCode.name === 'success' && json.sampleListDto.list) {
-                            c('receiving ' + json.sampleListDto.list.length + ' lists') // json.sampleListDto.list.length json.sampleListDto.dataSourceAddress.variableName.name
+                    break
+                case 'GetSamplesResponse':
+                    if (json.responseCode.name === 'success' && json.sampleListDto.list) {
+                        c('receiving ' + json.sampleListDto.list.length + ' lists') // json.sampleListDto.list.length json.sampleListDto.dataSourceAddress.variableName.name
 
-                            logStream.write(JSON.stringify(json.sampleListDto.list)) // log very lists to file
+                        dataFile.write(JSON.stringify(json.sampleListDto.list).replace(/resourceType/g, 'DID').replace(/SampleMotion/g, json.sampleListDto.dataSourceAddress.did).replace(/SampleAsset/g, json.sampleListDto.dataSourceAddress.did)) // log very lists to file
+                            //    dataFile.write(JSON.stringify(JSON.stringify(json.sampleListDto.list).replace(/resourceType/g, 'DID').replace(/SampleMotion/g, json.sampleListDto.dataSourceAddress.did).replace(/SampleAsset/g, json.sampleListDto.dataSourceAddress.did))) // log very lists to file
 
-                            // Process records
-                        } else {
-                            c('no samples.')
-                        }
-                } else {
-                    c("Couldn't understand")
-                    connection.close()
-                }
+                        // Process records
+                    } else {
+                        c('no samples.')
+                    }
 
-                break
+                    break
                 case 'GetUnitsResponse':
                     if (json.responseCode.name == 'success') {
                         // console.log(JSON.stringify(json) + '\n\n');
@@ -132,10 +133,11 @@ client.on('connect', function(connection) {
 
                                 _tempunitObj = JSON.parse(JSON.stringify(unitObj))
                                 _Units.push(_tempunitObj)
-                                    // _UnitsCounter++;
-                                    // if (json.list[index].lifeCycleState.name == 'present') {
-                                    //     _OnlineUnitsCounter++
-                                    // }
+                                if (unitObj.type === 'inputMotion' || unitObj.did.indexOf('UUID') >= 0) { sendGetSamplesRequest(unitObj.did, Date.parse(startDate), Date.parse(endDate)) }
+                                // _UnitsCounter++;
+                                // if (json.list[index].lifeCycleState.name == 'present') {
+                                //     _OnlineUnitsCounter++
+                                // }
                             };
                         }
 
@@ -161,123 +163,104 @@ client.on('connect', function(connection) {
         }
     })
 
-connection.on('error', function(error) {
-    console.log('Connection Error: reconnect' + error.toString())
-    beginPOLL()
-})
+    connection.on('error', function(error) {
+        console.log('Connection Error: reconnect' + error.toString())
+        beginPOLL()
+    })
 
-connection.on('close', function() {
-    console.log('Connection closed!')
-})
+    connection.on('close', function() {
+        console.log('Connection closed!')
+    })
 
-function sendMessage(message) {
-    if (connection.connected) {
-        // Create the text to be sent
-        var json = JSON.stringify(message, null, 1)
-            //    console.log('sending' + JSON.stringify(json));
-        connection.sendUTF(json)
-    } else {
-        console.log("sendMessage: Couldn't send message, the connection is not open")
-    }
-}
-
-function sendServiceRequest() {
-    var request = {
-        messageType: 'ServiceRequest',
-        clientId: 'client-fangtang'
-
-    }
-    sendMessage(request)
-}
-
-function sendLoginRequest() {
-    var request = {
-        messageType: 'LoginRequest',
-        username: username,
-        password: password
-    }
-    sendMessage(request)
-}
-
-function sendGetLocationsRequest() {
-    var now = new Date().getTime()
-        // var nowMinusOneHour = now - 60 * 60 * 1000;
-    var request = {
-        messageType: 'GetLocationsRequest',
-        timeSent: now
-    }
-    sendMessage(request)
-}
-
-function sendGetUnitsRequest(locationID) {
-    var now = new Date().getTime()
-    var request = {
-
-        messageType: 'GetUnitsRequest',
-        timeSent: now,
-        locationAddress: {
-            resourceType: 'LocationAddress',
-            locationId: locationID
+    function sendGetSamplesRequest(deviceID, timeStart_mili, timeEnd_mili) {
+        if (timeStart_mili > timeEnd_mili) {
+            c('Wrong Date.')
+            return null
+        }
+        if (timeEnd_mili - timeStart_mili >= _12Hour) {
+            var request = {
+                messageType: 'GetSamplesRequest',
+                dataSourceAddress: {
+                    resourceType: 'DataSourceAddress',
+                    did: deviceID,
+                    locationId: locationId
+                },
+                timeSerieSelection: {
+                    resourceType: 'TimeSerieSelection',
+                    timeStart: timeStart_mili,
+                    timeEnd: timeStart_mili + _12Hour
+                }
+            }
+            sendMessage(request)
+            c('requesting : ' + request.timeSerieSelection.timeStart)
+            sendGetSamplesRequest(
+                deviceID,
+                timeStart_mili + _12Hour,
+                timeEnd_mili
+            )
+        } else {
+            var request = {
+                messageType: 'GetSamplesRequest',
+                dataSourceAddress: {
+                    resourceType: 'DataSourceAddress',
+                    did: deviceID,
+                    locationId: locationId
+                },
+                timeSerieSelection: {
+                    resourceType: 'TimeSerieSelection',
+                    timeStart: timeStart_mili,
+                    timeEnd: timeEnd_mili
+                }
+            }
+            c('requesting : ' + request.dataSourceAddress.did + ' ' + request.timeSerieSelection.timeStart)
+            sendMessage(request)
         }
     }
-    console.log('sending request for ' + locationID)
-    sendMessage(request)
-}
 
-function sendPeriodicRequest() {
-    var now = new Date().getTime()
-    var request = {
-        messageType: 'PeriodicRequest',
-        timeSent: now
+    function sendMessage(message) {
+        if (connection.connected) {
+            // Create the text to be sent
+            var json = JSON.stringify(message, null, 1)
+                //    console.log('sending' + JSON.stringify(json));
+            connection.sendUTF(json)
+        } else {
+            console.log("sendMessage: Couldn't send message, the connection is not open")
+        }
     }
-    sendMessage(request)
-}
-})
 
-function sendGetSamplesRequest(deviceID, timeStart_mili, timeEnd_mili) {
-    if (timeStart_mili > timeEnd_mili) {
-        c('Wrong Date.')
-        return null
-    }
-    if (timeEnd_mili - timeStart_mili >= _12Hour) {
+    function sendServiceRequest() {
         var request = {
-            messageType: 'GetSamplesRequest',
-            dataSourceAddress: {
-                resourceType: 'DataSourceAddress',
-                did: deviceID,
-                locationId: locationId
-            },
-            timeSerieSelection: {
-                resourceType: 'TimeSerieSelection',
-                timeStart: timeStart_mili,
-                timeEnd: timeStart_mili + _12Hour
-            }
+            messageType: 'ServiceRequest',
+            clientId: 'client-fangtang'
+
         }
         sendMessage(request)
-        c('requesting : ' + request.timeSerieSelection.timeStart)
-        sendGetSamplesRequest(
-            deviceID,
-            timeStart_mili + _12Hour,
-            timeEnd_mili
-        )
-    } else {
+    }
+
+    function sendLoginRequest() {
         var request = {
-            messageType: 'GetSamplesRequest',
-            dataSourceAddress: {
-                resourceType: 'DataSourceAddress',
-                did: deviceID,
-                locationId: locationId
-            },
-            timeSerieSelection: {
-                resourceType: 'TimeSerieSelection',
-                timeStart: timeStart_mili,
-                timeEnd: timeEnd_mili
-            }
+            messageType: 'LoginRequest',
+            username: username,
+            password: password
         }
-        c('requesting : ' + request.timeSerieSelection.timeStart)
         sendMessage(request)
     }
-}
+
+    function sendGetUnitsRequest(locationID) {
+        var now = new Date().getTime()
+        var request = {
+
+            messageType: 'GetUnitsRequest',
+            timeSent: now,
+            locationAddress: {
+                resourceType: 'LocationAddress',
+                locationId: locationID
+            }
+        }
+        console.log('sending request for ' + locationID)
+        sendMessage(request)
+    }
+})
 
 function beginPOLL() {
     client.connect('wss://' + cirrusAPIendpoint + '/cirrusAPI')
@@ -292,13 +275,7 @@ function doReport() {
     console.log('Reporting：')
     console.log(timestamp.toLocaleTimeString() + '')
         // sorting
-    _Locations.sort(function(a, b) {
-        var x = a.locationId
-        var y = b.locationId
-        if (x > y) return 1
-        if (x < y) return -1
-        return 0
-    })
+
     _Units.sort(function(a, b) {
         var x = a.locationId
         var y = b.locationId
@@ -308,35 +285,6 @@ function doReport() {
     })
 
     // record all  Locations
-
-    for (const key in _Locations) {
-        output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n'
-    }
-    console.log('total ' + _Locations.length + ' locations: \n' + output) // print all locations with name
-    console.log('total ' + _Units.length + ' Units: \n') // print all Units with name
-
-    // match sensor to locations
-    for (let i = 0; i < _Units.length; i++) { // TODO: for each could be wrong
-        for (let j = 0; j < _Locations.length; j++) { // update to its locations
-            if (_Locations[j].locationId == _Units[i].locationId) { // Location match
-                _Locations[j].Allunits++
-                    if (_Units[i].lifeCycleState == 'present') { // mark live gateways
-                        _Locations[j].gwOnline = true // Location Online
-                        _Locations[j].Onlineunits++ // mark online sensors
-                    }
-                if (_Units[i].isChassis == 'true') {
-                    _Locations[j].units++
-                } // mark physical sensors
-                break // 跳出循环
-            }
-        }
-    }
-
-    // list each active location with sensors
-    for (let j = 0; j < _Locations.length; j++) { // TODO：for each
-        if (_Locations[j].gwOnline) { console.log('' + _Locations[j].locationId + '-' + _Locations[j].name + ' is online  with ' + _Locations[j].Onlineunits + ' active sensors, ' + _Locations[j].Allunits + ' logical') }
-    }
-    console.log('total ' + _Units.length + ' logical sensors live while ' + _OnlineUnitsCounter + ' sensors online') // sum up
 
     // //list all online physical sensors
     // for (let j = 0; j < _Units.length; j++) {

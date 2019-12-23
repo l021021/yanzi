@@ -50,20 +50,20 @@ logStream.on('finish', () => {
     console.log('写入已完成..')
 })
 logStream.on('close', () => {
-    console.log('文件已关闭！')
-})
-var t1 = new Date()
-var t2 = new Date()
-var t1m = new Date()
-var t0 = new Date()
-var t2m = new Date()
-var timeArray = []
-    // var _timeObj
-var timeObj = {
-    ID: '',
-    timeStamp: '',
-    value: ''
-}
+        console.log('文件已关闭！')
+    })
+    // var t1 = new Date()
+    // var t2 = new Date()
+    // var t1m = new Date()
+    // var t0 = new Date()
+    // var t2m = new Date()
+    // var timeArray = []
+    //     // var _timeObj
+    // var timeObj = {
+    //     ID: '',
+    //     timeStamp: '',
+    //     value: ''
+    // }
 
 var minDiff, t1ToNext, PrevTot2
 
