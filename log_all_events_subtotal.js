@@ -2,11 +2,17 @@
 /* eslint-disable space-unary-ops */
 /* eslint-disable handle-callback-err */
 /* eslint-disable camelcase */
+
+// 获得账号下所有location的事件信息,五分钟报告一次汇总,或者在得到记录数上限时退出
+//
+//
+
 var WebSocketClient = require('websocket').client
 var cirrusAPIendpoint = 'cirrus11.yanzi.se'
-
+var c = console.log
 var username = 'frank.shen@pinyuaninfo.com'
 var password = 'Internetofthing'
+const reportInter = 300000
 // var username = "653498331@qq.com";
 // var password = "000000";
 
@@ -14,7 +20,7 @@ var password = 'Internetofthing'
 
 // For log use only
 var _Counter = 0 // message counter
-var _logLimit = 300 // will exit when this number of messages has been logged
+var _logLimit = 500 // will exit when this number of messages has been logged
 var _t2 = new Date()
 var _Locations = []
 var _Events = []
@@ -22,21 +28,7 @@ var eventsCounter = []
 
 // Create a web socket client initialized with the options as above
 var client = new WebSocketClient()
-
-var locationObj = {
-
-    locationId: '',
-    serverDid: '',
-    accountId: '',
-    name: '',
-    gwdid: '',
-    units: 0,
-    Allunits: 0,
-    Onlineunits: 0,
-    activityLevel: ''
-
-}
-
+var TimeoutId = setTimeout(doReport, reportInter)
 var eventObj = {
     timeOfEvent: 1569232419674,
     did: 'EUI64-0080E10300099999',
@@ -91,32 +83,7 @@ client.on('connect', function (connection) {
                     case 'GetLocationsResponse':
                         if (json.responseCode.name === 'success') {
                             // UPDATE location IDs
-                            if (json.list.length !== 0) { // 收到一组新的location
-                                // for (var i = 0; i < json.list.length; i++) {
-                                //     let _locationExist = false
-
-                                //     for (const key in _Locations) { // already exits in Array?
-                                //         if (_Locations[key].locationID || (_Locations[key].locationID === json.list[i].locationAddress.locationId)) {
-                                //             _locationExist = true
-                                //         }
-                                //     }
-
-                                //     var _templocationObj
-                                //     if (!_locationExist) {
-                                //         locationObj.locationId = json.list[i].locationAddress.locationId
-                                //         locationObj.serverDid = json.list[i].locationAddress.serverDid
-                                //         locationObj.accountId = json.list[i].accountId
-                                //         locationObj.name = json.list[i].name
-                                //         locationObj.gwdid = json.list[i].gwdid
-
-                                //         _templocationObj = JSON.parse(JSON.stringify(locationObj))
-
-                                //         _Locations.push(_templocationObj)
-                                //         sendSubscribeRequest_lifecircle(locationObj.locationId) // subscribe eventDTO
-                                //         sendSubscribeRequest_config(locationObj.locationId)
-                                //     }
-                                // }
-
+                            if (json.list.length !== 0) {
                                 for (var i = 0; i < json.list.length; i++) {
                                     // let _locationExist = false
 
@@ -154,8 +121,6 @@ client.on('connect', function (connection) {
                                 break
                             case 'EventDTO':
                                 var _tempeventObj
-                                // console.log(JSON.stringify(json))
-                                // console.log('    ' + _Counter + '#  Event DTO : ' + json.list[0].eventType.name);
                                 switch (json.list[0].eventType.name) {
                                     case 'newUnAcceptedDeviceSeenByDiscovery':
                                     case 'physicalDeviceIsNowUP':
@@ -185,10 +150,10 @@ client.on('connect', function (connection) {
                                 console.log('      ' + _Counter + '# ' + _t2.toLocaleTimeString() + ' ' + eventObj.did + ' in ' + eventObj.locationId + ':' + eventObj.name)
                                 break
                             default:
-                                console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType) // TODO
+                                console.log('!!!! cannot understand this resourcetype ' + json.list[0].resourceType)
                         }
                         eventsCounter[eventObj.locationId + '_' + _Locations[eventObj.locationId] + ':' + json.list[0].eventType.name] = (eventsCounter[eventObj.locationId + '_' + _Locations[eventObj.locationId] + ':' + json.list[0].eventType.name] + 1) || 1
-
+                        // setTimeout(doReport, reportInter)// 10分钟一次总结
                         break
 
                     default:
@@ -299,33 +264,20 @@ function beginPOLL() {
 }
 
 function doReport() {
-    var output = ''
-
-    // _Locations.sort(function (a, b) {
-    //     var x = a.locationId
-    //     var y = b.locationId
-    //     if (x > y) return 1
-    //     if (x < y) return -1
-    //     return 0
-    // })
-
-    // for (const key in _Locations) {
-    //     output += _Locations[key].locationId + ' or ' + _Locations[key].name + '\n'
-    // }
-    // console.log('total ' + _Locations.length + ' locations: \n' + output) // print all locations with name
-
     scan_array(eventsCounter)
-    process.exit()
+    clearTimeout(TimeoutId)
+    TimeoutId = setTimeout(doReport, reportInter)
 }
 
 beginPOLL()
 
 function scan_array(arr) {
+    c('\n Listing Elements: \n')
     for (var key in arr) { // 这个是关键
         if (typeof (arr[key]) === 'array' || typeof (arr[key]) === 'object') { // 递归调用
             scan_array(arr[key])
         } else {
-            console.log(key + ' = ' + arr[key])
+            console.log('      ' + key + ' --- ' + arr[key])
         }
     }
 }
